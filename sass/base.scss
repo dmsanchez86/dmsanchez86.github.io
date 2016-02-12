@@ -1,0 +1,58 @@
+@import 'material';
+@import 'functions';
+
+*{ @include reset; }
+
+body,html{ @include init; }
+
+body{
+	@include gradient(radial, (#eeeeee , #757575));
+}
+
+img.responsive-img,
+video.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigator_content{
+	position: fixed;
+	padding: .35rem 0 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(130,130,130,.4);
+	@include box-shadow(0 1px 4px rgba(0,0,0,.3));
+
+	.logo{
+		max-width: 55px;
+		display: inline-block;
+	}
+
+	.navigator{
+		float: right;
+		margin-top: .6rem;
+
+		ul{
+			list-style: none;
+
+			li{
+				display: inline-block;
+
+				a{
+					color: #212121;
+					display: block;
+					font-weight: bold;
+					padding: .5rem;
+					font-size: 16px;
+					@include transition((color .3s ease, text-shadow .5s ease));
+
+					&.active,
+					&:hover{
+						@include text-shadow(0 0 2px #f5f5f5);
+					}
+				}
+			}
+		}
+	}
+}
