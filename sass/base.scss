@@ -1,3 +1,4 @@
+@import 'fonts';
 @import 'material';
 @import 'functions';
 
@@ -7,6 +8,97 @@ body,html{ @include init; }
 
 body{
 	@include gradient(radial, (#eeeeee , #757575));
+
+	&.home{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: #6AB5D4;
+							}
+						}
+
+						.edge{
+							background: #4C9CBD;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.projects{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: #309034;
+							}
+						}
+
+						.edge{
+							background: #27822B;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.colaborations{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: #04756A;
+							}
+						}
+
+						.edge{
+							background: #026D63;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.contact{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: #C16E25;
+							}
+						}
+
+						.edge{
+							background: #B3631D;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 img.responsive-img,
@@ -22,8 +114,8 @@ video.responsive-video {
 	z-index: 2;
 	left: 0;
 	width: 100%;
-	background: rgba(130,130,130,.4);
-	@include box-shadow(0 1px 4px rgba(0,0,0,.3));
+	background: rgba(97, 97, 97, 0.0);
+	@include box-shadow(0 1px 4px rgba(0,0,0,0));
 
 	.logo{
 		max-width: 55px;
@@ -39,18 +131,113 @@ video.responsive-video {
 
 			li{
 				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				@include border-radius(2px);
+
+				&.active,
+				&:hover{
+
+					.edge{
+						&.top,
+						&.bottom{
+							width: 100%;
+						}
+
+						&.left,
+						&.right{
+							height: 100%;
+						}
+					}
+
+					a{
+						color: #111;
+						@include text-shadow(0 0 1px transparent);
+
+						&:after,
+						&:before{
+							width: 50%;
+						}
+					}
+
+				}
 
 				a{
-					color: #212121;
+					color: white;
 					display: block;
 					font-weight: bold;
 					padding: .5rem;
-					font-size: 16px;
-					@include transition((color .3s ease, text-shadow .5s ease));
+					font-size: 20px;
+    				font-weight: 400;
+    				letter-spacing: 1px;
+					font-family: 'Yanone Kaffeesatz', sans-serif;
+					@include transition((color .5s .45s ease, text-shadow .5s ease));
+					@include text-shadow(0 0 1px #111);
+
+					&:after,
+					&:before{
+						position: absolute;
+						top: 0;
+						width: 0%;
+						height: 100%;
+						z-index: -1;
+						content: '';
+						@include transition(width .5s .4s ease);
+					}
+
+					&:after{
+						left: 0;
+						@include gradient(linear, (right, #fff, #E6E2E2)); 
+					}
+					&:before{
+						right: 0;
+						@include gradient(linear, (left, #fff, #E6E2E2)); 
+					}
 
 					&.active,
 					&:hover{
-						@include text-shadow(0 0 2px #f5f5f5);
+						//@include text-shadow(0 0 2px #323232);
+					}
+				}
+
+				.edge{
+					position: absolute;
+					background: rgba(17, 17, 17, 0.82);
+					content: '';
+					@include transition((width .13s ease,height .13s ease));
+
+					&.right,
+					&.left{
+						background: #111;
+					}
+
+					&.bottom{
+						height: 2px;
+						bottom: 0;
+						left: 0;
+						width: 0;
+					}
+
+					&.right{
+						bottom: 0;
+						right: 0;
+						height: 0;
+						width: 2px;
+						@include transition-delay(.14s);
+					}
+					&.top{
+						top: 0;
+						right: 0;
+						height: 2px;
+						width: 0;
+						@include transition-delay(.28s);
+					}
+					&.left{
+						top: 0;
+						left: 0;
+						height: 0;
+						width: 2px;
+						@include transition-delay(.30s);
 					}
 				}
 			}
@@ -117,6 +304,12 @@ video.responsive-video {
 			}
 		}
 	}
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	background: white;
+	@include transition(all .25s ease);
+	@include box-shadow(0 0 3px 1px rgba(0, 0, 0, 0.68));
 }
 
 @import 'keyframes';

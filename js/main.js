@@ -139,7 +139,7 @@ var App = {
       this.renderer.setSize(this.const.WINDOW_WIDTH, this.const.WINDOW_HEIGHT);
       
       // le agregamos un color de fondo al render
-      this.renderer.setClearColor( 0xaaaaaa );
+      this.renderer.setClearColor( THREE.ColorKeywords.skyblue );
       
       // añadimos la gama de entrada
       this.renderer.gammaInput = true;
@@ -237,6 +237,36 @@ var App = {
         // 	App.events.edgesHelper(App.objects.worldmap, 0x000000);
         // 	App.events.faceNormalHelper(App.objects.worldmap, 5, 0x000000, 1);
         // 	App.events.vertexNormalHelper(App.objects.worldmap, 5, 0xff0000, 1);
+            // create a canvas element
+
+
+
+
+            // add 3D text
+            /*var materialFront = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+            var materialSide = new THREE.MeshBasicMaterial( { color: 0x000088 } );
+            var materialArray = [ materialFront, materialSide ];
+            var textGeom = new THREE.TextGeometry( "dmsanchez86", 
+            {
+                size: 30, height: 4, curveSegments: 3,
+                font: "helvetiker", weight: "bold", style: "normal",
+                bevelThickness: 1, bevelSize: 2, bevelEnabled: true,
+                material: 0, extrudeMaterial: 1
+            });
+            // font: helvetiker, gentilis, droid sans, droid serif, optimer
+            // weight: normal, bold
+            
+            var textMaterial = new THREE.MeshFaceMaterial(materialArray);
+            var textMesh = new THREE.Mesh(textGeom, textMaterial );
+            
+            textGeom.computeBoundingBox();
+            var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+            
+            textMesh.position.set( -0.5 * textWidth, 50, 100 );
+            textMesh.rotation.x = -Math.PI / 4;
+            scene.add(textMesh);*/
+    
+
         },
 
         // funcion que me carga el plano
@@ -260,7 +290,7 @@ var App = {
             App.objects.plane = new THREE.Mesh(planeGeometry, planeMaterial);
             App.objects.plane.receiveShadow = true;
             App.objects.plane.castShadow = true;
-            App.objects.plane.visible = true;
+            App.objects.plane.visible = false;
         
             // Rotacion del plano
             App.objects.plane.rotation.x = -0.5 * Math.PI;
@@ -386,7 +416,7 @@ var App = {
 		case "MeshBasicMaterial" :
 
 			material = new THREE.MeshBasicMaterial({
-				color: 0xff0000,
+				color: THREE.ColorKeywords.deeppink,
 				vertexColors: THREE.FaceColors
 
 			});
@@ -463,11 +493,23 @@ var App = {
 
 $().ready(function(){
 	$('#main').fullpage({
-        sectionsColor: [],
+        sectionsColor: ["rgb(135, 206, 235)","#61AB64","#00897b", "rgba(214, 127, 53, 0.95)"],
         anchors: ['home', 'projects', 'colaborations', 'contact'],
         menu: '#menu',
         css3: true,
-        scrollingSpeed: 700
+        navigation: true,
+        //navigationTooltips: ['Home', 'Projects', 'Colaborations', 'Contact'],
+        //showActiveTooltip: true,
+        scrollingSpeed: 1300,
+        scrollBar: false,
+        //fitToSection: true,
+        //fitToSectionDelay: 2000,
+        easing: 'easeInQuart',
+        afterLoad: function(anchorLink, index){
+            console.log({anchorLink, index});
+            $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
+            $('body').removeClass('home projects colaborations contact').addClass(anchorLink);
+        }
     });
 
     App.init();

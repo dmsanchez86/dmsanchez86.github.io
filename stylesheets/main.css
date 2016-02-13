@@ -1,3 +1,45 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Yanone Kaffeesatz Light"), local("YanoneKaffeesatz-Light"), url(../fonts/We_iSDqttE3etzfdfhuPRV_VQuBLpnllPs8BB5MjWqY.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Yanone Kaffeesatz Light"), local("YanoneKaffeesatz-Light"), url(../fonts/We_iSDqttE3etzfdfhuPRcITWGgmQvtcmgaGakhz0f4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+/* latin-ext */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Yanone Kaffeesatz Regular"), local("YanoneKaffeesatz-Regular"), url(../fonts/YDAoLskQQ5MOAgvHUQCcLV83L2yn_om9bG0a6EHWBso.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Yanone Kaffeesatz Regular"), local("YanoneKaffeesatz-Regular"), url(../fonts/YDAoLskQQ5MOAgvHUQCcLfGwxTS8d1Q9KiDNCMKLFUM.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+/* latin-ext */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Yanone Kaffeesatz Bold"), local("YanoneKaffeesatz-Bold"), url(../fonts/We_iSDqttE3etzfdfhuPRcccuzE5yCkGgbLL57XEJls.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+/* latin */
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Yanone Kaffeesatz Bold"), local("YanoneKaffeesatz-Bold"), url(../fonts/We_iSDqttE3etzfdfhuPRfZL2QQ6ZygscP6wIFo8mp8.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -2844,6 +2886,30 @@ body {
   background-image: -ms-radial-gradient(#eeeeee, #757575);
   background-image: -o-radial-gradient(#eeeeee, #757575);
   background-image: radial-gradient(#eeeeee, #757575); }
+  body.home .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.home .navigator_content .navigator ul li a:before, body.home .navigator_content .navigator ul li a:after {
+      background: #6AB5D4; }
+  body.home .navigator_content .navigator ul li .edge {
+    background: #4C9CBD; }
+  body.projects .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.projects .navigator_content .navigator ul li a:before, body.projects .navigator_content .navigator ul li a:after {
+      background: #309034; }
+  body.projects .navigator_content .navigator ul li .edge {
+    background: #27822B; }
+  body.colaborations .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.colaborations .navigator_content .navigator ul li a:before, body.colaborations .navigator_content .navigator ul li a:after {
+      background: #04756A; }
+  body.colaborations .navigator_content .navigator ul li .edge {
+    background: #026D63; }
+  body.contact .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.contact .navigator_content .navigator ul li a:before, body.contact .navigator_content .navigator ul li a:after {
+      background: #C16E25; }
+  body.contact .navigator_content .navigator ul li .edge {
+    background: #B3631D; }
 
 img.responsive-img,
 video.responsive-video {
@@ -2857,13 +2923,13 @@ video.responsive-video {
   z-index: 2;
   left: 0;
   width: 100%;
-  background: rgba(130, 130, 130, 0.4);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -khtml-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+  background: rgba(97, 97, 97, 0);
+  -webkit-box-shadow: 0 1px 4px transparent;
+  -khtml-box-shadow: 0 1px 4px transparent;
+  -moz-box-shadow: 0 1px 4px transparent;
+  -ms-box-shadow: 0 1px 4px transparent;
+  -o-box-shadow: 0 1px 4px transparent;
+  box-shadow: 0 1px 4px transparent; }
   .navigator_content .logo {
     max-width: 55px;
     display: inline-block; }
@@ -2873,26 +2939,129 @@ video.responsive-video {
     .navigator_content .navigator ul {
       list-style: none; }
       .navigator_content .navigator ul li {
-        display: inline-block; }
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        -khtml-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px; }
+        .navigator_content .navigator ul li.active .edge.top, .navigator_content .navigator ul li.active .edge.bottom, .navigator_content .navigator ul li:hover .edge.top, .navigator_content .navigator ul li:hover .edge.bottom {
+          width: 100%; }
+        .navigator_content .navigator ul li.active .edge.left, .navigator_content .navigator ul li.active .edge.right, .navigator_content .navigator ul li:hover .edge.left, .navigator_content .navigator ul li:hover .edge.right {
+          height: 100%; }
+        .navigator_content .navigator ul li.active a, .navigator_content .navigator ul li:hover a {
+          color: #111;
+          -webkit-text-shadow: 0 0 1px transparent;
+          -khtml-text-shadow: 0 0 1px transparent;
+          -moz-text-shadow: 0 0 1px transparent;
+          -ms-text-shadow: 0 0 1px transparent;
+          -o-text-shadow: 0 0 1px transparent;
+          text-shadow: 0 0 1px transparent; }
+          .navigator_content .navigator ul li.active a:after, .navigator_content .navigator ul li.active a:before, .navigator_content .navigator ul li:hover a:after, .navigator_content .navigator ul li:hover a:before {
+            width: 50%; }
         .navigator_content .navigator ul li a {
-          color: #212121;
+          color: white;
           display: block;
           font-weight: bold;
           padding: .5rem;
-          font-size: 16px;
-          -webkit-transition: color 0.3s ease, text-shadow 0.5s ease;
-          -khtml-transition: color 0.3s ease, text-shadow 0.5s ease;
-          -moz-transition: color 0.3s ease, text-shadow 0.5s ease;
-          -ms-transition: color 0.3s ease, text-shadow 0.5s ease;
-          -o-transition: color 0.3s ease, text-shadow 0.5s ease;
-          transition: color 0.3s ease, text-shadow 0.5s ease; }
-          .navigator_content .navigator ul li a.active, .navigator_content .navigator ul li a:hover {
-            -webkit-text-shadow: 0 0 2px #f5f5f5;
-            -khtml-text-shadow: 0 0 2px #f5f5f5;
-            -moz-text-shadow: 0 0 2px #f5f5f5;
-            -ms-text-shadow: 0 0 2px #f5f5f5;
-            -o-text-shadow: 0 0 2px #f5f5f5;
-            text-shadow: 0 0 2px #f5f5f5; }
+          font-size: 20px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          font-family: 'Yanone Kaffeesatz', sans-serif;
+          -webkit-transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          -khtml-transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          -moz-transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          -ms-transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          -o-transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          transition: color 0.5s 0.45s ease, text-shadow 0.5s ease;
+          -webkit-text-shadow: 0 0 1px #111;
+          -khtml-text-shadow: 0 0 1px #111;
+          -moz-text-shadow: 0 0 1px #111;
+          -ms-text-shadow: 0 0 1px #111;
+          -o-text-shadow: 0 0 1px #111;
+          text-shadow: 0 0 1px #111; }
+          .navigator_content .navigator ul li a:after, .navigator_content .navigator ul li a:before {
+            position: absolute;
+            top: 0;
+            width: 0%;
+            height: 100%;
+            z-index: -1;
+            content: '';
+            -webkit-transition: width 0.5s 0.4s ease;
+            -khtml-transition: width 0.5s 0.4s ease;
+            -moz-transition: width 0.5s 0.4s ease;
+            -ms-transition: width 0.5s 0.4s ease;
+            -o-transition: width 0.5s 0.4s ease;
+            transition: width 0.5s 0.4s ease; }
+          .navigator_content .navigator ul li a:after {
+            left: 0;
+            background-image: -webkit-linear-gradient(right, #fff, #E6E2E2);
+            background-image: -khtml-linear-gradient(right, #fff, #E6E2E2);
+            background-image: -moz-linear-gradient(right, #fff, #E6E2E2);
+            background-image: -ms-linear-gradient(right, #fff, #E6E2E2);
+            background-image: -o-linear-gradient(right, #fff, #E6E2E2);
+            background-image: linear-gradient(right, #fff, #E6E2E2); }
+          .navigator_content .navigator ul li a:before {
+            right: 0;
+            background-image: -webkit-linear-gradient(left, #fff, #E6E2E2);
+            background-image: -khtml-linear-gradient(left, #fff, #E6E2E2);
+            background-image: -moz-linear-gradient(left, #fff, #E6E2E2);
+            background-image: -ms-linear-gradient(left, #fff, #E6E2E2);
+            background-image: -o-linear-gradient(left, #fff, #E6E2E2);
+            background-image: linear-gradient(left, #fff, #E6E2E2); }
+        .navigator_content .navigator ul li .edge {
+          position: absolute;
+          background: rgba(17, 17, 17, 0.82);
+          content: '';
+          -webkit-transition: width 0.13s ease, height 0.13s ease;
+          -khtml-transition: width 0.13s ease, height 0.13s ease;
+          -moz-transition: width 0.13s ease, height 0.13s ease;
+          -ms-transition: width 0.13s ease, height 0.13s ease;
+          -o-transition: width 0.13s ease, height 0.13s ease;
+          transition: width 0.13s ease, height 0.13s ease; }
+          .navigator_content .navigator ul li .edge.right, .navigator_content .navigator ul li .edge.left {
+            background: #111; }
+          .navigator_content .navigator ul li .edge.bottom {
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            width: 0; }
+          .navigator_content .navigator ul li .edge.right {
+            bottom: 0;
+            right: 0;
+            height: 0;
+            width: 2px;
+            -webkit-transition-delay: 0.14s;
+            -khtml-transition-delay: 0.14s;
+            -moz-transition-delay: 0.14s;
+            -ms-transition-delay: 0.14s;
+            -o-transition-delay: 0.14s;
+            transition-delay: 0.14s; }
+          .navigator_content .navigator ul li .edge.top {
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 0;
+            -webkit-transition-delay: 0.28s;
+            -khtml-transition-delay: 0.28s;
+            -moz-transition-delay: 0.28s;
+            -ms-transition-delay: 0.28s;
+            -o-transition-delay: 0.28s;
+            transition-delay: 0.28s; }
+          .navigator_content .navigator ul li .edge.left {
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 2px;
+            -webkit-transition-delay: 0.3s;
+            -khtml-transition-delay: 0.3s;
+            -moz-transition-delay: 0.3s;
+            -ms-transition-delay: 0.3s;
+            -o-transition-delay: 0.3s;
+            transition-delay: 0.3s; }
 
 .section {
   padding: 0; }
@@ -3002,6 +3171,21 @@ video.responsive-video {
       animation: point4 2s linear 0s infinite; }
     .loader .point:nth-child(5):before {
       display: none; }
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+  -khtml-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+  -ms-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+  -o-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68); }
 
 @-webkit-keyframes point1 {
   0% {
