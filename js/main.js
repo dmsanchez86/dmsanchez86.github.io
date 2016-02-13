@@ -74,6 +74,7 @@ var App = {
         this.createAxis();
         //this.createTooth('primer_molar');
         this.createLights();
+        this.loader.hide();
     },
 
     // funcion que me crea el contenedor
@@ -447,7 +448,16 @@ var App = {
 			break;
 		}
 
-	}
+	},
+
+    loader: {
+        hide: function(){
+            $('.loader').fadeOut(1000);
+        },
+        show: function(){
+            $('.loader').fadeIn(1000);
+        },
+    }
 }
 
 
