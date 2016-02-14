@@ -1,4 +1,5 @@
 @import 'fonts';
+@import 'variables';
 @import 'material';
 @import 'functions';
 
@@ -365,6 +366,31 @@ video.responsive-video {
 				display: none;
 			}
 		}
+	}
+}
+
+.project{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+
+	.title{
+		height: 70px;
+		display: inline-block;
+		@include center-absolute(absolute);
+		
+		a{
+			font-size: 50px;
+			color: white;
+			font-family: 'Pacifico';
+			@include text-3d;
+			@include transition(all .35s ease-in);
+		}
+	}
+
+	img{
+		max-width: 200px;
 	}
 }
 

@@ -3235,6 +3235,46 @@ video.responsive-video {
     .loader .point:nth-child(5):before {
       display: none; }
 
+.project {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  text-align: center; }
+  .project .title {
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+    .project .title a {
+      font-size: 50px;
+      color: white;
+      font-family: 'Pacifico';
+      -webkit-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      -khtml-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      -moz-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      -ms-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      -o-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
+      -webkit-transition: all 0.35s ease-in;
+      -khtml-transition: all 0.35s ease-in;
+      -moz-transition: all 0.35s ease-in;
+      -ms-transition: all 0.35s ease-in;
+      -o-transition: all 0.35s ease-in;
+      transition: all 0.35s ease-in; }
+      .project .title a:hover {
+        -webkit-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
+        -khtml-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
+        -moz-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
+        -ms-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
+        -o-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
+        text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111; }
+  .project img {
+    max-width: 200px; }
+
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: white;
   -webkit-transition: all 0.25s ease;
