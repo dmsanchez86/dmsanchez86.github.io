@@ -388,6 +388,23 @@ video.responsive-video {
 				}
 			}
 		}
+
+		.button_menu{
+			display: inline-block;
+		    width: 35px;
+		    height: 35px;
+		    border: solid 2px white;
+		    float: right;
+		    display: none;
+
+		    > span{
+		    	border-top: solid 2px white;
+			    display: block;
+			    width: 80%;
+			    margin: 6px auto;
+			    border-radius: 30%;
+		    }
+		}
 	}
 }
 
