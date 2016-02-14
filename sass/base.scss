@@ -29,6 +29,14 @@ body{
 					}
 				}
 			}
+			.logo{
+				svg{
+					circle{
+						fill: #6AB5D4;
+						stroke: #4C9CBD;
+					}
+				}
+			}
 		}
 	}
 
@@ -49,6 +57,14 @@ body{
 						.edge{
 							background: #27822B;
 						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: #309034;
+						stroke: #27822B;
 					}
 				}
 			}
@@ -75,6 +91,14 @@ body{
 					}
 				}
 			}
+			.logo{
+				svg{
+					circle{
+						fill: #04756A;
+						stroke: #026D63;
+					}
+				}
+			}
 		}
 	}
 	&.contact{
@@ -94,6 +118,14 @@ body{
 						.edge{
 							background: #B3631D;
 						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: #C16E25;
+						stroke: #B3631D;
 					}
 				}
 			}
@@ -120,6 +152,36 @@ video.responsive-video {
 	.logo{
 		max-width: 55px;
 		display: inline-block;
+
+		svg{
+			width: 55px;
+			height: 55px;
+
+			circle{
+				fill:#E5E1E1; 
+				stroke:#E5E1E1; 
+				stroke-width:3px;
+				@include transition(all .25s ease);
+			}
+
+			text{
+				font-size:50px; 
+				font-weight:bold;
+				fill: #E8EBEC;
+				stroke-width:1;
+				stroke: transparent;
+				font-family: 'Indie Flower', cursive;
+				@include transition(all .25s ease);
+				@include text-shadow(0 0 2px rgba(0,0,0,.65));
+
+				&:last-child{
+					fill: #323232;
+				    font-size: 26px;
+				    fill: #E8EBEC;
+					font-family: 'Pacifico', cursive;
+				}
+			}
+		}
 	}
 
 	.navigator{
