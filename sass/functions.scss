@@ -555,14 +555,16 @@
 
   &:hover{
     @include text-shadow((
-      1px -1px 1px $text-3d-color-hover,
-      2px -2px 1px $text-3d-color-hover,
-      3px -3px 1px $text-3d-color-hover,
-      4px -4px 1px $text-3d-color-hover,
-      5px -5px 1px $text-3d-color-hover,
-      6px -6px 1px $text-3d-color-hover,
-      7px -7px 1px $text-3d-color-hover,
-      8px -8px 1px $text-3d-color-hover,
+      2px -1px 1px $text-3d-color-hover,
+      3px -2px 1px $text-3d-color-hover,
+      4px -3px 1px $text-3d-color-hover,
+      5px -4px 1px $text-3d-color-hover,
+      6px -5px 1px $text-3d-color-hover,
+      7px -6px 1px $text-3d-color-hover,
+      8px -7px 1px $text-3d-color-hover,
+      9px -8px 1px $text-3d-color-hover,
+      10px -9px 1px $text-3d-color-hover,
+      11px -10px 1px $text-3d-color-hover,
     ));
   }
 }

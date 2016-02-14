@@ -8,8 +8,6 @@
 body,html{ @include init; }
 
 body{
-	@include gradient(radial, (#eeeeee , #757575));
-
 	&.home{
 		.navigator_content{
 			.navigator{
@@ -20,12 +18,12 @@ body{
 
 							&:before,
 							&:after{
-								background: #6AB5D4;
+								background: $home-primary;
 							}
 						}
 
 						.edge{
-							background: #4C9CBD;
+							background: $home-secondary;
 						}
 					}
 				}
@@ -33,14 +31,27 @@ body{
 			.logo{
 				svg{
 					circle{
-						fill: #6AB5D4;
-						stroke: #4C9CBD;
+						fill: $home-primary;
+						stroke: $home-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $home-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $home-primary);
+						}
 					}
 				}
 			}
 		}
 	}
-
 	&.projects{
 		.navigator_content{
 			.navigator{
@@ -51,12 +62,12 @@ body{
 
 							&:before,
 							&:after{
-								background: #309034;
+								background: $projects-primary;
 							}
 						}
 
 						.edge{
-							background: #27822B;
+							background: $projects-secondary;
 						}
 					}
 				}
@@ -64,14 +75,27 @@ body{
 			.logo{
 				svg{
 					circle{
-						fill: #309034;
-						stroke: #27822B;
+						fill: $projects-primary;
+						stroke: $projects-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $projects-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $projects-primary);
+						}
 					}
 				}
 			}
 		}
 	}
-
 	&.colaborations{
 		.navigator_content{
 			.navigator{
@@ -82,12 +106,12 @@ body{
 
 							&:before,
 							&:after{
-								background: #04756A;
+								background: $colaborations-primary;
 							}
 						}
 
 						.edge{
-							background: #026D63;
+							background: $colaborations-secondary;
 						}
 					}
 				}
@@ -95,8 +119,22 @@ body{
 			.logo{
 				svg{
 					circle{
-						fill: #04756A;
-						stroke: #026D63;
+						fill: $colaborations-primary;
+						stroke: $colaborations-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $colaborations-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $colaborations-primary);
+						}
 					}
 				}
 			}
@@ -112,12 +150,12 @@ body{
 
 							&:before,
 							&:after{
-								background: #C16E25;
+								background: $contact-primary;
 							}
 						}
 
 						.edge{
-							background: #B3631D;
+							background: $contact-secondary;
 						}
 					}
 				}
@@ -125,8 +163,22 @@ body{
 			.logo{
 				svg{
 					circle{
-						fill: #C16E25;
-						stroke: #B3631D;
+						fill: $contact-primary;
+						stroke: $contact-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $contact-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $contact-primary);
+						}
 					}
 				}
 			}
@@ -153,6 +205,37 @@ video.responsive-video {
 	.logo{
 		max-width: 55px;
 		display: inline-block;
+		position: relative;
+
+		&:after{
+			content: '';
+			width: 50px;
+			height: 50px;
+			border: solid 3px rgba(255,255,255,.25);
+			background: rgba(255,255,255,.15);
+			@include center-absolute(absolute);
+			top: -8px;
+		    left: 3px;
+		    z-index: -1;
+		    opacity: 0;
+			@include border-radius(50%);
+			@include transform(scale(0));
+			@include transition((opacity .5s ease, transform .3s ease ));
+		}
+
+		&:hover{
+			&:after{
+				@include animation(scale_logo 1s 1 ease);
+			}
+		}
+
+		&:focus{
+			outline: none;
+
+			&:after{
+				@include animation(scale_logo 1.5s infinite ease);
+			}
+		}
 
 		svg{
 			width: 55px;
@@ -384,8 +467,8 @@ video.responsive-video {
 			font-size: 50px;
 			color: white;
 			font-family: 'Pacifico';
+			@include transition(all .35s linear);
 			@include text-3d;
-			@include transition(all .35s ease-in);
 		}
 	}
 
@@ -394,10 +477,20 @@ video.responsive-video {
 	}
 }
 
-#fp-nav ul li a span, .fp-slidesNav ul li a span{
-	background: white;
-	@include transition(all .25s ease);
-	@include box-shadow(0 0 3px 1px rgba(0, 0, 0, 0.68));
+#fp-nav{ 
+    top: 92%;
+
+	ul {
+		li {
+			a {
+				span{
+					background: white;
+					@include transition(all .5s ease);
+					@include box-shadow(0 0 3px 1px rgba(0, 0, 0, 0.68));
+				}
+			}
+		}
+	}
 }
 
 @import 'keyframes';

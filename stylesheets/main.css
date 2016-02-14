@@ -2893,49 +2893,98 @@ body, html {
   height: 100%;
   display: block; }
 
-body {
-  background-image: -webkit-radial-gradient(#eeeeee, #757575);
-  background-image: -khtml-radial-gradient(#eeeeee, #757575);
-  background-image: -moz-radial-gradient(#eeeeee, #757575);
-  background-image: -ms-radial-gradient(#eeeeee, #757575);
-  background-image: -o-radial-gradient(#eeeeee, #757575);
-  background-image: radial-gradient(#eeeeee, #757575); }
-  body.home .navigator_content .navigator ul li a {
-    color: #E8EBEC; }
-    body.home .navigator_content .navigator ul li a:before, body.home .navigator_content .navigator ul li a:after {
-      background: #6AB5D4; }
-  body.home .navigator_content .navigator ul li .edge {
-    background: #4C9CBD; }
-  body.home .navigator_content .logo svg circle {
-    fill: #6AB5D4;
-    stroke: #4C9CBD; }
-  body.projects .navigator_content .navigator ul li a {
-    color: #E8EBEC; }
-    body.projects .navigator_content .navigator ul li a:before, body.projects .navigator_content .navigator ul li a:after {
-      background: #309034; }
-  body.projects .navigator_content .navigator ul li .edge {
-    background: #27822B; }
-  body.projects .navigator_content .logo svg circle {
-    fill: #309034;
-    stroke: #27822B; }
-  body.colaborations .navigator_content .navigator ul li a {
-    color: #E8EBEC; }
-    body.colaborations .navigator_content .navigator ul li a:before, body.colaborations .navigator_content .navigator ul li a:after {
-      background: #04756A; }
-  body.colaborations .navigator_content .navigator ul li .edge {
-    background: #026D63; }
-  body.colaborations .navigator_content .logo svg circle {
-    fill: #04756A;
-    stroke: #026D63; }
-  body.contact .navigator_content .navigator ul li a {
-    color: #E8EBEC; }
-    body.contact .navigator_content .navigator ul li a:before, body.contact .navigator_content .navigator ul li a:after {
-      background: #C16E25; }
-  body.contact .navigator_content .navigator ul li .edge {
-    background: #B3631D; }
-  body.contact .navigator_content .logo svg circle {
-    fill: #C16E25;
-    stroke: #B3631D; }
+body.home .navigator_content .navigator ul li a {
+  color: #E8EBEC; }
+  body.home .navigator_content .navigator ul li a:before, body.home .navigator_content .navigator ul li a:after {
+    background: #6AB5D4; }
+body.home .navigator_content .navigator ul li .edge {
+  background: #4C9CBD; }
+body.home .navigator_content .logo svg circle {
+  fill: #6AB5D4;
+  stroke: #4C9CBD; }
+body.home #fp-nav ul li a span {
+  background: #4C9CBD;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 3px 1px #6AB5D4;
+  -khtml-box-shadow: 0 0 3px 1px #6AB5D4;
+  -moz-box-shadow: 0 0 3px 1px #6AB5D4;
+  -ms-box-shadow: 0 0 3px 1px #6AB5D4;
+  -o-box-shadow: 0 0 3px 1px #6AB5D4;
+  box-shadow: 0 0 3px 1px #6AB5D4; }
+body.projects .navigator_content .navigator ul li a {
+  color: #E8EBEC; }
+  body.projects .navigator_content .navigator ul li a:before, body.projects .navigator_content .navigator ul li a:after {
+    background: #309034; }
+body.projects .navigator_content .navigator ul li .edge {
+  background: #27822B; }
+body.projects .navigator_content .logo svg circle {
+  fill: #309034;
+  stroke: #27822B; }
+body.projects #fp-nav ul li a span {
+  background: #27822B;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 3px 1px #309034;
+  -khtml-box-shadow: 0 0 3px 1px #309034;
+  -moz-box-shadow: 0 0 3px 1px #309034;
+  -ms-box-shadow: 0 0 3px 1px #309034;
+  -o-box-shadow: 0 0 3px 1px #309034;
+  box-shadow: 0 0 3px 1px #309034; }
+body.colaborations .navigator_content .navigator ul li a {
+  color: #E8EBEC; }
+  body.colaborations .navigator_content .navigator ul li a:before, body.colaborations .navigator_content .navigator ul li a:after {
+    background: #04756A; }
+body.colaborations .navigator_content .navigator ul li .edge {
+  background: #026D63; }
+body.colaborations .navigator_content .logo svg circle {
+  fill: #04756A;
+  stroke: #026D63; }
+body.colaborations #fp-nav ul li a span {
+  background: #026D63;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 3px 1px #04756A;
+  -khtml-box-shadow: 0 0 3px 1px #04756A;
+  -moz-box-shadow: 0 0 3px 1px #04756A;
+  -ms-box-shadow: 0 0 3px 1px #04756A;
+  -o-box-shadow: 0 0 3px 1px #04756A;
+  box-shadow: 0 0 3px 1px #04756A; }
+body.contact .navigator_content .navigator ul li a {
+  color: #E8EBEC; }
+  body.contact .navigator_content .navigator ul li a:before, body.contact .navigator_content .navigator ul li a:after {
+    background: #C16E25; }
+body.contact .navigator_content .navigator ul li .edge {
+  background: #B3631D; }
+body.contact .navigator_content .logo svg circle {
+  fill: #C16E25;
+  stroke: #B3631D; }
+body.contact #fp-nav ul li a span {
+  background: #B3631D;
+  -webkit-transition: all 0.25s ease;
+  -khtml-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 0 3px 1px #C16E25;
+  -khtml-box-shadow: 0 0 3px 1px #C16E25;
+  -moz-box-shadow: 0 0 3px 1px #C16E25;
+  -ms-box-shadow: 0 0 3px 1px #C16E25;
+  -o-box-shadow: 0 0 3px 1px #C16E25;
+  box-shadow: 0 0 3px 1px #C16E25; }
 
 img.responsive-img,
 video.responsive-video {
@@ -2958,7 +3007,58 @@ video.responsive-video {
   box-shadow: 0 1px 4px transparent; }
   .navigator_content .logo {
     max-width: 55px;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
+    .navigator_content .logo:after {
+      content: '';
+      width: 50px;
+      height: 50px;
+      border: solid 3px rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.15);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      top: -8px;
+      left: 3px;
+      z-index: -1;
+      opacity: 0;
+      -webkit-border-radius: 50%;
+      -khtml-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transform: scale(0);
+      -khtml-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: opacity 0.5s ease, transform 0.3s ease;
+      -khtml-transition: opacity 0.5s ease, transform 0.3s ease;
+      -moz-transition: opacity 0.5s ease, transform 0.3s ease;
+      -ms-transition: opacity 0.5s ease, transform 0.3s ease;
+      -o-transition: opacity 0.5s ease, transform 0.3s ease;
+      transition: opacity 0.5s ease, transform 0.3s ease; }
+    .navigator_content .logo:hover:after {
+      -webkit-animation: scale_logo 1s 1 ease;
+      -khtml-animation: scale_logo 1s 1 ease;
+      -moz-animation: scale_logo 1s 1 ease;
+      -ms-animation: scale_logo 1s 1 ease;
+      -o-animation: scale_logo 1s 1 ease;
+      animation: scale_logo 1s 1 ease; }
+    .navigator_content .logo:focus {
+      outline: none; }
+      .navigator_content .logo:focus:after {
+        -webkit-animation: scale_logo 1.5s infinite ease;
+        -khtml-animation: scale_logo 1.5s infinite ease;
+        -moz-animation: scale_logo 1.5s infinite ease;
+        -ms-animation: scale_logo 1.5s infinite ease;
+        -o-animation: scale_logo 1.5s infinite ease;
+        animation: scale_logo 1.5s infinite ease; }
     .navigator_content .logo svg {
       width: 55px;
       height: 55px; }
@@ -3253,42 +3353,44 @@ video.responsive-video {
       font-size: 50px;
       color: white;
       font-family: 'Pacifico';
+      -webkit-transition: all 0.35s linear;
+      -khtml-transition: all 0.35s linear;
+      -moz-transition: all 0.35s linear;
+      -ms-transition: all 0.35s linear;
+      -o-transition: all 0.35s linear;
+      transition: all 0.35s linear;
       -webkit-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       -khtml-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       -moz-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       -ms-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       -o-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
-      text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
-      -webkit-transition: all 0.35s ease-in;
-      -khtml-transition: all 0.35s ease-in;
-      -moz-transition: all 0.35s ease-in;
-      -ms-transition: all 0.35s ease-in;
-      -o-transition: all 0.35s ease-in;
-      transition: all 0.35s ease-in; }
+      text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232; }
       .project .title a:hover {
-        -webkit-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
-        -khtml-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
-        -moz-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
-        -ms-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
-        -o-text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111;
-        text-shadow: 1px -1px 1px #111, 2px -2px 1px #111, 3px -3px 1px #111, 4px -4px 1px #111, 5px -5px 1px #111, 6px -6px 1px #111, 7px -7px 1px #111, 8px -8px 1px #111; }
+        -webkit-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+        -khtml-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+        -moz-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+        -ms-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+        -o-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+        text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111; }
   .project img {
     max-width: 200px; }
 
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  background: white;
-  -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
-  -khtml-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
-  -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
-  -ms-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
-  -o-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68); }
+#fp-nav {
+  top: 92%; }
+  #fp-nav ul li a span {
+    background: white;
+    -webkit-transition: all 0.5s ease;
+    -khtml-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+    -khtml-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+    -ms-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+    -o-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.68); }
 
 @-webkit-keyframes point1 {
   0% {
@@ -3664,5 +3766,38 @@ video.responsive-video {
     -o-transform: scale(3);
     transform: scale(3);
     opacity: 1; } }
+@keyframes scale_logo {
+  0% {
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(1.3);
+    -khtml-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.3);
+    -khtml-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: .5; }
+  100% {
+    -webkit-transform: scale(1.3);
+    -khtml-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0; } }
 
 /*# sourceMappingURL=main.css.map */

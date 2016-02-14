@@ -97,6 +97,26 @@ var App = {
         window.addEventListener( 'resize', onWindowResize, false );
 
 
+        var bracket = new THREE.JSONLoader();
+        
+        bracket.load('objects/warrior.json', function(object){
+            var material = new THREE.MeshLambertMaterial( {
+                color: 0x555555,
+            } );
+            
+            var mesh = new THREE.Mesh( object, material );
+            mesh.scale.set( 22, 22,22 );
+            mesh.position.set(-71,190,0);
+            mesh.rotation.x = 3.14;
+            mesh.rotation.y = -7.9;
+            mesh.rotation.z = 0;
+            mesh.visible = true;
+            
+            App.objects.bracket = mesh;
+            
+            App.scene.add( mesh );
+        });
+
         //this.createControls();
         //this.createAmbientScene();
         //this.events.fullScreen();
@@ -143,7 +163,7 @@ var App = {
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000 );
         
         // posiciono la camara
-        this.camera.position.set(0,0,500);
+        this.camera.position.set(0,0,700);
         
         // rotacion de la camara
         //this.camera.rotation.set(-1.5707,9.935,1.4567);
@@ -533,6 +553,7 @@ $().ready(function(){
             console.log({anchorLink, index});
             $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
             $('body').removeClass('home projects colaborations contact').addClass(anchorLink);
+            $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
         }
     });
 
