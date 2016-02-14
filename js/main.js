@@ -23,6 +23,12 @@ var App = {
     // Estadisticas del renderizado y consumo de memoria
     stats: null,
 
+    mouseX : 0, 
+    mouseY : 0,
+
+    windowHalfX : window.innerWidth / 2,
+    windowHalfY : window.innerHeight / 2,
+
     // Variables Constantes
     const: {
       WINDOW_WIDTH: window.innerWidth,
@@ -65,15 +71,40 @@ var App = {
         this.createContainer();
         this.createScene();
         this.createCamera();
+
+
+        var material = new THREE.SpriteMaterial( {
+            map: new THREE.CanvasTexture( App.generateSprite() ),
+            blending: THREE.AdditiveBlending
+        } );
+
+        for ( var i = 0; i < 1000; i++ ) {
+
+            var particle = new THREE.Sprite( material );
+
+            App.initParticle( particle, i * 10 );
+
+            App.scene.add( particle );
+        }
+
+
         this.createRender();
-        this.createControls();
+
+        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+        document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+
+        //this.createControls();
         //this.createAmbientScene();
         //this.events.fullScreen();
-        this.events.plane();
-        this.events.worldmap();
-        this.createAxis();
+        //his.events.plane();
+        //this.events.worldmap();
+        //this.createAxis();
         //this.createTooth('primer_molar');
-        this.createLights();
+        //this.createLights();
         this.loader.hide();
     },
 
@@ -109,10 +140,10 @@ var App = {
         var far = 20000;
         
         // creacion de la camara con sus parametros
-        this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000 );
         
         // posiciono la camara
-        this.camera.position.set(400,400,400);
+        this.camera.position.set(0,0,500);
         
         // rotacion de la camara
         //this.camera.rotation.set(-1.5707,9.935,1.4567);
@@ -127,10 +158,13 @@ var App = {
     // funcion que me crea el renderizado
     createRender: function(){
         
+        /*
       this.renderer = new THREE.WebGLRenderer({
           antialias: true,
           preserveDrawingBuffer: true, // funcion que me permite tomar las capturas de las caras del diente
-      }); 
+      });*/ 
+
+      this.renderer = new THREE.CanvasRenderer();
       
       // pixel del render
       this.renderer.setPixelRatio(this.const.PIXEL_RATIO);
@@ -142,14 +176,14 @@ var App = {
       this.renderer.setClearColor( THREE.ColorKeywords.skyblue );
       
       // añadimos la gama de entrada
-      this.renderer.gammaInput = true;
+      //this.renderer.gammaInput = true;
       
       // añadimos la gama de salida
-      this.renderer.gammaOutput = true;
+      //this.renderer.gammaOutput = true;
       
       // activamos las sombras en el mapa
-      this.renderer.shadowMapEnabled = true;
-      this.renderer.shadowMapSoft = true;
+      //this.renderer.shadowMapEnabled = true;
+      //this.renderer.shadowMapSoft = true;
       
       // añadimos un id al renderer(canvas)
       this.renderer.domElement.id = "canvas_3d";
@@ -192,81 +226,25 @@ var App = {
     events: {
     	// funcion que me carga el mapamundi
         worldmap: function(){
-            // cargo la textura
-            //var map = THREE.ImageUtils.loadTexture( 'textures/mapamundi.jpg' );
+
+            var map = THREE.ImageUtils.loadTexture( 'images/textures/earth.jpg' );
             
             // le asigno un material
-            var material = new THREE.MeshBasicMaterial( {
+            var material = new THREE.MeshPhongMaterial( {
                 //map: map,
-                //side: THREE.DoubleSide, 
-                //wireframe : false ,
-                color: 0x2194ce,
-                vertexColor: THREE.FaceColors,
-                //specular: 0xed1212, 
-                //emissive: 0xfff ,
-                //shininess: 80,
-                shading: THREE.FlatShading,
-                fog: true,
-                //envMaps: 'reflection',
+                color: 0xfff,
+                side: THREE.DoubleSide, 
+                wireframe : false 
             } );
-    	    
-    	    // creo la malla
-        	App.objects.worldmap = new THREE.Mesh( new THREE.SphereGeometry( 30,32,32, 0, 6.3, 0, 3.1), material );
-        	
-        	App.objects.worldmap.position.set( 0, 100, 0 );
-        	App.objects.worldmap.scale.set( 3, 3, 3 );
-        	App.objects.worldmap.castShadow = true;
-        	App.objects.worldmap.visible = true; // mostrar o ocultar el mapamundi
-        	//App.scene.add( App.objects.worldmap );
-
-        	//var geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
-        	var geometry = new THREE.SphereGeometry( 30,32,32, 0, 6.3, 0, 3.1);
-        	var mesh = new THREE.Mesh( geometry );
-
-        	App.generateVertexColors( geometry );
-
-        	mesh.material = App.chooseFromHash( mesh, geometry );
-
-            App.objects.sphere = mesh;
-
-        	mesh.scale.set( 8, 8, 8 );
-            mesh.position.y = 100;
-
-        	App.scene.add( mesh );
-        	
-        // 	App.events.edgesHelper(App.objects.worldmap, 0x000000);
-        // 	App.events.faceNormalHelper(App.objects.worldmap, 5, 0x000000, 1);
-        // 	App.events.vertexNormalHelper(App.objects.worldmap, 5, 0xff0000, 1);
-            // create a canvas element
-
-
-
-
-            // add 3D text
-            /*var materialFront = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-            var materialSide = new THREE.MeshBasicMaterial( { color: 0x000088 } );
-            var materialArray = [ materialFront, materialSide ];
-            var textGeom = new THREE.TextGeometry( "dmsanchez86", 
-            {
-                size: 30, height: 4, curveSegments: 3,
-                font: "helvetiker", weight: "bold", style: "normal",
-                bevelThickness: 1, bevelSize: 2, bevelEnabled: true,
-                material: 0, extrudeMaterial: 1
-            });
-            // font: helvetiker, gentilis, droid sans, droid serif, optimer
-            // weight: normal, bold
             
-            var textMaterial = new THREE.MeshFaceMaterial(materialArray);
-            var textMesh = new THREE.Mesh(textGeom, textMaterial );
+            // creo la malla
+            App.objects.worldmap = new THREE.Mesh( new THREE.SphereGeometry( 30,32,32, 0, 6.3, 0, 3.1), material );
             
-            textGeom.computeBoundingBox();
-            var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
-            
-            textMesh.position.set( -0.5 * textWidth, 50, 100 );
-            textMesh.rotation.x = -Math.PI / 4;
-            scene.add(textMesh);*/
-    
-
+            App.objects.worldmap.position.set( 0, 100, 0 );
+            App.objects.worldmap.scale.set( 3, 3, 3 );
+            App.objects.worldmap.castShadow = true;
+            App.objects.worldmap.visible = true; // mostrar o ocultar el mapamundi
+            App.scene.add( App.objects.worldmap );   
         },
 
         // funcion que me carga el plano
@@ -480,6 +458,52 @@ var App = {
 
 	},
 
+    generateSprite: function() {
+
+        var canvas = document.createElement( 'canvas' );
+        canvas.width = 16;
+        canvas.height = 16;
+
+        var context = canvas.getContext( '2d' );
+        var gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
+        gradient.addColorStop( 0, 'rgba(0,0,0,1)' );
+        gradient.addColorStop( 0.2, 'rgb(106, 181, 212)' );
+        gradient.addColorStop( 0.4, 'rgba(0,0,64,1)' );
+        gradient.addColorStop( 1, 'rgba(0,0,0,1)' );
+
+        context.fillStyle = gradient;
+        context.fillRect( 0, 0, canvas.width, canvas.height );
+
+        return canvas;
+
+    },
+
+    initParticle: function( particle, delay ) {
+
+        var particle = this instanceof THREE.Sprite ? this : particle;
+        var delay = delay !== undefined ? delay : 0;
+
+        particle.position.set( 0, 0, 0 );
+        particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
+
+        new TWEEN.Tween( particle )
+            .delay( delay )
+            .to( {}, 10000 )
+            .onComplete( App.initParticle )
+            .start();
+
+        new TWEEN.Tween( particle.position )
+            .delay( delay )
+            .to( { x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000 }, 10000 )
+            .start();
+
+        new TWEEN.Tween( particle.scale )
+            .delay( delay )
+            .to( { x: 0.01, y: 0.01 }, 10000 )
+            .start();
+
+    },
+
     loader: {
         hide: function(){
             $('.loader').fadeOut(1000);
@@ -525,7 +549,12 @@ function animate(){
 // render()
 function render(){
     App.renderer.render(App.scene, App.camera);
-    App.controls.update();
+
+    TWEEN.update();
+
+    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.05;
+    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.05;
+    //App.controls.update();
     
     // Giro el mapamundi
     // App.objects.worldmap.rotation.y += 0.005;
@@ -535,4 +564,48 @@ function render(){
 //     App.lights.point.position.x = Math.sin( time * 0.7 ) * 300;
 // 	App.lights.point.position.y = Math.cos( time * 0.5 ) * 400;
 // 	App.lights.point.position.z = Math.cos( time * 0.3 ) * 300;
+}
+
+function onWindowResize() {
+
+    App.windowHalfX = window.innerWidth / 2;
+    App.windowHalfY = window.innerHeight / 2;
+
+    App.camera.aspect = window.innerWidth / window.innerHeight;
+    App.camera.updateProjectionMatrix();
+
+    App.renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+function onDocumentMouseMove( event ) {
+
+    App.mouseX = event.clientX - App.windowHalfX;
+    App.mouseY = event.clientY - App.windowHalfY;
+}
+
+function onDocumentTouchStart( event ) {
+
+    if ( event.touches.length == 1 ) {
+
+        event.preventDefault();
+
+        App.mouseX = event.touches[ 0 ].pageX - App.windowHalfX;
+        App.mouseY = event.touches[ 0 ].pageY - App.windowHalfY;
+
+    }
+
+}
+
+function onDocumentTouchMove( event ) {
+
+    if ( event.touches.length == 1 ) {
+
+        event.preventDefault();
+
+        mouseX = event.touches[ 0 ].pageX - windowHalfX;
+        mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+    }
+
 }
