@@ -1,6 +1,5 @@
 'use strict';
 
-
 var App = {
     // Escena
     scene: null,
@@ -90,9 +89,11 @@ var App = {
 
         this.createRender();
 
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+        if(window.innerWidth >= 960){
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+            document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+            document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+        }
 
         window.addEventListener( 'resize', onWindowResize, false );
 
@@ -127,17 +128,15 @@ var App = {
         //this.createLights();
         this.loader.hide();
 
-        if(window.innerWidth < 980){
-            $('.button_menu').unbind('click').click(function(){
-                $('#menu').toggleClass('open');
-                $(this).fadeOut('1000');
-            });
+        $('.button_menu').unbind('click').click(function(){
+            $('#menu').toggleClass('open');
+            $(this).fadeOut('1000');
+        });
 
-            $('#menu .close_menu').unbind('click').click(function(){
-                $('#menu').removeClass('open');
-                $('.button_menu').fadeIn('1500');
-            });
-        }
+        $('#menu .close_menu').unbind('click').click(function(){
+            $('#menu').removeClass('open');
+            $('.button_menu').fadeIn('1500');
+        });
     },
 
     // funcion que me crea el contenedor
@@ -545,7 +544,6 @@ var App = {
         },
     }
 }
-
 
 $().ready(function(){
 	$('#main').fullpage({
