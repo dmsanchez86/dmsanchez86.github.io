@@ -27,6 +27,23 @@ body{
 						}
 					}
 				}
+
+				.button_menu{
+					border-color: $home-secondary;
+					background: $home-primary;
+
+					> span{
+						border-color: $home-secondary;
+					}
+
+					&:hover{
+						background: $home-secondary;
+
+						> span{
+							border-color: $home-primary;
+						}
+					}
+				}
 			}
 			.logo{
 				svg{
@@ -71,6 +88,23 @@ body{
 						}
 					}
 				}
+
+				.button_menu{
+					border-color: $projects-secondary;
+					background: $projects-primary;
+
+					> span{
+						border-color: $projects-secondary;
+					}
+
+					&:hover{
+						background: $projects-secondary;
+
+						> span{
+							border-color: $projects-primary;
+						}
+					}
+				}
 			}
 			.logo{
 				svg{
@@ -96,7 +130,7 @@ body{
 			}
 		}
 	}
-	&.colaborations{
+	&.collaborations{
 		.navigator_content{
 			.navigator{
 				ul{
@@ -112,6 +146,23 @@ body{
 
 						.edge{
 							background: $colaborations-secondary;
+						}
+					}
+				}
+
+				.button_menu{
+					border-color: $colaborations-secondary;
+					background: $colaborations-primary;
+
+					> span{
+						border-color: $colaborations-secondary;
+					}
+
+					&:hover{
+						background: $colaborations-secondary;
+
+						> span{
+							border-color: $colaborations-primary;
 						}
 					}
 				}
@@ -156,6 +207,22 @@ body{
 
 						.edge{
 							background: $contact-secondary;
+						}
+					}
+				}
+				.button_menu{
+					border-color: $contact-secondary;
+					background: $contact-primary;
+
+					> span{
+						border-color: $contact-secondary;
+					}
+
+					&:hover{
+						background: $contact-secondary;
+
+						> span{
+							border-color: $contact-primary;
 						}
 					}
 				}
@@ -387,6 +454,16 @@ video.responsive-video {
 					}
 				}
 			}
+
+			.close_menu{
+				position: absolute;
+				top: 2px;
+				right: 5px;
+				font-weight: bold;
+				display: none;
+				color: #E8EBEC;
+				@include text-shadow(0 0 2px rgba(0,0,0,.4));
+			}
 		}
 
 		.button_menu{
@@ -396,6 +473,9 @@ video.responsive-video {
 		    border: solid 2px white;
 		    float: right;
 		    display: none;
+		    cursor: pointer;
+		    @include border-radius(2px);
+		    @include transition(border .5s ease);
 
 		    > span{
 		    	border-top: solid 2px white;
@@ -403,6 +483,7 @@ video.responsive-video {
 			    width: 80%;
 			    margin: 6px auto;
 			    border-radius: 30%;
+			    @include transition(border .5s ease);
 		    }
 		}
 	}
@@ -510,4 +591,5 @@ video.responsive-video {
 	}
 }
 
+@import 'queries';
 @import 'keyframes';

@@ -97,7 +97,7 @@ var App = {
         window.addEventListener( 'resize', onWindowResize, false );
 
 
-        var bracket = new THREE.JSONLoader();
+        /*var bracket = new THREE.JSONLoader();
         
         bracket.load('objects/warrior.json', function(object){
             var material = new THREE.MeshLambertMaterial( {
@@ -115,7 +115,7 @@ var App = {
             App.objects.bracket = mesh;
             
             App.scene.add( mesh );
-        });
+        });*/
 
         //this.createControls();
         //this.createAmbientScene();
@@ -126,6 +126,18 @@ var App = {
         //this.createTooth('primer_molar');
         //this.createLights();
         this.loader.hide();
+
+        if(window.innerWidth < 980){
+            $('.button_menu').unbind('click').click(function(){
+                $('#menu').toggleClass('open');
+                $(this).fadeOut('1000');
+            });
+
+            $('#menu .close_menu').unbind('click').click(function(){
+                $('#menu').removeClass('open');
+                $('.button_menu').fadeIn('1500');
+            });
+        }
     },
 
     // funcion que me crea el contenedor
@@ -538,7 +550,7 @@ var App = {
 $().ready(function(){
 	$('#main').fullpage({
         sectionsColor: ["rgb(135, 206, 235)","#61AB64","#00897b", "rgba(214, 127, 53, 0.95)"],
-        anchors: ['home', 'projects', 'colaborations', 'contact'],
+        anchors: ['home', 'projects', 'collaborations', 'contact'],
         menu: '#menu',
         css3: true,
         navigation: true,
@@ -550,9 +562,8 @@ $().ready(function(){
         //fitToSectionDelay: 2000,
         easing: 'easeInQuart',
         afterLoad: function(anchorLink, index){
-            console.log({anchorLink, index});
             $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
-            $('body').removeClass('home projects colaborations contact').addClass(anchorLink);
+            $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
             $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
         }
     });
