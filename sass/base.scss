@@ -591,5 +591,26 @@ video.responsive-video {
 	}
 }
 
+.fp-controlArrow{
+	@include transition(border .5s ease);
+
+	&.fp-next {
+    	border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+    	right: 4px;
+
+    	&:hover{
+    		border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+    	}
+    }
+    &.fp-prev {
+	    border-color: transparent rgba(255, 255, 255, 0.2) transparent transparent;
+	    left: 4px;
+
+	    &:hover{
+	    	border-color: transparent rgba(255, 255, 255, 0.8) transparent transparent;
+	    }
+	}
+}
+
 @import 'queries';
 @import 'keyframes';

@@ -79,3 +79,23 @@
 		}
 	}
 }
+
+@media (max-width: 500px){
+	.project{
+		.title{
+			a{
+				font-size: 37px;
+			}
+		}
+	}	
+
+	.fp-controlArrow{
+
+		&.fp-next {
+    	    border-width: 28.5px 0 28.5px 24px;
+	    }
+	    &.fp-prev {
+		        border-width: 28.5px 24px 28.5px 0;
+		}
+	}
+}
