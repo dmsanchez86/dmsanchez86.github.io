@@ -3029,7 +3029,7 @@ video.responsive-video {
 
 .navigator_content {
   position: fixed;
-  padding: .35rem 0 0;
+  padding: 1.35rem 0 0;
   top: 0;
   z-index: 2;
   left: 0;
@@ -3133,8 +3133,7 @@ video.responsive-video {
           fill: #E8EBEC;
           font-family: 'Pacifico', cursive; }
   .navigator_content .navigator {
-    float: right;
-    margin-top: .6rem; }
+    float: right; }
     .navigator_content .navigator ul {
       list-style: none; }
       .navigator_content .navigator ul li {
