@@ -67,6 +67,7 @@ var App = {
 
     // Inicializacion de todo el entorno
     init: function(){
+        this.fullPage();
         this.createContainer();
         this.createScene();
         this.createCamera();
@@ -97,35 +98,6 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-
-        /*var bracket = new THREE.JSONLoader();
-        
-        bracket.load('objects/warrior.json', function(object){
-            var material = new THREE.MeshLambertMaterial( {
-                color: 0x555555,
-            } );
-            
-            var mesh = new THREE.Mesh( object, material );
-            mesh.scale.set( 22, 22,22 );
-            mesh.position.set(-71,190,0);
-            mesh.rotation.x = 3.14;
-            mesh.rotation.y = -7.9;
-            mesh.rotation.z = 0;
-            mesh.visible = true;
-            
-            App.objects.bracket = mesh;
-            
-            App.scene.add( mesh );
-        });*/
-
-        //this.createControls();
-        //this.createAmbientScene();
-        //this.events.fullScreen();
-        //his.events.plane();
-        //this.events.worldmap();
-        //this.createAxis();
-        //this.createTooth('primer_molar');
-        //this.createLights();
         this.loader.hide();
 
         $('.button_menu').unbind('click').click(function(){
@@ -136,6 +108,28 @@ var App = {
         $('#menu .close_menu').unbind('click').click(function(){
             $('#menu').removeClass('open');
             $('.button_menu').fadeIn('1500');
+        });
+    },
+
+    fullPage: function(){
+        $('#main').fullpage({
+            sectionsColor: ["rgb(135, 206, 235)","#61AB64","#00897b", "rgba(214, 127, 53, 0.95)"],
+            anchors: ['home', 'projects', 'collaborations', 'contact'],
+            menu: '#menu',
+            css3: true,
+            navigation: true,
+            //navigationTooltips: ['Home', 'Projects', 'Colaborations', 'Contact'],
+            //showActiveTooltip: true,
+            scrollingSpeed: 1300,
+            scrollBar: false,
+            //fitToSection: true,
+            //fitToSectionDelay: 2000,
+            easing: 'easeInQuart',
+            afterLoad: function(anchorLink, index){
+                $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
+                $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
+                $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
+            }
         });
     },
 
@@ -546,26 +540,6 @@ var App = {
 }
 
 $().ready(function(){
-	$('#main').fullpage({
-        sectionsColor: ["rgb(135, 206, 235)","#61AB64","#00897b", "rgba(214, 127, 53, 0.95)"],
-        anchors: ['home', 'projects', 'collaborations', 'contact'],
-        menu: '#menu',
-        css3: true,
-        navigation: true,
-        //navigationTooltips: ['Home', 'Projects', 'Colaborations', 'Contact'],
-        //showActiveTooltip: true,
-        scrollingSpeed: 1300,
-        scrollBar: false,
-        //fitToSection: true,
-        //fitToSectionDelay: 2000,
-        easing: 'easeInQuart',
-        afterLoad: function(anchorLink, index){
-            $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
-            $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
-            $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
-        }
-    });
-
     App.init();
     animate();
 });
@@ -584,16 +558,6 @@ function render(){
 
     App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.05;
     App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.05;
-    //App.controls.update();
-    
-    // Giro el mapamundi
-    // App.objects.worldmap.rotation.y += 0.005;
-    
-    // var time = Date.now() * 0.0005;
-    
-//     App.lights.point.position.x = Math.sin( time * 0.7 ) * 300;
-// 	App.lights.point.position.y = Math.cos( time * 0.5 ) * 400;
-// 	App.lights.point.position.z = Math.cos( time * 0.3 ) * 300;
 }
 
 function onWindowResize() {

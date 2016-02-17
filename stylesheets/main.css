@@ -3456,7 +3456,7 @@ video.responsive-video {
     max-width: 200px; }
 
 #fp-nav {
-  top: 92%; }
+  top: 90%; }
   #fp-nav ul li a span {
     background: white;
     -webkit-transition: all 0.5s ease;
@@ -3567,6 +3567,9 @@ video.responsive-video {
     border-width: 28.5px 0 28.5px 24px; }
   .fp-controlArrow.fp-prev {
     border-width: 28.5px 24px 28.5px 0; } }
+@media (max-width: 400px) {
+  #fp-nav {
+    display: none; } }
 @-webkit-keyframes point1 {
   0% {
     -webkit-transform: translate3d(0, 0, 0) rotate(0);
