@@ -98,7 +98,9 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-        this.loader.hide();
+        setTimeout(function(){
+            App.loader.hide();
+        },2500);
 
         $('.button_menu').unbind('click').click(function(){
             $('#menu').toggleClass('open');

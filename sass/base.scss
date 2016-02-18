@@ -30,7 +30,7 @@ body{
 
 				.button_menu{
 					border-color: $home-secondary;
-					background: $home-primary;
+					background: $home-alpha;
 
 					> span{
 						border-color: $home-secondary;
@@ -91,7 +91,7 @@ body{
 
 				.button_menu{
 					border-color: $projects-secondary;
-					background: $projects-primary;
+					background: $projects-alpha;
 
 					> span{
 						border-color: $projects-secondary;
@@ -152,7 +152,7 @@ body{
 
 				.button_menu{
 					border-color: $colaborations-secondary;
-					background: $colaborations-primary;
+					background: $colaborations-alpha;
 
 					> span{
 						border-color: $colaborations-secondary;
@@ -212,7 +212,7 @@ body{
 				}
 				.button_menu{
 					border-color: $contact-secondary;
-					background: $contact-primary;
+					background: $contact-alpha;
 
 					> span{
 						border-color: $contact-secondary;
@@ -500,8 +500,8 @@ video.responsive-video {
 	@include center-absolute(fixed);
 
 	.content_points{
-		width: 50px;
-		height: 50px;
+		width: 80px;
+		height: 80px;
 		@include animation(rotate 5s infinite linear);
 		@include center-absolute(fixed);
 	}
@@ -566,6 +566,18 @@ video.responsive-video {
 			font-family: 'Pacifico';
 			@include transition(all .35s linear);
 			@include text-3d;
+
+			i{
+				@include text-shadow((
+					1px -1px 1px $text-3d-color,
+					2px -2px 1px $text-3d-color,
+					3px -3px 1px $text-3d-color,
+				));
+
+				&:hover{
+					@include animation(text3D 3s infinite linear); 
+				}
+			}
 		}
 	}
 
