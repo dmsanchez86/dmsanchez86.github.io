@@ -3080,12 +3080,19 @@ video.responsive-video {
       -o-transition: opacity 0.5s ease, transform 0.3s ease;
       transition: opacity 0.5s ease, transform 0.3s ease; }
     .navigator_content .logo:hover:after {
-      -webkit-animation: scale_logo 1s 1 ease;
-      -khtml-animation: scale_logo 1s 1 ease;
-      -moz-animation: scale_logo 1s 1 ease;
-      -ms-animation: scale_logo 1s 1 ease;
-      -o-animation: scale_logo 1s 1 ease;
-      animation: scale_logo 1s 1 ease; }
+      -webkit-animation: scale_logo 1.5s 2 0.5s ease;
+      -khtml-animation: scale_logo 1.5s 2 0.5s ease;
+      -moz-animation: scale_logo 1.5s 2 0.5s ease;
+      -ms-animation: scale_logo 1.5s 2 0.5s ease;
+      -o-animation: scale_logo 1.5s 2 0.5s ease;
+      animation: scale_logo 1.5s 2 0.5s ease; }
+    .navigator_content .logo:hover svg circle {
+      -webkit-animation: circle_resort 1s 2 linear;
+      -khtml-animation: circle_resort 1s 2 linear;
+      -moz-animation: circle_resort 1s 2 linear;
+      -ms-animation: circle_resort 1s 2 linear;
+      -o-animation: circle_resort 1s 2 linear;
+      animation: circle_resort 1s 2 linear; }
     .navigator_content .logo:focus {
       outline: none; }
       .navigator_content .logo:focus:after {
@@ -3102,12 +3109,18 @@ video.responsive-video {
         fill: #E5E1E1;
         stroke: #E5E1E1;
         stroke-width: 3px;
-        -webkit-transition: all 0.25s ease;
-        -khtml-transition: all 0.25s ease;
-        -moz-transition: all 0.25s ease;
-        -ms-transition: all 0.25s ease;
-        -o-transition: all 0.25s ease;
-        transition: all 0.25s ease; }
+        -webkit-transition: all 1s ease;
+        -khtml-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+        -webkit-transform-origin: center;
+        -khtml-transform-origin: center;
+        -moz-transform-origin: center;
+        -ms-transform-origin: center;
+        -o-transform-origin: center;
+        transform-origin: center; }
       .navigator_content .logo svg text {
         font-size: 50px;
         font-weight: bold;
@@ -4020,5 +4033,41 @@ video.responsive-video {
     -ms-text-shadow: -1px -1px 1px #323232, -2px -2px 1px #323232, -3px -3px 1px #323232;
     -o-text-shadow: -1px -1px 1px #323232, -2px -2px 1px #323232, -3px -3px 1px #323232;
     text-shadow: -1px -1px 1px #323232, -2px -2px 1px #323232, -3px -3px 1px #323232; } }
+@keyframes circle_resort {
+  0%, 100% {
+    -webkit-transform: scale(0.9);
+    -khtml-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
+  20% {
+    -webkit-transform: scale(0.2);
+    -khtml-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    transform: scale(0.2); }
+  30% {
+    -webkit-transform: scale(0.3);
+    -khtml-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3); }
+  50% {
+    -webkit-transform: scale(1);
+    -khtml-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  70% {
+    -webkit-transform: scale(0.5);
+    -khtml-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5); } }
 
 /*# sourceMappingURL=main.css.map */

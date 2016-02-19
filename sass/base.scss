@@ -292,7 +292,13 @@ video.responsive-video {
 
 		&:hover{
 			&:after{
-				@include animation(scale_logo 1s 1 ease);
+				@include animation(scale_logo 1.5s 2 .5s ease);
+			}
+
+			svg{
+				circle{
+					@include animation(circle_resort 1s 2 linear);
+				}
 			}
 		}
 
@@ -312,7 +318,8 @@ video.responsive-video {
 				fill:#E5E1E1; 
 				stroke:#E5E1E1; 
 				stroke-width:3px;
-				@include transition(all .25s ease);
+				@include transition(all 1s ease);
+				@include transform-origin(center);
 			}
 
 			text{

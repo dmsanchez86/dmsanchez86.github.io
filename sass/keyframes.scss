@@ -108,3 +108,21 @@
 		));
 	}
 }
+
+@keyframes circle_resort{
+	0%, 100%{
+		@include transform(scale(.9));
+	}
+	20%{
+		@include transform(scale(.2));
+	}
+	30%{
+		@include transform(scale(.3));
+	}
+	50%{
+		@include transform(scale(1));
+	}
+	70%{
+		@include transform(scale(.5));
+	}
+}
