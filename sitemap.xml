@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://dmsanchez86.github.io/</loc>
+  <lastmod>2016-02-18T21:49:39+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/interactive_clock/</loc>
+  <lastmod>2016-02-18T18:31:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/cellphone-3d/</loc>
+  <lastmod>2016-02-18T16:49:12+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/Cube-3D---CSS3-and-JavaScript/</loc>
+  <lastmod>2016-02-18T16:34:52+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/henogram/</loc>
+  <lastmod>2015-12-07T15:10:29+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/list_in_3d/</loc>
+  <lastmod>2016-02-18T20:25:42+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://dmsanchez86.github.io/cube_3D/</loc>
+  <lastmod>2016-02-18T18:25:58+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+</urlset>
