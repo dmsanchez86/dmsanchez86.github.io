@@ -345,16 +345,16 @@ video.responsive-video {
 	.navigator{
 		float: right;
 
-		ul{
+		> ul{
 			list-style: none;
 
 			li{
 				display: inline-block;
 				position: relative;
-				overflow: hidden;
 				@include border-radius(2px);
 
 				&.active,
+				&:focus,
 				&:hover{
 
 					.edge{
@@ -379,6 +379,15 @@ video.responsive-video {
 						}
 					}
 
+				}
+
+				&:focus,
+				&:hover{
+					.submenu{
+						z-index: 3;
+						opacity: 1;
+						@include transform(rotate(0deg));
+					}
 				}
 
 				a{
@@ -413,9 +422,9 @@ video.responsive-video {
 						@include gradient(linear, (left, #fff, #E6E2E2)); 
 					}
 
-					&.active,
-					&:hover{
-						//@include text-shadow(0 0 2px #323232);
+					&:hover,
+					&:focus{
+						outline: 0;
 					}
 				}
 
@@ -459,6 +468,41 @@ video.responsive-video {
 						@include transition-delay(.30s);
 					}
 				}
+
+				.submenu{
+					position: absolute;
+					top: 97%;
+					left: 0;
+					opacity: 0;
+					z-index: -2;
+					min-width: 142px;
+					overflow: hidden;
+					@include transform-origin(top left);
+					@include transform(rotate(-90deg));
+					@include transition((transform .4s ease, opacity .7s ease));
+
+					ul{
+						li{
+							display: block;
+
+							a{
+								&:after,
+								&:before{
+									width: 0;
+								}
+							}
+
+							&:hover{
+								a{
+									&:after,
+									&:before{
+										width: 50%;
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 
 			.close_menu{
@@ -469,6 +513,11 @@ video.responsive-video {
 				display: none;
 				color: #E8EBEC;
 				@include text-shadow(0 0 2px rgba(0,0,0,.4));
+				@include transition(all 1s ease);
+
+				&:hover{
+					@include transform(rotate(360deg));
+				}
 			}
 		}
 
@@ -571,7 +620,7 @@ video.responsive-video {
 			font-size: 50px;
 			color: white;
 			font-family: 'Pacifico';
-			@include transition(all .35s linear);
+			@include transition(all .5s ease);
 			@include text-3d;
 
 			i{
@@ -581,6 +630,7 @@ video.responsive-video {
 					3px -3px 1px $text-3d-color,
 				));
 
+				&:focus,
 				&:hover{
 					@include animation(text3D 3s infinite linear); 
 				}
