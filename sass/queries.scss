@@ -109,11 +109,6 @@
 		        border-width: 28.5px 24px 28.5px 0;
 		}
 	}
-}
-@media (max-width: 400px){
-	#fp-nav{ 
-    	display: none;
-	}
 	.navigator_content {
 		.navigator {
 			> ul{				
@@ -126,5 +121,10 @@
 				}
 			}
 		}
+	}
+}
+@media (max-width: 400px){
+	#fp-nav{ 
+    	display: none;
 	}
 }

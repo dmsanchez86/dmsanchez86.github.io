@@ -3667,12 +3667,12 @@ video.responsive-video {
   .fp-controlArrow.fp-next {
     border-width: 28.5px 0 28.5px 24px; }
   .fp-controlArrow.fp-prev {
-    border-width: 28.5px 24px 28.5px 0; } }
-@media (max-width: 400px) {
-  #fp-nav {
-    display: none; }
+    border-width: 28.5px 24px 28.5px 0; }
 
   .navigator_content .navigator > ul li .submenu.hide-mobile {
+    display: none; } }
+@media (max-width: 400px) {
+  #fp-nav {
     display: none; } }
 @-webkit-keyframes point1 {
   0% {
