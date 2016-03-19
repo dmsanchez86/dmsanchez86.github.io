@@ -68,6 +68,7 @@ var App = {
             $('.button_menu').fadeIn('1500');
         });
         
+/*
         $('.project .title a').mouseenter(function(){
             if(App.isValidUrl($(this).attr('href'))){
                 $('.preview_page').addClass('active').find('iframe').attr('src', $(this).attr('href'));
@@ -75,10 +76,19 @@ var App = {
                 $('.preview_page').addClass('active').find('iframe').attr('src', "http://dmsanchez86.github.io/"+$(this).attr('href'));
             }
         });
+        $('.project .title a').mouseleave(function(){
+            $('.preview_page').addClass('active').find('iframe').attr('src', "");
+        });*/
         
-        $('.preview_page').unbind('dblclick').dblclick(function(){
+        $('.resize').unbind('click').click(function(){
             $('.preview_page').toggleClass('fullscreen');
         });
+
+        var iframe = document.querySelector(".preview_page iframe");
+
+        iframe.onload = function(){
+            $('.preview_page').addClass('load');
+        }
         
     },
 
@@ -94,9 +104,46 @@ var App = {
             scrollBar: false,
             easing: 'easeInQuart',
             afterLoad: function(anchorLink, index){
+                console.log(index);
+                console.log(anchorLink);
+
+                if(anchorLink == "projects" || anchorLink == "collaborations"){
+                    $('.preview_page').addClass('active');
+
+                    $('.preview_page').find('iframe').attr('src', '');
+                    $('.preview_page').removeClass('load');
+
+                    if(anchorLink == "projects"){
+                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide:first-child .project .title a').attr('href'));
+                    }else{
+                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide:first-child .project .title a').attr('href'));
+                    }
+
+                }else{
+                    $('.preview_page').removeClass('active');
+                }
+
                 $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
                 $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
                 $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
+            },
+            afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+                $('.preview_page').addClass('active');
+            },
+            onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+                var leavingSlide = $(this);
+
+                $('.preview_page').removeClass('active');
+
+                //leaving the first slide of the 2nd Section to the right
+                if(index == 2 && slideIndex == 0 && direction == 'right'){
+                    //alert("Leaving the fist slide!!");
+                }
+
+                //leaving the 3rd slide of the 2nd Section to the left
+                if(index == 2 && slideIndex == 2 && direction == 'left'){
+                    //alert("Going to slide 2! ");
+                }
             }
         });
     },
@@ -246,6 +293,9 @@ var App = {
 $().ready(function(){
     App.init();
     animate();
+    setTimeout(function(){
+        $('.preview_page').find('iframe').attr('src', "");
+    },4000);
 });
 
 // funcion render() por defecto de three js

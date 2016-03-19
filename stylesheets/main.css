@@ -3580,6 +3580,7 @@ video.responsive-video {
   top: 0;
   left: 0;
   opacity: .6;
+  overflow: hidden;
   -webkit-transition: transform 0.5s ease-in-out, opacity 0.7s ease;
   -khtml-transition: transform 0.5s ease-in-out, opacity 0.7s ease;
   -moz-transition: transform 0.5s ease-in-out, opacity 0.7s ease;
@@ -3598,27 +3599,76 @@ video.responsive-video {
   -ms-transform-origin: bottom right;
   -o-transform-origin: bottom right;
   transform-origin: bottom right;
-  -webkit-transform: scale(0.5) translate3d(100%, 100%, 0);
-  -khtml-transform: scale(0.5) translate3d(100%, 100%, 0);
-  -moz-transform: scale(0.5) translate3d(100%, 100%, 0);
-  -ms-transform: scale(0.5) translate3d(100%, 100%, 0);
-  -o-transform: scale(0.5) translate3d(100%, 100%, 0);
-  transform: scale(0.5) translate3d(100%, 100%, 0); }
+  -webkit-transform: scale(0.37) translate3d(100%, 100%, 0);
+  -khtml-transform: scale(0.37) translate3d(100%, 100%, 0);
+  -moz-transform: scale(0.37) translate3d(100%, 100%, 0);
+  -ms-transform: scale(0.37) translate3d(100%, 100%, 0);
+  -o-transform: scale(0.37) translate3d(100%, 100%, 0);
+  transform: scale(0.37) translate3d(100%, 100%, 0); }
+  .preview_page .loader_preview {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+    .preview_page .loader_preview i {
+      font-size: 100px; }
+  .preview_page .toolbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: right;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -khtml-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: transform 0.5s ease-in, opacity 0.35s ease-out;
+    -khtml-transition: transform 0.5s ease-in, opacity 0.35s ease-out;
+    -moz-transition: transform 0.5s ease-in, opacity 0.35s ease-out;
+    -ms-transition: transform 0.5s ease-in, opacity 0.35s ease-out;
+    -o-transition: transform 0.5s ease-in, opacity 0.35s ease-out;
+    transition: transform 0.5s ease-in, opacity 0.35s ease-out; }
+    .preview_page .toolbox span {
+      cursor: pointer; }
+      .preview_page .toolbox span i {
+        font-size: 20px;
+        color: white; }
+        .preview_page .toolbox span i:last-child {
+          display: none; }
   .preview_page iframe {
     width: 100%;
     height: 100%; }
   .preview_page:hover {
     opacity: 1; }
+    .preview_page:hover .toolbox {
+      -webkit-transform: translate3d(0, 0, 0);
+      -khtml-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
   .preview_page.active {
-    -webkit-transform: scale(0.5) translate3d(0%, 0%, 0);
-    -khtml-transform: scale(0.5) translate3d(0%, 0%, 0);
-    -moz-transform: scale(0.5) translate3d(0%, 0%, 0);
-    -ms-transform: scale(0.5) translate3d(0%, 0%, 0);
-    -o-transform: scale(0.5) translate3d(0%, 0%, 0);
-    transform: scale(0.5) translate3d(0%, 0%, 0); }
+    -webkit-transform: scale(0.37) translate3d(0%, 0%, 0);
+    -khtml-transform: scale(0.37) translate3d(0%, 0%, 0);
+    -moz-transform: scale(0.37) translate3d(0%, 0%, 0);
+    -ms-transform: scale(0.37) translate3d(0%, 0%, 0);
+    -o-transform: scale(0.37) translate3d(0%, 0%, 0);
+    transform: scale(0.37) translate3d(0%, 0%, 0); }
   .preview_page.fullscreen {
+    z-index: 10000;
     opacity: 1;
-    padding: 2rem;
+    padding: .5rem;
+    background: white;
     -webkit-box-sizing: border-box;
     -khtml-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -3631,6 +3681,23 @@ video.responsive-video {
     -ms-transform: scale(1) translate3d(0%, 0%, 0);
     -o-transform: scale(1) translate3d(0%, 0%, 0);
     transform: scale(1) translate3d(0%, 0%, 0); }
+    .preview_page.fullscreen iframe {
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px; }
+    .preview_page.fullscreen .toolbox {
+      opacity: .5; }
+      .preview_page.fullscreen .toolbox .resize i:last-child {
+        display: block; }
+      .preview_page.fullscreen .toolbox .resize i:first-child {
+        display: none; }
+      .preview_page.fullscreen .toolbox:hover {
+        opacity: 1; }
+  .preview_page.load .loader_preview {
+    display: none; }
 
 @media (max-width: 980px) {
   body.home .navigator_content .navigator ul {
