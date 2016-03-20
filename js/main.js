@@ -12,6 +12,10 @@ var App = {
     
     // Contenedor
     container: null,
+    
+    // Contadoras
+    projects_count: 0,
+    collaboration_count: 0,
 
     mouseX : 0, 
     mouseY : 0,
@@ -99,19 +103,10 @@ var App = {
             menu: '#menu',
             css3: true,
             navigation: true,
-            showActiveTooltip: true,
-            scrollingSpeed: 600,
-            scrollBar: false,
-            easing: 'easeInQuart',
             afterLoad: function(anchorLink, index){
-                console.log(index);
-                console.log(anchorLink);
 
                 if(anchorLink == "projects" || anchorLink == "collaborations"){
                     $('.preview_page').addClass('active');
-
-                    $('.preview_page').find('iframe').attr('src', '');
-                    $('.preview_page').removeClass('load');
 
                     if(anchorLink == "projects"){
                         $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide:first-child .project .title a').attr('href'));
@@ -128,22 +123,32 @@ var App = {
                 $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
             },
             afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-                $('.preview_page').addClass('active');
+                
+                if(anchorLink == "projects"){
+                    console.log($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                    if($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href') != "https://github.com/dmsanchez86/Mecaut"){
+                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                    }else{
+                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                    }
+                    setTimeout(function(){
+                        $('.preview_page').addClass('active');
+                    },3000); 
+                }else{
+                    if($('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.phonegap.jurisquiz&hl=es_419" || $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.zopp.artritis"){
+                        $('.preview_page').removeClass('active');
+                    }else{
+                        $('.preview_page').addClass('active');
+                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                        
+                        setTimeout(function(){
+                            $('.preview_page').addClass('active');
+                        },3000); 
+                    }
+                }   
             },
             onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
-                var leavingSlide = $(this);
-
-                $('.preview_page').removeClass('active');
-
-                //leaving the first slide of the 2nd Section to the right
-                if(index == 2 && slideIndex == 0 && direction == 'right'){
-                    //alert("Leaving the fist slide!!");
-                }
-
-                //leaving the 3rd slide of the 2nd Section to the left
-                if(index == 2 && slideIndex == 2 && direction == 'left'){
-                    //alert("Going to slide 2! ");
-                }
+                $('.preview_page').removeClass('active load').find('iframe').attr('src','');
             }
         });
     },
