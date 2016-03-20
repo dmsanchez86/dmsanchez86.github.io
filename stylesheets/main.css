@@ -3289,7 +3289,7 @@ video.responsive-video {
           left: 0;
           opacity: 0;
           z-index: -2;
-          min-width: 142px;
+          min-width: 170px;
           overflow: hidden;
           -webkit-transform-origin: top left;
           -khtml-transform-origin: top left;
