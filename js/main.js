@@ -94,6 +94,68 @@ var App = {
             $('.preview_page').addClass('load');
         }
         
+        $('.carousel .control').unbind('click').click(function(){
+            var father = $(this).parent(); // carousel
+            var item = parseInt(father.attr('item')); // number item slider active
+            
+            if($(this).hasClass('right')){ // click in the rigth button
+                $('.carousel .item.active').addClass('last').removeClass('next');
+                
+                setTimeout(function(){
+                    $('.carousel .item.active').removeClass('active');
+                    $('.carousel .item.next').addClass('active').removeClass('next last');
+                    
+                    if(item >= $('.carousel .item').length){
+                        item = 0;
+                        
+                        $('.carousel .item').eq(item).removeClass('last').addClass('next');
+                        $('.carousel .item').eq(item+1).removeClass('last active').addClass('next');
+                        setTimeout(function(){
+                            $('.carousel .item').eq(item).removeClass('next').addClass('active');
+                            item++;
+                            
+                            father.attr('item', item);
+                        },500);
+                    }else{
+                        item++;
+                        
+                        $('.carousel .item').eq(item).removeClass('last active').addClass('next');
+                    }
+                    
+                    father.attr('item', item);
+                },500);
+                
+            }else{
+                $('.carousel .item.active').removeClass('last').addClass('next');
+                
+                setTimeout(function(){
+                    $('.carousel .item').removeClass('next last');
+                    $('.carousel .item.active').removeClass('active last');
+                    
+                    $('.carousel .item.last').addClass('active').removeClass('active last');
+                    
+                    if(item <= 0){
+                        item = $('.carousel .item').length;
+                        
+                        $('.carousel .item').eq(item - 1).removeClass('last active').addClass('next');
+                        // $('.carousel .item').eq(item - 2).removeClass('last active').addClass('next');
+                        setTimeout(function(){
+                            $('.carousel .item').eq(item - 1).removeClass('next').addClass('active');
+                            item--;
+                            
+                            father.attr('item', item);
+                        },500);
+                    }else{
+                        item--;
+                        
+                        $('.carousel .item').eq(item).removeClass('next active').addClass('last');
+                    }
+                    
+                    father.attr('item', item);
+                },500);
+            }
+        });
+        
     },
 
     fullPage: function(){
@@ -109,7 +171,7 @@ var App = {
                     $('.preview_page').addClass('active');
 
                     if(anchorLink == "projects"){
-                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide:first-child .project .title a').attr('href'));
+                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .item:first-child .project .title a').attr('href'));
                     }else{
                         $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide:first-child .project .title a').attr('href'));
                     }
