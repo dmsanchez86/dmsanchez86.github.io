@@ -3917,6 +3917,7 @@ video.responsive-video {
     color: white;
     margin: .25rem;
     opacity: 0;
+    position: relative;
     -webkit-text-shadow: 0 0 3px #111;
     -khtml-text-shadow: 0 0 3px #111;
     -moz-text-shadow: 0 0 3px #111;
@@ -3941,6 +3942,59 @@ video.responsive-video {
     -ms-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in; }
+    .tools .tool:after {
+      position: absolute;
+      top: 125%;
+      left: -25%;
+      width: 150%;
+      content: attr(title-ref);
+      color: white;
+      opacity: 0;
+      padding: .15rem .5rem;
+      font-size: 16px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      -webkit-transition: transform 0.5s ease, opacity 0.25s ease;
+      -khtml-transition: transform 0.5s ease, opacity 0.25s ease;
+      -moz-transition: transform 0.5s ease, opacity 0.25s ease;
+      -ms-transition: transform 0.5s ease, opacity 0.25s ease;
+      -o-transition: transform 0.5s ease, opacity 0.25s ease;
+      transition: transform 0.5s ease, opacity 0.25s ease;
+      -webkit-transform: translate3d(0, -10%, 0);
+      -khtml-transform: translate3d(0, -10%, 0);
+      -moz-transform: translate3d(0, -10%, 0);
+      -ms-transform: translate3d(0, -10%, 0);
+      -o-transform: translate3d(0, -10%, 0);
+      transform: translate3d(0, -10%, 0);
+      background-image: -webkit-radial-gradient(center, #111, #323232);
+      background-image: -khtml-radial-gradient(center, #111, #323232);
+      background-image: -moz-radial-gradient(center, #111, #323232);
+      background-image: -ms-radial-gradient(center, #111, #323232);
+      background-image: -o-radial-gradient(center, #111, #323232);
+      background-image: radial-gradient(center, #111, #323232);
+      -webkit-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px; }
+    .tools .tool:before {
+      position: absolute;
+      top: 115%;
+      left: 0;
+      width: 11px;
+      margin: auto;
+      right: 0;
+      border: solid #323232;
+      opacity: 0;
+      content: '';
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #323232 transparent;
+      -webkit-transition: opacity 0.25s ease;
+      -khtml-transition: opacity 0.25s ease;
+      -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+      -o-transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease; }
     .tools .tool:active {
       -webkit-transform: scale(0.9);
       -khtml-transform: scale(0.9);
@@ -3955,8 +4009,19 @@ video.responsive-video {
       -ms-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+      .tools .tool:hover:after {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -khtml-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0); }
+      .tools .tool:hover:before {
+        opacity: 1; }
     .tools .tool.code {
-      padding-bottom: .45rem; }
+      padding-bottom: .45rem;
+      margin-top: .1rem; }
 
 @media (max-width: 980px) {
   body.home .navigator_content .navigator ul {
