@@ -176,6 +176,12 @@ var App = {
                 }else{
                     $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
                 }
+            }else if($(this).hasClass('download')){
+                if(App.isValidUrl(url)){
+                    window.open(url+"/archive/master.zip");
+                }else{
+                    window.open("http://github.com/dmsanchez86/"+url+"/archive/gh-pages.zip");
+                }
             }
         });
     },

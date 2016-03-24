@@ -509,11 +509,12 @@ video.responsive-video {
 
 			.close_menu{
 				position: absolute;
-				top: 2px;
-				right: 5px;
+				top: 5px;
+				right: 10px;
 				font-weight: bold;
 				display: none;
 				color: #E8EBEC;
+				font-family: 'Pacifico';
 				@include text-shadow(0 0 2px rgba(0,0,0,.4));
 				@include transition(all 1s ease);
 
@@ -642,12 +643,13 @@ video.responsive-video {
 		
 		&:hover{
 			.tools{
+				display: block;
+				
 				.tool{
-					$secondsSteps: 0.5; 
 					$k: 0.2; 
 					@for $i from 1 through 10 {
 			            &:nth-child(#{$i}){ 
-			                @include animation(move .35s 1 #{($k)}s ease-in forwards);
+			                @include animation(move .5s 1 #{($k)}s ease-in forwards);
 			                $k: $k + $k
 			            }
 			        }
@@ -908,14 +910,14 @@ video.responsive-video {
 
 .tools{
 	position: absolute;
-	top: 130%;
+	top: 120%;
 	left: 0;
 	right: 0;
 	margin: auto;
 	width: 300px;
 	height: 60px;
 	z-index: 10;
-	opacity: 1;
+	display: none;
 	
 	.tool{
 		display: inline-block;
@@ -929,7 +931,7 @@ video.responsive-video {
 	    margin: .25rem;
 	    opacity: 0;
 	    @include text-shadow(0 0 3px #111);
-	    @include box-shadow(0 0 3px #111);
+	    @include box-shadow(0 0 4px rgba(0,0,0,.6));
 		@include border-radius(50%);
 		@include transition(all .5s ease-in);
 		
