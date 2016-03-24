@@ -101,22 +101,22 @@ var App = {
             if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
                 
                 // put inactive left control
-                $('.carousel .control.left').removeClass('inactive');
+                father.find('.control.left').removeClass('inactive');
             
                 // remove all items last class
-                $('.carousel .item').removeClass('last');
-                $('.carousel .item.active').addClass('last').removeClass('next'); // add next class item active
+                father.find('.item').removeClass('last');
+                father.find('.item.active').addClass('last').removeClass('next'); // add next class item active
                 
                 setTimeout(function(){
-                    $('.carousel .item.active').removeClass('active');
-                    $('.carousel .item.next').addClass('active').removeClass('next last');
+                    father.find('.item.active').removeClass('active');
+                    father.find('.item.next').addClass('active').removeClass('next last');
                     
-                    if(item >= $('.carousel .item').length - 1){
-                        $('.carousel .control.right').addClass('inactive');
+                    if(item >= father.find('.item').length - 1){
+                        father.find('.control.right').addClass('inactive');
                         item++;
                     }else{
                         item++;
-                        $('.carousel .item').eq(item).removeClass('last active').addClass('next');
+                        father.find('.item').eq(item).removeClass('last active').addClass('next');
                     }
                     
                     father.attr('item', item);
@@ -124,26 +124,24 @@ var App = {
                 
             }else if($(this).hasClass('left')){
                 
-                $('.carousel .control.right').removeClass('inactive');
+                father.find('.control.right').removeClass('inactive');
                 
                 setTimeout(function(){
                     
                     if(item <= 1){
-                         $('.carousel .control.left').addClass('inactive');
+                         father.find('.control.left').addClass('inactive');
                         return;
                     }else{
-                        console.log(item);
                         item--;
-                        console.log(item);
-                        $('.carousel .item').removeClass('next');
-                        $('.carousel .item.active').addClass('next');
+                        father.find('.item').removeClass('next');
+                        father.find('.item.active').addClass('next');
                         
                         setTimeout(function(){
-                            $('.carousel .item.active').removeClass('active');
-                            $('.carousel .item.last').addClass('active').removeClass('next last');
+                            father.find('.item.active').removeClass('active');
+                            father.find('.item.last').addClass('active').removeClass('next last');
                             
                             if(item != 1){
-                                $('.carousel .item').eq(item - 2).removeClass('next active').addClass('last');
+                                father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
                             }
                             father.attr('item', item);
                         },500);
