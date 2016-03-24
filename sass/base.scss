@@ -614,6 +614,7 @@ video.responsive-video {
 	text-align: center;
 
 	.title{
+		position: relative;
 		height: 70px;
 		display: inline-block;
 		@include center-absolute(absolute);
@@ -635,6 +636,21 @@ video.responsive-video {
 				&:focus,
 				&:hover{
 					@include animation(text3D 3s infinite linear); 
+				}
+			}
+		}
+		
+		&:hover{
+			.tools{
+				.tool{
+					$secondsSteps: 0.5; 
+					$k: 0.2; 
+					@for $i from 1 through 10 {
+			            &:nth-child(#{$i}){ 
+			                @include animation(move .35s 1 #{($k)}s ease-in forwards);
+			                $k: $k + $k
+			            }
+			        }
 				}
 			}
 		}
@@ -689,6 +705,7 @@ video.responsive-video {
 	height: 100vh;
 	top: 0;
 	left: 0;
+	padding: .5rem 0 0 .5rem;
 	opacity: .6;
 	overflow: hidden;
 	@include transition((transform .5s ease-in-out, opacity .7s ease));
@@ -700,7 +717,9 @@ video.responsive-video {
 		display: inline-block;
 		width: 150px;
 		height: 100px;
+		color: white;
 		text-align: center;
+		@include text-shadow(0 0 4px #323232);
 		@include center-absolute(absolute);
 
 		i{
@@ -749,7 +768,7 @@ video.responsive-video {
 	}
 	
 	&.active{
-		// @include transform(scale(.37) translate3d(0%, 0%, 0));
+		@include transform(scale(.37) translate3d(0%, 0%, 0));
 	}
 	
 	&.fullscreen{
@@ -885,6 +904,47 @@ video.responsive-video {
 		}
 	}
 	
+}
+
+.tools{
+	position: absolute;
+	top: 130%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 300px;
+	height: 60px;
+	z-index: 10;
+	opacity: 1;
+	
+	.tool{
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+		background: transparent;
+	    padding: .45rem .65rem .3rem;
+	    line-height: 1.2;
+	    font-size: 28px;
+	    color: white;
+	    margin: .25rem;
+	    opacity: 0;
+	    @include text-shadow(0 0 3px #111);
+	    @include box-shadow(0 0 3px #111);
+		@include border-radius(50%);
+		@include transition(all .5s ease-in);
+		
+		&:active{
+			@include transform(scale(.9));
+		}
+		
+		&:hover{
+			@include box-shadow(0 0 10px rgba(0,0,0,.4));
+		}
+		
+		&.code{
+			padding-bottom: .45rem;
+		}
+	}
 }
 
 @import 'queries';

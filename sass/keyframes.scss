@@ -318,3 +318,53 @@
 		@include transform(scale(.5));
 	}
 }
+
+// animation items tools
+@-webkit-keyframes move{
+	0%{
+		@include transform(translatey(-15px));
+	}
+	10%{
+		opacity: 1;
+		@include transform(translatey(-5px));
+	}
+	50%{
+		@include transform(translatey(25px));
+	}
+	100%{
+		opacity: 1;
+		@include transform(translatey(0px));
+	}
+}
+@-moz-keyframes move{
+	0%{
+		@include transform(translatey(-15px));
+	}
+	10%{
+		opacity: 1;
+		@include transform(translatey(-5px));
+	}
+	50%{
+		@include transform(translatey(25px));
+	}
+	100%{
+		opacity: 1;
+		@include transform(translatey(0px));
+	}
+}
+@keyframes move{
+	0%{
+		@include transform(translatey(-15px));
+	}
+	10%{
+		opacity: 1;
+		@include transform(translatey(-5px));
+	}
+	50%{
+		@include transform(translatey(25px));
+	}
+	100%{
+		opacity: 1;
+		@include transform(translatey(0px));
+	}
+}

@@ -95,6 +95,8 @@ var App = {
         }
         
         $('.carousel .control:not(.inactive)').unbind('click').click(function(){
+            $('.preview_page').removeClass('load active').find('iframe').attr('src', '');
+            
             var father = $(this).parent(); // carousel
             var item = parseInt(father.attr('item')); // number item slider active
             
@@ -151,6 +153,31 @@ var App = {
             }
         });
         
+        $('.tools .tool').unbind('click').click(function(){
+            var url = $(this).parent().parent().find('a').attr('href');
+            
+            if($(this).hasClass('preview')){
+                $('.preview_page').toggleClass('active');
+                if(App.isValidUrl(url)){
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+                }else{
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+                }
+            }else if($(this).hasClass('code')){
+                if(App.isValidUrl(url)){
+                    window.open(url);
+                }else{
+                    window.open("http://github.com/dmsanchez86/"+url);
+                }
+            }else if($(this).hasClass('page')){
+                $('.preview_page').toggleClass('active');
+                if(App.isValidUrl(url)){
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+                }else{
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+                }
+            }
+        });
     },
 
     fullPage: function(){
@@ -161,19 +188,7 @@ var App = {
             css3: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
-
-                if(anchorLink == "projects" || anchorLink == "collaborations"){
-                    $('.preview_page').addClass('active');
-
-                    if(anchorLink == "projects"){
-                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .item:first-child .project .title a').attr('href'));
-                    }else{
-                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide:first-child .project .title a').attr('href'));
-                    }
-
-                }else{
-                    $('.preview_page').removeClass('active');
-                }
+                $('.preview_page').removeClass('active load').find('iframe').attr('src','');
 
                 $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
                 $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
@@ -181,31 +196,28 @@ var App = {
             },
             afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
                 
-                if(anchorLink == "projects"){
-                    console.log($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                    if($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href') != "https://github.com/dmsanchez86/Mecaut"){
-                        $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                    }else{
-                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                    }
-                    setTimeout(function(){
-                        $('.preview_page').addClass('active');
-                    },3000); 
-                }else{
-                    if($('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.phonegap.jurisquiz&hl=es_419" || $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.zopp.artritis"){
-                        $('.preview_page').removeClass('active');
-                    }else{
-                        $('.preview_page').addClass('active');
-                        $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                // if(anchorLink == "projects"){
+                //     console.log($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                //     if($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href') != "https://github.com/dmsanchez86/Mecaut"){
+                //         $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                //     }else{
+                //         $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
+                //     }
+                //     setTimeout(function(){
+                //         $('.preview_page').addClass('active');
+                //     },3000); 
+                // }else{
+                //     if($('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.phonegap.jurisquiz&hl=es_419" || $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.zopp.artritis"){
+                //         $('.preview_page').removeClass('active');
+                //     }else{
+                //         $('.preview_page').addClass('active');
+                //         $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href'));
                         
-                        setTimeout(function(){
-                            $('.preview_page').addClass('active');
-                        },3000); 
-                    }
-                }   
-            },
-            onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
-                $('.preview_page').removeClass('active load').find('iframe').attr('src','');
+                //         setTimeout(function(){
+                //             $('.preview_page').addClass('active');
+                //         },3000); 
+                //     }
+                // }   
             }
         });
     },
