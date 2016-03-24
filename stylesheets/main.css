@@ -2893,134 +2893,136 @@ body, html {
   height: 100%;
   display: block; }
 
-body.home .navigator_content .navigator ul li a {
-  color: #E8EBEC; }
-  body.home .navigator_content .navigator ul li a:before, body.home .navigator_content .navigator ul li a:after {
-    background: #6AB5D4; }
-body.home .navigator_content .navigator ul li .edge {
-  background: #4C9CBD; }
-body.home .navigator_content .navigator .button_menu {
-  border-color: #4C9CBD;
-  background: rgba(106, 181, 212, 0.72); }
-  body.home .navigator_content .navigator .button_menu > span {
-    border-color: #4C9CBD; }
-  body.home .navigator_content .navigator .button_menu:hover {
+body {
+  overflow: hidden; }
+  body.home .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.home .navigator_content .navigator ul li a:before, body.home .navigator_content .navigator ul li a:after {
+      background: #6AB5D4; }
+  body.home .navigator_content .navigator ul li .edge {
     background: #4C9CBD; }
-    body.home .navigator_content .navigator .button_menu:hover > span {
-      border-color: #6AB5D4; }
-body.home .navigator_content .logo svg circle {
-  fill: #6AB5D4;
-  stroke: #4C9CBD; }
-body.home #fp-nav ul li a span {
-  background: #4C9CBD;
-  -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-box-shadow: 0 0 3px 1px #6AB5D4;
-  -khtml-box-shadow: 0 0 3px 1px #6AB5D4;
-  -moz-box-shadow: 0 0 3px 1px #6AB5D4;
-  -ms-box-shadow: 0 0 3px 1px #6AB5D4;
-  -o-box-shadow: 0 0 3px 1px #6AB5D4;
-  box-shadow: 0 0 3px 1px #6AB5D4; }
-body.projects .navigator_content .navigator ul li a {
-  color: #E8EBEC; }
-  body.projects .navigator_content .navigator ul li a:before, body.projects .navigator_content .navigator ul li a:after {
-    background: #309034; }
-body.projects .navigator_content .navigator ul li .edge {
-  background: #27822B; }
-body.projects .navigator_content .navigator .button_menu {
-  border-color: #27822B;
-  background: rgba(48, 144, 52, 0.72); }
-  body.projects .navigator_content .navigator .button_menu > span {
-    border-color: #27822B; }
-  body.projects .navigator_content .navigator .button_menu:hover {
+  body.home .navigator_content .navigator .button_menu {
+    border-color: #4C9CBD;
+    background: rgba(106, 181, 212, 0.72); }
+    body.home .navigator_content .navigator .button_menu > span {
+      border-color: #4C9CBD; }
+    body.home .navigator_content .navigator .button_menu:hover {
+      background: #4C9CBD; }
+      body.home .navigator_content .navigator .button_menu:hover > span {
+        border-color: #6AB5D4; }
+  body.home .navigator_content .logo svg circle {
+    fill: #6AB5D4;
+    stroke: #4C9CBD; }
+  body.home #fp-nav ul li a span {
+    background: #4C9CBD;
+    -webkit-transition: all 0.25s ease;
+    -khtml-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-box-shadow: 0 0 3px 1px #6AB5D4;
+    -khtml-box-shadow: 0 0 3px 1px #6AB5D4;
+    -moz-box-shadow: 0 0 3px 1px #6AB5D4;
+    -ms-box-shadow: 0 0 3px 1px #6AB5D4;
+    -o-box-shadow: 0 0 3px 1px #6AB5D4;
+    box-shadow: 0 0 3px 1px #6AB5D4; }
+  body.projects .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.projects .navigator_content .navigator ul li a:before, body.projects .navigator_content .navigator ul li a:after {
+      background: #309034; }
+  body.projects .navigator_content .navigator ul li .edge {
     background: #27822B; }
-    body.projects .navigator_content .navigator .button_menu:hover > span {
-      border-color: #309034; }
-body.projects .navigator_content .logo svg circle {
-  fill: #309034;
-  stroke: #27822B; }
-body.projects #fp-nav ul li a span {
-  background: #27822B;
-  -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-box-shadow: 0 0 3px 1px #309034;
-  -khtml-box-shadow: 0 0 3px 1px #309034;
-  -moz-box-shadow: 0 0 3px 1px #309034;
-  -ms-box-shadow: 0 0 3px 1px #309034;
-  -o-box-shadow: 0 0 3px 1px #309034;
-  box-shadow: 0 0 3px 1px #309034; }
-body.collaborations .navigator_content .navigator ul li a {
-  color: #E8EBEC; }
-  body.collaborations .navigator_content .navigator ul li a:before, body.collaborations .navigator_content .navigator ul li a:after {
-    background: #04756A; }
-body.collaborations .navigator_content .navigator ul li .edge {
-  background: #026D63; }
-body.collaborations .navigator_content .navigator .button_menu {
-  border-color: #026D63;
-  background: rgba(4, 117, 106, 0.72); }
-  body.collaborations .navigator_content .navigator .button_menu > span {
-    border-color: #026D63; }
-  body.collaborations .navigator_content .navigator .button_menu:hover {
+  body.projects .navigator_content .navigator .button_menu {
+    border-color: #27822B;
+    background: rgba(48, 144, 52, 0.72); }
+    body.projects .navigator_content .navigator .button_menu > span {
+      border-color: #27822B; }
+    body.projects .navigator_content .navigator .button_menu:hover {
+      background: #27822B; }
+      body.projects .navigator_content .navigator .button_menu:hover > span {
+        border-color: #309034; }
+  body.projects .navigator_content .logo svg circle {
+    fill: #309034;
+    stroke: #27822B; }
+  body.projects #fp-nav ul li a span {
+    background: #27822B;
+    -webkit-transition: all 0.25s ease;
+    -khtml-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-box-shadow: 0 0 3px 1px #309034;
+    -khtml-box-shadow: 0 0 3px 1px #309034;
+    -moz-box-shadow: 0 0 3px 1px #309034;
+    -ms-box-shadow: 0 0 3px 1px #309034;
+    -o-box-shadow: 0 0 3px 1px #309034;
+    box-shadow: 0 0 3px 1px #309034; }
+  body.collaborations .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.collaborations .navigator_content .navigator ul li a:before, body.collaborations .navigator_content .navigator ul li a:after {
+      background: #04756A; }
+  body.collaborations .navigator_content .navigator ul li .edge {
     background: #026D63; }
-    body.collaborations .navigator_content .navigator .button_menu:hover > span {
-      border-color: #04756A; }
-body.collaborations .navigator_content .logo svg circle {
-  fill: #04756A;
-  stroke: #026D63; }
-body.collaborations #fp-nav ul li a span {
-  background: #026D63;
-  -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-box-shadow: 0 0 3px 1px #04756A;
-  -khtml-box-shadow: 0 0 3px 1px #04756A;
-  -moz-box-shadow: 0 0 3px 1px #04756A;
-  -ms-box-shadow: 0 0 3px 1px #04756A;
-  -o-box-shadow: 0 0 3px 1px #04756A;
-  box-shadow: 0 0 3px 1px #04756A; }
-body.contact .navigator_content .navigator ul li a {
-  color: #E8EBEC; }
-  body.contact .navigator_content .navigator ul li a:before, body.contact .navigator_content .navigator ul li a:after {
-    background: #C16E25; }
-body.contact .navigator_content .navigator ul li .edge {
-  background: #B3631D; }
-body.contact .navigator_content .navigator .button_menu {
-  border-color: #B3631D;
-  background: rgba(193, 110, 37, 0.71); }
-  body.contact .navigator_content .navigator .button_menu > span {
-    border-color: #B3631D; }
-  body.contact .navigator_content .navigator .button_menu:hover {
+  body.collaborations .navigator_content .navigator .button_menu {
+    border-color: #026D63;
+    background: rgba(4, 117, 106, 0.72); }
+    body.collaborations .navigator_content .navigator .button_menu > span {
+      border-color: #026D63; }
+    body.collaborations .navigator_content .navigator .button_menu:hover {
+      background: #026D63; }
+      body.collaborations .navigator_content .navigator .button_menu:hover > span {
+        border-color: #04756A; }
+  body.collaborations .navigator_content .logo svg circle {
+    fill: #04756A;
+    stroke: #026D63; }
+  body.collaborations #fp-nav ul li a span {
+    background: #026D63;
+    -webkit-transition: all 0.25s ease;
+    -khtml-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-box-shadow: 0 0 3px 1px #04756A;
+    -khtml-box-shadow: 0 0 3px 1px #04756A;
+    -moz-box-shadow: 0 0 3px 1px #04756A;
+    -ms-box-shadow: 0 0 3px 1px #04756A;
+    -o-box-shadow: 0 0 3px 1px #04756A;
+    box-shadow: 0 0 3px 1px #04756A; }
+  body.contact .navigator_content .navigator ul li a {
+    color: #E8EBEC; }
+    body.contact .navigator_content .navigator ul li a:before, body.contact .navigator_content .navigator ul li a:after {
+      background: #C16E25; }
+  body.contact .navigator_content .navigator ul li .edge {
     background: #B3631D; }
-    body.contact .navigator_content .navigator .button_menu:hover > span {
-      border-color: #C16E25; }
-body.contact .navigator_content .logo svg circle {
-  fill: #C16E25;
-  stroke: #B3631D; }
-body.contact #fp-nav ul li a span {
-  background: #B3631D;
-  -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  -webkit-box-shadow: 0 0 3px 1px #C16E25;
-  -khtml-box-shadow: 0 0 3px 1px #C16E25;
-  -moz-box-shadow: 0 0 3px 1px #C16E25;
-  -ms-box-shadow: 0 0 3px 1px #C16E25;
-  -o-box-shadow: 0 0 3px 1px #C16E25;
-  box-shadow: 0 0 3px 1px #C16E25; }
+  body.contact .navigator_content .navigator .button_menu {
+    border-color: #B3631D;
+    background: rgba(193, 110, 37, 0.71); }
+    body.contact .navigator_content .navigator .button_menu > span {
+      border-color: #B3631D; }
+    body.contact .navigator_content .navigator .button_menu:hover {
+      background: #B3631D; }
+      body.contact .navigator_content .navigator .button_menu:hover > span {
+        border-color: #C16E25; }
+  body.contact .navigator_content .logo svg circle {
+    fill: #C16E25;
+    stroke: #B3631D; }
+  body.contact #fp-nav ul li a span {
+    background: #B3631D;
+    -webkit-transition: all 0.25s ease;
+    -khtml-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-box-shadow: 0 0 3px 1px #C16E25;
+    -khtml-box-shadow: 0 0 3px 1px #C16E25;
+    -moz-box-shadow: 0 0 3px 1px #C16E25;
+    -ms-box-shadow: 0 0 3px 1px #C16E25;
+    -o-box-shadow: 0 0 3px 1px #C16E25;
+    box-shadow: 0 0 3px 1px #C16E25; }
 
 img.responsive-img,
 video.responsive-video {
@@ -3659,13 +3661,6 @@ video.responsive-video {
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-  .preview_page.active {
-    -webkit-transform: scale(0.37) translate3d(0%, 0%, 0);
-    -khtml-transform: scale(0.37) translate3d(0%, 0%, 0);
-    -moz-transform: scale(0.37) translate3d(0%, 0%, 0);
-    -ms-transform: scale(0.37) translate3d(0%, 0%, 0);
-    -o-transform: scale(0.37) translate3d(0%, 0%, 0);
-    transform: scale(0.37) translate3d(0%, 0%, 0); }
   .preview_page.fullscreen {
     z-index: 10000;
     opacity: 1;
@@ -3747,7 +3742,7 @@ video.responsive-video {
     -ms-transform: rotatey(0deg) translatex(0%);
     -o-transform: rotatey(0deg) translatex(0%);
     transform: rotatey(0deg) translatex(0%); }
-    .carousel .item.last, .carousel .item.active {
+    .carousel .item.active {
       z-index: 1;
       opacity: 1; }
     .carousel .item.active {
@@ -3807,6 +3802,8 @@ video.responsive-video {
       transform: rotatey(180deg); }
     .carousel .control.right {
       right: 0; }
+    .carousel .control.inactive:after {
+      cursor: no-drop; }
     .carousel .control:hover:after {
       border-color: transparent transparent transparent white; }
 

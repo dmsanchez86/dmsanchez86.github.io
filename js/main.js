@@ -94,63 +94,60 @@ var App = {
             $('.preview_page').addClass('load');
         }
         
-        $('.carousel .control').unbind('click').click(function(){
+        $('.carousel .control:not(.inactive)').unbind('click').click(function(){
             var father = $(this).parent(); // carousel
             var item = parseInt(father.attr('item')); // number item slider active
             
-            if($(this).hasClass('right')){ // click in the rigth button
-                $('.carousel .item.active').addClass('last').removeClass('next');
+            if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
+                
+                // put inactive left control
+                $('.carousel .control.left').removeClass('inactive');
+            
+                // remove all items last class
+                $('.carousel .item').removeClass('last');
+                $('.carousel .item.active').addClass('last').removeClass('next'); // add next class item active
                 
                 setTimeout(function(){
                     $('.carousel .item.active').removeClass('active');
                     $('.carousel .item.next').addClass('active').removeClass('next last');
                     
-                    if(item >= $('.carousel .item').length){
-                        item = 0;
-                        
-                        $('.carousel .item').eq(item).removeClass('last').addClass('next');
-                        $('.carousel .item').eq(item+1).removeClass('last active').addClass('next');
-                        setTimeout(function(){
-                            $('.carousel .item').eq(item).removeClass('next').addClass('active');
-                            item++;
-                            
-                            father.attr('item', item);
-                        },500);
+                    if(item >= $('.carousel .item').length - 1){
+                        $('.carousel .control.right').addClass('inactive');
+                        item++;
                     }else{
                         item++;
-                        
                         $('.carousel .item').eq(item).removeClass('last active').addClass('next');
                     }
                     
                     father.attr('item', item);
                 },500);
                 
-            }else{
-                $('.carousel .item.active').removeClass('last').addClass('next');
+            }else if($(this).hasClass('left')){
+                
+                $('.carousel .control.right').removeClass('inactive');
                 
                 setTimeout(function(){
-                    $('.carousel .item').removeClass('next last');
-                    $('.carousel .item.active').removeClass('active last');
                     
-                    $('.carousel .item.last').addClass('active').removeClass('active last');
-                    
-                    if(item <= 0){
-                        item = $('.carousel .item').length;
+                    if(item <= 1){
+                         $('.carousel .control.left').addClass('inactive');
+                        return;
+                    }else{
+                        console.log(item);
+                        item--;
+                        console.log(item);
+                        $('.carousel .item').removeClass('next');
+                        $('.carousel .item.active').addClass('next');
                         
-                        $('.carousel .item').eq(item - 1).removeClass('last active').addClass('next');
-                        // $('.carousel .item').eq(item - 2).removeClass('last active').addClass('next');
                         setTimeout(function(){
-                            $('.carousel .item').eq(item - 1).removeClass('next').addClass('active');
-                            item--;
+                            $('.carousel .item.active').removeClass('active');
+                            $('.carousel .item.last').addClass('active').removeClass('next last');
                             
+                            if(item != 1){
+                                $('.carousel .item').eq(item - 2).removeClass('next active').addClass('last');
+                            }
                             father.attr('item', item);
                         },500);
-                    }else{
-                        item--;
-                        
-                        $('.carousel .item').eq(item).removeClass('next active').addClass('last');
                     }
-                    
                     father.attr('item', item);
                 },500);
             }

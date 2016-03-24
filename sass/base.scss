@@ -8,6 +8,8 @@
 body,html{ @include init; }
 
 body{
+	overflow: hidden;
+	
 	&.home{
 		.navigator_content{
 			.navigator{
@@ -747,7 +749,7 @@ video.responsive-video {
 	}
 	
 	&.active{
-		@include transform(scale(.37) translate3d(0%, 0%, 0));
+		// @include transform(scale(.37) translate3d(0%, 0%, 0));
 	}
 	
 	&.fullscreen{
@@ -819,7 +821,7 @@ video.responsive-video {
 		@include transition(transform 1s ease-in-out);
 		@include transform(rotatey(0deg) translatex(0%));
 		
-		&.last,
+		// &.last,
 		&.active{
 			z-index: 1;
 			opacity: 1;
@@ -868,6 +870,12 @@ video.responsive-video {
 		
 		&.right{
 			right: 0;
+		}
+		
+		&.inactive{
+			&:after{
+				cursor: no-drop;
+			}
 		}
 		
 		&:hover{
