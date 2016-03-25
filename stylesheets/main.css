@@ -3870,19 +3870,19 @@ video.responsive-video {
       -o-transform: rotatey(0deg) translatex(0%);
       transform: rotatey(0deg) translatex(0%); }
     .carousel .item.last {
-      -webkit-transform: translatex(-150%) rotatey(120deg);
-      -khtml-transform: translatex(-150%) rotatey(120deg);
-      -moz-transform: translatex(-150%) rotatey(120deg);
-      -ms-transform: translatex(-150%) rotatey(120deg);
-      -o-transform: translatex(-150%) rotatey(120deg);
-      transform: translatex(-150%) rotatey(120deg); }
+      -webkit-transform: translatex(-150%) rotatey(150deg);
+      -khtml-transform: translatex(-150%) rotatey(150deg);
+      -moz-transform: translatex(-150%) rotatey(150deg);
+      -ms-transform: translatex(-150%) rotatey(150deg);
+      -o-transform: translatex(-150%) rotatey(150deg);
+      transform: translatex(-150%) rotatey(150deg); }
     .carousel .item.next {
-      -webkit-transform: translatex(150%) rotatey(-120deg);
-      -khtml-transform: translatex(150%) rotatey(-120deg);
-      -moz-transform: translatex(150%) rotatey(-120deg);
-      -ms-transform: translatex(150%) rotatey(-120deg);
-      -o-transform: translatex(150%) rotatey(-120deg);
-      transform: translatex(150%) rotatey(-120deg); }
+      -webkit-transform: translatex(150%) rotatey(-150deg);
+      -khtml-transform: translatex(150%) rotatey(-150deg);
+      -moz-transform: translatex(150%) rotatey(-150deg);
+      -ms-transform: translatex(150%) rotatey(-150deg);
+      -o-transform: translatex(150%) rotatey(-150deg);
+      transform: translatex(150%) rotatey(-150deg); }
   .carousel .control {
     position: absolute;
     top: 0;

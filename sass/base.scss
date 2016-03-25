@@ -865,11 +865,11 @@ video.responsive-video {
 		}
 		
 		&.last{
-			@include transform(translatex(-150%) rotatey(120deg) );
+			@include transform(translatex(-150%) rotatey(150deg) );
 		}
 		
 		&.next{
-			@include transform(translatex(150%) rotatey(-120deg));
+			@include transform(translatex(150%) rotatey(-150deg));
 		}
 	}
 	
