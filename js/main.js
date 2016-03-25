@@ -86,6 +86,9 @@ var App = {
         
         $('.resize').unbind('click').click(function(){
             $('.preview_page').toggleClass('fullscreen');
+            if(window.innerWidth <= 600){
+                $('.preview_page').removeClass('active');
+            }
         });
 
         var iframe = document.querySelector(".preview_page iframe");
@@ -163,6 +166,9 @@ var App = {
                 }else{
                     $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
                 }
+                if(window.innerWidth <= 600){
+                    $('.preview_page').addClass('fullscreen');
+                }
             }else if($(this).hasClass('code')){
                 if(App.isValidUrl(url)){
                     window.open(url);
@@ -192,6 +198,8 @@ var App = {
             anchors: ['home', 'projects', 'collaborations', 'contact'],
             menu: '#menu',
             css3: true,
+            // scrollOverflow: true, // for scroll big sections
+            continuousVertical: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
                 $('.preview_page').removeClass('active load').find('iframe').attr('src','');

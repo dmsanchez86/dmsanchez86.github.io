@@ -2,31 +2,31 @@
 @-webkit-keyframes point1{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @-moz-keyframes point1{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @keyframes point1{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 
@@ -34,31 +34,31 @@
 @-webkit-keyframes point2{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @-moz-keyframes point2{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @keyframes point2{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 
@@ -66,31 +66,31 @@
 @-webkit-keyframes point3{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @-moz-keyframes point3{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @keyframes point3{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(3px, -10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(6px, -20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(10px, -20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(10px, -10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(8px, -5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(6px, -20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(12px, -40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(20px, -40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(20px, -20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(16px, -10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 
@@ -98,31 +98,31 @@
 @-webkit-keyframes point4{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @-moz-keyframes point4{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 @keyframes point4{
 	0%{@include transform(translate3d(0,0,0) rotate(0));}
 	0%, 100%, 49.8%{ @include transform(translate3d(0, 0, 0)); }
-	8.3%, 91.2%{ @include transform(translate3d(-3px, 10px, 0)); }
-	16.6%, 82.9%{ @include transform(translate3d(-6px, 20px, 0)); }
-	29.9%, 74.69%{ @include transform(translate3d(-10px, 20px, 0)); }
-	33.2%, 66.3%{ @include transform(translate3d(-10px, 10px, 0));	}
-	41.5%, 58%{ @include transform(translate3d(-8px, 5px, 0));	}
+	8.3%, 91.2%{ @include transform(translate3d(-6px, 20px, 0)); }
+	16.6%, 82.9%{ @include transform(translate3d(-12px, 40px, 0)); }
+	29.9%, 74.69%{ @include transform(translate3d(-20px, 40px, 0)); }
+	33.2%, 66.3%{ @include transform(translate3d(-20px, 20px, 0));	}
+	41.5%, 58%{ @include transform(translate3d(-16px, 10px, 0));	}
 	50%{@include transform(translate3d(0,0,0) rotate(360deg));}
 }
 

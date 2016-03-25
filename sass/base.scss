@@ -294,12 +294,12 @@ video.responsive-video {
 
 		&:hover{
 			&:after{
-				@include animation(scale_logo 1.5s 2 .5s ease);
+				@include animation(scale_logo 1.5s 1 .5s ease);
 			}
 
 			svg{
 				circle{
-					@include animation(circle_resort 1s 2 linear);
+					@include animation(circle_resort 1s 1 ease);
 				}
 			}
 		}
@@ -509,7 +509,7 @@ video.responsive-video {
 
 			.close_menu{
 				position: absolute;
-				top: 5px;
+				top: 0px;
 				right: 10px;
 				font-weight: bold;
 				display: none;
@@ -580,24 +580,24 @@ video.responsive-video {
 			content: '';
 			@include center-absolute(absolute);
 			@include border-radius(50%);
-			@include animation(scale 1s infinite linear);
+			@include animation(scale .5s infinite linear);
 		}
 
 		&:nth-child(1){
 			background: rgba(22, 162, 216, 0.85);
-			@include animation(point1 2s linear 0s infinite);
+			@include animation(point1 2s linear infinite);
 		}
 		&:nth-child(2){
 			background: rgba(193, 39, 39, 0.85);
-			@include animation(point2 2s linear 0s infinite);
+			@include animation(point2 2s linear infinite);
 		}
 		&:nth-child(3){
 			background: rgba(214, 127, 53, 0.85);
-			@include animation(point3 2s linear 0s infinite);
+			@include animation(point3 2s linear infinite);
 		}
 		&:nth-child(4){
 			background: rgba(69, 208, 35, 0.85);
-			@include animation(point4 2s linear 0s infinite);
+			@include animation(point4 2s linear infinite);
 		}
 		&:nth-child(5){
 
@@ -707,6 +707,7 @@ video.responsive-video {
 	height: 100vh;
 	top: 0;
 	left: 0;
+	z-index: 222;
 	padding: .5rem 0 0 .5rem;
 	opacity: .6;
 	overflow: hidden;
@@ -743,11 +744,12 @@ video.responsive-video {
 
 		span{
 			cursor: pointer;
+			height: 200px;
+			@include center-absolute(absolute);
 
 			i{
-				font-size: 400px;
+				font-size: 200px;
 			    color: rgba(255, 255, 255, 0.72);
-			    line-height: 634px;
 				
 				&:last-child{
 					display: none;
@@ -779,8 +781,9 @@ video.responsive-video {
 		padding: .5rem;
 		background: white;
 		text-align: right;
+		@include border-radius(5px);
 		@include box-sizing(border-box);
-		@include transform(scale(1) translate3d(0%, 0%, 0));
+		@include transform(scale(1) translate3d(0%, 0%, 0) !important);
 
 		iframe{
 			@include border-radius(5px);
@@ -789,8 +792,16 @@ video.responsive-video {
 		.toolbox{
 			opacity: .5;
 			height: auto;
+		    width: 40px;
+		    right: 0;
+		    margin: auto;
+		    padding-left: 0;
+		    padding-right: 0;
+		    @include border-radius(0 0 5px 5px);
 
 			.resize{
+				height: auto;
+				
 				i{
 					font-size: 20px;
 					line-height: 1;
@@ -798,6 +809,7 @@ video.responsive-video {
 					
 					&:last-child{
 						display: block;
+						margin-top: .25rem;
 					}
 					&:first-child{
 						display: none;
@@ -877,9 +889,9 @@ video.responsive-video {
 			right: 0;
 			content: '';
 			max-height: 50px;
-			border: solid rgba(255,255,255,.5);
+			border: solid rgba(255,255,255,.3);
 			border-width: 33px 0 33px 33px;
-			border-color: transparent transparent transparent rgba(255,255,255,.5);
+			border-color: transparent transparent transparent rgba(255,255,255,.3);
 			cursor: pointer;
 			@include transition(border .5s ease);
 		}
@@ -901,7 +913,7 @@ video.responsive-video {
 		
 		&:hover{
 			&:after{
-				border-color: transparent transparent transparent rgba(255,255,255,1);
+				border-color: transparent transparent transparent rgba(255,255,255,.7);
 			}
 		}
 	}
@@ -979,6 +991,7 @@ video.responsive-video {
 				opacity: 1;
 				@include transform(translate3d(0,0,0));
 			}
+			
 			&:before{
 				opacity: 1;
 			}
