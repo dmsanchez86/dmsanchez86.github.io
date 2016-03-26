@@ -3501,7 +3501,7 @@ video.responsive-video {
     right: 0;
     bottom: 0;
     margin: auto; }
-    .project .title a {
+    .project .title > a {
       font-size: 50px;
       color: white;
       font-family: 'Pacifico';
@@ -3517,21 +3517,92 @@ video.responsive-video {
       -ms-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       -o-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232;
       text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232, 4px -4px 1px #323232, 5px -5px 1px #323232, 6px -6px 1px #323232, 7px -7px 1px #323232, 8px -8px 1px #323232; }
-      .project .title a:hover {
+      .project .title > a:hover {
         -webkit-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
         -khtml-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
         -moz-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
         -ms-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
         -o-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
         text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111; }
-      .project .title a i {
+      .project .title > a[title-ref] {
+        position: relative; }
+        .project .title > a[title-ref]:after {
+          position: absolute;
+          top: 90%;
+          left: -100%;
+          width: 300%;
+          content: attr(title-ref);
+          color: white;
+          opacity: 0;
+          padding: .15rem .5rem;
+          font-size: 16px;
+          font-family: 'Yanone Kaffeesatz', sans-serif;
+          -webkit-text-shadow: none;
+          -khtml-text-shadow: none;
+          -moz-text-shadow: none;
+          -ms-text-shadow: none;
+          -o-text-shadow: none;
+          text-shadow: none;
+          -webkit-transition: transform 0.5s ease, opacity 0.25s ease;
+          -khtml-transition: transform 0.5s ease, opacity 0.25s ease;
+          -moz-transition: transform 0.5s ease, opacity 0.25s ease;
+          -ms-transition: transform 0.5s ease, opacity 0.25s ease;
+          -o-transition: transform 0.5s ease, opacity 0.25s ease;
+          transition: transform 0.5s ease, opacity 0.25s ease;
+          -webkit-transform: translate3d(0, -10%, 0);
+          -khtml-transform: translate3d(0, -10%, 0);
+          -moz-transform: translate3d(0, -10%, 0);
+          -ms-transform: translate3d(0, -10%, 0);
+          -o-transform: translate3d(0, -10%, 0);
+          transform: translate3d(0, -10%, 0);
+          background-image: -webkit-radial-gradient(center, #111, #323232);
+          background-image: -khtml-radial-gradient(center, #111, #323232);
+          background-image: -moz-radial-gradient(center, #111, #323232);
+          background-image: -ms-radial-gradient(center, #111, #323232);
+          background-image: -o-radial-gradient(center, #111, #323232);
+          background-image: radial-gradient(center, #111, #323232);
+          -webkit-border-radius: 4px;
+          -khtml-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -o-border-radius: 4px;
+          border-radius: 4px; }
+        .project .title > a[title-ref]:before {
+          position: absolute;
+          top: 85%;
+          left: 0;
+          width: 11px;
+          margin: auto;
+          right: 0;
+          border: solid #323232;
+          opacity: 0;
+          content: '';
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent #323232 transparent;
+          -webkit-transition: opacity 0.25s ease;
+          -khtml-transition: opacity 0.25s ease;
+          -moz-transition: opacity 0.25s ease;
+          -ms-transition: opacity 0.25s ease;
+          -o-transition: opacity 0.25s ease;
+          transition: opacity 0.25s ease; }
+        .project .title > a[title-ref]:hover:after {
+          opacity: 1;
+          -webkit-transform: translate3d(0, 0, 0);
+          -khtml-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+          -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+        .project .title > a[title-ref]:hover:before {
+          opacity: 1; }
+      .project .title > a i {
         -webkit-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232;
         -khtml-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232;
         -moz-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232;
         -ms-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232;
         -o-text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232;
         text-shadow: 1px -1px 1px #323232, 2px -2px 1px #323232, 3px -3px 1px #323232; }
-        .project .title a i:focus, .project .title a i:hover {
+        .project .title > a i:focus, .project .title > a i:hover {
           -webkit-animation: text3D 3s infinite linear;
           -khtml-animation: text3D 3s infinite linear;
           -moz-animation: text3D 3s infinite linear;
