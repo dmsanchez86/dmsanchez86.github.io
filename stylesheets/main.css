@@ -4121,6 +4121,23 @@ video.responsive-video {
       padding-bottom: .45rem;
       margin-top: .1rem; }
 
+.overlay-menu {
+  position: fixed;
+  height: 100vh;
+  width: calc(100vw - 150px);
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: -100;
+  -webkit-transition: z-index 0.5s ease;
+  -khtml-transition: z-index 0.5s ease;
+  -moz-transition: z-index 0.5s ease;
+  -ms-transition: z-index 0.5s ease;
+  -o-transition: z-index 0.5s ease;
+  transition: z-index 0.5s ease; }
+  .overlay-menu.open {
+    z-index: 9; }
+
 @media (max-width: 980px) {
   body.home .navigator_content .navigator ul {
     background: rgba(106, 181, 212, 0.72);

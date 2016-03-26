@@ -12,10 +12,6 @@ var App = {
     
     // Contenedor
     container: null,
-    
-    // Contadoras
-    projects_count: 0,
-    collaboration_count: 0,
 
     mouseX : 0, 
     mouseY : 0,
@@ -42,7 +38,7 @@ var App = {
             blending: THREE.AdditiveBlending
         } );
 
-        for ( var i = 0; i < 1000; i++ ) {
+        for ( var i = 0; i < 2000; i++ ) {
             var particle = new THREE.Sprite( material );
             App.initParticle( particle, i * 10 );
             App.scene.add( particle );
@@ -63,26 +59,14 @@ var App = {
         },2500);
 
         $('.button_menu').unbind('click').click(function(){
-            $('#menu').toggleClass('open');
+            $('#menu,.overlay-menu').addClass('open');
             $(this).fadeOut('1000');
         });
 
-        $('#menu .close_menu').unbind('click').click(function(){
-            $('#menu').removeClass('open');
+        $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
+            $('#menu,.overlay-menu').removeClass('open');
             $('.button_menu').fadeIn('1500');
         });
-        
-/*
-        $('.project .title a').mouseenter(function(){
-            if(App.isValidUrl($(this).attr('href'))){
-                $('.preview_page').addClass('active').find('iframe').attr('src', $(this).attr('href'));
-            }else{
-                $('.preview_page').addClass('active').find('iframe').attr('src', "http://dmsanchez86.github.io/"+$(this).attr('href'));
-            }
-        });
-        $('.project .title a').mouseleave(function(){
-            $('.preview_page').addClass('active').find('iframe').attr('src', "");
-        });*/
         
         $('.resize').unbind('click').click(function(){
             $('.preview_page').toggleClass('fullscreen');

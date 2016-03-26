@@ -1052,5 +1052,20 @@ video.responsive-video {
 	}
 }
 
+.overlay-menu{
+	position: fixed;
+	height: 100vh;
+	width: calc(100vw - 150px);
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0);
+	z-index: -100;
+	@include transition(z-index .5s ease);
+	
+	&.open{
+		z-index: 9;
+	}
+}
+
 @import 'queries';
 @import 'keyframes';
