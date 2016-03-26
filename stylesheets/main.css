@@ -3765,14 +3765,14 @@ video.responsive-video {
     display: inline-block;
     width: 150px;
     height: 100px;
-    color: white;
+    color: #323232;
     text-align: center;
-    -webkit-text-shadow: 0 0 4px #323232;
-    -khtml-text-shadow: 0 0 4px #323232;
-    -moz-text-shadow: 0 0 4px #323232;
-    -ms-text-shadow: 0 0 4px #323232;
-    -o-text-shadow: 0 0 4px #323232;
-    text-shadow: 0 0 4px #323232;
+    -webkit-text-shadow: 0 0 6px #fefefe;
+    -khtml-text-shadow: 0 0 6px #fefefe;
+    -moz-text-shadow: 0 0 6px #fefefe;
+    -ms-text-shadow: 0 0 6px #fefefe;
+    -o-text-shadow: 0 0 6px #fefefe;
+    text-shadow: 0 0 6px #fefefe;
     position: absolute;
     top: 0;
     left: 0;
@@ -3790,6 +3790,7 @@ video.responsive-video {
     padding: 1rem 5rem;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
+    z-index: 10;
     -webkit-transform: translate3d(0, -100%, 0);
     -khtml-transform: translate3d(0, -100%, 0);
     -moz-transform: translate3d(0, -100%, 0);
@@ -3818,7 +3819,19 @@ video.responsive-video {
           display: none; }
   .preview_page iframe {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    -webkit-transition: transform 1s 0.5s ease;
+    -khtml-transition: transform 1s 0.5s ease;
+    -moz-transition: transform 1s 0.5s ease;
+    -ms-transition: transform 1s 0.5s ease;
+    -o-transition: transform 1s 0.5s ease;
+    transition: transform 1s 0.5s ease;
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0); }
   .preview_page:hover {
     opacity: 1; }
     .preview_page:hover .toolbox {
@@ -3895,6 +3908,13 @@ video.responsive-video {
         opacity: 1; }
   .preview_page.load .loader_preview {
     display: none; }
+  .preview_page.load iframe {
+    -webkit-transform: scale(1);
+    -khtml-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
 
 .fp-section.fp-table, .fp-slide.fp-table {
   height: 100vh !important; }
