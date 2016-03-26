@@ -3609,6 +3609,13 @@ video.responsive-video {
           -ms-animation: text3D 3s infinite linear;
           -o-animation: text3D 3s infinite linear;
           animation: text3D 3s infinite linear; }
+    .project .title:hover > a {
+      -webkit-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+      -khtml-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+      -moz-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+      -ms-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+      -o-text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111;
+      text-shadow: 2px -1px 1px #111, 3px -2px 1px #111, 4px -3px 1px #111, 5px -4px 1px #111, 6px -5px 1px #111, 7px -6px 1px #111, 8px -7px 1px #111, 9px -8px 1px #111, 10px -9px 1px #111, 11px -10px 1px #111; }
     .project .title:hover .tools {
       display: block; }
       .project .title:hover .tools .tool:nth-child(1) {
@@ -3897,12 +3904,12 @@ video.responsive-video {
   left: 0;
   width: 100vw;
   height: 100vh;
-  -webkit-perspective: 1000px;
-  -khtml-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -ms-perspective: 1000px;
-  -o-perspective: 1000px;
-  perspective: 1000px;
+  -webkit-perspective: 800px;
+  -khtml-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
   -webkit-perspective-origin: center;
   -khtml-perspective-origin: center;
   -moz-perspective-origin: center;
@@ -3933,7 +3940,7 @@ video.responsive-video {
       z-index: 1;
       opacity: 1; }
     .carousel .item.active {
-      background: rgba(0, 0, 0, 0.13);
+      background: rgba(0, 0, 0, 0.07);
       -webkit-transform: rotatey(0deg) translatex(0%);
       -khtml-transform: rotatey(0deg) translatex(0%);
       -moz-transform: rotatey(0deg) translatex(0%);
