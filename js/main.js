@@ -182,7 +182,8 @@ var App = {
             anchors: ['home', 'projects', 'collaborations', 'contact'],
             menu: '#menu',
             css3: true,
-            // scrollOverflow: true, // for scroll big sections
+            scrollOverflow: false, // for scroll big sections
+            autoScrolling: true,
             continuousVertical: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
