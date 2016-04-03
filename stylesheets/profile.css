@@ -1,0 +1,23 @@
+.profile_content{
+	position: fixed;
+	bottom: 2rem;
+	left: 2rem;
+	border-radius: 50%;
+	border: solid 3px white;
+	overflow: hidden;
+	max-width: 60px;
+	display: none;
+	height: 60px;
+	cursor: pointer;
+	transition: transform .5s ease;
+}
+.profile_content:hover{
+	transform: scale(1.1);
+}
+.profile_content:hover img{
+	-webkit-filter: blur(3px);
+}
+.profile_content img{
+	max-width: 100%;
+	transition: filter .5s ease-in;
+}
