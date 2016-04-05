@@ -374,6 +374,12 @@ body{
 		.popup{
 			opacity: 1;
 			z-index: 111;
+			
+			.popup-header{
+				.profile_content{
+					@include animation(scaleIn .5s 1.6s linear forwards);
+				}
+			}
 		}
 	}
 }
@@ -1239,9 +1245,10 @@ video.responsive-video {
 	@include border-radius(50%);
 	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.452));
 	@include transition((transform .25s linear, border .2s linear));
+	@include transform(scale(0));
 	
 	&:hover{
-		transform: scale(1.2);
+		@include transform(scale(1.2));
 		
 		img{
 			//@include filter(grayscale(80%));
@@ -1288,16 +1295,18 @@ video.responsive-video {
 	img{
 		max-width: 100%;
 		@include border-radius(50%);
-		@include filter(grayscale(100%));
+		//@include filter(grayscale(100%));
 		@include transition(filter .5s linear);
 	}
 	
 	&.scaleOut{
-		@include animation(scaleOut 1s 1s ease forwards);
+		@include transform(scale(1));
+		@include animation(scaleOut .25s 0s linear forwards);
 	}
 	
 	&.scaleIn{
-		@include animation(scaleIn 1s 1s ease forwards);
+		@include transform(scale(0));
+		@include animation(scaleIn .5s .5s linear forwards);
 	}
 }
 
@@ -1370,6 +1379,20 @@ video.responsive-video {
 		
 		.popup-body{
 			@include transform(translatey(0%));
+			
+			h1{
+				@include animation(moveUp 1s 2.3s ease forwards);
+			}
+			
+			article{
+				p{
+					@include animation(moveUp 1s 2.5s ease forwards);
+				}
+				
+				.project{
+					@include animation(moveUp 1s 2.7s ease forwards);
+				}
+			}
 		}
 	}
 	
@@ -1391,8 +1414,8 @@ video.responsive-video {
 			margin: auto;
 			bottom: 0;
 			top: 0;
-			height: 120px;
-			max-width: 120px;
+			height: 135px;
+			max-width: 135px;
 			border-width: 4px;
 			
 			img{
@@ -1407,6 +1430,82 @@ video.responsive-video {
 		background-color: white;
 	    @include transition(transform .5s 1s ease-in);
 	    @include transform(translatey(105%));
+	    
+	    h1{
+	    	color: #323232;
+	    	text-align: center;
+	    	background: white;
+	    	position: relative;
+	    	top: -6%;
+	    	@include border-radius(6px);
+	    	left: 0;
+		    right: 0;
+		    margin: auto;
+		    max-width: 100%;
+		    width: 325px;
+		    padding: .15rem 1.5rem;
+		    font-family: 'Yanone Kaffeesatz', sans-serif;
+		    opacity: 0;
+	    }
+	    
+	    article{
+	    	p{
+	    		font-family: 'Yanone Kaffeesatz', sans-serif;
+	    		color: #323232;
+	    		text-align: center;
+	    		font-size: 2rem;
+			    font-weight: 100;
+			    padding-top: 2rem;
+			    opacity: 0;
+	    	}
+	    	
+	    	.project{
+	    		position: fixed;
+	    		width: 100%;
+	    		height: auto;
+	    		bottom: 1rem;
+	    		opacity: 0;
+	    		
+	    		.title{
+	    			width: 500px;
+	    			
+	    			> a{
+	    				color: #323232;
+	    				font-size: 35px;
+	    				margin: 0 .15rem;
+	    				
+	    				i{
+	    					@include text-shadow(none);
+	    					
+	    					&:hover{
+	    						@include animation(none);
+	    					}
+	    				}
+	    				
+	    				&[title-ref]{
+	    					&:after{
+	    						left: -150%;
+    							width: 400%;
+    						    top: initial;
+    							bottom: 99%;
+    							@include transform(translate3d(0, 10%, 0));
+	    					}
+	    					&:before{
+	    						top: 6%;
+	    						border-width: 5px  5px 0 5px;
+    							border-color: #323232 transparent transparent transparent;
+	    					}
+	    					
+	    					&:nth-child(6){
+	    						&:before{
+	    							top: 4%;
+	    						}
+	    					}
+	    				}
+	    			}
+	    		}
+	    	}
+	    }
 	}
 }
 

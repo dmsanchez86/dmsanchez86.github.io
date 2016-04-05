@@ -69,6 +69,10 @@ var App = {
                 $('.profile_content').removeClass('scaleOut');
                 $('.popup').removeClass('active');
                 
+                if($(this).hasClass('overlay-menu')){
+                    $('.popup').find('.popup-header .profile_content').remove();
+                }
+                
                 setTimeout(function(){
                     $('.profile_content').addClass('scaleIn');
                 },500);
@@ -204,31 +208,19 @@ var App = {
                 $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
                 $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
                 $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
-            },
-            afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
                 
-                // if(anchorLink == "projects"){
-                //     console.log($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                //     if($('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href') != "https://github.com/dmsanchez86/Mecaut"){
-                //         $('.preview_page').addClass('active').find('iframe').attr('src', 'http://dmsanchez86.github.io/'+$('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                //     }else{
-                //         $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_projects .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                //     }
-                //     setTimeout(function(){
-                //         $('.preview_page').addClass('active');
-                //     },3000); 
-                // }else{
-                //     if($('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.phonegap.jurisquiz&hl=es_419" || $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href') == "https://play.google.com/store/apps/details?id=com.zopp.artritis"){
-                //         $('.preview_page').removeClass('active');
-                //     }else{
-                //         $('.preview_page').addClass('active');
-                //         $('.preview_page').addClass('active').find('iframe').attr('src', $('#section_collaborations .slide').eq(slideIndex).find('.project .title a').attr('href'));
-                        
-                //         setTimeout(function(){
-                //             $('.preview_page').addClass('active');
-                //         },3000); 
-                //     }
-                // }   
+                $('.profile_content').removeClass('scaleOut');
+                
+                setTimeout(function(){
+                    $('.profile_content').addClass('scaleIn');
+                },300);
+            },
+            onLeave: function(){
+                $('.profile_content').removeClass('scaleIn').addClass('scaleOut');
+                
+                setTimeout(function(){
+                    $('.profile_content').removeClass('scaleOut');
+                },1000);
             }
         });
     },
@@ -385,9 +377,11 @@ var App = {
                 setTimeout(function(){
                     $('.profile_content').addClass('scaleIn');
                     setTimeout(function(){
-                        $('.profile_content').removeClass('scaleIn');
+                        // $('.profile_content').removeClass('scaleIn');
                     },500);
                 },500);
+                
+                window.location.hash = "#about";
             }else{
                 $('body').addClass('profile');
                 $(this).removeClass('scaleIn');
@@ -402,7 +396,7 @@ var App = {
                         clonePopup.appendTo(".popup .popup-header");
                         App.contentProfile();
                     },1000);
-                },500);
+                },100);
             }
         });
     }
