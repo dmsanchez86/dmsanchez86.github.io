@@ -64,8 +64,18 @@ var App = {
         });
 
         $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
-            $('#menu,.overlay-menu').removeClass('open');
-            $('.button_menu').fadeIn('1500');
+            if($('body').hasClass('profile')){
+                $('body').removeClass('profile');
+                $('.profile_content').removeClass('scaleOut');
+                $('.popup').removeClass('active');
+                
+                setTimeout(function(){
+                    $('.profile_content').addClass('scaleIn');
+                },500);
+            }else{
+                $('.button_menu').fadeIn('1500');
+                $('#menu,.overlay-menu').removeClass('open');
+            }
         });
         
         $('.resize').unbind('click').click(function(){
@@ -174,6 +184,8 @@ var App = {
                 }
             }
         });
+        
+        this.contentProfile();
     },
 
     fullPage: function(){
@@ -184,7 +196,7 @@ var App = {
             css3: true,
             scrollOverflow: false, // for scroll big sections
             autoScrolling: true,
-            continuousVertical: true,
+            // continuousVertical: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
                 $('.preview_page').removeClass('active load').find('iframe').attr('src','');
@@ -360,6 +372,39 @@ var App = {
             return true;
         else
             return false;
+    },
+    
+    contentProfile: function(){
+        $('.profile_content').unbind('click').click(function(){
+            if($('body').hasClass('profile')){
+                $('body').removeClass('profile');
+                $('.popup').removeClass('active').find('.popup-header .profile_content').remove();
+                
+                $('.profile_content').removeClass('scaleOut');
+                
+                setTimeout(function(){
+                    $('.profile_content').addClass('scaleIn');
+                    setTimeout(function(){
+                        $('.profile_content').removeClass('scaleIn');
+                    },500);
+                },500);
+            }else{
+                $('body').addClass('profile');
+                $(this).removeClass('scaleIn');
+                
+                var clonePopup = $('.profile_content').clone();
+                
+                setTimeout(function(){
+                    $('.profile_content').addClass('scaleOut');
+                    $('.popup').addClass('active');
+                    
+                    setTimeout(function(){
+                        clonePopup.appendTo(".popup .popup-header");
+                        App.contentProfile();
+                    },1000);
+                },500);
+            }
+        });
     }
 }
 

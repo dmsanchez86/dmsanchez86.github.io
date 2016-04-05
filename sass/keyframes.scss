@@ -368,3 +368,34 @@
 		@include transform(translatey(0px));
 	}
 }
+
+// Scale Out
+@keyframes scaleOut{
+	0%{
+		@include transform(scale(1));
+	}
+	10%, 15%{
+		@include transform(scale(1.12));
+	}
+	50%{
+		@include transform(scale(.5));
+	}
+	100%{
+		@include transform(scale(0));
+	}
+}
+
+@keyframes scaleIn{
+	0%{
+		@include transform(scale(0));
+	}
+	60%, 65%{
+		@include transform(scale(1.12));
+	}
+	50%{
+		@include transform(scale(.5));
+	}
+	100%{
+		@include transform(scale(1));
+	}
+}
