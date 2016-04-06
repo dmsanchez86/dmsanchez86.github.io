@@ -214,10 +214,10 @@
 	
 	.carousel{
 		.control{
-			width: 25px;
-			
-			&:after{
-				border-width: 25px 0 25px 20px;
+			&:after,
+			&:before{
+				opacity: .5;
+				@include box-shadow(0 0 11px #323232);
 			}
 		}
 	}

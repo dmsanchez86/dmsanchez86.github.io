@@ -4114,26 +4114,64 @@ video.responsive-video {
     top: 0;
     height: 100vh;
     width: 40px;
-    z-index: 1; }
-    .carousel .control:after {
+    z-index: 1;
+    cursor: pointer;
+    margin: auto;
+    bottom: 0;
+    height: 100px; }
+    .carousel .control:after, .carousel .control:before {
+      content: '';
+      opacity: .3;
+      width: 30px;
+      height: 5px;
+      background: white;
+      cursor: pointer;
       position: absolute;
-      margin: auto;
       top: 0;
-      bottom: 0;
       left: 0;
       right: 0;
-      content: '';
-      max-height: 50px;
-      border: solid rgba(255, 255, 255, 0.3);
-      border-width: 33px 0 33px 33px;
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-      -webkit-transition: border 0.5s ease;
-      -khtml-transition: border 0.5s ease;
-      -moz-transition: border 0.5s ease;
-      -ms-transition: border 0.5s ease;
-      -o-transition: border 0.5s ease;
-      transition: border 0.5s ease; }
+      bottom: 0;
+      margin: auto;
+      -webkit-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-transition: opacity 0.5s ease, transform 0.25s ease-in;
+      -khtml-transition: opacity 0.5s ease, transform 0.25s ease-in;
+      -moz-transition: opacity 0.5s ease, transform 0.25s ease-in;
+      -ms-transition: opacity 0.5s ease, transform 0.25s ease-in;
+      -o-transition: opacity 0.5s ease, transform 0.25s ease-in;
+      transition: opacity 0.5s ease, transform 0.25s ease-in; }
+    .carousel .control:after {
+      -webkit-transform: rotate(40deg) translatex(-25%);
+      -khtml-transform: rotate(40deg) translatex(-25%);
+      -moz-transform: rotate(40deg) translatex(-25%);
+      -ms-transform: rotate(40deg) translatex(-25%);
+      -o-transform: rotate(40deg) translatex(-25%);
+      transform: rotate(40deg) translatex(-25%);
+      -webkit-transform-origin: right bottom;
+      -khtml-transform-origin: right bottom;
+      -moz-transform-origin: right bottom;
+      -ms-transform-origin: right bottom;
+      -o-transform-origin: right bottom;
+      transform-origin: right bottom; }
+    .carousel .control:before {
+      top: -25px;
+      right: 1px;
+      -webkit-transform: rotate(-40deg) translatex(-25%);
+      -khtml-transform: rotate(-40deg) translatex(-25%);
+      -moz-transform: rotate(-40deg) translatex(-25%);
+      -ms-transform: rotate(-40deg) translatex(-25%);
+      -o-transform: rotate(-40deg) translatex(-25%);
+      transform: rotate(-40deg) translatex(-25%);
+      -webkit-transform-origin: right top;
+      -khtml-transform-origin: right top;
+      -moz-transform-origin: right top;
+      -ms-transform-origin: right top;
+      -o-transform-origin: right top;
+      transform-origin: right top; }
     .carousel .control.left {
       left: 0;
       -webkit-transform: rotatey(180deg);
@@ -4146,8 +4184,28 @@ video.responsive-video {
       right: 0; }
     .carousel .control.inactive:after {
       cursor: no-drop; }
+    .carousel .control:hover:after, .carousel .control:hover:before {
+      opacity: 1;
+      -webkit-box-shadow: 0 0 11px #323232;
+      -khtml-box-shadow: 0 0 11px #323232;
+      -moz-box-shadow: 0 0 11px #323232;
+      -ms-box-shadow: 0 0 11px #323232;
+      -o-box-shadow: 0 0 11px #323232;
+      box-shadow: 0 0 11px #323232; }
     .carousel .control:hover:after {
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.7); }
+      -webkit-transform: rotate(30deg) translatex(-34%);
+      -khtml-transform: rotate(30deg) translatex(-34%);
+      -moz-transform: rotate(30deg) translatex(-34%);
+      -ms-transform: rotate(30deg) translatex(-34%);
+      -o-transform: rotate(30deg) translatex(-34%);
+      transform: rotate(30deg) translatex(-34%); }
+    .carousel .control:hover:before {
+      -webkit-transform: rotate(-30deg) translatex(-34%);
+      -khtml-transform: rotate(-30deg) translatex(-34%);
+      -moz-transform: rotate(-30deg) translatex(-34%);
+      -ms-transform: rotate(-30deg) translatex(-34%);
+      -o-transform: rotate(-30deg) translatex(-34%);
+      transform: rotate(-30deg) translatex(-34%); }
 
 .tools {
   position: absolute;
@@ -4830,10 +4888,14 @@ video.responsive-video {
       opacity: 1;
       font-size: 20px; }
 
-  .carousel .control {
-    width: 25px; }
-    .carousel .control:after {
-      border-width: 25px 0 25px 20px; }
+  .carousel .control:after, .carousel .control:before {
+    opacity: .5;
+    -webkit-box-shadow: 0 0 11px #323232;
+    -khtml-box-shadow: 0 0 11px #323232;
+    -moz-box-shadow: 0 0 11px #323232;
+    -ms-box-shadow: 0 0 11px #323232;
+    -o-box-shadow: 0 0 11px #323232;
+    box-shadow: 0 0 11px #323232; }
 
   .popup {
     width: 97vw;
