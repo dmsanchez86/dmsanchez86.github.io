@@ -3112,6 +3112,20 @@ body {
         -ms-animation: scaleIn 0.5s 1s linear forwards;
         -o-animation: scaleIn 0.5s 1s linear forwards;
         animation: scaleIn 0.5s 1s linear forwards; }
+  body.menu {
+    background-image: -webkit-linear-gradient(left, #d6d3d3, #fff);
+    background-image: -khtml-linear-gradient(left, #d6d3d3, #fff);
+    background-image: -moz-linear-gradient(left, #d6d3d3, #fff);
+    background-image: -ms-linear-gradient(left, #d6d3d3, #fff);
+    background-image: -o-linear-gradient(left, #d6d3d3, #fff);
+    background-image: linear-gradient(left, #d6d3d3, #fff); }
+    body.menu .fullpage-wrapper .section.active {
+      -webkit-transform: translate3d(0, 0, -120px);
+      -khtml-transform: translate3d(0, 0, -120px);
+      -moz-transform: translate3d(0, 0, -120px);
+      -ms-transform: translate3d(0, 0, -120px);
+      -o-transform: translate3d(0, 0, -120px);
+      transform: translate3d(0, 0, -120px); }
 
 .fullpage-wrapper {
   -webkit-perspective: 2000px;

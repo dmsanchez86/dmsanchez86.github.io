@@ -59,6 +59,7 @@ var App = {
         },2500);
 
         $('.button_menu').unbind('click').click(function(){
+            $('body').addClass('menu');
             $('#menu,.overlay-menu').addClass('open');
             $(this).fadeOut('1000');
         });
@@ -77,6 +78,7 @@ var App = {
                     $('.profile_content').addClass('scaleIn');
                 },500);
             }else{
+                $('body').removeClass('menu');
                 $('.button_menu').fadeIn('1500');
                 $('#menu,.overlay-menu').removeClass('open');
             }

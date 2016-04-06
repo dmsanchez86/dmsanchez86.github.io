@@ -382,6 +382,19 @@ body{
 			}
 		}
 	}
+	
+	&.menu{
+		@include gradient(linear, (left, #d6d3d3, #fff));
+		
+		.fullpage-wrapper{
+			
+			.section{
+				&.active{
+					@include transform(translate3d(0,0,-120px));
+				}
+			}
+		}
+	}
 }
 
 .fullpage-wrapper{
