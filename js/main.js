@@ -195,8 +195,10 @@ var App = {
     },
 
     fullPage: function(){
+        var colorsTheme = ["#87CEEB","#61AB64","#00897b", "#D67F35"];
+        
         $('#main').fullpage({
-            sectionsColor: ["rgb(135, 206, 235)","#61AB64","#00897b", "rgba(214, 127, 53, 0.95)"],
+            sectionsColor: colorsTheme,
             anchors: ['home', 'projects', 'collaborations', 'contact'],
             menu: '#menu',
             css3: true,
@@ -212,6 +214,17 @@ var App = {
                 $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
                 
                 $('.profile_content').removeClass('scaleOut');
+                
+                var color = "";
+                
+                switch(anchorLink){
+                    case "home": color = colorsTheme[0]; break;
+                    case "projects": color = colorsTheme[1]; break;
+                    case "collaborations": color = colorsTheme[2]; break;
+                    case "contact": color = colorsTheme[3]; break;
+                }
+                
+                $('#themeColor').attr('content', color);
                 
                 setTimeout(function(){
                     $('.profile_content').addClass('scaleIn');
