@@ -381,7 +381,8 @@ var App = {
                     },500);
                 },500);
                 
-                window.location.hash = "#about";
+                window.location.hash = $('#menu li.active a').attr('href');
+                
             }else{
                 $('body').addClass('profile');
                 $(this).removeClass('scaleIn');
@@ -397,8 +398,18 @@ var App = {
                         App.contentProfile();
                     },1000);
                 },100);
+                
+                window.location.hash = "#about";
             }
         });
+    },
+    
+    validateUrl: function(){
+        if(window.location.hash == "#about"){
+            setTimeout(function(){
+                $('.profile_content').click();
+            },2000);
+        }
     }
 }
 
@@ -408,6 +419,8 @@ $().ready(function(){
     setTimeout(function(){
         $('.preview_page').find('iframe').attr('src', "");
     },4000);
+    
+    App.validateUrl();
 });
 
 // funcion render() por defecto de three js
