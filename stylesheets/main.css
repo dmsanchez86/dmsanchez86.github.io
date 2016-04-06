@@ -3096,22 +3096,22 @@ body {
       z-index: 100;
       background: transparent;
       cursor: nesw-resize;
-      -webkit-transition: z-index 0.15s ease, background 0.15s 2s ease;
-      -khtml-transition: z-index 0.15s ease, background 0.15s 2s ease;
-      -moz-transition: z-index 0.15s ease, background 0.15s 2s ease;
-      -ms-transition: z-index 0.15s ease, background 0.15s 2s ease;
-      -o-transition: z-index 0.15s ease, background 0.15s 2s ease;
-      transition: z-index 0.15s ease, background 0.15s 2s ease; }
+      -webkit-transition: z-index 0.1s ease, background 0.15s 1s ease;
+      -khtml-transition: z-index 0.1s ease, background 0.15s 1s ease;
+      -moz-transition: z-index 0.1s ease, background 0.15s 1s ease;
+      -ms-transition: z-index 0.1s ease, background 0.15s 1s ease;
+      -o-transition: z-index 0.1s ease, background 0.15s 1s ease;
+      transition: z-index 0.1s ease, background 0.15s 1s ease; }
     body.profile .popup {
       opacity: 1;
       z-index: 111; }
       body.profile .popup .popup-header .profile_content {
-        -webkit-animation: scaleIn 0.5s 1.6s linear forwards;
-        -khtml-animation: scaleIn 0.5s 1.6s linear forwards;
-        -moz-animation: scaleIn 0.5s 1.6s linear forwards;
-        -ms-animation: scaleIn 0.5s 1.6s linear forwards;
-        -o-animation: scaleIn 0.5s 1.6s linear forwards;
-        animation: scaleIn 0.5s 1.6s linear forwards; }
+        -webkit-animation: scaleIn 0.5s 1s linear forwards;
+        -khtml-animation: scaleIn 0.5s 1s linear forwards;
+        -moz-animation: scaleIn 0.5s 1s linear forwards;
+        -ms-animation: scaleIn 0.5s 1s linear forwards;
+        -o-animation: scaleIn 0.5s 1s linear forwards;
+        animation: scaleIn 0.5s 1s linear forwards; }
 
 .fullpage-wrapper {
   -webkit-perspective: 2000px;
@@ -3133,12 +3133,12 @@ body {
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    -webkit-transition: transform 0.45s ease;
-    -khtml-transition: transform 0.45s ease;
-    -moz-transition: transform 0.45s ease;
-    -ms-transition: transform 0.45s ease;
-    -o-transition: transform 0.45s ease;
-    transition: transform 0.45s ease; }
+    -webkit-transition: transform 0.25s ease;
+    -khtml-transition: transform 0.25s ease;
+    -moz-transition: transform 0.25s ease;
+    -ms-transition: transform 0.25s ease;
+    -o-transition: transform 0.25s ease;
+    transition: transform 0.25s ease; }
 
 img.responsive-img,
 video.responsive-video {
@@ -4458,12 +4458,12 @@ video.responsive-video {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border-radius: 8px;
-  -webkit-transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear;
-  -khtml-transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear;
-  -moz-transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear;
-  -ms-transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear;
-  -o-transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear;
-  transition: opacity 0.45s 0.5s ease, box-shadow 0.25s 2s linear; }
+  -webkit-transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear;
+  -khtml-transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear;
+  -moz-transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear;
+  -ms-transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear;
+  -o-transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear;
+  transition: opacity 0.23s 0.25s ease, box-shadow 0.1s 0.5s linear; }
   .popup .edge {
     position: absolute;
     background: #f9f9f9;
@@ -4523,6 +4523,7 @@ video.responsive-video {
       width: 100%; }
     .popup.active .edge.left, .popup.active .edge.right {
       height: 100%; }
+    .popup.active .popup-body,
     .popup.active .popup-header {
       -webkit-transform: translatey(0%);
       -khtml-transform: translatey(0%);
@@ -4530,34 +4531,27 @@ video.responsive-video {
       -ms-transform: translatey(0%);
       -o-transform: translatey(0%);
       transform: translatey(0%); }
-    .popup.active .popup-body {
-      -webkit-transform: translatey(0%);
-      -khtml-transform: translatey(0%);
-      -moz-transform: translatey(0%);
-      -ms-transform: translatey(0%);
-      -o-transform: translatey(0%);
-      transform: translatey(0%); }
-      .popup.active .popup-body h1 {
-        -webkit-animation: moveUp 1s 2.3s ease forwards;
-        -khtml-animation: moveUp 1s 2.3s ease forwards;
-        -moz-animation: moveUp 1s 2.3s ease forwards;
-        -ms-animation: moveUp 1s 2.3s ease forwards;
-        -o-animation: moveUp 1s 2.3s ease forwards;
-        animation: moveUp 1s 2.3s ease forwards; }
-      .popup.active .popup-body article p {
-        -webkit-animation: moveUp 1s 2.5s ease forwards;
-        -khtml-animation: moveUp 1s 2.5s ease forwards;
-        -moz-animation: moveUp 1s 2.5s ease forwards;
-        -ms-animation: moveUp 1s 2.5s ease forwards;
-        -o-animation: moveUp 1s 2.5s ease forwards;
-        animation: moveUp 1s 2.5s ease forwards; }
-      .popup.active .popup-body article .project {
-        -webkit-animation: moveUp 1s 2.7s ease forwards;
-        -khtml-animation: moveUp 1s 2.7s ease forwards;
-        -moz-animation: moveUp 1s 2.7s ease forwards;
-        -ms-animation: moveUp 1s 2.7s ease forwards;
-        -o-animation: moveUp 1s 2.7s ease forwards;
-        animation: moveUp 1s 2.7s ease forwards; }
+    .popup.active .popup-body h1 {
+      -webkit-animation: moveUp 0.51s 1.6s ease forwards;
+      -khtml-animation: moveUp 0.51s 1.6s ease forwards;
+      -moz-animation: moveUp 0.51s 1.6s ease forwards;
+      -ms-animation: moveUp 0.51s 1.6s ease forwards;
+      -o-animation: moveUp 0.51s 1.6s ease forwards;
+      animation: moveUp 0.51s 1.6s ease forwards; }
+    .popup.active .popup-body article p {
+      -webkit-animation: moveUp 0.51s 1.8s ease forwards;
+      -khtml-animation: moveUp 0.51s 1.8s ease forwards;
+      -moz-animation: moveUp 0.51s 1.8s ease forwards;
+      -ms-animation: moveUp 0.51s 1.8s ease forwards;
+      -o-animation: moveUp 0.51s 1.8s ease forwards;
+      animation: moveUp 0.51s 1.8s ease forwards; }
+    .popup.active .popup-body article .project {
+      -webkit-animation: moveUp 0.51s 2s ease forwards;
+      -khtml-animation: moveUp 0.51s 2s ease forwards;
+      -moz-animation: moveUp 0.51s 2s ease forwards;
+      -ms-animation: moveUp 0.51s 2s ease forwards;
+      -o-animation: moveUp 0.51s 2s ease forwards;
+      animation: moveUp 0.51s 2s ease forwards; }
   .popup .popup-header {
     min-height: 200px;
     background-color: #484747;
@@ -4567,12 +4561,12 @@ video.responsive-video {
     background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
     background-image: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
-    -webkit-transition: transform 0.5s 1s ease-in;
-    -khtml-transition: transform 0.5s 1s ease-in;
-    -moz-transition: transform 0.5s 1s ease-in;
-    -ms-transition: transform 0.5s 1s ease-in;
-    -o-transition: transform 0.5s 1s ease-in;
-    transition: transform 0.5s 1s ease-in;
+    -webkit-transition: transform 0.25s 1s ease-in;
+    -khtml-transition: transform 0.25s 1s ease-in;
+    -moz-transition: transform 0.25s 1s ease-in;
+    -ms-transition: transform 0.25s 1s ease-in;
+    -o-transition: transform 0.25s 1s ease-in;
+    transition: transform 0.25s 1s ease-in;
     -webkit-transform: translatey(-105%);
     -khtml-transform: translatey(-105%);
     -moz-transform: translatey(-105%);
@@ -4596,14 +4590,13 @@ video.responsive-video {
         filter: grayscale(0); }
   .popup .popup-body {
     height: calc(100% - 200px);
-    min-height: 200px;
     background-color: white;
-    -webkit-transition: transform 0.5s 1s ease-in;
-    -khtml-transition: transform 0.5s 1s ease-in;
-    -moz-transition: transform 0.5s 1s ease-in;
-    -ms-transition: transform 0.5s 1s ease-in;
-    -o-transition: transform 0.5s 1s ease-in;
-    transition: transform 0.5s 1s ease-in;
+    -webkit-transition: transform 0.25s 1s ease-in;
+    -khtml-transition: transform 0.25s 1s ease-in;
+    -moz-transition: transform 0.25s 1s ease-in;
+    -ms-transition: transform 0.25s 1s ease-in;
+    -o-transition: transform 0.25s 1s ease-in;
+    transition: transform 0.25s 1s ease-in;
     -webkit-transform: translatey(105%);
     -khtml-transform: translatey(105%);
     -moz-transform: translatey(105%);
@@ -4616,12 +4609,6 @@ video.responsive-video {
       background: white;
       position: relative;
       top: -6%;
-      -webkit-border-radius: 6px;
-      -khtml-border-radius: 6px;
-      -moz-border-radius: 6px;
-      -ms-border-radius: 6px;
-      -o-border-radius: 6px;
-      border-radius: 6px;
       left: 0;
       right: 0;
       margin: auto;
@@ -4629,7 +4616,13 @@ video.responsive-video {
       width: 325px;
       padding: .15rem 1.5rem;
       font-family: 'Yanone Kaffeesatz', sans-serif;
-      opacity: 0; }
+      opacity: 0;
+      -webkit-border-radius: 6px;
+      -khtml-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      border-radius: 6px; }
     .popup .popup-body article p {
       font-family: 'Yanone Kaffeesatz', sans-serif;
       color: #323232;

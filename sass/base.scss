@@ -368,7 +368,7 @@ body{
 			z-index: 100;
 			background: rgba(0,0,0,.0);
 		    cursor: nesw-resize;
-		    @include transition((z-index .15s ease, background .15s 2s ease));
+		    @include transition((z-index .1s ease, background .15s 1s ease));
 		}
 		
 		.popup{
@@ -377,7 +377,7 @@ body{
 			
 			.popup-header{
 				.profile_content{
-					@include animation(scaleIn .5s 1.6s linear forwards);
+					@include animation(scaleIn .5s 1s linear forwards);
 				}
 			}
 		}
@@ -392,7 +392,7 @@ body{
 		
 		&.active{
 			@include transform(translate3d(0,0,0));
-			@include transition(transform .45s ease );
+			@include transition(transform .25s ease );
 		}
 	}
 }
@@ -1320,7 +1320,7 @@ video.responsive-video {
 	z-index: -10;
 	@include center-absolute(fixed);
 	@include border-radius(8px);
-	@include transition((opacity .45s .5s ease, box-shadow .25s 2s linear));
+	@include transition((opacity .23s .25s ease, box-shadow .1s .5s linear));
 	
 	.edge{
 		position: absolute;
@@ -1373,24 +1373,24 @@ video.responsive-video {
 			}
 		}
 		
+		.popup-body,
 		.popup-header{
 			@include transform(translatey(0%));
 		}
 		
 		.popup-body{
-			@include transform(translatey(0%));
 			
 			h1{
-				@include animation(moveUp 1s 2.3s ease forwards);
+				@include animation(moveUp .51s 1.6s ease forwards);
 			}
 			
 			article{
 				p{
-					@include animation(moveUp 1s 2.5s ease forwards);
+					@include animation(moveUp .51s 1.8s ease forwards);
 				}
 				
 				.project{
-					@include animation(moveUp 1s 2.7s ease forwards);
+					@include animation(moveUp .51s 2s ease forwards);
 				}
 			}
 		}
@@ -1405,7 +1405,7 @@ video.responsive-video {
 	    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
 	    background-image: -o-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
 	    background-image: linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	    @include transition(transform .5s 1s ease-in);
+	    @include transition(transform .25s 1s ease-in);
 	    @include transform(translatey(-105%));
 	    
 	    .profile_content{
@@ -1426,9 +1426,8 @@ video.responsive-video {
 		
 	.popup-body{
 		height: calc(100% - 200px);
-		min-height: 200px;
 		background-color: white;
-	    @include transition(transform .5s 1s ease-in);
+	    @include transition(transform .25s 1s ease-in);
 	    @include transform(translatey(105%));
 	    
 	    h1{
@@ -1437,7 +1436,6 @@ video.responsive-video {
 	    	background: white;
 	    	position: relative;
 	    	top: -6%;
-	    	@include border-radius(6px);
 	    	left: 0;
 		    right: 0;
 		    margin: auto;
@@ -1446,6 +1444,7 @@ video.responsive-video {
 		    padding: .15rem 1.5rem;
 		    font-family: 'Yanone Kaffeesatz', sans-serif;
 		    opacity: 0;
+	    	@include border-radius(6px);
 	    }
 	    
 	    article{
