@@ -1146,8 +1146,11 @@ video.responsive-video {
 		}
 		
 		&.inactive{
+			cursor: default;
+			opacity: 0;
+			
 			&:after{
-				cursor: no-drop;
+				cursor: default;
 			}
 		}
 		

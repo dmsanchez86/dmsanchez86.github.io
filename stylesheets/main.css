@@ -4196,8 +4196,11 @@ video.responsive-video {
       transform: rotatey(180deg); }
     .carousel .control.right {
       right: 0; }
-    .carousel .control.inactive:after {
-      cursor: no-drop; }
+    .carousel .control.inactive {
+      cursor: default;
+      opacity: 0; }
+      .carousel .control.inactive:after {
+        cursor: default; }
     .carousel .control:hover:after, .carousel .control:hover:before {
       opacity: 1;
       -webkit-box-shadow: 0 0 11px #323232;

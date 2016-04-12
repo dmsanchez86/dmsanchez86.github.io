@@ -1,32 +1,21 @@
 'use strict';
 
 var App = {
-    // Escena
     scene: null,
-    
-    // Camara
     camera: null,
-    
-    // Render
     renderer: null,
-    
-    // Contenedor
     container: null,
-
     mouseX : 0, 
     mouseY : 0,
-
     windowHalfX : window.innerWidth / 2,
     windowHalfY : window.innerHeight / 2,
-
-    // Variables Constantes
+    
     const: {
       WINDOW_WIDTH: window.innerWidth,
       WINDOW_HEIGHT: window.innerHeight,
       PIXEL_RATIO: window.devicePixelRatio
     },
 
-    // Inicializacion de todo el entorno
     init: function(){
         this.fullPage();
         this.createContainer();
@@ -54,143 +43,14 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-        setTimeout(function(){
-            App.loader.hide();
-        },2500);
+        setTimeout(function(){ App.loader.hide(); },2500);
 
-        $('.button_menu').unbind('click').click(function(){
-            $('body').addClass('menu');
-            $('#menu,.overlay-menu').addClass('open');
-            $(this).fadeOut('1000');
-        });
-
-        $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
-            if($('body').hasClass('profile')){
-                $('body').removeClass('profile');
-                $('.profile_content').removeClass('scaleOut');
-                $('.popup').removeClass('active');
-                
-                if($(this).hasClass('overlay-menu')){
-                    $('.popup').find('.popup-header .profile_content').remove();
-                }
-                
-                setTimeout(function(){
-                    $('.profile_content').addClass('scaleIn');
-                },500);
-            }else{
-                $('body').removeClass('menu');
-                $('.button_menu').fadeIn('1500');
-                $('#menu,.overlay-menu').removeClass('open');
-            }
-        });
-        
-        $('.resize').unbind('click').click(function(){
-            $('.preview_page').toggleClass('fullscreen');
-            if(window.innerWidth <= 600){
-                $('.preview_page').removeClass('active');
-            }
-        });
-
-        var iframe = document.querySelector(".preview_page iframe");
-
-        iframe.onload = function(){
-            $('.preview_page').addClass('load');
-        }
-        
-        $('.carousel .control:not(.inactive)').unbind('click').click(function(){
-            $('.preview_page').removeClass('load active').find('iframe').attr('src', '');
-            
-            var father = $(this).parent(); // carousel
-            var item = parseInt(father.attr('item')); // number item slider active
-            
-            if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
-                
-                // put inactive left control
-                father.find('.control.left').removeClass('inactive');
-            
-                // remove all items last class
-                father.find('.item').removeClass('last');
-                father.find('.item.active').addClass('last').removeClass('next'); // add next class item active
-                
-                setTimeout(function(){
-                    father.find('.item.active').removeClass('active');
-                    father.find('.item.next').addClass('active').removeClass('next last');
-                    
-                    if(item >= father.find('.item').length - 1){
-                        father.find('.control.right').addClass('inactive');
-                        item++;
-                    }else{
-                        item++;
-                        father.find('.item').eq(item).removeClass('last active').addClass('next');
-                    }
-                    
-                    father.attr('item', item);
-                },500);
-                
-            }else if($(this).hasClass('left')){
-                
-                father.find('.control.right').removeClass('inactive');
-                
-                setTimeout(function(){
-                    
-                    if(item <= 1){
-                         father.find('.control.left').addClass('inactive');
-                        return;
-                    }else{
-                        item--;
-                        father.find('.item').removeClass('next');
-                        father.find('.item.active').addClass('next');
-                        
-                        setTimeout(function(){
-                            father.find('.item.active').removeClass('active');
-                            father.find('.item.last').addClass('active').removeClass('next last');
-                            
-                            if(item != 1){
-                                father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
-                            }
-                            father.attr('item', item);
-                        },500);
-                    }
-                    father.attr('item', item);
-                },500);
-            }
-        });
-        
-        $('.tools .tool').unbind('click').click(function(){
-            var url = $(this).parent().parent().find('a').attr('href');
-            
-            if($(this).hasClass('preview')){
-                $('.preview_page').toggleClass('active');
-                if(App.isValidUrl(url)){
-                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
-                }else{
-                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
-                }
-                if(window.innerWidth <= 600){
-                    $('.preview_page').addClass('fullscreen');
-                }
-            }else if($(this).hasClass('code')){
-                if(App.isValidUrl(url)){
-                    window.open(url);
-                }else{
-                    window.open("http://github.com/dmsanchez86/"+url);
-                }
-            }else if($(this).hasClass('page')){
-                $('.preview_page').toggleClass('active');
-                if(App.isValidUrl(url)){
-                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
-                }else{
-                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
-                }
-            }else if($(this).hasClass('download')){
-                if(App.isValidUrl(url)){
-                    window.open(url+"/archive/master.zip");
-                }else{
-                    window.open("http://github.com/dmsanchez86/"+url+"/archive/gh-pages.zip");
-                }
-            }
-        });
-        
+        this.buttonMenu();
+        this.overlayAndMenuEvent();
+        this.resizeButton();
+        this.iframe();
+        this.carouselControls();
+        this.tools();
         this.contentProfile();
     },
 
@@ -202,7 +62,7 @@ var App = {
             anchors: ['home', 'projects', 'collaborations', 'contact'],
             menu: '#menu',
             css3: true,
-            scrollOverflow: false, // for scroll big sections
+            scrollOverflow: false,
             autoScrolling: true,
             // continuousVertical: true,
             navigation: true,
@@ -240,19 +100,16 @@ var App = {
         });
     },
 
-    // funcion que me crea el contenedor
     createContainer: function(){
         // div donde se carga el dom del render
         this.container = document.querySelector('#container3D');
         this.container.className = 'container3D';
     },
 
-    // funcion que me crea la escena
     createScene: function(){
         this.scene = new THREE.Scene();
     },
 
-    // funcion que me crea la camara
     createCamera: function(){
         /*
         * Constructor
@@ -284,7 +141,6 @@ var App = {
 	    this.camera.lookAt( this.scene.position );
     },
 
-    // funcion que me crea el renderizado
     createRender: function(){
 
       this.renderer = new THREE.CanvasRenderer();
@@ -425,26 +281,184 @@ var App = {
                 $('.profile_content').click();
             },2000);
         }
-    }
+    },
+    
+    carouselControls: function(){
+        $('.carousel .control').unbind('click').click(function(){
+            $('.preview_page').removeClass('load active').find('iframe').attr('src', '');
+            
+            var father = $(this).parent(); // carousel
+            var item = parseInt(father.attr('item')); // number item slider active
+            
+            if($(this).hasClass('inactive')){
+                return;
+            }
+            
+            if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
+                
+                // put inactive left control
+                father.find('.control.left').removeClass('inactive');
+            
+                // remove all items last class
+                father.find('.item').removeClass('last');
+                father.find('.item.active').addClass('last').removeClass('next'); // add next class item active
+                
+                setTimeout(function(){
+                    father.find('.item.active').removeClass('active');
+                    father.find('.item.next').addClass('active').removeClass('next last');
+                    
+                    if(item >= father.find('.item').length - 1){
+                        father.find('.control.right').addClass('inactive');
+                        item++;
+                    }else{
+                        item++;
+                        father.find('.item').eq(item).removeClass('last active').addClass('next');
+                    }
+                    
+                    father.attr('item', item);
+                },500);
+                
+            }else if($(this).hasClass('left')){
+                
+                father.find('.control.right').removeClass('inactive');
+                
+                setTimeout(function(){
+                    if(item <= 2){
+                        father.find('.control.left').addClass('inactive');
+                        
+                        item--;
+                        
+                        father.find('.item').removeClass('next');
+                        father.find('.item.active').addClass('next');
+                        
+                        setTimeout(function(){
+                            father.find('.item.active').removeClass('active');
+                            father.find('.item.last').addClass('active').removeClass('next last');
+                            
+                            if(item != 1){
+                                father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
+                            }
+                            father.attr('item', item);
+                        },500);
+                        return;
+                    }else{
+                        item--;
+                        father.find('.item').removeClass('next');
+                        father.find('.item.active').addClass('next');
+                        
+                        setTimeout(function(){
+                            father.find('.item.active').removeClass('active');
+                            father.find('.item.last').addClass('active').removeClass('next last');
+                            
+                            if(item != 1){
+                                father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
+                            }
+                            father.attr('item', item);
+                        },500);
+                    }
+                    father.attr('item', item);
+                },500);
+            }
+        });
+    },
+    
+    tools: function(){
+        $('.tools .tool').unbind('click').click(function(){
+            var url = $(this).parent().parent().find('a').attr('href');
+            
+            if($(this).hasClass('preview')){
+                $('.preview_page').toggleClass('active');
+                if(App.isValidUrl(url)){
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+                }else{
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+                }
+                if(window.innerWidth <= 600){
+                    $('.preview_page').addClass('fullscreen');
+                }
+            }else if($(this).hasClass('code')){
+                if(App.isValidUrl(url)){
+                    window.open(url);
+                }else{
+                    window.open("http://github.com/dmsanchez86/"+url);
+                }
+            }else if($(this).hasClass('page')){
+                $('.preview_page').toggleClass('active');
+                if(App.isValidUrl(url)){
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+                }else{
+                    $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+                }
+            }else if($(this).hasClass('download')){
+                if(App.isValidUrl(url)){
+                    window.open(url+"/archive/master.zip");
+                }else{
+                    window.open("http://github.com/dmsanchez86/"+url+"/archive/gh-pages.zip");
+                }
+            }
+        });
+    },
+    
+    iframe: function(){
+        var iframe = document.querySelector(".preview_page iframe");
+
+        iframe.onload = function(){
+            $('.preview_page').addClass('load');
+        }
+    },
+    
+    resizeButton: function(){
+        $('.resize').unbind('click').click(function(){
+            $('.preview_page').toggleClass('fullscreen');
+            if(window.innerWidth <= 600){
+                $('.preview_page').removeClass('active');
+            }
+        });
+    },
+    
+    buttonMenu: function(){
+        $('.button_menu').unbind('click').click(function(){
+            $('body').addClass('menu');
+            $('#menu,.overlay-menu').addClass('open');
+            $(this).fadeOut('1000');
+        });
+    },
+    
+    overlayAndMenuEvent: function(){
+        $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
+            if($('body').hasClass('profile')){
+                $('body').removeClass('profile');
+                $('.profile_content').removeClass('scaleOut');
+                $('.popup').removeClass('active');
+                
+                if($(this).hasClass('overlay-menu')){
+                    $('.popup').find('.popup-header .profile_content').remove();
+                }
+                
+                setTimeout(function(){
+                    $('.profile_content').addClass('scaleIn');
+                },500);
+            }else{
+                $('body').removeClass('menu');
+                $('.button_menu').fadeIn('1500');
+                $('#menu,.overlay-menu').removeClass('open');
+            }
+        });
+    },
 }
 
 $().ready(function(){
     App.init();
     animate();
-    setTimeout(function(){
-        $('.preview_page').find('iframe').attr('src', "");
-    },4000);
-    
+    setTimeout(function(){ $('.preview_page').find('iframe').attr('src', ""); },4000);
     App.validateUrl();
 });
 
-// funcion render() por defecto de three js
 function animate(){
     requestAnimationFrame( animate );
     render();
 }
 
-// render()
 function render(){
     App.renderer.render(App.scene, App.camera);
     TWEEN.update();
