@@ -4354,7 +4354,7 @@ video.responsive-video {
 .overlay-menu {
   position: fixed;
   height: 100vh;
-  width: calc(100vw - 150px);
+  width: calc(100vw - 170px);
   top: 0;
   left: 0;
   background: transparent;
