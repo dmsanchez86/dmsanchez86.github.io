@@ -718,7 +718,7 @@ video.responsive-video {
 	.content_points{
 		width: 80px;
 		height: 80px;
-		@include animation(rotate 5s infinite linear);
+		@include animation(rotate 5s infinite ease);
 		@include center-absolute(fixed);
 	}
 
@@ -742,19 +742,19 @@ video.responsive-video {
 
 		&:nth-child(1){
 			background: rgba(22, 162, 216, 0.85);
-			@include animation(point1 2s linear infinite);
+			@include animation(point1 2s .01s linear infinite);
 		}
 		&:nth-child(2){
 			background: rgba(193, 39, 39, 0.85);
-			@include animation(point2 2s linear infinite);
+			@include animation(point2 2s .01s linear infinite);
 		}
 		&:nth-child(3){
 			background: rgba(214, 127, 53, 0.85);
-			@include animation(point3 2s linear infinite);
+			@include animation(point3 2s .01s linear infinite);
 		}
 		&:nth-child(4){
 			background: rgba(69, 208, 35, 0.85);
-			@include animation(point4 2s linear infinite);
+			@include animation(point4 2s .01s linear infinite);
 		}
 		&:nth-child(5){
 
