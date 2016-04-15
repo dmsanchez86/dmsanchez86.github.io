@@ -1547,5 +1547,23 @@ video.responsive-video {
 	}
 }
 
+#section_collaborations{
+	background-image: -webkit-linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary) !important;
+	background-image: -moz-linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary) !important;
+	background-image: linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary) !important;
+}
+
+#section_projects{
+	background-image: -webkit-linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary) !important;
+	background-image: -moz-linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary) !important;
+	background-image: linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary) !important;
+}
+
+#section_contact{
+	background-image: -webkit-linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary) !important;
+	background-image: -moz-linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary) !important;
+	background-image: linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary) !important;
+}
+
 @import 'queries';
 @import 'keyframes';

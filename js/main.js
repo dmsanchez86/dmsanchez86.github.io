@@ -378,6 +378,9 @@ var App = {
                 }
             }else if($(this).hasClass('code')){
                 if(App.isValidUrl(url)){
+                    if(url.indexOf("full") > 0){
+                        url = url.replace("full", "pen");
+                    }
                     window.open(url);
                 }else{
                     window.open("http://github.com/dmsanchez86/"+url);
