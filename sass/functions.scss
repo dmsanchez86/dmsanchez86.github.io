@@ -593,3 +593,10 @@
 @mixin transform-style($value){
     @include prefixes(transform-style, $value);
 }
+
+// function to set calc property
+@mixin calc($property, $value) {
+  #{$property}: -webkit-calc(#{$value});
+  #{$property}: -moz-calc(#{$value});
+  #{$property}: calc(#{$value});
+}
