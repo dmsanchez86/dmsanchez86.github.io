@@ -43,7 +43,7 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-        setTimeout(function(){ App.loader.hide(); },1500);
+        setTimeout(function(){ App.loader.hide(); }, 2000);
 
         this.buttonMenu();
         this.overlayAndMenuEvent();

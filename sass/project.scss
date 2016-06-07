@@ -92,6 +92,7 @@
 			      9px -8px 1px $text-3d-color-hover,
 			      10px -9px 1px $text-3d-color-hover,
 			      11px -10px 1px $text-3d-color-hover,
+						12px -11px 1px $text-3d-color-hover,
 			    ));
 			}
 			
@@ -102,7 +103,7 @@
 					$k: 0.2; 
 					@for $i from 1 through 10 {
 			            &:nth-child(#{$i}){ 
-			                @include animation(move .5s 1 #{($k)}s ease-in forwards);
+			                @include animation(move 500ms 1 #{($k)}s cubic-bezier(0.06, 0.18, 1, 1.11) forwards);
 			                $k: $k + $k
 			            }
 			        }

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dmsanchez86/dmsanchez86.github.io/issues"
   },
-  "homepage": "https://github.com/dmsanchez86/dmsanchez86.github.io#readme"
+  "homepage": "https://github.com/dmsanchez86/dmsanchez86.github.io#readme",
+  "dependencies": {
+    "browserify": "^13.0.1"
+  }
 }
