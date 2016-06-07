@@ -43,7 +43,7 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-        setTimeout(function(){ App.loader.hide(); },2500);
+        setTimeout(function(){ App.loader.hide(); },1500);
 
         this.buttonMenu();
         this.overlayAndMenuEvent();
@@ -279,7 +279,7 @@ var App = {
         if(window.location.hash == "#about"){
             setTimeout(function(){
                 $('.profile_content').click();
-            },2000);
+            },1000);
         }
     },
     
@@ -465,8 +465,8 @@ function animate(){
 function render(){
     App.renderer.render(App.scene, App.camera);
     TWEEN.update();
-    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.05;
-    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.05;
+    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
+    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
 }
 
 function onWindowResize() {

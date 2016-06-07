@@ -2,13 +2,13 @@
 	position: fixed;
 	bottom: 2rem;
 	left: 2rem;
-	border: solid 4px white;
+	border: solid 5px white;
 	max-width: 60px;
 	height: 60px;
     background: transparent;
 	cursor: pointer;
 	@include border-radius(50%);
-	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.452));
+	// @include box-shadow(0 0 6px rgba(0, 0, 0, 0.452));
 	@include transition((transform .25s linear, border .2s linear));
 	@include transform(scale(0));
 	
