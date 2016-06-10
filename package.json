@@ -4,7 +4,9 @@
   "description": "[Demo](http://dmsanchez86.github.io)",
   "main": "app.js",
   "scripts": {
-    "start": "npm install"
+    "start": "npm install",
+    "build": "browserify scripts/app.js -o js/main.js",
+    "watch": "watchify scripts/app.js -o js/main.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,9 @@
   },
   "homepage": "https://github.com/dmsanchez86/dmsanchez86.github.io#readme",
   "dependencies": {
-    "browserify": "^13.0.1"
+    "browserify": "^13.0.1",
+    "jquery": "^3.0.0",
+    "watchify": "^3.7.0"
   }
 }
+
