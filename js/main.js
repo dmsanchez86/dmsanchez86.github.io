@@ -248,6 +248,8 @@ var App = {
     
     contentProfile: function(){
         $('.profile_content').unbind('click').click(function(){
+            $('.preview_page').removeClass('active load');
+            
             if($('body').hasClass('profile')){
                 $('body').removeClass('profile');
                 $('.popup').removeClass('active').find('.popup-header .profile_content').remove();
