@@ -5011,7 +5011,9 @@ video.responsive-video {
       border-width: 5px  5px 0 5px;
       border-color: #323232 transparent transparent transparent; }
     .popup .popup-body article .project .title > a[title-ref]:nth-child(6):before {
-      top: 4%; } }
+      top: 4%; }
+  .twitter_content label {
+    display: none; } }
 
 @media (max-width: 400px) {
   #fp-nav {
