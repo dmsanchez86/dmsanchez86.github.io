@@ -96,5 +96,13 @@ video.responsive-video {
 	background-image: linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary) !important;
 }
 
+
+.twitter_content{
+	position: absolute;
+	bottom: 2rem;
+	right: 5rem;
+	color: white;
+}
+
 @import 'queries';
 @import 'keyframes';
