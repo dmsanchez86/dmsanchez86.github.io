@@ -38,7 +38,8 @@ video.responsive-video {
 }
 
 #fp-nav{ 
-    top: 90%;
+    top: inherit;
+    bottom: 2rem;
 
 	ul {
 		li {
@@ -103,6 +104,7 @@ video.responsive-video {
 	right: 5rem;
 	color: white;
 	@include perspective(500px);
+	@include transition((bottom 200ms linear, right 200ms ease));
 	
 	label{
 		font-size: 2rem;

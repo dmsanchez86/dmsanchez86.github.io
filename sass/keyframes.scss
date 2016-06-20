@@ -258,6 +258,44 @@
 	100%{@include transform(scale(1.3));opacity: 0;}
 }
 
+// animation letter logo
+@keyframes move_letter{
+	0%{@include transform(translate3d(-10px,0,0));}
+	50%{@include transform(translate3d(-5px,0,0))}
+	70%{@include transform(translate3d(-3px,-4px,0) rotate(-5deg))}
+	100%{@include transform(translate3d(-1,0,0) rotate(5deg))}
+}
+@-webkit-keyframes move_letter{
+	0%{@include transform(translate3d(-10px,0,0));}
+	50%{@include transform(translate3d(-5px,0,0))}
+	70%{@include transform(translate3d(-3px,-4px,0) rotate(-5deg))}
+	100%{@include transform(translate3d(-1,0,0) rotate(5deg))}
+}
+@-moz-keyframes move_letter{
+	0%{@include transform(translate3d(-10px,0,0));}
+	50%{@include transform(translate3d(-5px,0,0))}
+	70%{@include transform(translate3d(-3px,-4px,0) rotate(-5deg))}
+	100%{@include transform(translate3d(-1,0,0) rotate(5deg))}
+}
+@keyframes rotate_letter{
+	0%, 100%{@include transform(translate3d(-4px,0,0));}
+	25%{@include transform(translate3d(-6px,-5px,0));}
+	50%{@include transform(translate3d(-8px,-0px,0));}
+	75%{@include transform(translate3d(0,-0px,0));}
+}
+@-webkit-keyframes rotate_letter{
+	0%, 100%{@include transform(translate3d(-4px,0,0));}
+	25%{@include transform(translate3d(-6px,-5px,0));}
+	50%{@include transform(translate3d(-8px,-0px,0));}
+	75%{@include transform(translate3d(0,-0px,0));}
+}
+@-moz-keyframes rotate_letter{
+	0%, 100%{@include transform(translate3d(-4px,0,0));}
+	25%{@include transform(translate3d(-6px,-5px,0));}
+	50%{@include transform(translate3d(-8px,-0px,0));}
+	75%{@include transform(translate3d(0,-0px,0));}
+}
+
 // animation text 3d
 @-webkit-keyframes text3D{
 	0%,100%{

@@ -40,6 +40,16 @@
 				circle{
 					@include animation(circle_resort 1s 1 ease);
 				}
+				
+				text{
+					@include animation(move_letter 1s 1 ease);
+					@include transform-origin(top center);
+	
+					&:last-child{
+						@include transform-origin(center);
+						@include animation(rotate_letter .6s 1 ease);
+					}
+				}
 			}
 		}
 
