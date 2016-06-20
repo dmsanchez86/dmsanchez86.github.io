@@ -43,7 +43,10 @@ var App = {
 
         window.addEventListener( 'resize', onWindowResize, false );
 
-        setTimeout(function(){ App.loader.hide(); }, 2000);
+        setTimeout(function(){ 
+            App.loader.hide(); 
+            $('.twitter_content .container').addClass('close');
+        }, 2000);
 
         this.buttonMenu();
         this.overlayAndMenuEvent();

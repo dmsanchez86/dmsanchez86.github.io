@@ -102,6 +102,43 @@ video.responsive-video {
 	bottom: 2rem;
 	right: 5rem;
 	color: white;
+	@include perspective(500px);
+	
+	label{
+		font-size: 2rem;
+		cursor: pointer;
+		@include transition(all 200ms ease);
+		@include text-shadow(0 0 2px rgba(0,0,0,.4));
+		
+		&:hover{
+			@include text-shadow(0 0 5px rgba(0,0,0,.4));
+		}
+	}
+	
+	input[type=checkbox]{
+		display: none;
+		
+		&:checked{
+			+ .container.close{
+				@include box-shadow(0 0 5px rgba(0, 0, 0, .3));
+				@include transform(scale(1) rotatex(0) rotatey(0) translate3d(0,0,0));
+			}
+		}
+	}
+	
+	.container{
+		position: absolute;
+		bottom: 40px;
+    	right: 0;
+		width: 255px;
+		height: 400px;
+		@include transition(transform 300ms ease);
+		@include transform-origin(right bottom);
+		
+		&.close{
+			@include transform(scale(0) rotatex(120deg) rotatey(120deg) translate3d(0,0,-300px));
+		}
+	}
 }
 
 @import 'queries';

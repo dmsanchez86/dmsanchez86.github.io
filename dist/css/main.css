@@ -4761,7 +4761,75 @@ video.responsive-video {
   position: absolute;
   bottom: 2rem;
   right: 5rem;
-  color: white; }
+  color: white;
+  -webkit-perspective: 500px;
+  -khtml-perspective: 500px;
+  -moz-perspective: 500px;
+  -ms-perspective: 500px;
+  -o-perspective: 500px;
+  perspective: 500px; }
+  .twitter_content label {
+    font-size: 2rem;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease;
+    -khtml-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    -webkit-text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    -khtml-text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    -moz-text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    -ms-text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    -o-text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.4); }
+    .twitter_content label:hover {
+      -webkit-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -khtml-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -moz-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -ms-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      -o-text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); }
+  .twitter_content input[type=checkbox] {
+    display: none; }
+    .twitter_content input[type=checkbox]:checked + .container.close {
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -khtml-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      -webkit-transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0);
+      -khtml-transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0);
+      -moz-transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0);
+      -ms-transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0);
+      -o-transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0);
+      transform: scale(1) rotatex(0) rotatey(0) translate3d(0, 0, 0); }
+  .twitter_content .container {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    width: 255px;
+    height: 400px;
+    -webkit-transition: transform 300ms ease;
+    -khtml-transition: transform 300ms ease;
+    -moz-transition: transform 300ms ease;
+    -ms-transition: transform 300ms ease;
+    -o-transition: transform 300ms ease;
+    transition: transform 300ms ease;
+    -webkit-transform-origin: right bottom;
+    -khtml-transform-origin: right bottom;
+    -moz-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    -o-transform-origin: right bottom;
+    transform-origin: right bottom; }
+    .twitter_content .container.close {
+      -webkit-transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px);
+      -khtml-transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px);
+      -moz-transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px);
+      -ms-transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px);
+      -o-transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px);
+      transform: scale(0) rotatex(120deg) rotatey(120deg) translate3d(0, 0, -300px); }
 
 @media (max-width: 980px) {
   body.home .navigator_content .navigator ul {
