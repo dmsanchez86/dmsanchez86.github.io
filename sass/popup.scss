@@ -179,7 +179,9 @@
 	    					
 	    					&:last-child{
 	    						&:after{
-	    							left: -200%;
+	    							left: inherit;
+    								right: 0%;
+								    bottom: 97%;
 	    						}
 	    					}
 	    					
