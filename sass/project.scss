@@ -20,6 +20,18 @@
 			&[title-ref]{
 				position: relative;
 				
+				&:first-child{
+					&:after{
+						left: 3%;
+					}
+				}
+				
+				&:last-child{
+					&:after{
+						left: -200%;
+					}
+				}
+				
 				&:after{
 					position: absolute;
 					top: 90%;

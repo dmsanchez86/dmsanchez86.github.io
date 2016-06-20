@@ -170,6 +170,20 @@
 	    				}
 	    				
 	    				&[title-ref]{
+	    					
+	    					&:first-child{
+	    						&:after{
+	    							left: 0%;
+	    						}
+	    					}
+	    					
+	    					&:last-child{
+	    						&:after{
+	    							left: -200%;
+	    						}
+	    					}
+	    					
+	    					
 	    					&:after{
 	    						left: -150%;
     							width: 400%;

@@ -3681,6 +3681,10 @@ video.responsive-video {
         text-shadow: 2px -1px 1px #464545, 3px -2px 1px #464545, 4px -3px 1px #464545, 5px -4px 1px #464545, 6px -5px 1px #464545, 7px -6px 1px #464545, 8px -7px 1px #464545, 9px -8px 1px #464545, 10px -9px 1px #464545, 11px -10px 1px #464545; }
       .project .title > a[title-ref] {
         position: relative; }
+        .project .title > a[title-ref]:first-child:after {
+          left: 3%; }
+        .project .title > a[title-ref]:last-child:after {
+          left: -200%; }
         .project .title > a[title-ref]:after {
           position: absolute;
           top: 90%;
@@ -4724,6 +4728,10 @@ video.responsive-video {
               -ms-animation: none;
               -o-animation: none;
               animation: none; }
+          .popup .popup-body article .project .title > a[title-ref]:first-child:after {
+            left: 0%; }
+          .popup .popup-body article .project .title > a[title-ref]:last-child:after {
+            left: -200%; }
           .popup .popup-body article .project .title > a[title-ref]:after {
             left: -150%;
             width: 400%;
