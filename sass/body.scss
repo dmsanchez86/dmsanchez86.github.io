@@ -1,5 +1,6 @@
 body{
 	overflow: hidden;
+	@include perspective(1000px);
 	
 	&.home{
 		.navigator_content{

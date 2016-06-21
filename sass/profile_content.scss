@@ -8,15 +8,16 @@
     background: transparent;
 	cursor: pointer;
 	@include border-radius(50%);
-	// @include box-shadow(0 0 6px rgba(0, 0, 0, 0.452));
+	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.2));
 	@include transition((transform .25s linear, border .2s linear));
 	@include transform(scale(0));
 	
 	&:hover{
 		@include transform(scale(1.2));
+		@include box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 		
 		img{
-			//@include filter(grayscale(80%));
+			// @include filter(grayscale(80%));
 		}
 		
 		&:before{
@@ -25,7 +26,7 @@
 		}
 		
 		&:after{
-			display: none;
+			width: 70%;
 		}
 	}
 
@@ -55,6 +56,7 @@
 		height: 10px;
 		@include gradient(radial, (center, #323232, transparent));
 		@include transform(rotatex(83deg));
+		@include transition(width 200ms ease);
 	}
 
 	img{
