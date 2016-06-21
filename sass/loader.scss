@@ -8,8 +8,18 @@
 	.content_points{
 		width: 80px;
 		height: 80px;
-		@include animation(rotate 5s infinite ease);
+		// @include animation(rotate 5s infinite ease);
 		@include center-absolute(fixed);
+		
+		&:after{
+			width: 20%;
+			height: 20%;
+			@include center-absolute(absolute);
+			@include gradient(linear, (left, red, orange));
+			@include border-radius(50%);
+			background: green;
+			content: '';
+		}
 	}
 
 	.point{
@@ -32,15 +42,15 @@
 
 		&:nth-child(1){
 			background: rgba(22, 162, 216, 0.85);
-			@include animation(point1 2s .01s linear infinite);
+			@include animation(point1 1500ms linear infinite);
 		}
 		&:nth-child(2){
 			background: rgba(193, 39, 39, 0.85);
-			@include animation(point2 2s .01s linear infinite);
+			@include animation(point2 1500ms linear infinite);
 		}
 		&:nth-child(3){
 			background: rgba(214, 127, 53, 0.85);
-			@include animation(point3 2s .01s linear infinite);
+			@include animation(point3 1500ms linear infinite);
 		}
 		&:nth-child(4){
 			background: rgba(69, 208, 35, 0.85);
