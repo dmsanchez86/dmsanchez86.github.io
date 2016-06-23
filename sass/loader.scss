@@ -2,64 +2,76 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 999;
-	@include gradient(rAdial, (#fff, #aaa));	
+	@include gradient(radial, (#fff, #2f2f2f));	
 	@include center-absolute(fixed);
 
 	.content_points{
 		width: 80px;
 		height: 80px;
-		// @include animation(rotate 5s infinite ease);
+		// @include animation(rotate 5s infinite linear);
 		@include center-absolute(fixed);
 		
 		&:after{
-			width: 20%;
-			height: 20%;
+			width: 25%;
+			height: 25%;
 			@include center-absolute(absolute);
-			@include gradient(linear, (left, red, orange));
+			@include gradient(radial, (center, #323232, #111));
 			@include border-radius(50%);
-			background: green;
+			@include box-shadow(0 0 5px rgba(0,0,0,.5));
+			@include animation(backgroundAtom 1000ms infinite linear);
 			content: '';
+		}
+		
+		&:before{
+			content: 'Loading...';
+			position: absolute;
+			top: 105%;
+			left: 0;
+			text-align: center;
+			font-family: 'Pacifico', Helvetica;
+			width: 100%;
+			overflow: hidden;
+			// @include animation(widthText 500ms infinite linear);
 		}
 	}
 
 	.point{
-		width: 12px;
-		height: 12px;
-		background: rgba(255,255,255,.4);
+		width: 50px;
+		height: 100%;
+		background: rgba(255,255,255,0);
 		@include center-absolute(absolute);
 		@include border-radius(50%);
+		border: solid thin rgba(0,0,0,.2);
 
 		&:before{
 			position: absolute;
-			width: 5px;
-			height: 5px;
-			background: rgba(255, 255,255, .2);
+			width: 12px;
+			height: 12px;
 			content: '';
+			background: #323232;
+			@include gradient(linear, (left, #323232, #111));
 			@include center-absolute(absolute);
 			@include border-radius(50%);
-			@include animation(scale .5s infinite linear);
+			@include box-shadow(0 0 5px rgba(255,255,255,.5) inset);
 		}
 
 		&:nth-child(1){
-			background: rgba(22, 162, 216, 0.85);
-			@include animation(point1 1500ms linear infinite);
+			&:before{
+				@include animation(point 1500ms -1000ms linear infinite);
+			}
 		}
 		&:nth-child(2){
-			background: rgba(193, 39, 39, 0.85);
-			@include animation(point2 1500ms linear infinite);
+			@include transform(rotate(60deg));
+			
+			&:before{
+				@include animation(point 1800ms -2000ms linear infinite reverse);
+			}
 		}
 		&:nth-child(3){
-			background: rgba(214, 127, 53, 0.85);
-			@include animation(point3 1500ms linear infinite);
-		}
-		&:nth-child(4){
-			background: rgba(69, 208, 35, 0.85);
-			@include animation(point4 2s .01s linear infinite);
-		}
-		&:nth-child(5){
-
+			@include transform(rotate(-60deg));
+			
 			&:before{
-				display: none;
+				@include animation(point 1300ms -3000ms linear infinite reverse);
 			}
 		}
 	}
