@@ -44,7 +44,7 @@ var App = {
         window.addEventListener( 'resize', onWindowResize, false );
 
         setTimeout(function(){ 
-            // App.loader.hide(); 
+            App.loader.hide(); 
             $('.twitter_content .container').addClass('close');
         }, 2000);
 
