@@ -221,7 +221,7 @@ var App = {
 
     loader: {
         hide: function(){
-            $('.loader').fadeOut(1000);
+            $('.atomLoader').fadeOut(1000);
         }
     },
     

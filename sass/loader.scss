@@ -1,11 +1,11 @@
-.loader{
+.atomLoader{
 	width: 100vw;
 	height: 100vh;
 	z-index: 999;
 	@include gradient(radial, (#fff, #2f2f2f));	
 	@include center-absolute(fixed);
 
-	.content_points{
+	.contentAtoms{
 		width: 80px;
 		height: 80px;
 		// @include animation(rotate 5s infinite linear);
@@ -35,7 +35,7 @@
 		}
 	}
 
-	.point{
+	.atom{
 		width: 50px;
 		height: 100%;
 		background: rgba(255,255,255,0);
