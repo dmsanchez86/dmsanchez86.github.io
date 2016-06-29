@@ -440,6 +440,8 @@ var App = {
             $('.preview_page').toggleClass('fullscreen');
             if(window.innerWidth <= 600){
                 $('.preview_page').removeClass('active');
+                colorPrev = $('#themeColor').attr('content');
+                $('#themeColor').attr('content', '#fff');
             }
         });
     },
