@@ -390,6 +390,7 @@ var App = {
                 if(window.innerWidth <= 600){
                     $('.preview_page').addClass('fullscreen');
                     colorPrev = $('#themeColor').attr('content');
+                    toggle = false;
                     $('#themeColor').attr('content', '#fff');
                 }
             }else if($(this).hasClass('code')){
