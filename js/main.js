@@ -389,6 +389,8 @@ var App = {
                 }
                 if(window.innerWidth <= 600){
                     $('.preview_page').addClass('fullscreen');
+                    colorPrev = $('#themeColor').attr('content');
+                    $('#themeColor').attr('content', '#fff');
                 }
             }else if($(this).hasClass('code')){
                 if(App.isValidUrl(url)){
@@ -440,8 +442,6 @@ var App = {
             $('.preview_page').toggleClass('fullscreen');
             if(window.innerWidth <= 600){
                 $('.preview_page').removeClass('active');
-                colorPrev = $('#themeColor').attr('content');
-                $('#themeColor').attr('content', '#fff');
             }
         });
     },
