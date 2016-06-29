@@ -435,7 +435,7 @@ var App = {
                 colorPrev = $('#themeColor').attr('content');
                 $('#themeColor').attr('content', '#fff');
                 toggle = false;
-            }else{debugger
+            }else{
                 $('#themeColor').attr('content', colorPrev);
                 toggle = true;
             }
