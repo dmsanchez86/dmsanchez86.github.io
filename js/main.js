@@ -425,7 +425,18 @@ var App = {
     },
     
     resizeButton: function(){
+        var toggle = true;
+        var colorPrev = null;
         $('.resize').unbind('click').click(function(){
+            if(toggle){
+                colorPrev = $('#themeColor').attr('content');
+                $('#themeColor').attr('content', '#fff');
+                toggle = false;
+            }else{debugger
+                $('#themeColor').attr('content', colorPrev);
+                toggle = true;
+            }
+            
             $('.preview_page').toggleClass('fullscreen');
             if(window.innerWidth <= 600){
                 $('.preview_page').removeClass('active');
