@@ -4878,20 +4878,28 @@ video.responsive-video {
           .popup .popup-body article .project .title > a[title-ref]:nth-child(6):before {
             top: 4%; }
 
+#section_home {
+  background-image: -webkit-linear-gradient(left, rgba(116, 181, 212, 0.35), rgba(16, 181, 212, 0.4), rgba(116, 181, 212, 0.35)), url(../../images/pattern.png);
+  background-image: -moz-linear-gradient(left, rgba(116, 181, 212, 0.35), rgba(16, 181, 212, 0.4), rgba(116, 181, 212, 0.35)), url(../../images/pattern.png);
+  background-image: linear-gradient(left, rgba(116, 181, 212, 0.35), rgba(16, 181, 212, 0.4), rgba(116, 181, 212, 0.35)), url(../../images/pattern.png);
+  background-size: 100%, 420px;
+  background-position: center; }
+
 #section_collaborations {
-  background-image: -webkit-linear-gradient(left, #00897b, #3c9e94, #00897b) !important;
-  background-image: -moz-linear-gradient(left, #00897b, #3c9e94, #00897b) !important;
-  background-image: linear-gradient(left, #00897b, #3c9e94, #00897b) !important; }
+  background-image: -webkit-linear-gradient(left, rgba(0, 137, 123, 0.75), rgba(60, 158, 148, 0.8), rgba(0, 137, 123, 0.75)), url(../../images/pattern3.png);
+  background-image: -moz-linear-gradient(left, rgba(0, 137, 123, 0.75), rgba(60, 158, 148, 0.8), rgba(0, 137, 123, 0.75)), url(../../images/pattern3.png);
+  background-image: linear-gradient(left, rgba(0, 137, 123, 0.75), rgba(60, 158, 148, 0.8), rgba(0, 137, 123, 0.75)), url(../../images/pattern3.png); }
 
 #section_projects {
-  background-image: -webkit-linear-gradient(left, #61AB64, #64d469, #61AB64) !important;
-  background-image: -moz-linear-gradient(left, #61AB64, #64d469, #61AB64) !important;
-  background-image: linear-gradient(left, #61AB64, #64d469, #61AB64) !important; }
+  background-image: -webkit-linear-gradient(left, rgba(97, 171, 100, 0.75), rgba(100, 212, 105, 0.8), rgba(97, 171, 100, 0.75)), url(../../images/pattern6.png);
+  background-image: -moz-linear-gradient(left, rgba(97, 171, 100, 0.75), rgba(100, 212, 105, 0.8), rgba(97, 171, 100, 0.75)), url(../../images/pattern6.png);
+  background-image: linear-gradient(left, rgba(97, 171, 100, 0.75), rgba(100, 212, 105, 0.8), rgba(97, 171, 100, 0.75)), url(../../images/pattern6.png);
+  background-size: 100%, 400px; }
 
 #section_contact {
-  background-image: -webkit-linear-gradient(left, #D67F35, #e68634, #D67F35) !important;
-  background-image: -moz-linear-gradient(left, #D67F35, #e68634, #D67F35) !important;
-  background-image: linear-gradient(left, #D67F35, #e68634, #D67F35) !important; }
+  background-image: -webkit-linear-gradient(left, rgba(214, 127, 53, 0.75), rgba(230, 134, 52, 0.8), rgba(214, 127, 53, 0.75)), url(../../images/pattern4.png);
+  background-image: -moz-linear-gradient(left, rgba(214, 127, 53, 0.75), rgba(230, 134, 52, 0.8), rgba(214, 127, 53, 0.75)), url(../../images/pattern4.png);
+  background-image: linear-gradient(left, rgba(214, 127, 53, 0.75), rgba(230, 134, 52, 0.8), rgba(214, 127, 53, 0.75)), url(../../images/pattern4.png); }
 
 .twitter_content {
   position: absolute;

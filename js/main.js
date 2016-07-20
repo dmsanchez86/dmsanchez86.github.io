@@ -4,7 +4,9 @@ var App = {
     scene: null,
     camera: null,
     renderer: null,
+    controls: null,
     container: null,
+    textMesh: null,
     mouseX : 0, 
     mouseY : 0,
     windowHalfX : window.innerWidth / 2,
@@ -16,24 +18,13 @@ var App = {
       PIXEL_RATIO: window.devicePixelRatio
     },
 
-    init: function(){
+    init: function(font){
         this.fullPage();
         this.createContainer();
         this.createScene();
         this.createCamera();
-
-        var material = new THREE.SpriteMaterial( {
-            map: new THREE.CanvasTexture( App.generateSprite() ),
-            blending: THREE.AdditiveBlending
-        } );
-
-        for ( var i = 0; i < 2000; i++ ) {
-            var particle = new THREE.Sprite( material );
-            App.initParticle( particle, i * 10 );
-            App.scene.add( particle );
-        }
-
         this.createRender();
+        this.createText(font);
 
         if(window.innerWidth >= 960){
             document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -76,6 +67,7 @@ var App = {
             css3: true,
             scrollOverflow: false,
             autoScrolling: true,
+            navigationTooltips: ['Home', 'Projects', 'Collaborations', 'Contact'],
             // continuousVertical: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
@@ -150,12 +142,19 @@ var App = {
         this.scene.add(this.camera);
         
         // Camera look at
-	    this.camera.lookAt( this.scene.position );
+	      this.camera.lookAt( this.scene.position );
     },
 
     createRender: function(){
 
-      this.renderer = new THREE.CanvasRenderer();
+      this.renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+      });
+
+      this.renderer.physicallyCorrectLights = true;
+
+      this.renderer.shadowMap.enabled = true;
       
       // pixel del render
       this.renderer.setPixelRatio(this.const.PIXEL_RATIO);
@@ -164,7 +163,7 @@ var App = {
       this.renderer.setSize(this.const.WINDOW_WIDTH, this.const.WINDOW_HEIGHT);
       
       // le agregamos un color de fondo al render
-      this.renderer.setClearColor( THREE.ColorKeywords.skyblue );
+        // this.renderer.setClearColor( THREE.ColorKeywords.skyblue );
       
       // añadimos un id al renderer(canvas)
       this.renderer.domElement.id = "canvas_3d";
@@ -173,50 +172,40 @@ var App = {
       App.container.appendChild(this.renderer.domElement);
     },
 
-    generateSprite: function() {
+    createText: function(font){
+      var geometry = new THREE.TextGeometry( "dmsanchez86", {
 
-        var canvas = document.createElement( 'canvas' );
-        canvas.width = 16;
-        canvas.height = 16;
+        font: font,
+        size: 270,
+        height: 30,
+        curveSegments: 20,
+        bevelEnabled: true,
+        bevelThickness: 10,
+        bevelSize: 3
 
-        var context = canvas.getContext( '2d' );
-        var gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
-        gradient.addColorStop( 0, 'rgba(0,0,0,1)' );
-        gradient.addColorStop( 0.2, 'rgb(106, 181, 212)' );
-        gradient.addColorStop( 0.4, 'rgba(0,0,64,1)' );
-        gradient.addColorStop( 1, 'rgba(0,0,0,1)' );
+      });
 
-        context.fillStyle = gradient;
-        context.fillRect( 0, 0, canvas.width, canvas.height );
+      geometry.computeBoundingBox();
 
-        return canvas;
+      var centerOffset = -0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
 
-    },
+      var material = new THREE.MultiMaterial( [
+        new THREE.MeshBasicMaterial( { color: 0x4c9cbd } ),
+        new THREE.MeshBasicMaterial( { color: 0x328cb1 } )
+      ] );
 
-    initParticle: function( particle, delay ) {
+      this.textMesh = new THREE.Mesh( geometry, material );
 
-        var particle = this instanceof THREE.Sprite ? this : particle;
-        var delay = delay !== undefined ? delay : 0;
+      this.textMesh.position.x = centerOffset;
+      this.textMesh.position.y = -80;
+      this.textMesh.position.z = 0;
 
-        particle.position.set( 0, 0, 0 );
-        particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
+      this.textMesh.rotation.x = 0;
+      this.textMesh.rotation.y = Math.PI * 2;
 
-        new TWEEN.Tween( particle )
-            .delay( delay )
-            .to( {}, 10000 )
-            .onComplete( App.initParticle )
-            .start();
-
-        new TWEEN.Tween( particle.position )
-            .delay( delay )
-            .to( { x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000 }, 10000 )
-            .start();
-
-        new TWEEN.Tween( particle.scale )
-            .delay( delay )
-            .to( { x: 0.01, y: 0.01 }, 10000 )
-            .start();
-
+      var group = new THREE.Group();
+      group.add( this.textMesh );
+      this.scene.add(group);
     },
 
     loader: {
@@ -293,7 +282,7 @@ var App = {
         if(window.location.hash == "#about"){
             setTimeout(function(){
                 $('.profile_content').click();
-            },1000);
+            },500);
         }
     },
     
@@ -480,21 +469,29 @@ var App = {
 
 App.analitycs();
 
-$().ready(function(){
-    App.init();
-    animate();
+$(function(){
+    var loader = new THREE.FontLoader();
+    loader.load( 'fonts/Chiller_Regular.json', function ( font ) {
+        App.init( font );
+        animate();
+    } );
+
     setTimeout(function(){ $('.preview_page').find('iframe').attr('src', ""); },4000);
     App.validateUrl();
 });
 
 function animate(){
-    requestAnimationFrame( animate );
-    render();
+  render();
+  requestAnimationFrame( animate );
 }
 
 function render(){
-    App.renderer.render(App.scene, App.camera);
-    TWEEN.update();
+    // App.controls.update();
+
+    App.camera.lookAt( App.scene.position );
+
+    App.renderer.render( App.scene, App.camera );
+
     App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
     App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
 }
