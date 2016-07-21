@@ -5180,7 +5180,13 @@ video.responsive-video {
           top: 4%; }
   .profile_content {
     left: 1rem;
-    bottom: 1rem; } }
+    bottom: 1rem; }
+  #section_home {
+    background-size: 100%, 250px; }
+  #section_collaborations {
+    background-size: 100%, 1000px; }
+  #section_projects {
+    background-size: 100%, 250px; } }
 
 @media (max-width: 500px) {
   .project .title a {
