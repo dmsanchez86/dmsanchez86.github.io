@@ -173,10 +173,18 @@ var App = {
     },
 
     createText: function(font){
+        var size = 270;
+
+        if(window.innerWidth < 460){
+            size = 150;
+        }else if(window.innerWidth < 680){
+            size = 180;
+        }
+
       var geometry = new THREE.TextGeometry( "dmsanchez86", {
 
         font: font,
-        size: 270,
+        size: size,
         height: 30,
         curveSegments: 20,
         bevelEnabled: true,
@@ -198,7 +206,7 @@ var App = {
 
       this.textMesh.position.x = centerOffset;
       this.textMesh.position.y = -80;
-      this.textMesh.position.z = 0;
+      this.textMesh.position.z = (window.innerWidth < 460 ? -200 : 0);
 
       this.textMesh.rotation.x = 0;
       this.textMesh.rotation.y = Math.PI * 2;
