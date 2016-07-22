@@ -5181,6 +5181,13 @@ video.responsive-video {
   .profile_content {
     left: 1rem;
     bottom: 1rem; }
+  .carousel {
+    -webkit-perspective: 500px;
+    -khtml-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    -o-perspective: 500px;
+    perspective: 500px; }
   #section_home {
     background-size: 100%, 250px; }
   #section_collaborations {

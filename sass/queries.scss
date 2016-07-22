@@ -166,6 +166,10 @@
 		bottom: 1rem;
 	}
 
+	.carousel{ 
+		@include perspective(500px);
+	}
+
 	#section_home{
 		background-size: 100%, 250px;
 	}
