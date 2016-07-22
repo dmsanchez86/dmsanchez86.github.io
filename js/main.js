@@ -535,22 +535,9 @@ function animate(){
 }
 
 function render(){
-    // App.controls.update();
 
-    if(window.innerWidth > 680){
-        App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
-        App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
-    }
-
-    if(window.innerWidth <= 680){
-        var timer = Date.now() * 0.0005;
-
-        App.camera.position.x = Math.cos( timer ) * 10;
-        // App.camera.position.y = 4;
-        // App.camera.position.z = Math.sin( timer ) * 10;
-
-        App.textMesh.position.z = -500;
-    }
+    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
+    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
 
     App.camera.lookAt( App.scene.position );
 
