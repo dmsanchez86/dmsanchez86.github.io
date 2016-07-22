@@ -25,6 +25,7 @@ var App = {
         this.createCamera();
         this.createRender();
         this.createText(font);
+        this.createPoints();
 
         if(window.innerWidth >= 960){
             document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -214,6 +215,46 @@ var App = {
       var group = new THREE.Group();
       group.add( this.textMesh );
       this.scene.add(group);
+    },
+
+    createPoints: function(){
+        var geometry = [
+
+            [ new THREE.IcosahedronGeometry( 100, 4 ), 50 ],
+            [ new THREE.IcosahedronGeometry( 100, 3 ), 300 ],
+            [ new THREE.IcosahedronGeometry( 100, 2 ), 1000 ],
+            [ new THREE.IcosahedronGeometry( 100, 1 ), 2000 ],
+            [ new THREE.IcosahedronGeometry( 100, 0 ), 8000 ]
+
+        ];
+
+        var material = new THREE.MeshLambertMaterial( { color: 0xfefefe, wireframe: true } );
+        material.opacity = .5;
+
+        var i, j, mesh, lod;
+
+        for ( j = 0; j < 1000; j ++ ) {
+
+            lod = new THREE.LOD();
+
+            for ( i = 0; i < geometry.length; i ++ ) {
+
+                mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
+                mesh.scale.set( .06, .06, .06 );
+                mesh.updateMatrix();
+                mesh.matrixAutoUpdate = false;
+                lod.addLevel( mesh, geometry[ i ][ 1 ] );
+
+            }
+
+            lod.position.x = 10000 * ( 0.5 - Math.random() );
+            lod.position.y =  7500 * ( 0.5 - Math.random() );
+            lod.position.z = 10000 * ( 0.5 - Math.random() );
+            lod.updateMatrix();
+            lod.matrixAutoUpdate = false;
+            App.scene.add( lod );
+
+        }
     },
 
     loader: {
@@ -496,12 +537,24 @@ function animate(){
 function render(){
     // App.controls.update();
 
+    if(window.innerWidth > 680){
+        App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
+        App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
+    }
+
+    if(window.innerWidth <= 680){
+        var timer = Date.now() * 0.0005;
+
+        App.camera.position.x = Math.cos( timer ) * 10;
+        // App.camera.position.y = 4;
+        // App.camera.position.z = Math.sin( timer ) * 10;
+
+        App.textMesh.position.z = -500;
+    }
+
     App.camera.lookAt( App.scene.position );
 
     App.renderer.render( App.scene, App.camera );
-
-    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
-    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
 }
 
 function onWindowResize() {
