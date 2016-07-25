@@ -228,7 +228,7 @@ var App = {
 
         ];
 
-        var material = new THREE.MeshLambertMaterial( { color: 0xfefefe, wireframe: true } );
+        var material = new THREE.MeshLambertMaterial( { color: 0xfefefe } );
         material.opacity = .5;
 
         var i, j, mesh, lod;
@@ -536,8 +536,8 @@ function animate(){
 
 function render(){
 
-    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.01;
-    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.01;
+    App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.04;
+    App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.04;
 
     App.camera.lookAt( App.scene.position );
 
