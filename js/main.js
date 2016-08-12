@@ -7,8 +7,10 @@ var App = {
     controls: null,
     container: null,
     textMesh: null,
+    plane: null,
     mouseX : 0, 
     mouseY : 0,
+    startTime : Date.now(),
     windowHalfX : window.innerWidth / 2,
     windowHalfY : window.innerHeight / 2,
     
@@ -178,9 +180,9 @@ var App = {
     createPlane: function(){
 
         var groundMaterial = new THREE.MeshBasicMaterial( { color: 0x328cb1 } );
-        var plane = new THREE.Mesh( new THREE.BoxGeometry( 1000, 2, 200 ), groundMaterial );
-        plane.position.y = - 250;
-        this.scene.add( plane );
+        this.plane = new THREE.Mesh( new THREE.BoxGeometry( 800, 10, 40 ), groundMaterial );
+        this.plane.position.y = - 200;
+        this.scene.add( this.plane );
     },
 
     createText: function(font){
@@ -249,7 +251,7 @@ var App = {
 
             for ( i = 0; i < geometry.length; i ++ ) {
                 mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
-                mesh.scale.set( .8, .8, .8 );
+                mesh.scale.set( .9, .9, .9 );
                 mesh.updateMatrix();
                 mesh.matrixAutoUpdate = false;
                 lod.addLevel( mesh, geometry[ i ][ 1 ] );
@@ -266,7 +268,6 @@ var App = {
     },
 
     createLight: function(){
-        console.log(6);
         this.scene.add(new THREE.AmbientLight( 0x404040 ));
 
         var light = new THREE.DirectionalLight( 0xffffff, 1 );
@@ -571,6 +572,9 @@ function animate(){
 }
 
 function render(){
+
+    var dtime   = Date.now() - App.startTime;
+    App.plane.scale.x = 0.5 + 0.3 * Math.sin( dtime / 300 );
 
     App.camera.position.x += ( App.mouseX - App.camera.position.x ) * 0.04;
     App.camera.position.y += ( - App.mouseY - App.camera.position.y ) * 0.04;
