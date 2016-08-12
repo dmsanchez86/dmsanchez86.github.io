@@ -175,7 +175,7 @@ var App = {
     },
 
     createText: function(font){
-        var size = 270;
+        var size = 255;
 
         if(window.innerWidth < 460){
             size = 150;
@@ -187,11 +187,11 @@ var App = {
 
         font: font,
         size: size,
-        height: 30,
+        height: 70,
         curveSegments: 20,
         bevelEnabled: true,
-        bevelThickness: 10,
-        bevelSize: 3
+        bevelThickness: 20,
+        bevelSize: 7
 
       });
 
@@ -549,7 +549,7 @@ $(function(){
     }
 
     var loader = new THREE.FontLoader();
-    loader.load( 'fonts/Chiller_Regular.json', function ( font ) {
+    loader.load( 'fonts/Buxton_Sketch_Regular.json', function ( font ) {
         App.init( font );
         animate();
     } );
