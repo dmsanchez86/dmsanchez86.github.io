@@ -519,6 +519,12 @@ var App = {
 App.analitycs();
 
 $(function(){
+    // Detects webgl
+    if ( ! Detector.webgl ) {
+        Detector.addGetWebGLMessage();
+        alert('your browser don\'t support WebGL');
+    }
+
     var loader = new THREE.FontLoader();
     loader.load( 'fonts/Chiller_Regular.json', function ( font ) {
         App.init( font );
