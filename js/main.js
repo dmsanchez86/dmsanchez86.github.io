@@ -187,7 +187,7 @@ var App = {
 
         font: font,
         size: size,
-        height: 70,
+        height: 50,
         curveSegments: 20,
         bevelEnabled: true,
         bevelThickness: 20,
