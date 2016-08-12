@@ -25,6 +25,7 @@ var App = {
         this.createCamera();
         this.createRender();
         this.createText(font);
+        this.createPlane();
         this.createPoints();
         this.createLight();
 
@@ -174,6 +175,14 @@ var App = {
       App.container.appendChild(this.renderer.domElement);
     },
 
+    createPlane: function(){
+
+        var groundMaterial = new THREE.MeshBasicMaterial( { color: 0x328cb1 } );
+        var plane = new THREE.Mesh( new THREE.BoxGeometry( 1000, 2, 200 ), groundMaterial );
+        plane.position.y = - 250;
+        this.scene.add( plane );
+    },
+
     createText: function(font){
         var size = 255;
 
@@ -239,13 +248,11 @@ var App = {
             lod = new THREE.LOD();
 
             for ( i = 0; i < geometry.length; i ++ ) {
-
                 mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
                 mesh.scale.set( .8, .8, .8 );
                 mesh.updateMatrix();
                 mesh.matrixAutoUpdate = false;
                 lod.addLevel( mesh, geometry[ i ][ 1 ] );
-
             }
 
             lod.position.x = 10000 * ( 0.5 - Math.random() );
