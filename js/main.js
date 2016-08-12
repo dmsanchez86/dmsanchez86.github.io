@@ -26,6 +26,7 @@ var App = {
         this.createRender();
         this.createText(font);
         this.createPoints();
+        this.createLight();
 
         if(window.innerWidth >= 960){
             document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -228,7 +229,7 @@ var App = {
 
         ];
 
-        var material = new THREE.MeshLambertMaterial( { color: 0xfefefe } );
+        var material = new THREE.MeshPhongMaterial( { color: 0xa345daf, /* wireframe: true */ } );
         material.opacity = .5;
 
         var i, j, mesh, lod;
@@ -240,7 +241,7 @@ var App = {
             for ( i = 0; i < geometry.length; i ++ ) {
 
                 mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
-                mesh.scale.set( .06, .06, .06 );
+                mesh.scale.set( .8, .8, .8 );
                 mesh.updateMatrix();
                 mesh.matrixAutoUpdate = false;
                 lod.addLevel( mesh, geometry[ i ][ 1 ] );
@@ -255,6 +256,28 @@ var App = {
             App.scene.add( lod );
 
         }
+    },
+
+    createLight: function(){
+        console.log(6);
+        this.scene.add(new THREE.AmbientLight( 0x404040 ));
+
+        var light = new THREE.DirectionalLight( 0xffffff, 1 );
+        light.position.set( -10, 10, 5 );
+        light.castShadow = true;
+        var d = 20;
+        light.shadow.camera.left = -d;
+        light.shadow.camera.right = d;
+        light.shadow.camera.top = d;
+        light.shadow.camera.bottom = -d;
+
+        light.shadow.camera.near = 2;
+        light.shadow.camera.far = 50;
+
+        light.shadow.mapSize.x = 1024;
+        light.shadow.mapSize.y = 1024;
+
+        this.scene.add( light );
     },
 
     loader: {
