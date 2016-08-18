@@ -50,4 +50,4 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
 [![About dmsanchez86.github.io](./screens/about.png)](http://dmsanchez86.github.io/#about)
 
-By [Daniel Mauricio Sanchez Avila](http://twitter.con/dmsanchez86)
+By [Daniel Mauricio Sanchez Avila](http://twitter.com/dmsanchez86)
