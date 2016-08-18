@@ -8,11 +8,21 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 > Index:
 
 <ol>
-	<li>[Home](#home)</li>
-	<li>[Projects](#projects)</li>
-	<li>[Collaborations](#collaborations)</li>
-	<li>[Contact](#contact)</li>
-	<li>[About](#about)</li>
+	<li>
+		<a href="#home">Home</a>
+	</li>
+	<li>
+		<a href="#projects">Projects</a>
+	</li>
+	<li>
+		<a href="#collaborations">Collaborations</a>
+	</li>
+	<li>
+		<a href="#contact">Contact</a>
+	</li>
+	<li>
+		<a href="#about">About</a>
+	</li>
 </ol>
 
 > Build With
