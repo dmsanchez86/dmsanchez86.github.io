@@ -139,6 +139,7 @@ var App = {
         
         // creacion de la camara con sus parametros
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000 );
+        // this.camera = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 1000 );
         
         // posiciono la camara
         this.camera.position.set(0,0,700);
@@ -186,19 +187,19 @@ var App = {
     },
 
     createText: function(font){
-        var size = 255;
+        var size = 235;
 
         if(window.innerWidth < 460){
-            size = 150;
+            size = 135;
         }else if(window.innerWidth < 680){
-            size = 180;
+            size = 165;
         }
 
       var geometry = new THREE.TextGeometry( "dmsanchez86", {
 
         font: font,
         size: size,
-        height: 50,
+        height: 30,
         curveSegments: 20,
         bevelEnabled: true,
         bevelThickness: 20,
@@ -556,8 +557,12 @@ $(function(){
         alert('your browser don\'t support WebGL');
     }
 
+    var fonts = ['Chiller_Regular.json','Buxton_Sketch_Regular.json', 'Agency FB_Regular.json','Bradley Hand ITC_Regular.json', 'Papyrus_Regular.json', 'Segoe Marker_Regular.json', 'Tempus Sans ITC_Regular.json', 'Viner Hand ITC_Regular.json'];
+    var selectedFont = Math.floor((Math.random() * fonts.length) + 1) - 1;
+    console.log(selectedFont);
+
     var loader = new THREE.FontLoader();
-    loader.load( 'fonts/Buxton_Sketch_Regular.json', function ( font ) {
+    loader.load( 'fonts/' + fonts[selectedFont], function ( font ) {
         App.init( font );
         animate();
     } );
