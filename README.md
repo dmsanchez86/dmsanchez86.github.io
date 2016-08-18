@@ -3,25 +3,36 @@
 
 ### Versión 1.1.9
 
-Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
+Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
-> Made With
+Index:
+1. [Home](#home)
+2. [Projects](#projects)
+3. [Collaborations](#collaborations)
+4. [Contact](#contact)
+5. [Contact](#contact)
 
-* HTML5
-* Three JS
-* CSS3 Transforms
-* SASS
-* jQuery
-* Full Page JS 
-* Font Awesome
-* Materialize
+> Build With
+
+* [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5)
+* [Three JS](http://threejs.org)
+* [CSS3 Transforms](http://www.css3.info/)
+* [SASS](http://sass-lang.com/)
+* [jQuery](http://jquery.com)
+* [Full Page JS](http://alvarotrigo.com/fullPage/)
+* [Font Awesome](http://fontawesome.io/icons/)
+* [Materialize](http://materializecss.com)
+* [Gulp](http://gulpjs.com/)
+* [Humans txt](http://humanstxt.org/)
 
 ## Home
+***
 
 | [![Home dmsanchez86.github.io](./screens/home.png)](http://dmsanchez86.github.io) | [![Home dmsanchez86.github.io](./screens/home_.png)](http://dmsanchez86.github.io) |
 |---|---|
 
 ## Projects
+***
 
 | [![Football Field 3D](./screens/projects/footballField.png)](http://dmsanchez86.github.io/Field_3d) | [![Atom Loader](./screens/projects/atomLoader.png)](http://codepen.io/dmsanchez86/full/WxRovR) |
 |---|---|
@@ -34,6 +45,7 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 | [![Arthritis Web](./screens/projects/arthritisWeb.png)](http://dmsanchez86.github.io/ArthritisWeb) | [![Angular Template](./screens/projects/angularTemplate.png)](http://dmsanchez86.github.io/siema) |
 
 ## Colaborations
+***
 
 | [![Conexiones](./screens/collaborations/conexiones.png)](http://conexiones.net.co) | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/) |
 |---|---|
@@ -43,10 +55,12 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 | [![EasyNet](./screens/collaborations/easyNet.png)](http://www.easynet.com.co/) | [![Finca y Cafe](./screens/collaborations/fincaYCafe.png)](http://fincaycafe.com/) |
 
 ## Contact
+***
 
 [![Contact dmsanchez86.github.io](./screens/contact.png)](http://dmsanchez86.github.io/#contact)
 
 ## About
+***
 
 [![About dmsanchez86.github.io](./screens/about.png)](http://dmsanchez86.github.io/#about)
 
