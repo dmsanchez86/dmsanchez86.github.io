@@ -18,7 +18,7 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
 ## Home
 
-| [![Home dmsanchez86.github.io](./screens/home.png)](http://dmsanchez86.github.io){:target="_blank"} | [![Home dmsanchez86.github.io](./screens/home_.png)](http://dmsanchez86.github.io){:target="_blank"} |
+| <a href="http://dmsanchez86.github.io" target="_blank">![Home dmsanchez86.github.io](./screens/home.png)]</a> | <a href="http://dmsanchez86.github.io" target="_blank">![Home dmsanchez86.github.io](./screens/home_.png)</a> |
 |---|---|
 
 ## Projects
