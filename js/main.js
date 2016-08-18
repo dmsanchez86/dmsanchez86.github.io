@@ -251,7 +251,7 @@ var App = {
 
             for ( i = 0; i < geometry.length; i ++ ) {
                 mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
-                mesh.scale.set( .9, .9, .9 );
+                mesh.scale.set( .7, .7, .7 );
                 mesh.updateMatrix();
                 mesh.matrixAutoUpdate = false;
                 lod.addLevel( mesh, geometry[ i ][ 1 ] );
