@@ -30,12 +30,12 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 | [![Weather App](./screens/projects/weatherApp.png)](http://codepen.io/dmsanchez86/full/bpYXPN/){:target="_blank"} | [![Perspective Slider](./screens/projects/sliderPerspective.png)](http://dmsanchez86.github.io/Perspective_Slider){:target="_blank"} |
 | [![Interactive Clock](./screens/projects/interactiveClock.png)](http://dmsanchez86.github.io/interactive_clock){:target="_blank"} | [![Cellphone 3D](./screens/projects/cellphone3D.png)](http://dmsanchez86.github.io/cellphone-3d){:target="_blank"} |
 | [![Cube 3D](./screens/projects/cube3D.png)](http://dmsanchez86.github.io/Cube-3D---CSS3-and-JavaScript){:target="_blank"} | [![List In 3D](./screens/projects/list3D.png)](http://dmsanchez86.github.io/list_in_3d){:target="_blank"} |
-| [![Geometry Cube 3D](./screens/projects/cubeWireframe.png)](http://dmsanchez86.github.io/cube_3D){:target="_blank"} | [![Juris Quiz Web](./screens/projects/jurisquizWeb.png)](http://dmsanchez86.github.io/jurisquizWeb{:target="_blank"}) |
+| [![Geometry Cube 3D](./screens/projects/cubeWireframe.png)](http://dmsanchez86.github.io/cube_3D){:target="_blank"} | [![Juris Quiz Web](./screens/projects/jurisquizWeb.png)](http://dmsanchez86.github.io/jurisquizWeb){:target="_blank"} |
 | [![Arthritis Web](./screens/projects/arthritisWeb.png)](http://dmsanchez86.github.io/ArthritisWeb){:target="_blank"} | [![Angular Template](./screens/projects/angularTemplate.png)](http://dmsanchez86.github.io/siema){:target="_blank"} |
 
 ## Colaborations
 
-| [![Conexiones](./screens/collaborations/conexiones.png)](conexiones.net.co){:target="_blank"} | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/){:target="_blank"} |
+| [![Conexiones](./screens/collaborations/conexiones.png)](http://conexiones.net.co){:target="_blank"} | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/){:target="_blank"} |
 |---|---|
 | [![I.E Santo Domingo Savio](./screens/collaborations/IESantoDomingoSavio.png)](http://www.iesantodomingosavio.edu.co/){:target="_blank"} | [![Antorcha Films](./screens/collaborations/antorchaFilms.png)](http://atarrayaitinerante.org/ebookapp/index.html){:target="_blank"} |
 | [![Rakim](./screens/collaborations/rakim.org.png)](http://rakin.org/){:target="_blank"} | [![Buffalo Republic](./screens/collaborations/buffaloRepublic.png)](http://buffalorepublic.menu/){:target="_blank"} |
@@ -44,6 +44,10 @@ Url: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
 ## Contact
 
-![Contact dmsanchez86.github.io](./screens/contact.png)
+[![Contact dmsanchez86.github.io](./screens/contact.png)](http://dmsanchez86.github.io/#contact)
+
+## About
+
+[![About dmsanchez86.github.io](./screens/about.png)](http://dmsanchez86.github.io/#about)
 
 By [Daniel Mauricio Sanchez Avila](http://twitter.con/dmsanchez86)
