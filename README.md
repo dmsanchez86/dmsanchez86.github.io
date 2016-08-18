@@ -47,6 +47,8 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 ## Projects
 ***
 
+[![Projects dmsanchez86.github.io](./screens/projects.png)](http://dmsanchez86.github.io/#projects)
+
 | [![Football Field 3D](./screens/projects/footballField.png)](http://dmsanchez86.github.io/Field_3d) | [![Atom Loader](./screens/projects/atomLoader.png)](http://codepen.io/dmsanchez86/full/WxRovR) |
 |---|---|
 | [![Form Perspective 3D](./screens/projects/formPerspective.png)](http://codepen.io/dmsanchez86/full/dXqJLv) | [![Animation Juris Quiz](./screens/projects/jurisquizAnimation.png)](http://codepen.io/dmsanchez86/full/yJPAqK) |
@@ -59,6 +61,8 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
 ## Collaborations
 ***
+
+[![Collaborations dmsanchez86.github.io](./screens/collaborations.png)](http://dmsanchez86.github.io/#collaborations)
 
 | [![Conexiones](./screens/collaborations/conexiones.png)](http://conexiones.net.co) | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/) |
 |---|---|
