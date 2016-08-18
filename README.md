@@ -5,12 +5,15 @@
 
 Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
-Index:
-1. [Home](#home)
-2. [Projects](#projects)
-3. [Collaborations](#collaborations)
-4. [Contact](#contact)
-5. [Contact](#contact)
+> Index:
+
+<ol>
+	<li>[Home](#home)</li>
+	<li>[Projects](#projects)</li>
+	<li>[Collaborations](#collaborations)</li>
+	<li>[Contact](#contact)</li>
+	<li>[About](#about)</li>
+</ol>
 
 > Build With
 
@@ -44,7 +47,7 @@ Index:
 | [![Geometry Cube 3D](./screens/projects/cubeWireframe.png)](http://dmsanchez86.github.io/cube_3D) | [![Juris Quiz Web](./screens/projects/jurisquizWeb.png)](http://dmsanchez86.github.io/jurisquizWeb) |
 | [![Arthritis Web](./screens/projects/arthritisWeb.png)](http://dmsanchez86.github.io/ArthritisWeb) | [![Angular Template](./screens/projects/angularTemplate.png)](http://dmsanchez86.github.io/siema) |
 
-## Colaborations
+## Collaborations
 ***
 
 | [![Conexiones](./screens/collaborations/conexiones.png)](http://conexiones.net.co) | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/) |
