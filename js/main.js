@@ -8,9 +8,10 @@ var App = {
     container: null,
     textMesh: null,
     plane: null,
+    lod: null,
+    points: [],
     mouseX : 0, 
     mouseY : 0,
-    startTime : Date.now(),
     windowHalfX : window.innerWidth / 2,
     windowHalfY : window.innerHeight / 2,
     
@@ -242,37 +243,37 @@ var App = {
         ];
 
         var material = new THREE.MeshPhongMaterial( { color: 0xa345daf, /* wireframe: true */ } );
-        material.opacity = .5;
+        material.opacity = 1;
 
-        var i, j, mesh, lod;
+        var i, j, mesh;
 
         for ( j = 0; j < 1000; j ++ ) {
 
-            lod = new THREE.LOD();
+            this.lod = new THREE.LOD();
 
             for ( i = 0; i < geometry.length; i ++ ) {
                 mesh = new THREE.Mesh( geometry[ i ][ 0 ], material );
                 mesh.scale.set( .7, .7, .7 );
                 mesh.updateMatrix();
                 mesh.matrixAutoUpdate = false;
-                lod.addLevel( mesh, geometry[ i ][ 1 ] );
+                this.lod.addLevel( mesh, geometry[ i ][ 1 ] );
+                this.points.push(mesh);
             }
 
-            lod.position.x = 10000 * ( 0.5 - Math.random() );
-            lod.position.y =  7500 * ( 0.5 - Math.random() );
-            lod.position.z = 10000 * ( 0.5 - Math.random() );
-            lod.updateMatrix();
-            lod.matrixAutoUpdate = false;
-            App.scene.add( lod );
-
+            this.lod.position.x = 10000 * ( 0.7 - Math.random() );
+            this.lod.position.y =  7500 * ( 0.7 - Math.random() );
+            this.lod.position.z = 10000 * ( 0.7 - Math.random() );
+            this.lod.updateMatrix();
+            // this.lod.matrixAutoUpdate = false;
+            App.scene.add( this.lod );
         }
     },
 
     createLight: function(){
-        this.scene.add(new THREE.AmbientLight( 0x404040 ));
+        this.scene.add(new THREE.AmbientLight( 0xf3f3f3 ));
 
-        var light = new THREE.DirectionalLight( 0xffffff, 1 );
-        light.position.set( -10, 10, 5 );
+        var light = new THREE.DirectionalLight( 0xffffff, 2 );
+        light.position.set( -10, 1000, 500 );
         light.castShadow = true;
         var d = 20;
         light.shadow.camera.left = -d;
@@ -559,7 +560,6 @@ $(function(){
 
     var fonts = ['Chiller_Regular.json','Buxton_Sketch_Regular.json', 'Agency FB_Regular.json','Bradley Hand ITC_Regular.json', 'Papyrus_Regular.json', 'Segoe Marker_Regular.json', 'Tempus Sans ITC_Regular.json', 'Viner Hand ITC_Regular.json'];
     var selectedFont = Math.floor((Math.random() * fonts.length) + 1) - 1;
-    console.log(selectedFont);
 
     var loader = new THREE.FontLoader();
     loader.load( 'fonts/' + fonts[selectedFont], function ( font ) {
@@ -577,6 +577,13 @@ function animate(){
 }
 
 function render(){
+
+    for (var i = 0; i < App.points.length; i++) {
+        App.points[i].position.x = ( App.mouseX - App.camera.position.x ) * 0.07;
+        App.points[i].position.y = ( - App.mouseY - App.camera.position.y ) * 0.08;
+        App.points[i].position.z = ( App.mouseY - App.camera.position.y ) * 0.07;
+        App.points[i].updateMatrix();
+    }
 
     var dtime   = Date.now() - App.startTime;
     App.plane.scale.x = 0.5 + 0.3 * Math.sin( dtime / 300 );
