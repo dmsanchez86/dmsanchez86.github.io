@@ -203,8 +203,8 @@ var App = {
         height: 30,
         curveSegments: 20,
         bevelEnabled: true,
-        bevelThickness: 20,
-        bevelSize: 7
+        bevelThickness: 22,
+        bevelSize: 8
 
       });
 
@@ -213,8 +213,8 @@ var App = {
       var centerOffset = -0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
 
       var material = new THREE.MultiMaterial( [
-        new THREE.MeshBasicMaterial( { color: 0x4c9cbd } ),
-        new THREE.MeshBasicMaterial( { color: 0x328cb1 } )
+        new THREE.MeshPhongMaterial( { color: 0x4c9cbd, specular: 0xaaaaaa } ),
+        new THREE.MeshPhongMaterial( { color: 0x328cb1, specular: 0xaaaaaa } )
       ] );
 
       this.textMesh = new THREE.Mesh( geometry, material );
@@ -233,16 +233,14 @@ var App = {
 
     createPoints: function(){
         var geometry = [
-
             [ new THREE.IcosahedronGeometry( 100, 4 ), 50 ],
             [ new THREE.IcosahedronGeometry( 100, 3 ), 300 ],
             [ new THREE.IcosahedronGeometry( 100, 2 ), 1000 ],
             [ new THREE.IcosahedronGeometry( 100, 1 ), 2000 ],
             [ new THREE.IcosahedronGeometry( 100, 0 ), 8000 ]
-
         ];
 
-        var material = new THREE.MeshPhongMaterial( { color: 0xa345daf, /* wireframe: true */ } );
+        var material = new THREE.MeshPhongMaterial( { color: 0x323232, specular: 0x4c9cbd, shininess: 8 /* wireframe: true */ } );
         material.opacity = 1;
 
         var i, j, mesh;
@@ -272,8 +270,8 @@ var App = {
     createLight: function(){
         this.scene.add(new THREE.AmbientLight( 0xf3f3f3 ));
 
-        var light = new THREE.DirectionalLight( 0xffffff, 2 );
-        light.position.set( -10, 1000, 500 );
+        var light = new THREE.DirectionalLight( 0xffffff, 2.5 );
+        light.position.set( -10, 1800, 1000 );
         light.castShadow = true;
         var d = 20;
         light.shadow.camera.left = -d;
