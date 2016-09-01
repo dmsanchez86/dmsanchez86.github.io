@@ -14,6 +14,10 @@ var App = {
     mouseY : 0,
     windowHalfX : window.innerWidth / 2,
     windowHalfY : window.innerHeight / 2,
+    lights: {
+        ambient: null,
+        directional: null,
+    },
     
     const: {
       WINDOW_WIDTH: window.innerWidth,
@@ -149,7 +153,7 @@ var App = {
         this.scene.add(this.camera);
         
         // Camera look at
-	      this.camera.lookAt( this.scene.position );
+        this.camera.lookAt( this.scene.position );
     },
 
     createRender: function(){
@@ -268,24 +272,26 @@ var App = {
     },
 
     createLight: function(){
-        this.scene.add(new THREE.AmbientLight( 0xf3f3f3 ));
+        this.lights.ambient = new THREE.AmbientLight( 0xf3f3f3 );
 
-        var light = new THREE.DirectionalLight( 0xffffff, 2.5 );
-        light.position.set( -10, 1800, 1000 );
-        light.castShadow = true;
+        this.scene.add(this.lights.ambient);
+
+        this.lights.directional = new THREE.DirectionalLight( 0xffffff, 2.5 );
+        this.lights.directional.position.set( -10, 1800, 1000 );
+        this.lights.directional.castShadow = true;
         var d = 20;
-        light.shadow.camera.left = -d;
-        light.shadow.camera.right = d;
-        light.shadow.camera.top = d;
-        light.shadow.camera.bottom = -d;
+        this.lights.directional.shadow.camera.left = -d;
+        this.lights.directional.shadow.camera.right = d;
+        this.lights.directional.shadow.camera.top = d;
+        this.lights.directional.shadow.camera.bottom = -d;
 
-        light.shadow.camera.near = 2;
-        light.shadow.camera.far = 50;
+        this.lights.directional.shadow.camera.near = 2;
+        this.lights.directional.shadow.camera.far = 50;
 
-        light.shadow.mapSize.x = 1024;
-        light.shadow.mapSize.y = 1024;
+        this.lights.directional.shadow.mapSize.x = 1024;
+        this.lights.directional.shadow.mapSize.y = 1024;
 
-        this.scene.add( light );
+        this.scene.add( this.lights.directional );
     },
 
     loader: {
