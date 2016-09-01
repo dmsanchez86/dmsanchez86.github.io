@@ -2909,6 +2909,9 @@ body, html {
   height: 100%;
   display: block; }
 
+svg:not(:root) {
+  overflow: visible; }
+
 body {
   overflow: hidden;
   -webkit-perspective: 1000px;

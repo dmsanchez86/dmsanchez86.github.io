@@ -7,6 +7,10 @@
 
 body,html{ @include init; }
 
+svg:not(:root){
+	overflow: visible;
+}
+
 @import 'body';
 
 .fullpage-wrapper{
