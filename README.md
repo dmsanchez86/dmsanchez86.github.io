@@ -1,7 +1,7 @@
 # dmsanchez86 WebSite
 ***
 
-### Versión 1.1.9
+### Versión 1.2
 
 Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
