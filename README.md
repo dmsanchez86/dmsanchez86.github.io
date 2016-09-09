@@ -15,7 +15,7 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 		<a href="#projects">Projects</a>
 	</li>
 	<li>
-		<a href="#collaborations">Collaborations</a>
+		<a href="#portafolio">Portafolio</a>
 	</li>
 	<li>
 		<a href="#contact">Contact</a>
@@ -59,17 +59,17 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 | [![Geometry Cube 3D](./screens/projects/cubeWireframe.png)](http://dmsanchez86.github.io/cube_3D) | [![Juris Quiz Web](./screens/projects/jurisquizWeb.png)](http://dmsanchez86.github.io/jurisquizWeb) |
 | [![Arthritis Web](./screens/projects/arthritisWeb.png)](http://dmsanchez86.github.io/ArthritisWeb) | [![Angular Template](./screens/projects/angularTemplate.png)](http://dmsanchez86.github.io/siema) |
 
-## Collaborations
+## Portafolio
 ***
 
-[![Collaborations dmsanchez86.github.io](./screens/collaborations.png)](http://dmsanchez86.github.io/#collaborations)
+[![portafolio dmsanchez86.github.io](./screens/portafolio.png)](http://dmsanchez86.github.io/#portafolio)
 
-| [![Conexiones](./screens/collaborations/conexiones.png)](http://conexiones.net.co) | [![Zeus Consultores](./screens/collaborations/zeusConsultores.png)](http://zeusconsultores.com/) |
+| [![Conexiones](./screens/portafolio/conexiones.png)](http://conexiones.net.co) | [![Zeus Consultores](./screens/portafolio/zeusConsultores.png)](http://zeusconsultores.com/) |
 |---|---|
-| [![I.E Santo Domingo Savio](./screens/collaborations/IESantoDomingoSavio.png)](http://www.iesantodomingosavio.edu.co/) | [![Antorcha Films](./screens/collaborations/antorchaFilms.png)](http://atarrayaitinerante.org/ebookapp/index.html) |
-| [![Rakim](./screens/collaborations/rakim.org.png)](http://rakin.org/) | [![Buffalo Republic](./screens/collaborations/buffaloRepublic.png)](http://buffalorepublic.menu/) |
-| [![Clinica de Artritis Temprana](./screens/collaborations/arthritisHospital.png)](http://clinicadeartritistemprana.com/) | [![Plastilina Verano](./screens/collaborations/plastilinaVerano.png)](http://plastilinaverano.com/) |
-| [![EasyNet](./screens/collaborations/easyNet.png)](http://www.easynet.com.co/) | [![Finca y Cafe](./screens/collaborations/fincaYCafe.png)](http://fincaycafe.com/) |
+| [![I.E Santo Domingo Savio](./screens/portafolio/IESantoDomingoSavio.png)](http://www.iesantodomingosavio.edu.co/) | [![Antorcha Films](./screens/portafolio/antorchaFilms.png)](http://atarrayaitinerante.org/ebookapp/index.html) |
+| [![Rakim](./screens/portafolio/rakim.org.png)](http://rakin.org/) | [![Buffalo Republic](./screens/portafolio/buffaloRepublic.png)](http://buffalorepublic.menu/) |
+| [![Clinica de Artritis Temprana](./screens/portafolio/arthritisHospital.png)](http://clinicadeartritistemprana.com/) | [![Plastilina Verano](./screens/portafolio/plastilinaVerano.png)](http://plastilinaverano.com/) |
+| [![EasyNet](./screens/portafolio/easyNet.png)](http://www.easynet.com.co/) | [![Finca y Cafe](./screens/portafolio/fincaYCafe.png)](http://fincaycafe.com/) |
 
 ## Contact
 ***
@@ -82,3 +82,5 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 [![About dmsanchez86.github.io](./screens/about.png)](http://dmsanchez86.github.io/#about)
 
 By [Daniel Mauricio Sanchez Avila](http://twitter.com/dmsanchez86)
+
+License MIT
