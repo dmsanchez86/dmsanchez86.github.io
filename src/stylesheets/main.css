@@ -3003,25 +3003,25 @@ body {
     background: #309034; }
   body.projects.profile .overlay-menu {
     background-color: #27822B; }
-  body.collaborations .navigator_content .navigator ul li a {
+  body.portafolio .navigator_content .navigator ul li a {
     color: #E8EBEC; }
-    body.collaborations .navigator_content .navigator ul li a:before, body.collaborations .navigator_content .navigator ul li a:after {
+    body.portafolio .navigator_content .navigator ul li a:before, body.portafolio .navigator_content .navigator ul li a:after {
       background: #04756A; }
-  body.collaborations .navigator_content .navigator ul li .edge {
+  body.portafolio .navigator_content .navigator ul li .edge {
     background: #026D63; }
-  body.collaborations .navigator_content .navigator .button_menu {
+  body.portafolio .navigator_content .navigator .button_menu {
     border-color: #026D63;
     background: rgba(4, 117, 106, 0.72); }
-    body.collaborations .navigator_content .navigator .button_menu > span {
+    body.portafolio .navigator_content .navigator .button_menu > span {
       border-color: #026D63; }
-    body.collaborations .navigator_content .navigator .button_menu:hover {
+    body.portafolio .navigator_content .navigator .button_menu:hover {
       background: #026D63; }
-      body.collaborations .navigator_content .navigator .button_menu:hover > span {
+      body.portafolio .navigator_content .navigator .button_menu:hover > span {
         border-color: #04756A; }
-  body.collaborations .navigator_content .logo svg circle {
+  body.portafolio .navigator_content .logo svg circle {
     fill: #04756A;
     stroke: #026D63; }
-  body.collaborations #fp-nav ul li a span {
+  body.portafolio #fp-nav ul li a span {
     background: #026D63;
     -webkit-transition: all 0.25s ease;
     -khtml-transition: all 0.25s ease;
@@ -3035,18 +3035,18 @@ body {
     -ms-box-shadow: 0 0 3px 1px #04756A;
     -o-box-shadow: 0 0 3px 1px #04756A;
     box-shadow: 0 0 3px 1px #04756A; }
-  body.collaborations .fullpage-wrapper {
+  body.portafolio .fullpage-wrapper {
     -webkit-perspective-origin: 50% 250%;
     -khtml-perspective-origin: 50% 250%;
     -moz-perspective-origin: 50% 250%;
     -ms-perspective-origin: 50% 250%;
     -o-perspective-origin: 50% 250%;
     perspective-origin: 50% 250%; }
-  body.collaborations .profile_content {
+  body.portafolio .profile_content {
     border-color: #04756A; }
-  body.collaborations .popup .edge {
+  body.portafolio .popup .edge {
     background: #04756A; }
-  body.collaborations.profile .overlay-menu {
+  body.portafolio.profile .overlay-menu {
     background-color: #026D63; }
   body.contact .navigator_content .navigator ul li a {
     color: #E8EBEC; }

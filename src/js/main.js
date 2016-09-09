@@ -72,19 +72,19 @@ var App = {
         
         $('#main').fullpage({
             sectionsColor: colorsTheme,
-            anchors: ['home', 'projects', 'collaborations', 'contact'],
+            anchors: ['home', 'projects', 'portafolio', 'contact'],
             menu: '#menu',
             css3: true,
             scrollOverflow: false,
             autoScrolling: true,
-            navigationTooltips: ['Home', 'Projects', 'Collaborations', 'Contact'],
+            navigationTooltips: ['Home', 'Projects', 'portafolio', 'Contact'],
             // continuousVertical: true,
             navigation: true,
             afterLoad: function(anchorLink, index){
                 $('.preview_page').removeClass('active load').find('iframe').attr('src','');
 
                 $('a[href="#'+ anchorLink +'"]').addClass('active').parent().addClass('active');
-                $('body').removeClass('home projects collaborations contact').addClass(anchorLink);
+                $('body').removeClass('home projects portafolio contact').addClass(anchorLink);
                 $('#favicon').attr('href', 'favicon_'+anchorLink+'.png');
                 
                 $('.profile_content').removeClass('scaleOut');
@@ -94,7 +94,7 @@ var App = {
                 switch(anchorLink){
                     case "home": color = colorsTheme[0]; break;
                     case "projects": color = colorsTheme[1]; break;
-                    case "collaborations": color = colorsTheme[2]; break;
+                    case "portafolio": color = colorsTheme[2]; break;
                     case "contact": color = colorsTheme[3]; break;
                 }
                 
