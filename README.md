@@ -83,4 +83,4 @@ Page: [http://dmsanchez86.github.io](http://dmsanchez86.github.io)
 
 By [Daniel Mauricio Sanchez Avila](http://twitter.com/dmsanchez86)
 
-License MIT
+License [MIT](./LICENSE.md)
