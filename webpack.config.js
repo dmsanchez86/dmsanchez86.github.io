@@ -41,10 +41,6 @@ if (ENV === 'development') {
     module.exports = merge(common, {
         devServer: {
             contentBase: PATHS.build,
-
-            // Enable history API fallback so HTML5 History API based
-            // routing works. This is a good default that will come
-            // in handy in more complicated setups.
             historyApiFallback: true,
             hot: true,
             inline: true,
@@ -56,13 +52,6 @@ if (ENV === 'development') {
             // Parse host and port from env so this is easy to customize.
             host: process.env.HOST,
             port: process.env.PORT,
-             plugins: [
-                new webpack.HotModuleReplacementPlugin(),
-                // enable HMR globally
-
-                new webpack.NamedModulesPlugin(),
-                // prints more readable module names in the browser console on HMR updates
-            ],
         },
     });
 } else {
