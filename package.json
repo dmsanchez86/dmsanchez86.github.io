@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack",
+  "name": "dmsanchez86.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,9 @@
     "prod": "webpack -p --colors --progress",
     "start": "npm run dev"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["react", "github"],
+  "author": "Daniel Mauricio Sanchez",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.24.0",
