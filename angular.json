@@ -131,6 +131,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pageAngular"
+    }
+  },
+  "defaultProject": "pageAngular",
+  "cli": {
+    "analytics": false
+  }
 }
