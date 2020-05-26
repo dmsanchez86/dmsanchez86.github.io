@@ -40,11 +40,11 @@
 				circle{
 					@include animation(circle_resort 1s 1 ease);
 				}
-				
+
 				text{
 					@include animation(move_letter 1s 1 ease);
 					@include transform-origin(top center);
-	
+
 					&:last-child{
 						@include transform-origin(center);
 						@include animation(rotate_letter .6s 1 ease);
@@ -66,15 +66,15 @@
 			height: 55px;
 
 			circle{
-				fill:#E5E1E1; 
-				stroke:#E5E1E1; 
+				fill:#E5E1E1;
+				stroke:#E5E1E1;
 				stroke-width:3px;
 				@include transition(all 1s ease);
 				@include transform-origin(center);
 			}
 
 			text{
-				font-size:50px; 
+				font-size:50px;
 				font-weight:bold;
 				fill: #E8EBEC;
 				stroke-width:1;
@@ -166,11 +166,11 @@
 
 					&:after{
 						left: 0;
-						@include gradient(linear, (right, #fff, #E6E2E2)); 
+						@include gradient(linear, (to right, #fff, #E6E2E2));
 					}
 					&:before{
 						right: 0;
-						@include gradient(linear, (left, #fff, #E6E2E2)); 
+						@include gradient(linear, (to left, #fff, #E6E2E2));
 					}
 
 					&:hover,

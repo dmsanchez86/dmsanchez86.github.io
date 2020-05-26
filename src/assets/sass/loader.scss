@@ -2,7 +2,7 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 999;
-	@include gradient(radial, (#fff, #2f2f2f));	
+	@include gradient(radial, (#fff, #2f2f2f));
 	@include center-absolute(fixed);
 
 	.contentAtoms{
@@ -10,7 +10,7 @@
 		height: 80px;
 		// @include animation(rotate 5s infinite linear);
 		@include center-absolute(fixed);
-		
+
 		&:after{
 			width: 25%;
 			height: 25%;
@@ -21,7 +21,7 @@
 			@include animation(backgroundAtom 1000ms infinite linear);
 			content: '';
 		}
-		
+
 		&:before{
 			content: 'Loading...';
 			position: absolute;
@@ -49,7 +49,7 @@
 			height: 12px;
 			content: '';
 			background: #323232;
-			@include gradient(linear, (left, #323232, #111));
+			@include gradient(linear, (to left, #323232, #111));
 			@include center-absolute(absolute);
 			@include border-radius(50%);
 			@include box-shadow(0 0 5px rgba(255,255,255,.5) inset);
@@ -62,14 +62,14 @@
 		}
 		&:nth-child(2){
 			@include transform(rotate(60deg));
-			
+
 			&:before{
 				@include animation(point 1800ms -2000ms linear infinite reverse);
 			}
 		}
 		&:nth-child(3){
 			@include transform(rotate(-60deg));
-			
+
 			&:before{
 				@include animation(point 1300ms -3000ms linear infinite reverse);
 			}

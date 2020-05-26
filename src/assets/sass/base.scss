@@ -85,36 +85,36 @@ video.responsive-video {
 @import 'popup';
 
 #section_home{
-	background-image: -webkit-linear-gradient(left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
-	background-image: -moz-linear-gradient(left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
-	background-image: linear-gradient(left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
+	background-image: -webkit-linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
+	background-image: -moz-linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
+	background-image: linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
 	background-size: 100%, 420px;
 	background-position: center;
 }
 
 #section_collaborations{
-	background-image: -webkit-linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
-	background-image: -moz-linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
-	background-image: linear-gradient(left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
+	background-image: -webkit-linear-gradient(to left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
+	background-image: -moz-linear-gradient(to left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
+	background-image: linear-gradient(to left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary),url(assets/images/pattern3.png);
 }
 
 #section_projects{
-	background-image: -webkit-linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
-	background-image: -moz-linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
-	background-image: linear-gradient(left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
+	background-image: -webkit-linear-gradient(to left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
+	background-image: -moz-linear-gradient(to left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
+	background-image: linear-gradient(to left, $projects-gradient-primary, $projects-gradient-secondary, $projects-gradient-primary),url(assets/images/pattern6.png);
 	background-size: 100%, 400px;
 }
 
 #section_contact{
-	background-image: -webkit-linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
-	background-image: -moz-linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
-	background-image: linear-gradient(left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
+	background-image: -webkit-linear-gradient(to left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
+	background-image: -moz-linear-gradient(to left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
+	background-image: linear-gradient(to left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary), url(assets/images/pattern4.png);
 }
 
 #section_footer {
-	background-image: -webkit-linear-gradient(bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
-	background-image: -moz-linear-gradient(bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
-	background-image: linear-gradient(bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
+	background-image: -webkit-linear-gradient(to bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
+	background-image: -moz-linear-gradient(to bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
+	background-image: linear-gradient(to bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
 	background-size: 100%, 400px;
 }
 

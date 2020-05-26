@@ -1,7 +1,7 @@
 body{
 	overflow: hidden;
 	@include perspective(1000px);
-	
+
 	&.home{
 		.navigator_content{
 			.navigator{
@@ -62,18 +62,18 @@ body{
 				}
 			}
 		}
-		
+
 		.profile_content{
 			border-color: $home-primary;
 		}
-		
+
 		.popup{
-			
+
 			.edge{
 				background: $home-primary;
 			}
 		}
-		
+
 		&.profile{
 			.overlay-menu{
 				background-color: $home-secondary;
@@ -140,22 +140,22 @@ body{
 				}
 			}
 		}
-		
+
 		.fullpage-wrapper{
 			@include perspective-origin(50% 150%);
 		}
-		
+
 		.profile_content{
 			border-color: $projects-primary;
 		}
-		
+
 		.popup{
-			
+
 			.edge{
 				background: $projects-primary;
 			}
 		}
-		
+
 		&.profile{
 			.overlay-menu{
 				background-color: $projects-secondary;
@@ -222,22 +222,22 @@ body{
 				}
 			}
 		}
-		
+
 		.fullpage-wrapper{
 			@include perspective-origin(50% 250%);
 		}
-		
+
 		.profile_content{
 			border-color: $colaborations-primary;
 		}
-		
+
 		.popup{
-			
+
 			.edge{
 				background: $colaborations-primary;
 			}
 		}
-		
+
 		&.profile{
 			.overlay-menu{
 				background-color: $colaborations-secondary;
@@ -304,32 +304,32 @@ body{
 				}
 			}
 		}
-		
+
 		.fullpage-wrapper{
 			@include perspective-origin(50% 350%);
 		}
-		
+
 		.profile_content{
 			border-color: $contact-primary;
 		}
-		
+
 		.popup{
-			
+
 			.edge{
 				background: $contact-primary;
 			}
 		}
-		
+
 		&.profile{
 			.overlay-menu{
 				background-color: $contact-secondary;
 			}
 		}
 	}
-	
+
 	&.profile{
-		@include gradient(linear, (left, #d6d3d3, #fff));
-		
+		@include gradient(linear, (to left, #d6d3d3, #fff));
+
 		#fp-nav{
 
 			ul {
@@ -342,20 +342,20 @@ body{
 				}
 			}
 		}
-		
+
 		.fullpage-wrapper{
-			
+
 			.section{
 				&.active{
 					@include transform(translate3d(0,0,-250px));
 				}
 			}
 		}
-		
+
 		.navigator_content{
 			@include transform(translatey(30px));
 		}
-		
+
 		.overlay-menu{
 			width: 100%;
 			z-index: 100;
@@ -363,35 +363,35 @@ body{
 		    cursor: nesw-resize;
 		    @include transition((z-index .1s ease, background .15s 1s ease));
 		}
-		
+
 		.popup{
 			opacity: 1;
 			z-index: 111;
-			
+
 			.popup-header{
 				.profile_content{
 					@include animation(scaleIn .5s 1s linear forwards);
 				}
 			}
 		}
-		
+
 		.twitter_content{
 			z-index: 115;
 		    bottom: 4rem;
     		right: 6rem;
-			
+
 			label{
 				color: #323232;
 				@include text-shadow(0 0 4px rgba(255,255,255,.5));
 			}
 		}
 	}
-	
+
 	&.menu{
-		@include gradient(linear, (left, #d6d3d3, #fff));
-		
+		@include gradient(linear, (to left, #d6d3d3, #fff));
+
 		.fullpage-wrapper{
-			
+
 			.section{
 				&.active{
 					@include transform(translate3d(0,0,-120px));
