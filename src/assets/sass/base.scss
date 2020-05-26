@@ -85,11 +85,13 @@ video.responsive-video {
 @import 'popup';
 
 #section_home{
-	background-image: -webkit-linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
-	background-image: -moz-linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
-	background-image: linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),url(assets/images/pattern.png);
-	background-size: 100%, 420px;
-	background-position: center;
+  background-image:
+    linear-gradient(to left, $home-gradient-primary, $home-gradient-secondary, $home-gradient-primary),
+    url(assets/images/home.png),
+    url(assets/images/pattern.png);
+	background-size: 100%, contain, 420px;
+  background-position: center;
+  background-repeat: no-repeat, no-repeat, repeat;
 }
 
 #section_collaborations{
