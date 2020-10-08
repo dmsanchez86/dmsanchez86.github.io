@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectsComponent } from './projects.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const routes: Routes = [{
   path: '', component: ProjectsComponent
@@ -12,6 +13,7 @@ const routes: Routes = [{
   declarations: [ProjectsComponent],
   imports: [
     CommonModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
 })
