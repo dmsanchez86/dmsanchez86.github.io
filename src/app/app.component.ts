@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pageAngular';
+
+  constructor(){
+    setTimeout(() => {
+      let atomLoader: HTMLElement = document.querySelector('#atomLoader');
+      atomLoader.style.display = 'none';
+    }, 1000);
+  }
 }
