@@ -13,6 +13,9 @@ import { Component, Input } from '@angular/core';
       <div *ngIf="download" (click)="downloadF()" class="tool download" title-ref="Download">
         <i class="fa fa-download"></i>
       </div>
+      <div *ngIf="app" (click)="codeF()" class="tool code" title-ref="Install App">
+        <i class="fa fa-android"></i>
+      </div>
     </div>
   `
 })
@@ -20,6 +23,7 @@ export class ToolsComponent {
   @Input() preview: true;
   @Input() code: false;
   @Input() download: false;
+  @Input() app: false;
 
   previewF(){ console.log('preview'); }
 
