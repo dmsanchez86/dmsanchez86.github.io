@@ -10,7 +10,7 @@
       <ul id="menu">
         <span class="close_menu">X</span>
         <li *ngFor="let menu of menus; let i  = index">
-          <a [href]="menu.href" [ngClass]="{'active': i === 0}">
+          <a [routerLink]="[menu.href]" routerLinkActive="active">
             <i class="fa fa-{{menu.icon}}"></i>
             {{menu.name}}
           </a>

@@ -16,22 +16,22 @@ export class NavigatorComponent {
   menus: MenuI[] = [
     {
       name: 'Home',
-      href: '#home',
+      href: '/',
       icon: 'home',
     },
     {
       name: 'Projects',
-      href: '#projects',
+      href: '/projects',
       icon: 'gamepad',
     },
     {
       name: 'Portafolio',
-      href: '#portafolio',
+      href: '/portafolio',
       icon: 'flask',
     },
     {
       name: 'Contact',
-      href: '#contact',
+      href: '/contact',
       icon: 'mobile',
     },
   ];
