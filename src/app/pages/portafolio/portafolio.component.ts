@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
-
-import { ProjectI } from '../../store/reducers/projects/dataProjects';
 
 @Component({
   selector: 'app-portafolio',
@@ -11,7 +10,7 @@ import { ProjectI } from '../../store/reducers/projects/dataProjects';
 })
 export class PortafolioComponent implements OnInit {
 
-  projects: Observable<ProjectI[]> = this.store.select('projects');
+  projects: Observable<ProjectItemI[]> = this.store.select('collaborations');
 
   constructor(private store: Store<AppState>) { }
 
