@@ -12,6 +12,6 @@ export class AppComponent {
     setTimeout(() => {
       let atomLoader: HTMLElement = document.querySelector('#atomLoader');
       atomLoader.style.display = 'none';
-    }, 1000);
+    }, 300);
   }
 }
