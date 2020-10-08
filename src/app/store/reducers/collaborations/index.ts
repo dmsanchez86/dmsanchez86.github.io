@@ -1,7 +1,9 @@
 import { createReducer, on } from '@ngrx/store';
 import { loadCollaborations } from '../../actions/collaborations/';
 
-const initialState = [];
+import { dataCollaborations } from './dataCollaborations';
+
+const initialState = [...dataCollaborations];
 
 const _collaborationsReducer = createReducer(
   initialState,
