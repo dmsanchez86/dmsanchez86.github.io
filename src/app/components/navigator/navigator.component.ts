@@ -15,7 +15,7 @@ interface MenuI {
 export class NavigatorComponent {
   menus: MenuI[] = [
     {
-      name: '',
+      name: 'Home',
       href: '/',
       icon: 'home',
     },
