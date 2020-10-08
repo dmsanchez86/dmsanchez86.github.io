@@ -8,6 +8,7 @@ import { PopupComponent } from './popup/popup.component';
 import { PreviewComponent } from './preview/preview.component';
 import { ToolsComponent } from './tools/tools.component';
 import { RouterModule } from '@angular/router';
+import { ProfileImageComponent } from './profile-image/profile-image.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     AtomLoaderComponent,
     PopupComponent,
     PreviewComponent,
-    ToolsComponent
+    ToolsComponent,
+    ProfileImageComponent
   ],
   exports: [
     LogoComponent,
@@ -25,7 +27,8 @@ import { RouterModule } from '@angular/router';
     AtomLoaderComponent,
     PopupComponent,
     PreviewComponent,
-    ToolsComponent
+    ToolsComponent,
+    ProfileImageComponent
   ],
 })
 export class ComponentsModule {}
