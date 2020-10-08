@@ -15,7 +15,7 @@ interface MenuI {
 export class NavigatorComponent {
   menus: MenuI[] = [
     {
-      name: 'Home',
+      name: '',
       href: '/',
       icon: 'home',
     },
@@ -33,6 +33,11 @@ export class NavigatorComponent {
       name: 'Contact',
       href: '/contact',
       icon: 'mobile',
+    },
+    {
+      name: 'Hobbies',
+      href: '/hobbies',
+      icon: 'circle',
     },
   ];
 
