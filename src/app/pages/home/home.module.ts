@@ -8,13 +8,19 @@ import { NavigatorComponent } from 'src/app/components/navigator/navigator.compo
 import { PreviewComponent } from 'src/app/components/preview/preview.component';
 import { PopupComponent } from 'src/app/components/popup/popup.component';
 import { ToolsComponent } from 'src/app/components/tools/tools.component';
+import { LogoComponent } from 'src/app/components/logo/logo.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, AtomLoaderComponent, NavigatorComponent, PreviewComponent, PopupComponent, ToolsComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  declarations: [
+    HomeComponent,
+    AtomLoaderComponent,
+    NavigatorComponent,
+    PreviewComponent,
+    PopupComponent,
+    ToolsComponent,
+    LogoComponent,
+  ],
+  imports: [CommonModule, HomeRoutingModule],
 })
-export class HomeModule { }
+export class HomeModule {}
