@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { loadCollaborations } from '../actions/collaborations';
+import { loadCollaborations } from '../../actions/collaborations/';
 
 const initialState = [];
 

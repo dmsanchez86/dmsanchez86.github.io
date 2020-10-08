@@ -1,7 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
-import { loadProjects } from '../actions/projects';
+import { loadProjects } from '../../actions/projects/';
+import { dataProjects } from './dataProjects';
 
-const initialState = [];
+const initialState = [...dataProjects];
 
 const _projectsReducer = createReducer(
   initialState,
