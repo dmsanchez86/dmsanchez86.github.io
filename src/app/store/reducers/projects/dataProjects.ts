@@ -1,94 +1,117 @@
-export interface ProjectI {
-  name: string;
-  url: string;
-  url_app?: string;
-  preview?: boolean;
-  code?: boolean;
-  download?: boolean;
-  app?: boolean;
-}
+import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 
-export const dataProjects: ProjectI[] = [
+export const dataProjects: ProjectItemI[] = [
   {
-    name: 'GO finanzas',
+    name: 'Football Field 3D',
     url: 'http://gofinanzas.com/',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'Entre Pinos',
-    url: 'http://entrepinoshostal.com/',
+    name: 'Atom Loader',
+    url: 'http://codepen.io/dmsanchez86/full/WxRovR',
     preview: true,
+    code: true,
   },
   {
-    name: 'Oral Center',
-    url: 'http://oralcenter.com.co/',
+    name: 'Form Perspective',
+    url: 'http://codepen.io/dmsanchez86/full/dXqJLv',
     preview: true,
+    code: true,
   },
   {
-    name: 'Conexiones',
-    url: 'http://conexiones.net.co/',
+    name: 'Juris Quiz Animation Logo',
+    url: 'http://codepen.io/dmsanchez86/full/yJPAqK',
     preview: true,
+    code: true,
   },
   {
-    name: 'Zeus Consultores',
-    url: 'http://zeusconsultores.com/',
+    name: 'Quotes Machine',
+    url: 'http://codepen.io/dmsanchez86/full/xVXjYW',
     preview: true,
+    code: true,
   },
   {
-    name: 'I.E Santo Domingo Savio',
-    url: 'http://www.iesantodomingosavio.edu.co/',
+    name: 'Ball Loader',
+    url: 'http://codepen.io/dmsanchez86/full/OXjROz',
     preview: true,
+    code: true,
   },
   {
-    name: 'Antorcha Films',
-    url: 'http://atarrayaitinerante.org/ebookapp/index.html',
+    name: 'Weather App',
+    url: 'http://codepen.io/dmsanchez86/full/bpYXPN/',
     preview: true,
+    code: true,
   },
   {
-    name: 'Rakin.org',
-    url: 'http://rakin.org/',
+    name: 'Perspective Slide',
+    url: 'Perspective_Slider',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'JurisQuiz',
-    url: 'https://play.google.com/store/apps/details?id=com.zopp.jurisquiz',
-    url_app: 'https://play.google.com/store/apps/details?id=com.zopp.jurisquiz',
-    app: true,
-  },
-  {
-    name: 'Therapy Tips for',
-    url: 'https://play.google.com/store/apps/details?id=com.zopp.artritis',
-    url_app: 'https://play.google.com/store/apps/details?id=com.zopp.artritis',
-    app: true,
-  },
-  {
-    name: 'Zopp Agency',
-    url: 'http://zoppagency.com',
+    name: 'Interactive Clock',
+    url: 'interactive_clock',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'Buffalo Republic',
-    url: 'http://buffalorepublic.menu',
+    name: 'Cellphone 3D',
+    url: 'cellphone-3d',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'EasyNet',
-    url: 'http://easynet.com.co',
+    name: 'Cube 3D',
+    url: 'Cube-3D---CSS3-and-JavaScript',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'CliniWeb',
-    url: 'http://cliniweb.co',
+    name: 'Lists in 3D',
+    url: 'list_in_3d',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'Clinica de Artritis',
-    url: 'http://clinicadeartritistemprana.com/',
+    name: 'Geometry Cube 3D',
+    url: 'cube_3D',
     preview: true,
+    code: true,
+    download: true,
   },
   {
-    name: 'Finca y Café',
-    url: 'http://fincaycafe.com',
+    name: 'Juris Quiz Web',
+    url: 'jurisquizWeb',
     preview: true,
+    code: true,
+    download: true,
+  },
+  {
+    name: 'Arthritis Web',
+    url: 'ArthritisWeb',
+    preview: true,
+    code: true,
+    download: true,
+  },
+  {
+    name: 'Basic Angular Template',
+    url: 'siema',
+    preview: true,
+    code: true,
+    download: true,
+  },
+  {
+    name: 'Mecaut',
+    url: 'https://github.com/dmsanchez86/Mecaut',
+    preview: false,
+    code: true,
+    download: true,
   },
 ];
