@@ -8,6 +8,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
 import { reducers } from './store/reducers';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { reducers } from './store/reducers';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
