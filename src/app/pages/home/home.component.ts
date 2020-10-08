@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => $('.twitter_content .container').addClass('close'), 2000);
 
     this.fullpage();
+    this.carouselControls();
   }
 
   initTree(font: any) {
@@ -400,6 +401,85 @@ export class HomeComponent implements OnInit {
             $('.button_menu').fadeIn('1500');
             $('#menu,.overlay-menu').removeClass('open');
         }
+    });
+  }
+
+  carouselControls(){
+    $('.carousel .control').unbind('click').click(function(){
+      $('.preview_page').removeClass('load active').find('iframe').attr('src', '');
+        
+      var father = $(this).parent(); // carousel
+      var item = parseInt(father.attr('item')); // number item slider active
+      
+      if($(this).hasClass('inactive')){
+        return;
+      }
+      
+      if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
+            
+        // put inactive left control
+        father.find('.control.left').removeClass('inactive');
+    
+        // remove all items last class
+        father.find('.item').removeClass('last');
+        father.find('.item.active').addClass('last').removeClass('next'); // add next class item active
+        
+        setTimeout(function(){
+          father.find('.item.active').removeClass('active');
+          father.find('.item.next').addClass('active').removeClass('next last');
+            
+          if(item >= father.find('.item').length - 1){
+            father.find('.control.right').addClass('inactive');
+            item++;
+          }else{
+            item++;
+            father.find('.item').eq(item).removeClass('last active').addClass('next');
+          }
+            
+          father.attr('item', item);
+        },500);
+            
+      }else if($(this).hasClass('left')){
+            
+        father.find('.control.right').removeClass('inactive');
+        
+        setTimeout(function(){
+          if(item <= 2){
+            father.find('.control.left').addClass('inactive');
+                
+            item--;
+                
+            father.find('.item').removeClass('next');
+            father.find('.item.active').addClass('next');
+                
+            setTimeout(function(){
+                father.find('.item.active').removeClass('active');
+                father.find('.item.last').addClass('active').removeClass('next last');
+                
+                if(item != 1){
+                    father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
+                }
+                father.attr('item', item);
+            },500);
+            return;
+          }else{
+              item--;
+              father.find('.item').removeClass('next');
+              father.find('.item.active').addClass('next');
+              
+              setTimeout(function(){
+                father.find('.item.active').removeClass('active');
+                father.find('.item.last').addClass('active').removeClass('next last');
+                
+                if(item != 1){
+                  father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
+                }
+                father.attr('item', item);
+              },500);
+          }
+          father.attr('item', item);
+        },500);
+      }
     });
   }
 }
