@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
       atomLoader.style.display = 'none';
     }, 1000);
 
+    setTimeout(() => $('.twitter_content .container').addClass('close'), 2000);
+
     this.fullpage();
   }
 
