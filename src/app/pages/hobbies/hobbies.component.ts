@@ -7,5 +7,11 @@ import { Component, OnInit } from '@angular/core';
 export class HobbiesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnDestroy() {
+    document.body.classList.remove('contact');
+  }
+
+  ngOnInit() {
+    document.body.classList.add('contact');
+  }
 }

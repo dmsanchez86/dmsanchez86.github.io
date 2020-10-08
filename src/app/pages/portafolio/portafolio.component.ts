@@ -14,7 +14,11 @@ export class PortafolioComponent implements OnInit {
 
   constructor(private store: Store<AppState>) { }
 
-  ngOnInit(): void {
+  ngOnDestroy() {
+    document.body.classList.remove('portafolio');
   }
 
+  ngOnInit() {
+    document.body.classList.add('portafolio');
+  }
 }

@@ -13,5 +13,11 @@ export class ProjectsComponent implements OnInit {
 
   constructor(private store: Store<AppState>) {}
 
-  ngOnInit(): void {}
+  ngOnDestroy() {
+    document.body.classList.remove('projects');
+  }
+
+  ngOnInit() {
+    document.body.classList.add('projects');
+  }
 }
