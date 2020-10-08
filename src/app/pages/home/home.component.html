@@ -12,17 +12,11 @@
         <div class="project">
           <h1 class="title">
             <a href="Field_3d">Football Field 3D</a>
-            <div class="tools">
-              <div class="tool preview" title-ref="Preview">
-                <i class="fa fa-desktop"></i>
-              </div>
-              <div class="tool code" title-ref="Check code on GitHub ">
-                <i class="fa fa-code"></i>
-              </div>
-              <div class="tool download" title-ref="Download">
-                <i class="fa fa-download"></i>
-              </div>
-            </div>
+            <app-tools 
+              [preview]="true" 
+              [code]="true" 
+              [download]="true">
+            </app-tools>
           </h1>
         </div>
       </div>
