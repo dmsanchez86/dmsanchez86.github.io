@@ -7,10 +7,11 @@ import { AtomLoaderComponent } from 'src/app/components/atom-loader/atom-loader.
 import { NavigatorComponent } from 'src/app/components/navigator/navigator.component';
 import { PreviewComponent } from 'src/app/components/preview/preview.component';
 import { PopupComponent } from 'src/app/components/popup/popup.component';
+import { ToolsComponent } from 'src/app/components/tools/tools.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, AtomLoaderComponent, NavigatorComponent, PreviewComponent, PopupComponent],
+  declarations: [HomeComponent, AtomLoaderComponent, NavigatorComponent, PreviewComponent, PopupComponent, ToolsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
