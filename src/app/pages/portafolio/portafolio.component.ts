@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { AppState } from 'src/app/store';
+
+import { ProjectI } from '../../store/reducers/projects/dataProjects';
 
 @Component({
   selector: 'app-portafolio',
@@ -6,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortafolioComponent implements OnInit {
 
-  constructor() { }
+  projects: Observable<ProjectI[]> = this.store.select('projects');
+
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
   }
