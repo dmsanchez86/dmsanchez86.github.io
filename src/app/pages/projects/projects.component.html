@@ -1,22 +1,17 @@
-<app-navigator></app-navigator>
-<app-popup></app-popup>
-
-<div id="main">
-  <div class="section fp-table" id="section_projects">
-    <div class="carousel" item="1">
-      <div
-        *ngFor="let project of (projects | async);let i = index"
-        class="item"
-        [ngClass]="{active: i === 0}">
-        <div class="project">
-          <h1 class="title">
-            <a [href]="project.url" target="_blank">{{ project.name }}</a>
-            <app-tools [preview]="project.preview" [code]="project.code" [download]="project.download" [app]="project.app" ></app-tools>
-          </h1>
-        </div>
+<div class="section fp-table" id="section_projects">
+  <div class="carousel" item="1">
+    <div
+      *ngFor="let project of (projects | async);let i = index"
+      class="item"
+      [ngClass]="{active: i === 0}">
+      <div class="project">
+        <h1 class="title">
+          <a [href]="project.url" target="_blank">{{ project.name }}</a>
+          <app-tools [preview]="project.preview" [code]="project.code" [download]="project.download" [app]="project.app" ></app-tools>
+        </h1>
       </div>
-      <div class="control left inactive"></div>
-      <div class="control right"></div>
     </div>
+    <div class="control left inactive"></div>
+    <div class="control right"></div>
   </div>
 </div>
