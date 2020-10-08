@@ -381,5 +381,25 @@ export class HomeComponent implements OnInit {
           window.location.hash = '#about';
         }
       });
+
+    $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
+        if($('body').hasClass('profile')){
+            $('body').removeClass('profile');
+            $('.profile_content').removeClass('scaleOut');
+            $('.popup').removeClass('active');
+            
+            if($(this).hasClass('overlay-menu')){
+                $('.popup').find('.popup-header .profile_content').remove();
+            }
+            
+            setTimeout(function(){
+                $('.profile_content').addClass('scaleIn');
+            },500);
+        }else{
+            $('body').removeClass('menu');
+            $('.button_menu').fadeIn('1500');
+            $('#menu,.overlay-menu').removeClass('open');
+        }
+    });
   }
 }
