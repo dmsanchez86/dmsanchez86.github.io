@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { isValidUrl } from 'src/environments/global_functions';
+
 import * as THREE from 'tree';
 
 declare const $;
@@ -34,6 +36,7 @@ export class HomeComponent implements OnInit {
 
     this.fullpage();
     this.carouselControls();
+    this.tools();
   }
 
   initTree(font: any) {
@@ -479,6 +482,60 @@ export class HomeComponent implements OnInit {
           }
           father.attr('item', item);
         },500);
+      }
+    });
+  }
+
+  colorPrev = null;
+  toggle = false;
+
+  tools(){
+    $('.tools .tool').unbind('click').click((e) => {
+      console.log(e.target);
+      console.log(e.target.nodeName);
+      var url = $(e.target).parent().parent().parent().find('a').attr('href');
+      var ref = $(e.target);
+      var parent = $(e.target).parent();
+
+      // console.log(ref);
+      console.log(parent);
+      // debugger
+      
+      if(parent.hasClass('preview')){
+        $('.preview_page').toggleClass('active');
+        if(isValidUrl(url)){
+            $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+        }else{
+            $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+        }
+        if(window.innerWidth <= 600){
+            $('.preview_page').addClass('fullscreen');
+            this.colorPrev = $('#themeColor').attr('content');
+            this.toggle = false;
+            $('#themeColor').attr('content', '#fff');
+        }
+      }else if(parent.hasClass('code')){
+          if(isValidUrl(url)){
+              if(url.indexOf("full") > 0){
+                  url = url.replace("full", "pen");
+              }
+              window.open(url);
+          }else{
+              window.open("http://github.com/dmsanchez86/"+url);
+          }
+      }else if(parent.hasClass('page')){
+          $('.preview_page').toggleClass('active');
+          if(isValidUrl(url)){
+              $('.preview_page').removeClass('load').find('iframe').attr('src', url);
+          }else{
+              $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
+          }
+      }else if(parent.hasClass('download')){
+          if(isValidUrl(url)){
+              window.open(url+"/archive/master.zip");
+          }else{
+              window.open("http://github.com/dmsanchez86/"+url+"/archive/gh-pages.zip");
+          }
       }
     });
   }
