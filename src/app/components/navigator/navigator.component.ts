@@ -1,19 +1,14 @@
 import { Component } from '@angular/core';
+import { MenuItemI } from 'src/app/interfaces/MenuItemI';
 
 declare const $;
-
-interface MenuI {
-  name: string;
-  icon: string;
-  href: string;
-}
 
 @Component({
   selector: 'app-navigator',
   templateUrl: './navigator.component.html',
 })
 export class NavigatorComponent {
-  menus: MenuI[] = [
+  menus: MenuItemI[] = [
     {
       name: 'Home',
       href: '/',
