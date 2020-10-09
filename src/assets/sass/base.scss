@@ -133,8 +133,8 @@ video.responsive-video {
 		&:after{
 			position: absolute;
 			bottom: 100%;
-			right: 0%;
-			width: 8rem;
+			right: -65%;
+			width: 10rem;
 			content: attr(title-ref);
 			color: white;
 			opacity: 0;
