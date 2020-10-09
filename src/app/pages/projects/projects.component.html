@@ -6,8 +6,8 @@
       [ngClass]="{current: i === 0}">
       <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
-          <a [href]="project.url" target="_blank">{{ project.name }}</a>
-          <app-tools [preview]="project.preview" [code]="project.code" [download]="project.download" [app]="project.app" ></app-tools>
+          <a [href]="project?.url" target="_blank">{{ project?.name }}</a>
+          <app-tools [preview]="project?.preview" [code]="project?.code" [download]="project?.download" [app]="project?.app" ></app-tools>
         </h1>
       </div>
     </div>
