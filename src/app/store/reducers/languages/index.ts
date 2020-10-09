@@ -14,6 +14,7 @@ const _languageReducer = createReducer(
   initialState,
   on(changeLanguage, (state, action) => {
     let current = state[action.key];
+    localStorage.language = action.key;
     return{ ...state, current }
   }),
 );

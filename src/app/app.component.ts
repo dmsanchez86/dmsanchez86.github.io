@@ -20,6 +20,10 @@ export class AppComponent {
       let atomLoader: HTMLElement = document.querySelector('#atomLoader');
       atomLoader.style.display = 'none';
     }, 300);
+
+    if(localStorage.language){
+      this.store.dispatch(changeLanguage({ key: localStorage.language }));
+    }
   }
 
   cerrarMenu(){
