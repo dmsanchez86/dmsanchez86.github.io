@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItemI } from 'src/app/interfaces/MenuItemI';
-
-declare const $;
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-navigator',
@@ -36,9 +35,16 @@ export class NavigatorComponent {
     },
   ];
 
+  constructor(private global: GlobalService){}
+
   buttonMenu() {
-    $('body').addClass('menu');
-    $('#menu,.overlay-menu').addClass('open');
-    $(this).fadeOut('1000');
+    document.body.classList.add('menu');
+    document.querySelector(`#menu`).classList.add('open');
+    document.querySelector(`.overlay-menu`).classList.add('open');
+    document.querySelector(`.button_menu`).style.opacity = 0;
+  }
+
+  cerrarMenu() {
+    this.global.cerrarMenu();
   }
 }
