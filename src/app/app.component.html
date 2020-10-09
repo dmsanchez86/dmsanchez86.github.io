@@ -12,7 +12,7 @@
 <app-profile-image [home]="true"></app-profile-image>
 
 <div class="twitter_content">
-  <label for="twitter_content" title-ref="Tweets's dmsanchez86">
+  <label for="twitter_content" [attr.title-ref]="(language | async).current.global.tweets">
     <i class="fa fa-twitter"></i>
   </label>
   <input type="checkbox" id="twitter_content" />
