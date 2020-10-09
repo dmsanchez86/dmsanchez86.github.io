@@ -9,7 +9,7 @@
       </div>
       <ul id="menu">
         <span class="close_menu" (click)="cerrarMenu()">X</span>
-        <li *ngFor="let menu of menus; let i  = index" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <li *ngFor="let menu of (menus | async); let i  = index" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <a [routerLink]="[menu.href]">
             <i class="fa fa-{{menu.icon}}"></i>
             {{menu.name}}

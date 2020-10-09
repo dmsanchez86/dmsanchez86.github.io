@@ -1,41 +1,18 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { MenuItemI } from 'src/app/interfaces/MenuItemI';
 import { GlobalService } from 'src/app/services/global.service';
+import { AppState } from 'src/app/store';
 
 @Component({
   selector: 'app-navigator',
   templateUrl: './navigator.component.html',
 })
 export class NavigatorComponent {
-  menus: MenuItemI[] = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: 'home',
-    },
-    {
-      name: 'Projects',
-      href: '/projects',
-      icon: 'gamepad',
-    },
-    {
-      name: 'Portafolio',
-      href: '/portafolio',
-      icon: 'flask',
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: 'mobile',
-    },
-    {
-      name: 'Hobbies',
-      href: '/hobbies',
-      icon: 'circle',
-    },
-  ];
+  menus: Observable<MenuItemI[]> = this.store.select('menu');
 
-  constructor(private global: GlobalService){}
+  constructor(private global: GlobalService, private store: Store<AppState>){}
 
   buttonMenu() {
     document.body.classList.add('menu');
