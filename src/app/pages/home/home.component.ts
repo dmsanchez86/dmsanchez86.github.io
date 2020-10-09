@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { isValidUrl } from 'src/environments/global_functions';
 
 import * as THREE from 'tree';
@@ -9,7 +9,7 @@ declare const $;
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   scene: any;
   plane: any;
   lights: any = [];
@@ -25,12 +25,16 @@ export class HomeComponent implements OnInit {
 
   constructor() {}
 
+  ngOnDestroy() {
+    document.body.classList.remove('home');
+  }
+
   ngOnInit() {
+    document.body.classList.add('home');
     // this.fontsThree();
 
     setTimeout(() => $('.twitter_content .container').addClass('close'), 2000);
 
-    this.fullpage();
     this.carouselControls();
     this.tools();
   }
@@ -263,144 +267,6 @@ export class HomeComponent implements OnInit {
     this.camera.lookAt(this.scene.position);
 
     this.renderer.render(this.scene, this.camera);
-  }
-
-  fullpage(){
-    var colorsTheme = ['#87CEEB', '#61AB64', '#00897b', '#D67F35', '#e6812b'];
-
-    $('#main').fullpage({
-      sectionsColor: colorsTheme,
-      anchors: ['home', 'projects', 'portafolio', 'contact', 'footer'],
-      menu: '#menu',
-      css3: true,
-      scrollOverflow: false,
-      autoScrolling: true,
-      navigationTooltips: [
-        'Home',
-        'Projects',
-        'portafolio',
-        'Contact',
-        'Footer',
-      ],
-      // continuousVertical: true,
-      navigation: true,
-      afterLoad(anchorLink, index) {
-        console.log('afterLoad');
-
-        $('.preview_page')
-          .removeClass('active load')
-          .find('iframe')
-          .attr('src', '');
-
-        $('a[href="#' + anchorLink + '"]')
-          .addClass('active')
-          .parent()
-          .addClass('active');
-        $('body')
-          .removeClass('home projects portafolio contact footer')
-          .addClass(anchorLink);
-        $('#favicon').attr('href', 'favicon_' + anchorLink + '.png');
-
-        $('.profile_content').removeClass('scaleOut');
-
-        var color = '';
-
-        switch (anchorLink) {
-          case 'home':
-            color = colorsTheme[0];
-            break;
-          case 'projects':
-            color = colorsTheme[1];
-            break;
-          case 'portafolio':
-            color = colorsTheme[2];
-            break;
-          case 'contact':
-            color = colorsTheme[3];
-            break;
-          case 'footer':
-            color = colorsTheme[4];
-            break;
-        }
-
-        $('#themeColor').attr('content', color);
-
-        setTimeout(function () {
-          $('.profile_content').addClass('scaleIn');
-        }, 300);
-      },
-      onLeave() {
-        console.log('onLeave');
-
-        $('.profile_content').removeClass('scaleIn').addClass('scaleOut');
-
-        setTimeout(function () {
-          $('.profile_content').removeClass('scaleOut');
-        }, 1000);
-      },
-    });
-
-    $('.profile_content')
-      .unbind('click')
-      .click(function () {
-        $('.preview_page').removeClass('active load');
-
-        if ($('body').hasClass('profile')) {
-          $('body').removeClass('profile');
-          $('.popup')
-            .removeClass('active')
-            .find('.popup-header .profile_content')
-            .remove();
-
-          $('.profile_content').removeClass('scaleOut');
-
-          setTimeout(function () {
-            $('.profile_content').addClass('scaleIn');
-            setTimeout(function () {
-              // $('.profile_content').removeClass('scaleIn');
-            }, 500);
-          }, 500);
-
-          window.location.hash = $('#menu li.active a').attr('href');
-        } else {
-          $('body').addClass('profile');
-          $(this).removeClass('scaleIn');
-
-          var clonePopup = $('.profile_content').clone();
-
-          setTimeout(function () {
-            $('.profile_content').addClass('scaleOut');
-            $('.popup').addClass('active');
-
-            setTimeout(function () {
-              clonePopup.appendTo('.popup .popup-header');
-              // App.contentProfile();
-            }, 1000);
-          }, 100);
-
-          window.location.hash = '#about';
-        }
-      });
-
-    $('#menu .close_menu,.overlay-menu').unbind('click').click(function(){
-        if($('body').hasClass('profile')){
-            $('body').removeClass('profile');
-            $('.profile_content').removeClass('scaleOut');
-            $('.popup').removeClass('active');
-
-            if($(this).hasClass('overlay-menu')){
-                $('.popup').find('.popup-header .profile_content').remove();
-            }
-
-            setTimeout(function(){
-                $('.profile_content').addClass('scaleIn');
-            },500);
-        }else{
-            $('body').removeClass('menu');
-            $('.button_menu').fadeIn('1500');
-            $('#menu,.overlay-menu').removeClass('open');
-        }
-    });
   }
 
   carouselControls(){
