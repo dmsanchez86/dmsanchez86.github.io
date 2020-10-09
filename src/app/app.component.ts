@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from './services/global.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pageAngular';
 
-  constructor(){
+  constructor(private global: GlobalService){
     setTimeout(() => {
       let atomLoader: HTMLElement = document.querySelector('#atomLoader');
       atomLoader.style.display = 'none';
     }, 300);
+  }
+
+  cerrarMenu(){
+    this.global.cerrarMenu();
   }
 }
