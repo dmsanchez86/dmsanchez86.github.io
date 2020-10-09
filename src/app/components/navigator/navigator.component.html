@@ -12,7 +12,7 @@
         <li *ngFor="let menu of (menus | async); let i  = index" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
           <a [routerLink]="[menu.href]">
             <i class="fa fa-{{menu.icon}}"></i>
-            {{menu.name}}
+            {{( language | async )[menu.key]}}
           </a>
           <div class="edge bottom"></div>
           <div class="edge right"></div>
