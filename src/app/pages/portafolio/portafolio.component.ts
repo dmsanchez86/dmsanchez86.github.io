@@ -20,5 +20,6 @@ export class PortafolioComponent implements OnInit {
 
   ngOnInit() {
     document.body.classList.add('portafolio');
+    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_collaborations.png');
   }
 }

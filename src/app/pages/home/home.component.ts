@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     document.body.classList.add('home');
+    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_home.png');
     // this.fontsThree();
 
     setTimeout(() => $('.twitter_content .container').addClass('close'), 2000);

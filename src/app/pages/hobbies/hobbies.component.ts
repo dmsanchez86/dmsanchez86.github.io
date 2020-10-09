@@ -13,5 +13,6 @@ export class HobbiesComponent implements OnInit {
 
   ngOnInit() {
     document.body.classList.add('contact');
+    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_contact.png');
   }
 }

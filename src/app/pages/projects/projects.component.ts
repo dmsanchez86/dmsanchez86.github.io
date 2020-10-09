@@ -19,5 +19,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     document.body.classList.add('projects');
+    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_projects.png');
   }
 }
