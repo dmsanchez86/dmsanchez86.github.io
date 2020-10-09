@@ -1,4 +1,5 @@
 export const EN = {
+  ref: 'en',
   nav: {
     home: 'Home',
     projects: 'Projects',
