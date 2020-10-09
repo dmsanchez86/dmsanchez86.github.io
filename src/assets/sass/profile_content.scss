@@ -5,28 +5,28 @@
 	border: solid 5px white;
 	max-width: 60px;
 	height: 60px;
-    background: transparent;
+  background: transparent;
 	cursor: pointer;
 	@include border-radius(50%);
 	@include box-shadow(0 0 6px rgba(0, 0, 0, 0.2));
 	@include transition((transform .25s linear, border .2s linear));
 	@include transform(scale(0));
-	
+
 	&:hover{
 		@include transform(scale(1.2));
 		@include box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
-		
+
 		img{
 			// @include filter(grayscale(80%));
 		}
-		
+
 		&:before{
 			opacity: 1;
 			@include transform(translate3d(-10%, -10%, 0) scale(1.5));
 		}
-		
+
 		&:after{
-			width: 70%;
+			opacity: 1;
 		}
 	}
 
@@ -43,20 +43,30 @@
 		@include border-radius(50%);
 		@include transition((opacity .5s ease, transform .3s ease ));
 	}
-	
+
+  &_home{
+    &:after{
+      content: attr(title-ref);
+    }
+  }
+
 	&:after{
-		content: '';
 		position: absolute;
-		top: 120%;
-		left: 0;
-	    width: 90%;
-	    margin: auto;
-	    right: 0;
-		width: 100%;
-		height: 10px;
+		top: 18%;
+		left: 138%;
+    margin: auto;
+    right: 0;
+    min-width: 15rem;
+    padding: .2rem;
+    border-radius: 3px;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 500;
+    font-size: 1.25rem;
+    opacity: 0;
 		@include gradient(radial, (center, #323232, transparent));
-		@include transform(rotatex(83deg));
-		@include transition(width 200ms ease);
+		// @include transform(rotatex(83deg));
+		@include transition(200ms ease);
 	}
 
 	img{
@@ -65,12 +75,12 @@
 		//@include filter(grayscale(100%));
 		@include transition(filter .5s linear);
 	}
-	
+
 	&.scaleOut{
 		@include transform(scale(1));
 		@include animation(scaleOut .25s 0s linear forwards);
 	}
-	
+
 	&.scaleIn{
 		@include transform(scale(0));
 		@include animation(scaleIn .5s .5s linear forwards);

@@ -1,10 +1,14 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { AppState } from 'src/app/store';
 
 @Component({
   selector: 'app-profile-image',
   template: `
     <div (click)="seeProfile()"
-      class="profile_content {{ this.home ? 'scaleIn profile_content_home': '' }}" title-ref="Daniel Mauricio Sánchez Ávila" >
+      class="profile_content {{ this.home ? 'scaleIn profile_content_home': '' }}"
+      [attr.title-ref]="(language | async)?.name" >
       <img src="assets/images/profile.jpg">
     </div>
   `
@@ -13,7 +17,9 @@ export class ProfileImageComponent implements OnInit {
   @Input() open: false;
   @Input() home: false;
 
-  constructor() { }
+  language: Observable<any> = this.store.select(state => state.language.current.profile);
+
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
   }

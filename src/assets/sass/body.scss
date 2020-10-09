@@ -64,7 +64,11 @@ body{
 		}
 
 		.profile_content{
-			border-color: $home-primary;
+      border-color: $home-primary;
+
+      &:after{
+        background-color: darken($home-primary, 10)
+      }
 		}
 
 		.popup{
@@ -146,7 +150,11 @@ body{
 		}
 
 		.profile_content{
-			border-color: $projects-primary;
+      border-color: $projects-primary;
+
+      &:after{
+        background-color: $projects-primary;
+      }
 		}
 
 		.popup{
@@ -228,7 +236,10 @@ body{
 		}
 
 		.profile_content{
-			border-color: $colaborations-primary;
+      border-color: $colaborations-primary;
+      &:after{
+        background-color: $colaborations-primary;
+      }
 		}
 
 		.popup{
@@ -310,7 +321,10 @@ body{
 		}
 
 		.profile_content{
-			border-color: $contact-primary;
+      border-color: $contact-primary;
+      &:after{
+        background-color: $contact-primary;
+      }
 		}
 
 		.popup{
