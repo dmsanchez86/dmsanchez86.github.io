@@ -1,17 +1,15 @@
-<div class="section fp-table" id="section_collaborations">
-  <div class="carousel" item="1">
+<div class="" id="section_collaborations" style="padding: 0;height: 100vh;overflow-y: auto;">
+  <div class="" item="1">
     <div
       *ngFor="let project of (projects | async);let i = index"
       class="item"
-      [ngClass]="{active: i === 0}">
-      <div class="project">
+      [ngClass]="{current: i === 0}">
+      <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
           <a [href]="project.url" target="_blank">{{ project.name }}</a>
           <app-tools [preview]="project.preview" [app]="project.app" ></app-tools>
         </h1>
       </div>
     </div>
-    <div class="control left inactive"></div>
-    <div class="control right"></div>
   </div>
 </div>
