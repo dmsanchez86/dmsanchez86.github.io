@@ -4,9 +4,11 @@ import { AppState } from '..';
 import { projectsReducer } from './projects/';
 import { collaborationsReducer } from './collaborations/';
 import { menuReducer } from './menu';
+import { languageReducer } from './languages';
 
 export const reducers: ActionReducerMap<AppState> = {
   projects: projectsReducer,
   collaborations: collaborationsReducer,
-  menu: menuReducer
+  menu: menuReducer,
+  language: languageReducer
 };
