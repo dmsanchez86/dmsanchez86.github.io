@@ -30,4 +30,7 @@ export const ES = {
       },
     },
   },
+  global: {
+    tweets: `Tweets de @dmsanchez86`,
+  },
 };
