@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { MenuItemI } from 'src/app/interfaces/MenuItemI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
-import { changeLanguage } from 'src/app/store/actions/language';
 
 @Component({
   selector: 'app-navigator',
@@ -25,9 +24,5 @@ export class NavigatorComponent {
 
   cerrarMenu() {
     this.global.cerrarMenu();
-  }
-
-  cambiarLenguaje(key){
-    this.store.dispatch(changeLanguage({ key }));
   }
 }
