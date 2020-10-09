@@ -101,7 +101,8 @@
 
 			li{
 				display: inline-block;
-				position: relative;
+        position: relative;
+        margin-right: .25rem;
 				@include border-radius(2px);
 
 				&.active,
