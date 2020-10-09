@@ -19,7 +19,7 @@ export class NavigatorComponent {
     document.body.classList.add('menu');
     document.querySelector(`#menu`).classList.add('open');
     document.querySelector(`.overlay-menu`).classList.add('open');
-    document.querySelector(`.button_menu`).style.opacity = 0;
+    document.querySelector(`.button_menu`)['style'].opacity = 0;
   }
 
   cerrarMenu() {

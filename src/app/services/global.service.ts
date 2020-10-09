@@ -24,7 +24,7 @@ export class GlobalService {
       body.classList.remove('menu');
       menu.classList.remove('open');
       overlay_menu.classList.remove('open');
-      document.querySelector(`.button_menu`).style.opacity = 1;
+      document.querySelector(`.button_menu`)['style'].opacity = 1;
     }
   }
 }
