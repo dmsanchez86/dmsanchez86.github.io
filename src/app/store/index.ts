@@ -10,9 +10,11 @@ export interface AppState {
 }
 export interface AppStateProjectsI {
   data: ProjectItemI[];
+  current: ProjectItemI;
 }
 export interface AppStateCollaborationsI {
   data: ProjectItemI[];
+  current: ProjectItemI;
 }
 export interface AppStateMenu {
   data: MenuItemI[];
