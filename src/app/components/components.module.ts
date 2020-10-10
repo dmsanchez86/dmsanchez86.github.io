@@ -5,7 +5,6 @@ import { LogoComponent } from './logo/logo.component';
 import { NavigatorComponent } from './navigator/navigator.component';
 import { AtomLoaderComponent } from './atom-loader/atom-loader.component';
 import { PopupComponent } from './popup/popup.component';
-import { PreviewComponent } from './preview/preview.component';
 import { ToolsComponent } from './tools/tools.component';
 import { RouterModule } from '@angular/router';
 import { ProfileImageComponent } from './profile-image/profile-image.component';
@@ -18,7 +17,6 @@ import { SocialNetworkingsComponent } from './social-networkings/social-networki
     NavigatorComponent,
     AtomLoaderComponent,
     PopupComponent,
-    PreviewComponent,
     ToolsComponent,
     ProfileImageComponent,
     SocialNetworkingsComponent
@@ -28,7 +26,6 @@ import { SocialNetworkingsComponent } from './social-networkings/social-networki
     NavigatorComponent,
     AtomLoaderComponent,
     PopupComponent,
-    PreviewComponent,
     ToolsComponent,
     ProfileImageComponent,
     SocialNetworkingsComponent
