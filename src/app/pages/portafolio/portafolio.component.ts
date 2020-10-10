@@ -11,7 +11,7 @@ import { AppState } from 'src/app/store';
 })
 export class PortafolioComponent implements OnInit {
 
-  projects: Observable<ProjectItemI[]> = this.store.select('collaborations');
+  projects: Observable<ProjectItemI[]> = this.store.select(state => state.collaborations.data);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
 
   constructor(private store: Store<AppState>) { }

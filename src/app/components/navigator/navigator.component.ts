@@ -11,7 +11,7 @@ import { AppState } from 'src/app/store';
   templateUrl: './navigator.component.html',
 })
 export class NavigatorComponent {
-  menus: Observable<MenuItemI[]> = this.store.select('menu');
+  menus: Observable<MenuItemI[]> = this.store.select(state => state.menu.data);
   language: Observable<LanguageItemNavI> = this.store.select(state => state.language.current.nav);
 
   constructor(private global: GlobalService, private store: Store<AppState>){}
