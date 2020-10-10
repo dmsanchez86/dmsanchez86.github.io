@@ -6,4 +6,5 @@ export interface ProjectItemI {
   code?: boolean;
   download?: boolean;
   app?: boolean;
+  key?: string;
 }
