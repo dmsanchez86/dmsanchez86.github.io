@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { LanguageItemToolsI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
+import { setCollaboration } from 'src/app/store/actions/collaborations';
+import { setProject } from 'src/app/store/actions/projects';
 
 @Component({
   selector: 'app-tools',
@@ -34,7 +36,13 @@ export class ToolsComponent {
   constructor(private store: Store<AppState>, private router: Router){}
 
   previewF(){
-    console.log(this.project);
+    localStorage.fromTools = true;
+    if(this.url.indexOf('project') >= 0){
+      this.store.dispatch(setProject(this.project));
+    }
+    if(this.url.indexOf('portafolio') >= 0){
+      this.store.dispatch(setCollaboration(this.project));
+    }
     this.router.navigate([this.url, this.project.key]);
   }
 
