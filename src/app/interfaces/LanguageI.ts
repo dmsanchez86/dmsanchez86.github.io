@@ -14,23 +14,24 @@ export interface LanguageItemI {
   profile: {
     nick: string;
     phone: string;
+    email: string;
     name: string;
     biography: string;
     hobbies_bio: string;
     social: {
       share: {
-        github: string;
-        twitter: string;
-        facebook: string;
-        google: string;
-        linkedin: string;
-        instagram: string;
-        email: string;
-        whatsapp: string;
-        freecodecamp: string;
-        codepen: string;
-      };
+      github: string;
+      twitter: string;
+      facebook: string;
+      google: string;
+      linkedin: string;
+      instagram: string;
+      email: string;
+      whatsapp: string;
+      freecodecamp: string;
+      codepen: string;
     };
+  };
   };
   global: {
     tweets: string;
