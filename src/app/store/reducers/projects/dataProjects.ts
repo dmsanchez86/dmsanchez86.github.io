@@ -3,46 +3,53 @@ import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 export const dataProjects: ProjectItemI[] = [
   {
     name: 'Football Field 3D',
-    url: 'http://gofinanzas.com/',
+    url: 'http://dmsanchez86.github.io/Field_3d',
     preview: true,
     code: true,
     download: true,
+    key: 'football',
   },
   {
     name: 'Atom Loader',
     url: 'http://codepen.io/dmsanchez86/full/WxRovR',
     preview: true,
     code: true,
+    key: 'atom',
   },
   {
     name: 'Form Perspective',
     url: 'http://codepen.io/dmsanchez86/full/dXqJLv',
     preview: true,
     code: true,
+    key: 'form',
   },
   {
     name: 'Juris Quiz Animation Logo',
     url: 'http://codepen.io/dmsanchez86/full/yJPAqK',
     preview: true,
     code: true,
+    key: 'jurisquiz_app',
   },
   {
     name: 'Quotes Machine',
     url: 'http://codepen.io/dmsanchez86/full/xVXjYW',
     preview: true,
     code: true,
+    key: 'quotes',
   },
   {
     name: 'Ball Loader',
     url: 'http://codepen.io/dmsanchez86/full/OXjROz',
     preview: true,
     code: true,
+    key: 'ball',
   },
   {
     name: 'Weather App',
     url: 'http://codepen.io/dmsanchez86/full/bpYXPN/',
     preview: true,
     code: true,
+    key: 'weather',
   },
   {
     name: 'Perspective Slide',
@@ -50,6 +57,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'slide',
   },
   {
     name: 'Interactive Clock',
@@ -57,6 +65,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'clocl',
   },
   {
     name: 'Cellphone 3D',
@@ -64,6 +73,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'cellphone',
   },
   {
     name: 'Cube 3D',
@@ -71,6 +81,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'cube',
   },
   {
     name: 'Lists in 3D',
@@ -78,6 +89,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'lists',
   },
   {
     name: 'Geometry Cube 3D',
@@ -85,6 +97,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'geometry_cube',
   },
   {
     name: 'Juris Quiz Web',
@@ -92,6 +105,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'jurisquiz_web',
   },
   {
     name: 'Arthritis Web',
@@ -99,6 +113,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'arthritis',
   },
   {
     name: 'Basic Angular Template',
@@ -106,6 +121,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
+    key: 'angular_template',
   },
   {
     name: 'Mecaut',
@@ -113,5 +129,6 @@ export const dataProjects: ProjectItemI[] = [
     preview: false,
     code: true,
     download: true,
+    key: 'mecaut',
   },
 ];
