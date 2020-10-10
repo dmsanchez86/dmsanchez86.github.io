@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { GlobalService } from './services/global.service';
 import { AppState, AppStateLanguaje } from './store';
-import { changeLanguage } from './store/actions/language';
+import { ChangeLanguage } from './store/actions/language';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,7 @@ export class AppComponent {
     }, 300);
 
     if(localStorage.language){
-      this.store.dispatch(changeLanguage({ key: localStorage.language }));
+      this.store.dispatch(ChangeLanguage({ key: localStorage.language }));
     }
   }
 
@@ -31,6 +31,6 @@ export class AppComponent {
   }
 
   cambiarLenguaje(key){
-    this.store.dispatch(changeLanguage({ key }));
+    this.store.dispatch(ChangeLanguage({ key }));
   }
 }
