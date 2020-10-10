@@ -1,4 +1,6 @@
-export const ES = {
+import { LanguageItemI } from 'src/app/interfaces/LanguageI';
+
+export const ES: LanguageItemI = {
   ref: 'es',
   title: 'Español',
   logo: {
