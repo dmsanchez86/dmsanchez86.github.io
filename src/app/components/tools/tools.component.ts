@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { LanguageItemToolsI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
-import { setCollaboration } from 'src/app/store/actions/collaborations';
+import { setPortafolio } from 'src/app/store/actions/portafolio';
 import { setProject } from 'src/app/store/actions/projects';
 
 @Component({
@@ -41,7 +41,7 @@ export class ToolsComponent {
       this.store.dispatch(setProject(this.project));
     }
     if(this.url.indexOf('portafolio') >= 0){
-      this.store.dispatch(setCollaboration(this.project));
+      this.store.dispatch(setPortafolio(this.project));
     }
     this.router.navigate([this.url, this.project.key]);
   }

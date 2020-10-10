@@ -1,6 +1,6 @@
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 
-export const dataCollaborations: ProjectItemI[] = [
+export const dataPortafolio: ProjectItemI[] = [
   {
     name: 'GO finanzas',
     url: 'http://gofinanzas.com/',

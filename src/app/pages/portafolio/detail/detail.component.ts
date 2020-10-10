@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
-import { resetCollaboration, setCollaboration } from 'src/app/store/actions/collaborations';
+import { resetPortafolio, setPortafolio } from 'src/app/store/actions/portafolio';
 
 @Component({
   selector: 'app-detail',
@@ -12,12 +12,12 @@ import { resetCollaboration, setCollaboration } from 'src/app/store/actions/coll
 })
 export class DetailComponent {
 
-  project: Observable<ProjectItemI> = this.store.select(state => state.collaborations.current);
+  project: Observable<ProjectItemI> = this.store.select(state => state.portafolio.current);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
 
   constructor(private store: Store<AppState>) {
-    if(localStorage.collaboration && !localStorage.fromTools) {
-      this.store.dispatch(setCollaboration(JSON.parse(localStorage.collaboration)));
+    if(localStorage.portafolio && !localStorage.fromTools) {
+      this.store.dispatch(setPortafolio(JSON.parse(localStorage.portafolio)));
     }else{
       if(localStorage.fromTools){
         delete localStorage.fromTools;
@@ -26,7 +26,7 @@ export class DetailComponent {
   }
 
   ngOnDestroy(): void {
-    this.store.dispatch(resetCollaboration());
+    this.store.dispatch(resetPortafolio());
   }
 
 }

@@ -11,7 +11,7 @@ import { AppState } from 'src/app/store';
 })
 export class PortafolioComponent implements OnInit {
 
-  projects: Observable<ProjectItemI[]> = this.store.select(state => state.collaborations.data);
+  projects: Observable<ProjectItemI[]> = this.store.select(state => state.portafolio.data);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
 
   constructor(private store: Store<AppState>) { }
@@ -22,6 +22,6 @@ export class PortafolioComponent implements OnInit {
 
   ngOnInit() {
     document.body.classList.add('portafolio');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_collaborations.png');
+    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_portafolio.png');
   }
 }

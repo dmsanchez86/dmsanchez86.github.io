@@ -4,7 +4,7 @@ import { ProjectItemI } from '../interfaces/ProjectItemI';
 
 export interface AppState {
   projects: AppStateProjectsI;
-  collaborations: AppStateCollaborationsI;
+  portafolio: AppStatePortafolioI;
   menu: AppStateMenu;
   language: AppStateLanguaje;
 }
@@ -12,7 +12,7 @@ export interface AppStateProjectsI {
   data: ProjectItemI[];
   current: ProjectItemI;
 }
-export interface AppStateCollaborationsI {
+export interface AppStatePortafolioI {
   data: ProjectItemI[];
   current: ProjectItemI;
 }

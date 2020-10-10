@@ -65,7 +65,7 @@
 					display: block;
 					cursor: pointer;
 				}
-				
+
 				li{
 					display: block;
 					margin: .15rem 0;
@@ -99,12 +99,12 @@
 			@include transform(scale(.4) translate3d(0,0,0));
 		}
 	}
-	
+
 	.popup{
-		
+
 		.popup-header{
 			min-height: 130px;
-		    
+
 		    .profile_content{
 				right: 0;
 			    left: 0;
@@ -116,28 +116,28 @@
 			    border-width: 3px;
 			}
 		}
-			
+
 		.popup-body{
 			height: calc(100% - 130px);
-		    
+
 		    h1{
 		    	font-size: 1.6rem;
 		    }
-		    
+
 		    article{
 		    	p{
 		    		font-size: 1.4rem;
 				    padding: 2rem 1rem 0;
 		    	}
-		    	
+
 		    	.project{
-		    		
+
 		    		.title{
 		    			width: 100%;
-		    			
+
 		    			> a{
 		    				font-size: 25px;
-		    				
+
 		    				&[title-ref]{
 		    					&:after{
 		    						left: -150%;
@@ -149,7 +149,7 @@
 		    						border-width: 5px  5px 0 5px;
 	    							border-color: #323232 transparent transparent transparent;
 		    					}
-		    					
+
 		    					&:nth-child(6){
 		    						&:before{
 		    							top: 4%;
@@ -162,13 +162,13 @@
 		    }
 		}
 	}
-	
+
 	.profile_content{
 		left: 1rem;
 		bottom: 1rem;
 	}
 
-	.carousel{ 
+	.carousel{
 		@include perspective(500px);
 	}
 
@@ -176,7 +176,7 @@
 		background-size: 100%, 250px;
 	}
 
-	#section_collaborations{
+	#section_portafolio{
 		background-size: 100%, 1000px;
 	}
 
@@ -192,7 +192,7 @@
 				font-size: 37px;
 			}
 		}
-	}	
+	}
 
 	.fp-controlArrow{
 
@@ -203,10 +203,10 @@
 		        border-width: 28.5px 24px 28.5px 0;
 		}
 	}
-	
+
 	.navigator_content {
 		.navigator {
-			> ul{				
+			> ul{
 				li{
 					.submenu{
 						&.hide-mobile{
@@ -217,17 +217,17 @@
 			}
 		}
 	}
-	
+
 	.tools{
 		top: 95%;
 		display: block;
-		
+
 		.tool{
 			opacity: 1;
 			font-size: 20px;
 		}
 	}
-	
+
 	.carousel{
 		.control{
 			&:after,
@@ -237,12 +237,12 @@
 			}
 		}
 	}
-	
+
 	.popup{
-		
+
 		.popup-header{
 			min-height: 100px;
-		    
+
 		    .profile_content{
 				right: 0;
 			    left: 0;
@@ -253,26 +253,26 @@
 			    max-width: 45px;
 			}
 		}
-			
+
 		.popup-body{
 			height: calc(100% - 100px);
-		    
+
 		    h1{
 		    	font-size: 1.35rem;
 		    	width: 255px;
 		    }
-		    
+
 		    article{
 		    	p{
 				    padding: 1rem 1.2rem 0;
 		    	}
-		    	
+
 		    	.project{
-		    		
+
 		    		.title{
-		    			
+
 		    			> a{
-		    				
+
 		    				&[title-ref]{
 		    					&:after{
 		    						left: -200%;
@@ -283,7 +283,7 @@
 		    						border-width: 5px  5px 0 5px;
 	    							border-color: #323232 transparent transparent transparent;
 		    					}
-		    					
+
 		    					&:nth-child(6){
 		    						&:before{
 		    							top: 4%;
@@ -296,9 +296,9 @@
 		    }
 		}
 	}
-	
+
 	.twitter_content{
-		
+
 		label{
 			display: none;
 		}
@@ -306,7 +306,7 @@
 }
 
 @media (max-width: 400px){
-	#fp-nav{ 
+	#fp-nav{
     	display: none;
 	}
 }
