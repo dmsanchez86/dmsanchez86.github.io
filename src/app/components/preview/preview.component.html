@@ -1,11 +1,13 @@
-<div class="preview_page hide-mobile">
+<div class="preview_page hide-mobile active" [ngClass]="{'load': validationLoad, 'fullscreen': validationFullscreen}">
   <div class="toolbox">
-    <span class="resize">
+    <span class="resize" (click)="setFullscreen()">
       <i class="fa fa-expand" title="Maximize Screen"></i>
       <i class="fa fa-compress" title="Minimize Screen"></i>
     </span>
   </div>
-  <iframe src="" frameborder="0" id="frame_preview"></iframe>
+  <!-- <iframe
+    [src]="sanitizer.bypassSecurityTrustResourceUrl(project.url)"
+    (load)="loadIframe($event)"></iframe> -->
   <span class="loader_preview">
     <i class="fa fa-spinner fa-pulse"></i>
   </span>
