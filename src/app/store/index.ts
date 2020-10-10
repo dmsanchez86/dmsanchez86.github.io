@@ -9,16 +9,16 @@ export interface AppState {
   language: AppStateLanguaje;
 }
 export interface AppStateProjectsI {
-  data: ProjectItemI[]
+  data: ProjectItemI[];
 }
 export interface AppStateCollaborationsI {
-  data: ProjectItemI[]
+  data: ProjectItemI[];
 }
 export interface AppStateMenu {
   data: MenuItemI[];
 }
 export interface AppStateLanguaje {
-  es: LanguageItemI,
-  en: LanguageItemI,
-  current: LanguageItemI
+  es: LanguageItemI;
+  en: LanguageItemI;
+  current: LanguageItemI;
 }
