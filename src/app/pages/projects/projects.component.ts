@@ -10,6 +10,7 @@ import { AppState } from 'src/app/store';
 })
 export class ProjectsComponent implements OnInit {
   projects: Observable<ProjectItemI[]> = this.store.select('projects');
+  language: Observable<any> = this.store.select(state => state.language.current.projects);
 
   constructor(private store: Store<AppState>) {}
 
