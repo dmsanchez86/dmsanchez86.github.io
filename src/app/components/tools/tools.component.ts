@@ -1,39 +1,42 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemToolsI } from 'src/app/interfaces/LanguageI';
+import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
 
 @Component({
   selector: 'app-tools',
   template: `
     <div class="tools">
-      <div *ngIf="preview" (click)="previewF()" class="tool preview" [attr.title-ref]="(language | async).preview">
+      <div *ngIf="project?.preview" (click)="previewF()" class="tool preview" [attr.title-ref]="(language | async).preview">
         <i class="fa fa-desktop"></i>
       </div>
-      <div *ngIf="code" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).check">
+      <div *ngIf="project?.code" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).check">
         <i class="fa fa-code"></i>
       </div>
-      <div *ngIf="download" (click)="downloadF()" class="tool download" [attr.title-ref]="(language | async).preview">
+      <div *ngIf="project?.download" (click)="downloadF()" class="tool download" [attr.title-ref]="(language | async).preview">
         <i class="fa fa-download"></i>
       </div>
-      <div *ngIf="app" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).download">
+      <div *ngIf="project?.app" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).download">
         <i class="fa fa-android"></i>
       </div>
     </div>
   `
 })
 export class ToolsComponent {
-  @Input() preview: true;
-  @Input() code: false;
-  @Input() download: false;
-  @Input() app: false;
+  @Input() project: ProjectItemI;
+  @Input() url: string;
 
   language: Observable<LanguageItemToolsI> = this.store.select(state => state.language.current.tools);
 
-  constructor(private store: Store<AppState>){}
+  constructor(private store: Store<AppState>, private router: Router){}
 
-  previewF(){ console.log('preview'); }
+  previewF(){
+    console.log(this.project);
+    this.router.navigate([this.url, this.project.key]);
+  }
 
   codeF(){ console.log('code'); }
 
