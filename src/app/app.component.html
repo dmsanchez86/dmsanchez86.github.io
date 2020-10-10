@@ -26,12 +26,12 @@
 <div class="language-content">
   <span><i class="fa fa-language"></i></span>
   <span>
-    <a href="javascript:void()" (click)="cambiarLenguaje('es')" [ngClass]="{active: (language | async).current.ref === 'es'}">
+    <a href="javascript:void()" (click)="cambiarLenguaje('es')" [ngClass]="{active: (language | async).current.ref === 'es'}" [title]="(language | async).es.title">
       ES
     </a>
   </span>
   <span>
-    <a href="javascript::void()" (click)="cambiarLenguaje('en')" [ngClass]="{active: (language | async).current.ref === 'en'}">
+    <a href="javascript::void()" (click)="cambiarLenguaje('en')" [ngClass]="{active: (language | async).current.ref === 'en'}" [title]="(language | async).en.title">
       EN
     </a>
   </span>
