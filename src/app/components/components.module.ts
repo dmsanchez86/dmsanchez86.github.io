@@ -9,6 +9,7 @@ import { ToolsComponent } from './tools/tools.component';
 import { RouterModule } from '@angular/router';
 import { ProfileImageComponent } from './profile-image/profile-image.component';
 import { SocialNetworkingsComponent } from './social-networkings/social-networkings.component';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -19,7 +20,8 @@ import { SocialNetworkingsComponent } from './social-networkings/social-networki
     PopupComponent,
     ToolsComponent,
     ProfileImageComponent,
-    SocialNetworkingsComponent
+    SocialNetworkingsComponent,
+    PreviewComponent
   ],
   exports: [
     LogoComponent,
@@ -28,7 +30,8 @@ import { SocialNetworkingsComponent } from './social-networkings/social-networki
     PopupComponent,
     ToolsComponent,
     ProfileImageComponent,
-    SocialNetworkingsComponent
+    SocialNetworkingsComponent,
+    PreviewComponent
   ],
 })
 export class ComponentsModule {}
