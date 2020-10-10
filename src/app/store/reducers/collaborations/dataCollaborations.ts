@@ -17,7 +17,7 @@ export const dataCollaborations: ProjectItemI[] = [
     name: 'Oral Center',
     url: 'http://oralcenter.com.co/',
     preview: true,
-    key: 'oral_Center',
+    key: 'oral_center',
   },
   {
     name: 'Conexiones',
