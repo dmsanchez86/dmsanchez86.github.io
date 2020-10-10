@@ -65,7 +65,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     download: true,
-    key: 'clocl',
+    key: 'clock',
   },
   {
     name: 'Cellphone 3D',
