@@ -5,14 +5,13 @@
 	height: 100vh;
 	top: 0;
 	left: 0;
-	z-index: 222;
 	padding: .5rem 0 0 .5rem;
 	opacity: .8;
 	overflow: hidden;
 	@include transition((transform .5s ease, opacity .7s ease));
 	@include border-radius(5px 0 0 0);
-	@include transform-origin(bottom right);
-	@include transform(scale(.37) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg)); 	
+	@include transform-origin(bottom center);
+	@include transform(scale(.235) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg));
 
 	.loader_preview{
 		display: inline-block;
@@ -22,7 +21,7 @@
 		text-align: center;
 		@include text-shadow(0 0 6px #fefefe);
 		@include center-absolute(absolute);
-		
+
 		&:after{
 			position: absolute;
 			left: 0;
@@ -38,7 +37,7 @@
 			font-size: 100px;
 		}
 	}
-	
+
 	.toolbox{
 		position: absolute;
 		top: 0;
@@ -56,7 +55,7 @@
 			cursor: pointer;
 			height: 200px;
 			@include center-absolute(absolute);
-			
+
 			&:hover{
 				i{
 					@include transform(scale(1.2));
@@ -68,7 +67,7 @@
 			    color: rgba(255, 255, 255, 0.72);
 			    @include text-shadow(0 0 5px rgba(0,0,0,.5));
 			    @include transition(transform 200ms ease);
-				
+
 				&:last-child{
 					display: none;
 				}
@@ -82,7 +81,7 @@
 		opacity: 0;
 		@include transition(opacity 1s .5s ease);
 	}
-	
+
 	&:hover{
 		opacity: 1;
 
@@ -90,11 +89,11 @@
 			@include transform(translate3d(0,0,0));
 		}
 	}
-	
+
 	&.active{
-		@include transform(scale(.37) translate3d(0%, 0%, 0) rotatey(0) rotatex(0));
+		@include transform(scale(.235) translate3d(0%, 0%, 0) rotatey(0) rotatex(0));
 	}
-	
+
 	&.fullscreen{
 		z-index: 10000;
 		opacity: 1;
@@ -121,12 +120,12 @@
 
 			.resize{
 				height: auto;
-				
+
 				i{
 					font-size: 20px;
 					line-height: 1;
 					color: white;
-					
+
 					&:last-child{
 						display: block;
 						margin-top: .25rem;
@@ -148,7 +147,7 @@
 		.loader_preview{
 			display: none;
 		}
-		
+
 		iframe{
 			opacity: 1;
 		}
