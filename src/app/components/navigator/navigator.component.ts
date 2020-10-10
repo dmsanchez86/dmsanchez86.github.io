@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { LanguageItemNavI } from 'src/app/interfaces/LanguageI';
 import { MenuItemI } from 'src/app/interfaces/MenuItemI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
@@ -11,7 +12,7 @@ import { AppState } from 'src/app/store';
 })
 export class NavigatorComponent {
   menus: Observable<MenuItemI[]> = this.store.select('menu');
-  language: Observable<any> = this.store.select(state => state.language.current.nav);
+  language: Observable<LanguageItemNavI> = this.store.select(state => state.language.current.nav);
 
   constructor(private global: GlobalService, private store: Store<AppState>){}
 

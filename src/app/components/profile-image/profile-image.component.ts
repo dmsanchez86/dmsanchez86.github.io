@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 
 @Component({
@@ -17,7 +18,7 @@ export class ProfileImageComponent implements OnInit {
   @Input() open: false;
   @Input() home: false;
 
-  language: Observable<any> = this.store.select(state => state.language.current.profile);
+  language: Observable<LanguageItemProfileI> = this.store.select(state => state.language.current.profile);
 
   constructor(private store: Store<AppState>) { }
 

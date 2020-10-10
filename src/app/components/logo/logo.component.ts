@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { LanguageItemLogoI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 
 @Component({
@@ -18,6 +19,6 @@ import { AppState } from 'src/app/store';
   `,
 })
 export class LogoComponent {
-  language: Observable<any> = this.store.select(state => state.language.current.logo);
+  language: Observable<LanguageItemLogoI> = this.store.select(state => state.language.current.logo);
   constructor(private store: Store<AppState>){}
 }
