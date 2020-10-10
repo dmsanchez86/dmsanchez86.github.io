@@ -16,6 +16,7 @@ export const EN = {
     phone: '+(57) 320 376 8421',
     name: 'Daniel Mauricio Sanchez Avila',
     biography: `Frontend Developer. I'm from Manizales Caldas in Colombia, currently live in Cali, Valle del Cauca.`,
+    hobbies_bio: 'My new hobby is ride for the mountains in bike and play with my two little kids. Isabela and Emmanuel',
     social: {
       share: {
         github: 'On Github',

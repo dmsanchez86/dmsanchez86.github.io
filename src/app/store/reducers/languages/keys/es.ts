@@ -16,6 +16,7 @@ export const ES = {
     phone: '+(57) 320 376 8421',
     name: 'Daniel Mauricio Sanchez',
     biography: `Desarrollador FrontEnd. Soy de Colombia, del departamento de Caldas, Nací en la ciudad de Manizales. Actualmente vivo en la ciudad de Cali, valle del Cauca.`,
+    hobbies_bio: 'Mi nuevo pasatiempo es salir a rodar en mi bicicleta por las montañas y jugar con mis dos pequeños hijos. Isabela & Emmanuel',
     social: {
       share: {
         github: 'En Github',
