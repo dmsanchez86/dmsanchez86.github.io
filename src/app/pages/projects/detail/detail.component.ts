@@ -10,7 +10,7 @@ import { resetProject, setProject } from 'src/app/store/actions/projects';
   selector: 'app-detail',
   templateUrl: './detail.component.html'
 })
-export class DetailComponent implements OnDestroy {
+export class DetailComponent implements OnDestroy, OnDestroy {
   project: Observable<ProjectItemI> = this.store.select(state => state.projects.current);
   language: Observable<LanguageItemProjectsI> = this.store.select(state => state.language.current.projects);
 
@@ -24,8 +24,13 @@ export class DetailComponent implements OnDestroy {
     }
   }
 
+  ngOnInit(): void {
+    document.body.classList.add('projects');
+  }
+
   ngOnDestroy(): void {
     this.store.dispatch(resetProject());
+    document.body.classList.remove('projects');
   }
 
 }

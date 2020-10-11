@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
@@ -10,7 +10,7 @@ import { resetPortafolio, setPortafolio } from 'src/app/store/actions/portafolio
   selector: 'app-detail',
   templateUrl: './detail.component.html',
 })
-export class DetailComponent {
+export class DetailComponent implements OnInit, OnDestroy {
 
   project: Observable<ProjectItemI> = this.store.select(state => state.portafolio.current);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
@@ -25,8 +25,12 @@ export class DetailComponent {
     }
   }
 
+  ngOnInit(): void {
+    document.body.classList.add('portafolio');
+  }
   ngOnDestroy(): void {
     this.store.dispatch(resetPortafolio());
+    document.body.classList.remove('portafolio');
   }
 
 }
