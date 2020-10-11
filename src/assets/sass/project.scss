@@ -9,7 +9,7 @@
 		height: 70px;
 		display: inline-block;
 		@include center-absolute(absolute);
-		
+
 		> a{
 			font-size: 50px;
 			color: white;
@@ -18,20 +18,21 @@
 			@include text-3d;
 
 			&[title-ref]{
-				position: relative;
-				
+        position: relative;
+        margin-right: .5rem;
+
 				&:first-child{
 					&:after{
 						left: 3%;
 					}
 				}
-				
+
 				&:last-child{
 					&:after{
 						left: -200%;
 					}
 				}
-				
+
 				&:after{
 					position: absolute;
 					top: 90%;
@@ -42,14 +43,14 @@
 					opacity: 0;
 					padding: .15rem .5rem;
 					font-size: 16px;
+          background-image: -webkit-radial-gradient(center,#111,#323232);
 				    font-family: 'Yanone Kaffeesatz', sans-serif;
 				    @include text-shadow(none);
 				    @include transition((transform .5s ease, opacity .25s ease));
 					@include transform(translate3d(0,-10%, 0));
-					@include gradient(radial, (center, #111, #323232));
 					@include border-radius(4px);
 				}
-				
+
 				&:before{
 					position: absolute;
 					top: 85%;
@@ -64,19 +65,19 @@
 					border-color: transparent transparent #323232 transparent;
 					@include transition(opacity .25s ease);
 				}
-				
+
 				&:hover{
 					&:after{
 						opacity: 1;
 						@include transform(translate3d(0,0,0));
 					}
-					
+
 					&:before{
 						opacity: 1;
 					}
 				}
 			}
-			
+
 			i{
 				@include text-shadow((
 					1px -1px 1px $text-3d-color,
@@ -86,11 +87,11 @@
 
 				&:focus,
 				&:hover{
-					@include animation(text3D 3s infinite linear); 
+					@include animation(text3D 3s infinite linear);
 				}
 			}
 		}
-		
+
 		&:hover{
 			> a{
 				@include text-shadow((
@@ -107,14 +108,14 @@
 						12px -11px 1px $text-3d-color-hover,
 			    ));
 			}
-			
+
 			.tools{
 				display: block;
-				
+
 				.tool{
-					$k: 0.2; 
+					$k: 0.2;
 					@for $i from 1 through 10 {
-			            &:nth-child(#{$i}){ 
+			            &:nth-child(#{$i}){
 			                @include animation(move 500ms 1 #{($k)}s cubic-bezier(0.06, 0.18, 1, 1.11) forwards);
 			                $k: $k + $k
 			            }
