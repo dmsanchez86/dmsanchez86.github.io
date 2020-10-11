@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
@@ -9,7 +9,7 @@ import { AppState } from 'src/app/store';
   selector: 'app-portafolio',
   templateUrl: './portafolio.component.html'
 })
-export class PortafolioComponent implements OnInit {
+export class PortafolioComponent implements OnInit, OnDestroy {
 
   projects: Observable<ProjectItemI[]> = this.store.select(state => state.portafolio.data);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
