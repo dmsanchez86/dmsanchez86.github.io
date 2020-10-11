@@ -21,7 +21,7 @@ export class PreviewComponent {
     // this.validationLoad = true;
   }
 
-  setFullscreen($event) {
+  setFullscreen() {
     this.validationFullscreen = !this.validationFullscreen;
   }
 }
