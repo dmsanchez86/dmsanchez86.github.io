@@ -5,43 +5,37 @@ export const dataSocial: SocialItemI[] = [
     name: 'http://github.com/dmsanchez86',
     href: '/',
     key: 'github',
-    icon: 'fa fa-github',
-    type: ''
+    icon: 'fa fa-github'
   },
   {
     name: 'Twitter',
     href: 'http://twitter.com/dmsanchez86',
     key: 'twitter',
-    icon: 'fa fa-twitter-square',
-    type: ''
+    icon: 'fa fa-twitter-square'
   },
   {
     name: 'Facebook',
     href: 'http://facebook.com/dmsanchez86',
     key: 'facebook',
-    icon: 'fa fa-facebook-square',
-    type: ''
+    icon: 'fa fa-facebook-square'
   },
   {
     name: 'Google+',
     href: 'https://plus.google.com/109279201439651083225',
     key: 'google',
-    icon: 'fa fa-google-plus-square',
-    type: ''
+    icon: 'fa fa-google-plus-square'
   },
   {
     name: 'Linkedin',
     href: 'https://co.linkedin.com/in/dmsanchez86',
     key: 'linkedin',
-    icon: 'fa fa-linkedin-square',
-    type: ''
+    icon: 'fa fa-linkedin-square'
   },
   {
     name: 'Instagram',
     href: 'http://instagram.com/danysanchez7',
     key: 'instagram',
-    icon: 'fa fa-instagram',
-    type: ''
+    icon: 'fa fa-instagram'
   },
   {
     name: 'Email',
@@ -61,14 +55,12 @@ export const dataSocial: SocialItemI[] = [
     name: 'Free Code Camp',
     href: 'http://freecodecamp.com/dmsanchez86',
     key: 'freecodecamp',
-    icon: 'fa fa-fire',
-    type: ''
+    icon: 'fa fa-fire'
   },
   {
     name: 'CodePen',
     href: 'http://codepen.io/dmsanchez86',
     key: 'codepen',
-    icon: 'fa fa-codepen',
-    type: ''
+    icon: 'fa fa-codepen'
   },
 ];
