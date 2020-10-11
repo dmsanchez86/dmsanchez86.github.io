@@ -12,7 +12,7 @@ import { setProject } from 'src/app/store/actions/projects';
   selector: 'app-tools',
   template: `
     <div class="tools">
-      <div *ngIf="project?.preview" (click)="previewF()" class="tool preview" [attr.title-ref]="(language | async).preview">
+      <div *ngIf="project?.preview && !no_preview" (click)="previewF()" class="tool preview" [attr.title-ref]="(language | async).preview">
         <i class="fa fa-desktop"></i>
       </div>
       <div *ngIf="project?.code" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).check">
@@ -30,6 +30,7 @@ import { setProject } from 'src/app/store/actions/projects';
 export class ToolsComponent {
   @Input() project: ProjectItemI;
   @Input() url: string;
+  @Input() no_preview: boolean = false;
 
   language: Observable<LanguageItemToolsI> = this.store.select(state => state.language.current.tools);
 
