@@ -3,6 +3,7 @@ export interface ProjectItemI {
   url?: string;
   url_app?: string;
   preview?: boolean;
+  no_preview?: boolean;
   code?: boolean;
   download?: boolean;
   app?: boolean;
