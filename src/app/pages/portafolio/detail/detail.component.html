@@ -5,7 +5,7 @@
       <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
           <a [href]="(project | async)?.url" target="_blank">{{ (language | async)[(project | async)?.key] }}</a>
-          <app-tools [project]="(project | async)" [url]="'portafolio'"></app-tools>
+          <app-tools [project]="(project | async)" [url]="'portafolio'" [no_preview]="true"></app-tools>
         </h1>
       </div>
     </div>
