@@ -3,6 +3,7 @@ import { LanguageItemI } from 'src/app/interfaces/LanguageI';
 export const EN: LanguageItemI = {
   ref: 'en',
   title: 'English',
+  loading: 'Loading...',
   logo: {
     title: 'dmsanchez86 Website',
   },
