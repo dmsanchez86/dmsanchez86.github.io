@@ -19,6 +19,16 @@ export interface LanguageItemMetaI {
   keywords?: string;
   description?: string;
   og?: LanguageItemMetaOGI;
+  tw?: LanguageItemMetaTWI;
+}
+
+export interface LanguageItemMetaTWI {
+  card?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  site?: string;
+  creator?: string;
 }
 
 export interface LanguageItemMetaOGI {
