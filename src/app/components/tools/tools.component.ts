@@ -7,6 +7,7 @@ import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
 import { setPortafolio } from 'src/app/store/actions/portafolio';
 import { setProject } from 'src/app/store/actions/projects';
+import { isValidUrl } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-tools',
@@ -47,8 +48,22 @@ export class ToolsComponent {
     this.router.navigate([this.url, this.project.key]);
   }
 
-  codeF(){ console.log('code'); }
+  codeF(){
+    if (isValidUrl(this.project.url)) {
+      if (this.project.url.indexOf('full')) {
+        this.project.url = this.project.url.replace('full', 'pen');
+      }
+      window.open(this.project.url);
+    } else {
+      window.open('http://github.com/dmsanchez86/' + this.project.url);
+    }
+  }
 
-  downloadF(){ console.log('download'); }
-
+  downloadF(){
+    if (isValidUrl(this.project.url)) {
+      window.open(this.project.url + '/archive/master.zip');
+    } else {
+      window.open('http://github.com/dmsanchez86/' + this.project.url + '/archive/gh-pages.zip');
+    }
+  }
 }
