@@ -1,6 +1,7 @@
 export interface LanguageItemI {
   ref: string;
   title: string;
+  meta: LanguageItemMetaI;
   logo: LanguageItemLogoI;
   nav: LanguageItemNavI;
   profile: LanguageItemProfileI;
@@ -12,6 +13,21 @@ export interface LanguageItemI {
 
 export interface LanguageItemLogoI {
   title: string;
+}
+
+export interface LanguageItemMetaI {
+  keywords?: string;
+  description?: string;
+  og?: LanguageItemMetaOGI;
+}
+
+export interface LanguageItemMetaOGI {
+  type?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  site_name?: string;
 }
 export interface LanguageItemNavI {
   home: string;
