@@ -19,7 +19,7 @@ import { isValidUrl } from 'src/environments/global_functions';
       <div *ngIf="project?.code" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).check">
         <i class="fa fa-code"></i>
       </div>
-      <div *ngIf="project?.download" (click)="downloadF()" class="tool download" [attr.title-ref]="(language | async).preview">
+      <div *ngIf="project?.download" (click)="downloadF()" class="tool download" [attr.title-ref]="(language | async).download">
         <i class="fa fa-download"></i>
       </div>
       <div *ngIf="project?.app" (click)="codeF()" class="tool code" [attr.title-ref]="(language | async).download">
@@ -50,10 +50,11 @@ export class ToolsComponent {
 
   codeF(){
     if (isValidUrl(this.project.url)) {
+      let url = this.project.url;
       if (this.project.url.indexOf('full')) {
-        this.project.url = this.project.url.replace('full', 'pen');
+        url = this.project.url.replace('full', 'pen');
       }
-      window.open(this.project.url);
+      window.open(url);
     } else {
       window.open('http://github.com/dmsanchez86/' + this.project.url);
     }
@@ -63,7 +64,11 @@ export class ToolsComponent {
     if (isValidUrl(this.project.url)) {
       window.open(this.project.url + '/archive/master.zip');
     } else {
-      window.open('http://github.com/dmsanchez86/' + this.project.url + '/archive/gh-pages.zip');
+      if(this.project.key !== 'mecaut'){
+        window.open('http://github.com/dmsanchez86/' + this.project.url + '/archive/gh-pages.zip');
+      }else{
+        window.open('http://github.com/dmsanchez86/' + this.project.url + '/archive/master.zip');
+      }
     }
   }
 }
