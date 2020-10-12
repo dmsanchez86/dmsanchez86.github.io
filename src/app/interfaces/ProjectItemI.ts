@@ -8,4 +8,5 @@ export interface ProjectItemI {
   download?: boolean;
   app?: boolean;
   key?: string;
+  type?: string;
 }

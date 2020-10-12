@@ -8,6 +8,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'football',
+    type: 'project'
   },
   {
     name: 'Atom Loader',
@@ -15,6 +16,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'atom',
+    type: 'project'
   },
   {
     name: 'Form Perspective',
@@ -22,6 +24,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'form',
+    type: 'project'
   },
   {
     name: 'Juris Quiz Animation Logo',
@@ -29,6 +32,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'jurisquiz_app',
+    type: 'project'
   },
   {
     name: 'Quotes Machine',
@@ -36,6 +40,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'quotes',
+    type: 'project'
   },
   {
     name: 'Ball Loader',
@@ -43,6 +48,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'ball',
+    type: 'project'
   },
   {
     name: 'Weather App',
@@ -50,6 +56,7 @@ export const dataProjects: ProjectItemI[] = [
     preview: true,
     code: true,
     key: 'weather',
+    type: 'project'
   },
   {
     name: 'Perspective Slide',
@@ -58,6 +65,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'slide',
+    type: 'project'
   },
   {
     name: 'Interactive Clock',
@@ -66,6 +74,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'clock',
+    type: 'project'
   },
   {
     name: 'Cellphone 3D',
@@ -74,6 +83,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'cellphone',
+    type: 'project'
   },
   {
     name: 'Cube 3D',
@@ -82,6 +92,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'cube',
+    type: 'project'
   },
   {
     name: 'Lists in 3D',
@@ -90,6 +101,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'lists',
+    type: 'project'
   },
   {
     name: 'Geometry Cube 3D',
@@ -98,6 +110,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'geometry_cube',
+    type: 'project'
   },
   {
     name: 'Juris Quiz Web',
@@ -106,6 +119,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'jurisquiz_web',
+    type: 'project'
   },
   {
     name: 'Arthritis Web',
@@ -114,6 +128,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'arthritis',
+    type: 'project'
   },
   {
     name: 'Basic Angular Template',
@@ -122,6 +137,7 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'angular_template',
+    type: 'project'
   },
   {
     name: 'Mecaut',
@@ -130,5 +146,6 @@ export const dataProjects: ProjectItemI[] = [
     code: true,
     download: true,
     key: 'mecaut',
+    type: 'project'
   },
 ];
