@@ -39,10 +39,10 @@ export class ToolsComponent {
 
   previewF(){
     localStorage.fromTools = true;
-    if(this.url.indexOf('project') >= 0){
+    if(this.project.type === 'project'){
       this.store.dispatch(setProject(this.project));
     }
-    if(this.url.indexOf('portafolio') >= 0){
+    if (this.project.type === 'portafolio') {
       this.store.dispatch(setPortafolio(this.project));
     }
     this.router.navigate([this.url, this.project.key]);
