@@ -12,7 +12,7 @@ import { AppState } from 'src/app/store';
       <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
           <a [href]="project?.url" target="_blank">{{ (language | async)[project?.key] }}</a>
-          <app-tools [project]="project" [url]="'projects'"></app-tools>
+          <app-tools [project]="project" [url]="key"></app-tools>
         </h1>
       </div>
     </div>
