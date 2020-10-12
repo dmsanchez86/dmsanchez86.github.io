@@ -1,15 +1,6 @@
 
 <div id="section_portafolio" style="padding: 0;height: 100vh;overflow-y: auto;">
-  <div item="1">
-    <div *ngIf="(project | async)?.key">
-      <div class="project" style="height: 50vh;width: 98vw;">
-        <h1 class="title">
-          <a [href]="(project | async)?.url" target="_blank">{{ (language | async)[(project | async)?.key] }}</a>
-          <app-tools [project]="(project | async)" [url]="'portafolio'" [no_preview]="true"></app-tools>
-        </h1>
-      </div>
-    </div>
-  </div>
+  <app-item-project [project]="(project | async)" [i]="0" [key]="'portafolio'"> </app-item-project>
 </div>
 
 <app-preview [project]="(project | async)"></app-preview>
