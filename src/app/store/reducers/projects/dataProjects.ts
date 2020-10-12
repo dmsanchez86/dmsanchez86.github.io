@@ -3,7 +3,7 @@ import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 export const dataProjects: ProjectItemI[] = [
   {
     name: 'Football Field 3D',
-    url: 'http://dmsanchez86.github.io/Field_3d',
+    url: 'Field_3d',
     preview: true,
     code: true,
     download: true,
@@ -125,7 +125,7 @@ export const dataProjects: ProjectItemI[] = [
   },
   {
     name: 'Mecaut',
-    url: 'https://github.com/dmsanchez86/Mecaut',
+    url: 'Mecaut',
     preview: false,
     code: true,
     download: true,
