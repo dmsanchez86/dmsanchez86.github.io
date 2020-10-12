@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { ProfileImageComponent } from './profile-image/profile-image.component';
 import { SocialNetworkingsComponent } from './social-networkings/social-networkings.component';
 import { PreviewComponent } from './preview/preview.component';
+import { LanguageContentComponent } from './language-content/language-content.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -21,7 +22,8 @@ import { PreviewComponent } from './preview/preview.component';
     ToolsComponent,
     ProfileImageComponent,
     SocialNetworkingsComponent,
-    PreviewComponent
+    PreviewComponent,
+    LanguageContentComponent
   ],
   exports: [
     LogoComponent,
@@ -31,7 +33,8 @@ import { PreviewComponent } from './preview/preview.component';
     ToolsComponent,
     ProfileImageComponent,
     SocialNetworkingsComponent,
-    PreviewComponent
+    PreviewComponent,
+    LanguageContentComponent
   ],
 })
 export class ComponentsModule {}
