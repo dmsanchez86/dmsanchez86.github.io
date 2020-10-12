@@ -8,7 +8,7 @@
   <!-- <iframe
     [src]="sanitizer.bypassSecurityTrustResourceUrl(project.url)"
     (load)="loadIframe($event)"></iframe> -->
-  <span class="loader_preview">
+  <span class="loader_preview" [attr.title]="(language | async)">
     <i class="fa fa-spinner fa-pulse"></i>
   </span>
 </div>

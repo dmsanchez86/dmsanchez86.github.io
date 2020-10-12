@@ -27,7 +27,7 @@
 			left: 0;
 			right: 0;
 			text-align: center;
-			content: 'Loading...';
+			content: attr(title);
 			font-family: 'Pacifico';
 			font-size: 2rem;
 			top: 100%;
