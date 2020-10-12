@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { isValidUrl } from 'src/environments/global_functions';
+import { Title, Meta }    from '@angular/platform-browser'
 
 import * as THREE from 'tree';
 
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   container: HTMLElement;
   camera: any;
 
-  constructor() {}
+  constructor(private meta: Meta, private title: Title) {}
 
   ngOnDestroy() {
     document.body.classList.remove('home');
@@ -38,6 +39,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.carouselControls();
     this.tools();
+
+    // this.meta.updateTag({ name: 'description', content: '' });
+    // this.title.setTitle('');
   }
 
   initTree(font: any) {
