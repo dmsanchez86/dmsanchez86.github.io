@@ -7,7 +7,13 @@ import { AppState } from 'src/app/store';
 
 @Component({
   selector: 'app-portafolio',
-  templateUrl: './portafolio.component.html'
+  template: `
+    <div id="section_portafolio" style="padding: 0;height: 100vh;overflow-y: auto;">
+      <ng-container *ngFor="let project of (projects | async);let i = index">
+        <app-item-project [project]="project" [i]="i" [key]="'portafolio'"> </app-item-project>
+      </ng-container>
+    </div>
+  `
 })
 export class PortafolioComponent implements OnInit, OnDestroy {
 
