@@ -23,7 +23,7 @@
 		}
 
 		&:before{
-			content: 'Loading...';
+			content: attr(title);
 			position: absolute;
 			top: 105%;
 			left: 0;
