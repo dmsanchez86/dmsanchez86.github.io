@@ -8,7 +8,7 @@
 	height: 60px;
 	z-index: 10;
 	display: none;
-	
+
 	.tool{
 		display: inline-block;
 		vertical-align: top;
@@ -25,7 +25,7 @@
 	    @include box-shadow(0 0 4px rgba(0,0,0,.6));
 		@include border-radius(50%);
 		@include transition(all .5s ease-in);
-		
+
 		&:after{
 			position: absolute;
 			top: 125%;
@@ -36,13 +36,13 @@
 			opacity: 0;
 			padding: .15rem .5rem;
 			font-size: 16px;
-		    font-family: 'Yanone Kaffeesatz', sans-serif;
-		    @include transition((transform .5s ease, opacity .25s ease));
+      background-image: -webkit-radial-gradient(center, #111, #323232);
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      @include transition((transform .5s ease, opacity .25s ease));
 			@include transform(translate3d(0,-10%, 0));
-			@include gradient(radial, (center, #111, #323232));
 			@include border-radius(4px);
 		}
-		
+
 		&:before{
 			position: absolute;
 			top: 115%;
@@ -57,24 +57,24 @@
 			border-color: transparent transparent #323232 transparent;
 			@include transition(opacity .25s ease);
 		}
-		
+
 		&:active{
 			@include transform(scale(.9));
 		}
-		
+
 		&:hover{
 			@include box-shadow(0 0 10px rgba(0,0,0,.4));
-			
+
 			&:after{
 				opacity: 1;
 				@include transform(translate3d(0,0,0));
 			}
-			
+
 			&:before{
 				opacity: 1;
 			}
 		}
-		
+
 		&.code{
 			padding-bottom: .45rem;
 		    margin-top: .1rem;
