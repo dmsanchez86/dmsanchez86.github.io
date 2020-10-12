@@ -23,16 +23,24 @@
   </div>
 </div>
 
-<div class="language-content">
+<div class="language-content" *ngIf="(language | async) as language">
   <span><i class="fa fa-language"></i></span>
   <span>
-    <a href="javascript:void()" (click)="cambiarLenguaje('es')" [ngClass]="{active: (language | async).current.ref === 'es'}" [title]="(language | async).es.title">
-      ES
+    <a
+      href="javascript:void(0)"
+      [ngClass]="{active: language.current.ref === 'es'}"
+      [title]="language.es.title"
+      (click)="cambiarLenguaje('es')">
+      {{language.es.ref}}
     </a>
   </span>
   <span>
-    <a href="javascript::void()" (click)="cambiarLenguaje('en')" [ngClass]="{active: (language | async).current.ref === 'en'}" [title]="(language | async).en.title">
-      EN
+    <a
+      href="javascript::void(0)"
+      [ngClass]="{active: language.current.ref === 'en'}"
+      [title]="language.en.title"
+      (click)="cambiarLenguaje('en')">
+      {{language.en.ref}}
     </a>
   </span>
 </div>
