@@ -12,6 +12,7 @@ import { SocialNetworkingsComponent } from './social-networkings/social-networki
 import { PreviewComponent } from './preview/preview.component';
 import { LanguageContentComponent } from './language-content/language-content.component';
 import { TwitterContentComponent } from './twitter-content/twitter-content.component';
+import { ItemProjectComponent } from './item-project/item-project.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -25,7 +26,8 @@ import { TwitterContentComponent } from './twitter-content/twitter-content.compo
     SocialNetworkingsComponent,
     PreviewComponent,
     LanguageContentComponent,
-    TwitterContentComponent
+    TwitterContentComponent,
+    ItemProjectComponent
   ],
   exports: [
     LogoComponent,
@@ -37,7 +39,8 @@ import { TwitterContentComponent } from './twitter-content/twitter-content.compo
     SocialNetworkingsComponent,
     PreviewComponent,
     LanguageContentComponent,
-    TwitterContentComponent
+    TwitterContentComponent,
+    ItemProjectComponent
   ],
 })
 export class ComponentsModule {}
