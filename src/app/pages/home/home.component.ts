@@ -1,10 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { isValidUrl } from 'src/environments/global_functions';
 import { Title, Meta }    from '@angular/platform-browser'
 
 import * as THREE from 'tree';
-
-declare const $;
 
 @Component({
   selector: 'app-home',
@@ -35,10 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_home.png');
     // this.fontsThree();
 
-    setTimeout(() => $('.twitter_content .container').addClass('close'), 2000);
-
-    this.carouselControls();
-    this.tools();
+    setTimeout(() => document.querySelector('.twitter_content .container').classList.add('close'), 500);
 
     // this.meta.updateTag({ name: 'description', content: '' });
     // this.title.setTitle('');
@@ -272,138 +266,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.camera.lookAt(this.scene.position);
 
     this.renderer.render(this.scene, this.camera);
-  }
-
-  carouselControls(){
-    $('.carousel .control').unbind('click').click(function(){
-      $('.preview_page').removeClass('load active').find('iframe').attr('src', '');
-
-      var father = $(this).parent(); // carousel
-      var item = parseInt(father.attr('item')); // number item slider active
-
-      if($(this).hasClass('inactive')){
-        return;
-      }
-
-      if($(this).hasClass('right') && !$(this).hasClass('inactive')){ // click in the rigth button
-
-        // put inactive left control
-        father.find('.control.left').removeClass('inactive');
-
-        // remove all items last class
-        father.find('.item').removeClass('last');
-        father.find('.item.active').addClass('last').removeClass('next'); // add next class item active
-
-        setTimeout(function(){
-          father.find('.item.active').removeClass('active');
-          father.find('.item.next').addClass('active').removeClass('next last');
-
-          if(item >= father.find('.item').length - 1){
-            father.find('.control.right').addClass('inactive');
-            item++;
-          }else{
-            item++;
-            father.find('.item').eq(item).removeClass('last active').addClass('next');
-          }
-
-          father.attr('item', item);
-        },500);
-
-      }else if($(this).hasClass('left')){
-
-        father.find('.control.right').removeClass('inactive');
-
-        setTimeout(function(){
-          if(item <= 2){
-            father.find('.control.left').addClass('inactive');
-
-            item--;
-
-            father.find('.item').removeClass('next');
-            father.find('.item.active').addClass('next');
-
-            setTimeout(function(){
-                father.find('.item.active').removeClass('active');
-                father.find('.item.last').addClass('active').removeClass('next last');
-
-                if(item != 1){
-                    father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
-                }
-                father.attr('item', item);
-            },500);
-            return;
-          }else{
-              item--;
-              father.find('.item').removeClass('next');
-              father.find('.item.active').addClass('next');
-
-              setTimeout(function(){
-                father.find('.item.active').removeClass('active');
-                father.find('.item.last').addClass('active').removeClass('next last');
-
-                if(item != 1){
-                  father.find('.item').eq(item - 2).removeClass('next active').addClass('last');
-                }
-                father.attr('item', item);
-              },500);
-          }
-          father.attr('item', item);
-        },500);
-      }
-    });
-  }
-
-  colorPrev = null;
-  toggle = false;
-
-  tools(){
-    $('.tools .tool').unbind('click').click((e) => {
-      console.log(e.target);
-      console.log(e.target.nodeName);
-      var url = $(e.target).parent().parent().parent().find('a').attr('href');
-      var ref = $(e.target);
-      var parent = $(e.target).parent();
-
-      // console.log(ref);
-      console.log(parent);
-      // debugger
-
-      if(parent.hasClass('preview')){
-        $('.preview_page').toggleClass('active');
-        if(isValidUrl(url)){
-            $('.preview_page').removeClass('load').find('iframe').attr('src', url);
-        }else{
-            $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
-        }
-        if(window.innerWidth <= 600){
-            $('.preview_page').addClass('fullscreen');
-            this.colorPrev = $('#themeColor').attr('content');
-            this.toggle = false;
-            $('#themeColor').attr('content', '#fff');
-        }
-      }else if(parent.hasClass('code')){
-          if(isValidUrl(url)){
-              if(url.indexOf("full") > 0){
-                  url = url.replace("full", "pen");
-              }
-              window.open(url);
-          }else{
-              window.open("http://github.com/dmsanchez86/"+url);
-          }
-      }else if(parent.hasClass('page')){
-          $('.preview_page').toggleClass('active');
-          if(isValidUrl(url)){
-              $('.preview_page').removeClass('load').find('iframe').attr('src', url);
-          }else{
-              $('.preview_page').removeClass('load').find('iframe').attr('src', "http://dmsanchez86.github.io/"+url);
-          }
-      }else if(parent.hasClass('download')){
-          if(isValidUrl(url)){
-              window.open(url+"/archive/master.zip");
-          }else{
-              window.open("http://github.com/dmsanchez86/"+url+"/archive/gh-pages.zip");
-          }
-      }
-    });
   }
 }
