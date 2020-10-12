@@ -7,12 +7,9 @@ import { ChangeLanguage } from './store/actions/language';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'pageAngular';
-
   language: Observable<AppStateLanguaje> = this.store.select(state => state.language);
 
   constructor(private global: GlobalService, private store: Store<AppState>){
@@ -28,9 +25,5 @@ export class AppComponent {
 
   cerrarMenu(){
     this.global.cerrarMenu();
-  }
-
-  cambiarLenguaje(key){
-    this.store.dispatch(ChangeLanguage({ key }));
   }
 }
