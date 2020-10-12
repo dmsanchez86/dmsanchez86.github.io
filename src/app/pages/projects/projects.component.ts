@@ -7,7 +7,13 @@ import { AppState } from 'src/app/store';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './projects.component.html',
+  template: `
+    <div id="section_projects" style="padding: 0;height: 100vh;overflow-y: auto;">
+      <ng-container *ngFor="let project of projects | async; let i = index">
+        <app-item-project [project]="project" [i]="i" [key]="'projects'"></app-item-project>
+      </ng-container>
+    </div>
+  `,
 })
 export class ProjectsComponent implements OnInit {
   projects: Observable<ProjectItemI[]> = this.store.select(state => state.projects.data);
