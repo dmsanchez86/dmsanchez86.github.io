@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
     }, 300);
 
     if (
-      this.router.url.indexOf('view=profile') ||
-      this.router.url.indexOf('#about')
+      location.href.indexOf('view=profile') !== -1 ||
+      location.href.indexOf('#about') !== -1
     ) {
       localStorage.fromParent = true;
 
