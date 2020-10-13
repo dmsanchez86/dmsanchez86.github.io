@@ -7,10 +7,10 @@ import { AppState, AppStateLanguaje } from 'src/app/store';
 @Component({
   selector: 'app-twitter-content',
   template: `
-    <div class="twitter_content">
+    <div class="twitter_content" *ngIf="(language | async) as lang">
       <label
         for="twitter_content"
-        [attr.title-ref]="(language | async).current.global.tweets"
+        [attr.title-ref]="lang.current.global.tweets"
       >
         <i class="fa fa-twitter"></i>
       </label>
