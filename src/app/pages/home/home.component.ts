@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     //   atomLoader.style.display = 'none';
     // }, 3000);
 
-    this.treeJS(font);
+    // this.treeJS(font);
   }
 
   treeJS(font) {
