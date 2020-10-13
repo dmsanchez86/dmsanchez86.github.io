@@ -70,9 +70,9 @@ export class ProfileImageComponent implements OnInit {
 
       setTimeout(() => profile.classList.add('scaleIn'), 100);
 
-      let url = this.router.url;
+      let url = location.href;
       try {
-        url = url.replace('view=profile', '').replace('#about', '');
+        url = this.router.url.replace('view=profile', '').replace('#about', '');
       } catch (error) { }
 
       this.router.navigateByUrl(`${url}`);
