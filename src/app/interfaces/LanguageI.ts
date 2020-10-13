@@ -1,6 +1,7 @@
 export interface LanguageItemI {
   ref: string;
   title: string;
+  label: string;
   loading: string;
   meta: LanguageItemMetaI;
   logo: LanguageItemLogoI;

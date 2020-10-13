@@ -3,6 +3,7 @@ import { LanguageItemI } from 'src/app/interfaces/LanguageI';
 export const ES: LanguageItemI = {
   ref: 'es',
   title: 'Español',
+  label: 'Cambiar Idioma',
   loading: 'Cargando...',
   logo: {
     title: 'Sitio Web dmsanchez86',
