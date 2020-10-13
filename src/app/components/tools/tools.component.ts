@@ -45,7 +45,8 @@ export class ToolsComponent {
     if (this.project.type === 'portafolio') {
       this.store.dispatch(setPortafolio(this.project));
     }
-    this.router.navigate([this.url, this.project.key]);
+    // this.router.navigate([this.url, this.project.key]);
+    window.open(this.project.url)
   }
 
   codeF(){
