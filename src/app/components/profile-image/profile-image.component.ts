@@ -1,8 +1,11 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Actions } from '@ngrx/effects';
+import { Observable, Subscription } from 'rxjs';
 import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
+import { mostrarPopup } from 'src/app/store/actions/global';
 
 @Component({
   selector: 'app-profile-image',
@@ -20,12 +23,30 @@ export class ProfileImageComponent implements OnInit {
 
   language: Observable<LanguageItemProfileI> = this.store.select(state => state.language.current.profile);
 
-  constructor(private store: Store<AppState>) { }
+  sus: Subscription = new Subscription();
+
+  constructor(
+    private store: Store<AppState>,
+    private router: Router,
+    private actions: Actions
+  ) {
+    this.sus = this.actions.subscribe(action => {
+      try {
+        if(action.type === '[GLOBAL] Abrir Perfil' && localStorage.fromParent){
+          setTimeout(() => {
+            this.seeProfile(true);
+            this.sus.unsubscribe();
+          }, 1500);
+          delete localStorage.fromParent;
+        }
+      } catch (error) { }
+    });
+  }
 
   ngOnInit(): void {
   }
 
-  seeProfile() {
+  seeProfile(ref?:boolean) {
     let body = document.body;
     let popup = document.querySelector('.popup');
     let profile = document.querySelector(`.profile_content_home`);
@@ -38,6 +59,9 @@ export class ProfileImageComponent implements OnInit {
         profile.classList.add('scaleOut');
         popup.classList.add('active');
       }, 100);
+
+      this.router.navigateByUrl(`${this.router.url}?view=profile`);
+      this.store.dispatch(mostrarPopup({payload: true}));
     }else{
       body.classList.remove('profile');
       profile.classList.remove('scaleOut');
@@ -45,6 +69,13 @@ export class ProfileImageComponent implements OnInit {
       popup.classList.remove('active');
 
       setTimeout(() => profile.classList.add('scaleIn'), 100);
+
+      let url = this.router.url;
+      try {
+        url = url.replace('view=profile', '').replace('#about', '');
+      } catch (error) { }
+
+      this.router.navigateByUrl(`${url}`);
     }
   }
 
