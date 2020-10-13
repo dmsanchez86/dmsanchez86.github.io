@@ -34,8 +34,7 @@
             "scripts": [
               "src/assets/lib/three.min.js",
               "src/assets/lib/Detector.js",
-              "src/assets/lib/Projector.js",
-              "src/assets/js/jquery-1.12.0.min.js"
+              "src/assets/lib/Projector.js"
             ]
           },
           "configurations": {
