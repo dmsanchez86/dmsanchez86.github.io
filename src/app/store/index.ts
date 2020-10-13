@@ -9,6 +9,7 @@ export interface AppState {
   menu: AppStateMenu;
   language: AppStateLanguaje;
   social: AppStateSocial;
+  global: AppStateGlobalI;
 }
 export interface AppStateProjectsI {
   data: ProjectItemI[];
@@ -24,6 +25,10 @@ export interface AppStateMenu {
 
 export interface AppStateSocial {
   data: SocialItemI[];
+}
+
+export interface AppStateGlobalI {
+  menu: boolean;
 }
 export interface AppStateLanguaje {
   es: LanguageItemI;

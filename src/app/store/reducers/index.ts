@@ -6,11 +6,13 @@ import { portafolioReducer } from './portafolio/';
 import { menuReducer } from './menu/';
 import { languageReducer } from './languages';
 import { socialReducer } from './social';
+import { globalReducer } from './global';
 
 export const reducers: ActionReducerMap<AppState> = {
   projects: projectsReducer,
   portafolio: portafolioReducer,
   menu: menuReducer,
   language: languageReducer,
-  social: socialReducer
+  social: socialReducer,
+  global: globalReducer
 };
