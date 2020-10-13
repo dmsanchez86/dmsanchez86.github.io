@@ -391,13 +391,25 @@ body{
 
 		.twitter_content{
 			z-index: 115;
-		    bottom: 4rem;
-    		right: 6rem;
+		    bottom: 5rem;
+    		right: 9rem;
 
 			label{
 				color: #323232;
 				@include text-shadow(0 0 4px rgba(255,255,255,.5));
 			}
+		}
+		.language-content{
+			z-index: 115;
+      bottom: 6.5rem;
+      right: 6rem;
+      position: relative;
+
+			i,
+			a{
+				color: #323232;
+				@include text-shadow(0 0 4px rgba(255,255,255,.5));
+      }
 		}
 	}
 
