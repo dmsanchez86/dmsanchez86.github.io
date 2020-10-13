@@ -1,0 +1,78 @@
+.atomLoader{
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	@include gradient(radial, (#fff, #2f2f2f));
+	@include center-absolute(fixed);
+
+	.contentAtoms{
+		width: 80px;
+		height: 80px;
+		// @include animation(rotate 5s infinite linear);
+		@include center-absolute(fixed);
+
+		&:after{
+			width: 25%;
+			height: 25%;
+			@include center-absolute(absolute);
+			@include gradient(radial, (center, #323232, #111));
+			@include border-radius(50%);
+			@include box-shadow(0 0 5px rgba(0,0,0,.5));
+			@include animation(backgroundAtom 1000ms infinite linear);
+			content: '';
+		}
+
+		&:before{
+			content: attr(title);
+			position: absolute;
+			top: 105%;
+			left: 0;
+			text-align: center;
+			font-family: 'Pacifico', Helvetica;
+			width: 100%;
+			overflow: hidden;
+			// @include animation(widthText 500ms infinite linear);
+		}
+	}
+
+	.atom{
+		width: 50px;
+		height: 100%;
+		background: rgba(255,255,255,0);
+		@include center-absolute(absolute);
+		@include border-radius(50%);
+		border: solid thin rgba(0,0,0,.2);
+
+		&:before{
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			content: '';
+			background: #323232;
+			@include gradient(linear, (to left, #323232, #111));
+			@include center-absolute(absolute);
+			@include border-radius(50%);
+			@include box-shadow(0 0 5px rgba(255,255,255,.5) inset);
+		}
+
+		&:nth-child(1){
+			&:before{
+				@include animation(point 1500ms -1000ms linear infinite);
+			}
+		}
+		&:nth-child(2){
+			@include transform(rotate(60deg));
+
+			&:before{
+				@include animation(point 1800ms -2000ms linear infinite reverse);
+			}
+		}
+		&:nth-child(3){
+			@include transform(rotate(-60deg));
+
+			&:before{
+				@include animation(point 1300ms -3000ms linear infinite reverse);
+			}
+		}
+	}
+}
