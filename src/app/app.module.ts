@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 
 import { reducers } from './store/reducers';
 import { ComponentsModule } from './components/components.module';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,10 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     StoreModule.forRoot(reducers, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([]),
     ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
