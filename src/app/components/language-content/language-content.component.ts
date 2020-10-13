@@ -7,13 +7,16 @@ import { ChangeLanguage } from 'src/app/store/actions/language';
 @Component({
   selector: 'app-language-content',
   template: `
-    <div class="language-content" *ngIf="language | async as language">
+    <div
+      class="language-content"
+      [attr.title-ref]="language.current.label"
+      *ngIf="language | async as language">
       <span><i class="fa fa-language"></i></span>
       <span>
         <a
           href="javascript:void(0)"
           [ngClass]="{ active: language.current.ref === 'es' }"
-          [title]="language.es.title"
+          [attr.title]="language.current.label"
           (click)="cambiarLenguaje('es')"
         >
           {{ language.es.ref }}
@@ -23,7 +26,7 @@ import { ChangeLanguage } from 'src/app/store/actions/language';
         <a
           href="javascript::void(0)"
           [ngClass]="{ active: language.current.ref === 'en' }"
-          [title]="language.en.title"
+          [attr.title]="language.current.label"
           (click)="cambiarLenguaje('en')"
         >
           {{ language.en.ref }}
