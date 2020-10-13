@@ -15,7 +15,7 @@ import { AppState, AppStateLanguaje } from 'src/app/store';
         <i class="fa fa-twitter"></i>
       </label>
       <input type="checkbox" id="twitter_content" />
-      <div class="container close">
+      <div class="container close" style="background: rgba(232, 235, 236, .34);">
         <a
           class="twitter-timeline"
           data-lang="en"
