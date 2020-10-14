@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta }    from '@angular/platform-browser'
 import { GlobalService } from 'src/app/services/global.service';
+import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
 
 import * as THREE from 'tree';
 
@@ -25,12 +26,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(private global: GlobalService) {}
 
   ngOnDestroy() {
-    document.body.classList.remove('home');
+    bodyRemoveClass('home');
   }
 
   ngOnInit() {
-    document.body.classList.add('home');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_home.png');
+    bodyAddClass('home');
+    favicon('home');
     // this.fontsThree();
 
     setTimeout(() => document.querySelector('.twitter_content .container').classList.add('close'), 500);

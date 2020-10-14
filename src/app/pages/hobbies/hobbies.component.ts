@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
+import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-hobbies',
@@ -14,12 +15,12 @@ export class HobbiesComponent implements OnInit {
   constructor(private store: Store<AppState>, private global: GlobalService) {}
 
   ngOnDestroy() {
-    document.body.classList.remove('contact');
+    bodyRemoveClass('contact');
   }
 
   ngOnInit() {
-    document.body.classList.add('contact');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_contact.png');
+    bodyAddClass('contact');
+    favicon('contact');
 
     this.global.titlePage(`hobbies`);
     this.global.metaColor('#D67F35');

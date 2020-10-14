@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { GlobalService } from 'src/app/services/global.service';
+import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-contact',
@@ -9,12 +10,12 @@ export class ContactComponent implements OnInit, OnDestroy {
   constructor(private global: GlobalService) {}
 
   ngOnDestroy() {
-    document.body.classList.remove('contact');
+    bodyRemoveClass('contact');
   }
 
   ngOnInit() {
-    document.body.classList.add('contact');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_contact.png');
+    bodyAddClass('contact');
+    favicon('contact');
 
     this.global.titlePage(`contact`);
     this.global.metaColor('#D67F35');

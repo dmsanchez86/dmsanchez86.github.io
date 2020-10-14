@@ -5,6 +5,7 @@ import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
+import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-portafolio',
@@ -24,12 +25,12 @@ export class PortafolioComponent implements OnInit, OnDestroy {
   constructor(private store: Store<AppState>, private global: GlobalService) { }
 
   ngOnDestroy() {
-    document.body.classList.remove('portafolio');
+    bodyRemoveClass('portafolio');
   }
 
   ngOnInit() {
-    document.body.classList.add('portafolio');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_portafolio.png');
+    bodyAddClass('portafolio');
+    favicon('portafolio');
 
     this.global.titlePage(`portafolio`);
     this.global.metaColor('#00897b');

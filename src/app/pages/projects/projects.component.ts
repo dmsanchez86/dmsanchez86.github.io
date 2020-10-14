@@ -5,6 +5,7 @@ import { LanguageItemProjectsI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
+import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-projects',
@@ -23,12 +24,12 @@ export class ProjectsComponent implements OnInit {
   constructor(private store: Store<AppState>, private global: GlobalService) {}
 
   ngOnDestroy() {
-    document.body.classList.remove('projects');
+    bodyRemoveClass('projects');
   }
 
   ngOnInit() {
-    document.body.classList.add('projects');
-    document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_projects.png');
+    bodyAddClass('projects');
+    favicon('projects');
 
     this.global.titlePage(`projects`);
     this.global.metaColor('#61AB64');
