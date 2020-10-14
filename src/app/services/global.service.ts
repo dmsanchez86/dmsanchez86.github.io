@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalService {
 
-  constructor(private meta: Meta) { }
+  constructor(private meta: Meta, private title: Title) { }
 
   cerrarMenu(){
     let body = document.body;
@@ -27,6 +27,10 @@ export class GlobalService {
       overlay_menu.classList.remove('open');
       document.querySelector(`.button_menu`)['style'].opacity = 1;
     }
+  }
+
+  titlePage(name: string){
+    this.title.setTitle(name);
   }
 
   metaColor(color: string){
