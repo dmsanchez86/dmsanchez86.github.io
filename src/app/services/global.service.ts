@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalService {
 
-  constructor() { }
+  constructor(private meta: Meta) { }
 
   cerrarMenu(){
     let body = document.body;
@@ -26,5 +27,9 @@ export class GlobalService {
       overlay_menu.classList.remove('open');
       document.querySelector(`.button_menu`)['style'].opacity = 1;
     }
+  }
+
+  metaColor(color: string){
+    this.meta.updateTag({name: 'theme-color', content: color});
   }
 }
