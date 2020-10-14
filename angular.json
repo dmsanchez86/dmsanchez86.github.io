@@ -29,7 +29,6 @@
               "src/_redirects"
             ],
             "styles": [
-              "src/assets/css/font-awesome.min.css",
               "src/styles.scss"
             ],
             "scripts": [
