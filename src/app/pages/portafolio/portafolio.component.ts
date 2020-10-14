@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
+import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
 
 @Component({
@@ -20,7 +21,7 @@ export class PortafolioComponent implements OnInit, OnDestroy {
   projects: Observable<ProjectItemI[]> = this.store.select(state => state.portafolio.data);
   language: Observable<LanguageItemPortafolioI> = this.store.select(state => state.language.current.portafolio);
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private global: GlobalService) { }
 
   ngOnDestroy() {
     document.body.classList.remove('portafolio');
@@ -29,5 +30,8 @@ export class PortafolioComponent implements OnInit, OnDestroy {
   ngOnInit() {
     document.body.classList.add('portafolio');
     document.querySelector('#favicon').setAttribute('href', 'assets/images/favicon_portafolio.png');
+
+    this.global.titlePage(`portafolio`);
+    this.global.metaColor('#00897b');
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta }    from '@angular/platform-browser'
+import { GlobalService } from 'src/app/services/global.service';
 
 import * as THREE from 'tree';
 
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   container: HTMLElement;
   camera: any;
 
-  constructor(private meta: Meta, private title: Title) {}
+  constructor(private global: GlobalService) {}
 
   ngOnDestroy() {
     document.body.classList.remove('home');
@@ -34,8 +35,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     setTimeout(() => document.querySelector('.twitter_content .container').classList.add('close'), 500);
 
-    // this.meta.updateTag({ name: 'description', content: '' });
-    // this.title.setTitle('');
+    this.global.titlePage(`home`);
+    this.global.metaColor('#87CEEB');
   }
 
   initTree(font: any) {
