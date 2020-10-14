@@ -64,6 +64,7 @@ export const EN: LanguageItemI = {
     preview: 'Preview',
     check: 'Check code',
     download: 'Download',
+    install: 'Install'
   },
   projects: {
     football: 'Football Field 3D',
@@ -85,6 +86,18 @@ export const EN: LanguageItemI = {
     mecaut: 'Mecaut',
   },
   portafolio: {
+    krika: 'Krika Cosmetics',
+    energiteca: 'Energiteca',
+    energiteca_app: 'Energiteca App',
+    libreria_nacional_app: 'Librería Nacional App',
+    libreria_nacional: 'Librería Nacional',
+    aseoya: 'AseoYa',
+    aseoya_app: 'Aseoya App',
+    coomeva_mp: 'Coomeva Medicina Prepagada',
+    coomeva_sao: 'Coomeva Salud Oral',
+    coomeva_pro: 'Coomeva Protegete',
+    existaya: 'Existaya Agencia',
+    stp: 'STP Networks',
     go: 'Go finance',
     between_pines: 'Between pines',
     oral_center: 'Oral Center',

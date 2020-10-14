@@ -76,6 +76,7 @@ export interface LanguageItemToolsI {
   preview: string;
   check: string;
   download: string;
+  install: string;
 }
 export interface LanguageItemProjectsI {
   football: string;
@@ -97,6 +98,18 @@ export interface LanguageItemProjectsI {
   mecaut: string;
 }
 export interface LanguageItemPortafolioI {
+  libreria_nacional: string;
+  libreria_nacional_app: string;
+  energiteca: string;
+  energiteca_app: string;
+  aseoya: string;
+  aseoya_app: string;
+  existaya: string;
+  stp: string;
+  coomeva_mp: string;
+  coomeva_sao: string;
+  coomeva_pro: string;
+  krika: string;
   go: string;
   between_pines: string;
   oral_center: string;
