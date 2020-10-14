@@ -22,3 +22,17 @@ export function isValidUrl(url, obligatorio?, ftp?) {
     return false;
   }
 }
+
+export function favicon(fav: string){
+  document
+    .querySelector('#favicon')
+    .setAttribute('href', `assets/images/favicon_${fav}.png`);
+}
+
+export function bodyAddClass(classes: string){
+  document.body.classList.add(classes);
+}
+
+export function bodyRemoveClass(classes: string){
+  document.body.classList.remove(classes);
+}
