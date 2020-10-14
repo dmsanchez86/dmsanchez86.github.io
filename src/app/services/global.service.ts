@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { AppState, AppStateLanguaje } from 'src/app/store';
 import { LanguageItemI } from '../interfaces/LanguageI';
@@ -9,10 +10,21 @@ import { LanguageItemI } from '../interfaces/LanguageI';
 })
 export class GlobalService {
   current: LanguageItemI;
+  currentPage: string = '';
 
-  constructor(private meta: Meta, private title: Title, private store: Store<AppState>) {
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    private store: Store<AppState>,
+    private actions: Actions
+  ) {
     this.store.select('language').subscribe((language: AppStateLanguaje) => {
       this.current = language.current;
+    });
+    this.actions.subscribe((action: any) => {
+      if (action.type === '[LANGUAGE] change') {
+        this.titlePage(this.currentPage);
+      }
     });
   }
 
@@ -38,6 +50,7 @@ export class GlobalService {
   }
 
   titlePage(key: string, pre?: string){
+    this.currentPage = key;
     this.title.setTitle(`${pre ? `${pre} ` : ''}${this.current.nav[key]} | ${this.current.profile.name}`);
   }
 
