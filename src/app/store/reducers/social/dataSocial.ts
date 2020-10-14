@@ -44,6 +44,12 @@ export const dataSocial: SocialItemI[] = [
     icon: 'fa fa-instagram'
   },
   {
+    name: 'Doulingo',
+    href: 'http://duolingo.com/dmsanchez86',
+    key: 'duolingo',
+    icon: 'fab fa-earlybirds'
+  },
+  {
     name: 'Email',
     href: 'mailto:',
     key: 'email',

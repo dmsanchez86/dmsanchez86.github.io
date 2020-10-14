@@ -51,6 +51,7 @@ export const EN: LanguageItemI = {
       google: 'On Google+',
       linkedin: 'On LinkedIn',
       instagram: 'On instagram',
+      duolingo: 'On Duolingo',
       email: 'Send Email to',
       whatsapp: '+(57) 320 376 8421',
       freecodecamp: 'On Free Code Camp',

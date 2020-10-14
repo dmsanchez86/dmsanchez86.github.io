@@ -64,6 +64,7 @@ export interface LanguageItemProfileSocialI {
   google: string;
   linkedin: string;
   instagram: string;
+  duolingo: string;
   email: string;
   whatsapp: string;
   freecodecamp: string;
