@@ -14,11 +14,17 @@ export const dataSocial: SocialItemI[] = [
     icon: 'fa fa-twitter-square'
   },
   {
-    name: 'Facebook',
-    href: 'http://facebook.com/dmsanchez86',
-    key: 'facebook',
-    icon: 'fa fa-facebook-square'
+    name: 'StackOverflow',
+    href: 'https://stackoverflow.com/users/6452294/daniel-mauricio-s%c3%a1nchez-%c3%81vila',
+    key: 'twitter',
+    icon: 'fa fa-stack-overflow'
   },
+  // {
+  //   name: 'Facebook',
+  //   href: 'http://facebook.com/dmsanchez86',
+  //   key: 'facebook',
+  //   icon: 'fa fa-facebook-square'
+  // },
   {
     name: 'Google+',
     href: 'https://plus.google.com/109279201439651083225',
@@ -55,7 +61,7 @@ export const dataSocial: SocialItemI[] = [
     name: 'Free Code Camp',
     href: 'http://freecodecamp.com/dmsanchez86',
     key: 'freecodecamp',
-    icon: 'fa fa-fire'
+    icon: 'fab fa-free-code-camp'
   },
   {
     name: 'CodePen',
