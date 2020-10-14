@@ -1,12 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Store } from '@ngrx/store';
+import { AppState, AppStateLanguaje } from 'src/app/store';
+import { LanguageItemI } from '../interfaces/LanguageI';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GlobalService {
+  current: LanguageItemI;
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private meta: Meta, private title: Title, private store: Store<AppState>) {
+    this.store.select('language').subscribe((language: AppStateLanguaje) => {
+      this.current = language.current;
+    });
+  }
 
   cerrarMenu(){
     let body = document.body;
@@ -29,8 +37,8 @@ export class GlobalService {
     }
   }
 
-  titlePage(name: string){
-    this.title.setTitle(name);
+  titlePage(key: string, pre?: string){
+    this.title.setTitle(`${pre ? `${pre} ` : ''}${this.current.nav[key]} | ${this.current.profile.name}`);
   }
 
   metaColor(color: string){
