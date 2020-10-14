@@ -16,7 +16,7 @@ export const dataSocial: SocialItemI[] = [
   {
     name: 'StackOverflow',
     href: 'https://stackoverflow.com/users/6452294/daniel-mauricio-s%c3%a1nchez-%c3%81vila',
-    key: 'twitter',
+    key: 'stack',
     icon: 'fa fa-stack-overflow'
   },
   // {

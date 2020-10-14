@@ -47,6 +47,7 @@ export const EN: LanguageItemI = {
     social: {
       github: 'On Github',
       twitter: 'On Twitter',
+      stack: 'On StackOverflow',
       facebook: 'On Facebook',
       google: 'On Google+',
       linkedin: 'On LinkedIn',

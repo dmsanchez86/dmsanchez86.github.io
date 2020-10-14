@@ -60,7 +60,8 @@ export interface LanguageItemProfileI {
 export interface LanguageItemProfileSocialI {
   github: string;
   twitter: string;
-  facebook: string;
+  stack: string;
+  facebook?: string;
   google: string;
   linkedin: string;
   instagram: string;
