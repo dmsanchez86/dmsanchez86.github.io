@@ -1,7 +1,8 @@
 export interface ProjectItemI {
   name?: string;
   url?: string;
-  url_app?: string;
+  url_app_store?: string;
+  url_play_store?: string;
   preview?: boolean;
   no_preview?: boolean;
   code?: boolean;
