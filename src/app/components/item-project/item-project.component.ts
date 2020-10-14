@@ -11,7 +11,12 @@ import { AppState } from 'src/app/store';
     <div [attr.tabIndex]="this.i + 1">
       <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
-          <a [href]="project?.url" target="_blank">{{ (language | async)[project?.key] }}</a>
+          <ng-container *ngIf="project?.url">
+            <a [href]="project?.url" target="_blank">{{ (language | async)[project?.key] }}</a>
+          </ng-container>
+          <ng-container *ngIf="project?.url_play_store || project?.url_app_store">
+            <a [href]="'javascript::void(0)'">{{ (language | async)[project?.key] }}</a>
+          </ng-container>
           <app-tools [project]="project" [url]="key"></app-tools>
         </h1>
       </div>
