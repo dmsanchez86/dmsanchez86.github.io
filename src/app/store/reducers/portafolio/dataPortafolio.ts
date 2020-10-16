@@ -149,7 +149,6 @@ export const dataPortafolio: ProjectItemI[] = [
   },
   {
     name: 'JurisQuiz',
-    url: 'https://play.google.com/store/apps/details?id=com.zopp.jurisquiz',
     url_play_store: 'https://play.google.com/store/apps/details?id=com.zopp.jurisquiz',
     app: true,
     key: 'jurisquiz',
@@ -157,7 +156,6 @@ export const dataPortafolio: ProjectItemI[] = [
   },
   {
     name: 'Therapy Tips for',
-    url: 'https://play.google.com/store/apps/details?id=com.zopp.artritis',
     url_play_store: 'https://play.google.com/store/apps/details?id=com.zopp.artritis',
     app: true,
     key: 'therapy',
