@@ -38,6 +38,7 @@ export interface AppStateGlobalI {
 
 export interface AppStateSkillsI {
   data: LanguageItemProfileSkillsI[];
+  current: LanguageItemProfileSkillsI;
 }
 
 export interface AppStateLanguaje {
