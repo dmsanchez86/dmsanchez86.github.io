@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
   { path: 'hobbies', loadChildren: () => import('./pages/hobbies/hobbies.module').then(m => m.HobbiesModule) },
   { path: '404', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
+  { path: 'skills', loadChildren: () => import('./pages/skills/skills.module').then(m => m.SkillsModule) },
   { path: '**', redirectTo: '/404' }
 ];
 
