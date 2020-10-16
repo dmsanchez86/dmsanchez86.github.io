@@ -41,7 +41,7 @@ export const ES: LanguageItemI = {
     nick: 'dmsanchez86',
     phone: '+(57) 320 376 8421',
     email: 'dmsanchez86@misena.edu.co',
-    name: 'Daniel Mauricio Sanchez',
+    name: 'Daniel Mauricio Sánchez Ávila',
     biography: `Desarrollador FrontEnd. Soy de Colombia, del departamento de Caldas, Nací en la ciudad de Manizales. Actualmente vivo en la ciudad de Cali, valle del Cauca.`,
     hobbies_bio:
       'Mi nuevo pasatiempo es salir a rodar en mi bicicleta por las montañas y jugar con mis dos pequeños hijos. Isabela & Emmanuel',
