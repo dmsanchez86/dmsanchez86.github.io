@@ -148,7 +148,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 150%);
+			// @include perspective-origin(50% 150%);
 		}
 
 		.profile_content{
@@ -235,7 +235,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 250%);
+			// @include perspective-origin(50% 250%);
 		}
 
 		.profile_content{
@@ -321,7 +321,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 350%);
+			// @include perspective-origin(50% 350%);
 		}
 
 		.profile_content{
@@ -365,7 +365,8 @@ body{
 
 			.section{
 				&.active{
-					@include transform(translate3d(0,0,-250px));
+          @include transform(translate3d(0,0,-950px) rotateY(18deg));
+          transform-origin: left center;
 				}
 			}
 		}
@@ -423,7 +424,8 @@ body{
 
 			.section{
 				&.active{
-					@include transform(translate3d(0,0,-120px));
+					@include transform(translate3d(0,0,-950px) rotateY(18deg));
+          transform-origin: left center;
 				}
 			}
 		}
