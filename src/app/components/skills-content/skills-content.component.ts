@@ -17,16 +17,16 @@ import { AppState } from 'src/app/store';
       <div class="skills-body center" [ngClass]="{'skills-body-complete': complete}">
         <ng-container *ngFor="let skill of skills; let i = index">
           <ng-container *ngIf="complete; else elseTemplate">
-            <div class="skills-item center" [ngClass]="{'skills-item-complete': complete}" [title]="skill.title">
+            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  class="skills-item center" [ngClass]="{'skills-item-complete': complete}" [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
-            </div>
+            </a>
           </ng-container>
           <ng-template #elseTemplate>
-            <div *ngIf="i < 10" class="skills-item center" [title]="skill.title">
+            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  *ngIf="i < 10" class="skills-item center" [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
-            </div>
+            </a>
           </ng-template>
 
         </ng-container>
