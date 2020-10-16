@@ -2,6 +2,7 @@ import { LanguageItemI } from '../interfaces/LanguageI';
 import { MenuItemI } from '../interfaces/MenuItemI';
 import { ProjectItemI } from '../interfaces/ProjectItemI';
 import { SocialItemI } from '../interfaces/SocialItemI';
+import { LanguageItemProfileSkillsI } from '../interfaces/LanguageI';
 
 export interface AppState {
   projects: AppStateProjectsI;
@@ -10,15 +11,19 @@ export interface AppState {
   language: AppStateLanguaje;
   social: AppStateSocial;
   global: AppStateGlobalI;
+  skills?: AppStateSkillsI;
 }
+
 export interface AppStateProjectsI {
   data: ProjectItemI[];
   current: ProjectItemI;
 }
+
 export interface AppStatePortafolioI {
   data: ProjectItemI[];
   current: ProjectItemI;
 }
+
 export interface AppStateMenu {
   data: MenuItemI[];
 }
@@ -30,6 +35,11 @@ export interface AppStateSocial {
 export interface AppStateGlobalI {
   menu: boolean;
 }
+
+export interface AppStateSkillsI {
+  data: LanguageItemProfileSkillsI[];
+}
+
 export interface AppStateLanguaje {
   es: LanguageItemI;
   en: LanguageItemI;
