@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'projects', loadChildren: () => import('./pages/projects/projects.module').then(m => m.ProjectsModule) },
   { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
   { path: 'hobbies', loadChildren: () => import('./pages/hobbies/hobbies.module').then(m => m.HobbiesModule) },
+  { path: '404', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({
