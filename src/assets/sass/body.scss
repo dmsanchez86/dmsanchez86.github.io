@@ -365,7 +365,7 @@ body{
 
 			.section{
 				&.active{
-          @include transform(translate3d(0,0,-950px) rotateY(18deg));
+          @include transform(translate3d(17px, 29px, 357px) rotateY(44deg));
           transform-origin: left center;
 				}
 			}
