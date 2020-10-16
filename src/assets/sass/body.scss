@@ -3,6 +3,7 @@ body{
 	@include perspective(1000px);
 
 	&.home{
+    --current-main: #74b5d4;
 		.navigator_content{
 			.navigator{
 				ul{
@@ -85,6 +86,7 @@ body{
 		}
 	}
 	&.projects{
+    --current-main: rgb(8 144 13 / 75%);
 		.navigator_content{
 			.navigator{
 				ul{
@@ -171,6 +173,7 @@ body{
 		}
 	}
 	&.portafolio{
+    --current-main: rgb(0 137 123);
 		.navigator_content{
 			.navigator{
 				ul{
@@ -257,6 +260,7 @@ body{
 	}
 	&.footer,
 	&.contact{
+    --current-main: rgb(228 120 29 / 99%);
 		.navigator_content{
 			.navigator{
 				ul{
