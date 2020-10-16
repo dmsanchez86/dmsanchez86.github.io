@@ -10,7 +10,6 @@ import { AppState } from 'src/app/store';
 })
 export class PopupComponent implements OnInit {
   language: Observable<LanguageItemProfileI> = this.store.select(state => state.language.current.profile);
-  skills: Observable<LanguageItemProfileSkillsI[]> = this.store.select(state => state.skills.data);
 
   constructor(private store: Store<AppState>) { }
 
