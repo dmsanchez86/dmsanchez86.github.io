@@ -8,6 +8,11 @@ export const ES: LanguageItemI = {
   logo: {
     title: 'Sitio Web dmsanchez86',
   },
+  skills: {
+    title: 'Habilidades',
+    label: 'Habilidades',
+    label_link: 'Ver Todas'
+  },
   meta: {
     description:
       'Daniel Mauricio Sanchez Avila Desarrollador Frontend - Este es mi portafolio. Mira aqui mis proyectos y colaboraciones en las que he trabajado y desarrollado',

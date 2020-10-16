@@ -8,6 +8,11 @@ export const EN: LanguageItemI = {
   logo: {
     title: 'dmsanchez86 Website',
   },
+  skills: {
+    title: 'Skills',
+    label: 'skills',
+    label_link: 'All',
+  },
   meta: {
     description:
       'Daniel Mauricio Sanchez Avila Front-End and Back-End Developer - Porfolio. See here my projects and collaborations made for me on the web. Visit my profile on GitHub.',
@@ -43,7 +48,8 @@ export const EN: LanguageItemI = {
     email: 'dmsanchez86@misena.edu.co',
     name: 'Daniel Mauricio Sanchez Avila',
     biography: `Frontend Developer. I'm from Manizales Caldas in Colombia, currently live in Cali, Valle del Cauca.`,
-    hobbies_bio: 'My new hobby is ride for the mountains in bike and play with my two little kids. Isabela and Emmanuel',
+    hobbies_bio:
+      'My new hobby is ride for the mountains in bike and play with my two little kids. Isabela and Emmanuel',
     social: {
       github: 'On Github',
       twitter: 'On Twitter',
@@ -67,7 +73,7 @@ export const EN: LanguageItemI = {
     preview: 'Preview',
     check: 'Check code',
     download: 'Download',
-    install: 'Install'
+    install: 'Install',
   },
   projects: {
     football: 'Football Field 3D',

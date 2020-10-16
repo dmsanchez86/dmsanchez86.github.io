@@ -3,6 +3,7 @@ export interface LanguageItemI {
   title: string;
   label: string;
   loading: string;
+  skills?: LanguageItemSkillsI;
   meta: LanguageItemMetaI;
   logo: LanguageItemLogoI;
   nav: LanguageItemNavI;
@@ -11,6 +12,12 @@ export interface LanguageItemI {
   tools: LanguageItemToolsI;
   projects: LanguageItemProjectsI;
   portafolio: LanguageItemPortafolioI;
+}
+
+export interface LanguageItemSkillsI {
+  title: string;
+  label: string;
+  label_link: string;
 }
 
 export interface LanguageItemLogoI {
