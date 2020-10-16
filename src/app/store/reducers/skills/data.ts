@@ -229,10 +229,4 @@ export const data: LanguageItemProfileSkillsI[] = [
     title: 'Yarn',
     icon: 'fab fa-yarn',
   },
-  {
-    name: 'slack',
-    key: 'slack',
-    title: 'Slack',
-    icon: 'fab fa-slack',
-  },
 ];
