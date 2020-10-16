@@ -1,29 +1,10 @@
 import { createReducer, on } from '@ngrx/store';
 import { AppStateSkillsI } from '../..';
 import { cargarSkills } from '../../actions/skills';
+import { data } from './data';
 
 const initialState: AppStateSkillsI = {
-  data: [{
-    name: 'angular',
-    key: 'angular',
-    title: 'Angular',
-    icon: 'fab fa-angular'
-  },{
-    name: 'sass',
-    key: 'sass',
-    title: 'SASS',
-    icon: 'fab fa-sass'
-  },{
-    name: 'react',
-    key: 'react',
-    title: 'React JS',
-    icon: 'fab fa-react'
-  },{
-    name: 'wordpress',
-    key: 'wordpress',
-    title: 'Wordpress',
-    icon: 'fab fa-wordpress'
-  }]
+  data,
 };
 
 const _skillsReducer = createReducer(
