@@ -14,9 +14,13 @@ import { AppState } from 'src/app/store';
           <ng-container *ngIf="project?.url">
             <a [href]="project?.url" target="_blank">{{ (language | async)[project?.key] }}</a>
           </ng-container>
-          <ng-container *ngIf="project?.url_play_store || project?.url_app_store">
-            <a [href]="'javascript::void(0)'">{{ (language | async)[project?.key] }}</a>
+          <ng-container *ngIf="project?.url_play_store && project?.url_app_store;else other">
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store">{{ (language | async)[project?.key] }}</a>
           </ng-container>
+          <ng-template #other >
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ (language | async)[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ (language | async)[project?.key] }}</a>
+          </ng-template>
           <app-tools [project]="project" [url]="key"></app-tools>
         </h1>
       </div>
