@@ -11,7 +11,6 @@ import { ChangeLanguage } from 'src/app/store/actions/language';
       class="language-content"
       [attr.title-ref]="language.current.label"
       *ngIf="language | async as language">
-      <span><i class="fa fa-language"></i></span>
       <span>
         <a
           href="javascript:void(0)"
@@ -19,6 +18,7 @@ import { ChangeLanguage } from 'src/app/store/actions/language';
           [attr.title]="language.current.label"
           (click)="cambiarLenguaje('es')"
         >
+          <span><i class="fa fa-language"></i></span>
           {{ language.es.ref }}
         </a>
       </span>
@@ -29,6 +29,7 @@ import { ChangeLanguage } from 'src/app/store/actions/language';
           [attr.title]="language.current.label"
           (click)="cambiarLenguaje('en')"
         >
+          <span><i class="fa fa-language"></i></span>
           {{ language.en.ref }}
         </a>
       </span>
