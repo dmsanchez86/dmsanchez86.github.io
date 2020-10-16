@@ -50,12 +50,6 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-bitbucket',
   },
   {
-    name: 'android',
-    key: 'android',
-    title: 'Android',
-    icon: 'fab fa-android',
-  },
-  {
     name: 'bootstrap',
     key: 'bootstrap',
     title: 'Bootstrap',
