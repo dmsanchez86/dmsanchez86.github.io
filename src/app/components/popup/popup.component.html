@@ -15,7 +15,7 @@
         </div>
         <div class="skills-body center">
           <ng-container *ngFor="let skill of skills">
-            <div class="skills-item center">
+            <div class="skills-item center" [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
             </div>
