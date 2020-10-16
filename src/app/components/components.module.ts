@@ -13,6 +13,7 @@ import { PreviewComponent } from './preview/preview.component';
 import { LanguageContentComponent } from './language-content/language-content.component';
 import { TwitterContentComponent } from './twitter-content/twitter-content.component';
 import { ItemProjectComponent } from './item-project/item-project.component';
+import { SkillsContentComponent } from './skills-content/skills-content.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule],
@@ -27,7 +28,8 @@ import { ItemProjectComponent } from './item-project/item-project.component';
     PreviewComponent,
     LanguageContentComponent,
     TwitterContentComponent,
-    ItemProjectComponent
+    ItemProjectComponent,
+    SkillsContentComponent
   ],
   exports: [
     LogoComponent,
@@ -40,7 +42,8 @@ import { ItemProjectComponent } from './item-project/item-project.component';
     PreviewComponent,
     LanguageContentComponent,
     TwitterContentComponent,
-    ItemProjectComponent
+    ItemProjectComponent,
+    SkillsContentComponent
   ],
 })
 export class ComponentsModule {}

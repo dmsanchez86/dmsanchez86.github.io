@@ -9,19 +9,7 @@
         {{ (language | async).biography }}
       </p>
 
-      <div class="skills-wrap" *ngIf="(skills | async) as skills">
-        <div>
-          <h1 class="skills-title">Skills</h1>
-        </div>
-        <div class="skills-body center">
-          <ng-container *ngFor="let skill of skills">
-            <div class="skills-item center" [title]="skill.title">
-              <i [class]="skill.icon"></i>
-              <span>{{ skill.title }}</span>
-            </div>
-          </ng-container>
-        </div>
-      </div>
+      <app-skills-content></app-skills-content>
     </article>
 
     <app-social-networkings></app-social-networkings>
