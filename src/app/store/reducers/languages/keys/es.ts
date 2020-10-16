@@ -50,6 +50,7 @@ export const ES: LanguageItemI = {
       twitter: 'En Twitter',
       stack: 'En StackOverflow',
       google: 'En Google+',
+      strava: 'En Strava',
       linkedin: 'En LinkedIn',
       instagram: 'En instagram',
       duolingo: 'En Duolingo',

@@ -64,6 +64,7 @@ export interface LanguageItemProfileSocialI {
   stack: string;
   facebook?: string;
   google: string;
+  strava: string;
   linkedin: string;
   instagram: string;
   duolingo: string;

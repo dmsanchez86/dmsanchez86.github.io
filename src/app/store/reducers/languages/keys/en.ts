@@ -50,6 +50,7 @@ export const EN: LanguageItemI = {
       stack: 'On StackOverflow',
       facebook: 'On Facebook',
       google: 'On Google+',
+      strava: 'On Strava',
       linkedin: 'On LinkedIn',
       instagram: 'On instagram',
       duolingo: 'On Duolingo',
