@@ -295,7 +295,11 @@ video.responsive-video {
     width: 100% !important;
   }
   &-body{
-    margin: 3vh 0;
+    margin: 3vh auto;
+    display: block;
+    @media(min-width: 998px){
+      max-width: 700px;
+    }
   }
   &-item{
     display: inline-block;
@@ -303,8 +307,9 @@ video.responsive-video {
     padding: .35rem;
     background-color: var(--current-main);
     color: white;
-    margin-right: .25rem;
-    border-radius: 4px;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 3px;
     font-family: "Yanone Kaffeesatz", sans-serif;
 
     i,
