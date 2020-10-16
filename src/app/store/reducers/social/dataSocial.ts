@@ -32,6 +32,12 @@ export const dataSocial: SocialItemI[] = [
     icon: 'fa fa-google-plus-square'
   },
   {
+    name: 'Strava',
+    href: 'https://www.strava.com/athletes/19196886',
+    key: 'strava',
+    icon: 'fab fa-strava',
+  },
+  {
     name: 'Linkedin',
     href: 'https://co.linkedin.com/in/dmsanchez86',
     key: 'linkedin',
