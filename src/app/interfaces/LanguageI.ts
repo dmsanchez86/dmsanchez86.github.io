@@ -56,6 +56,7 @@ export interface LanguageItemProfileI {
   biography: string;
   hobbies_bio: string;
   social: LanguageItemProfileSocialI;
+  skills?: LanguageItemProfileSkillsI;
 }
 export interface LanguageItemProfileSocialI {
   github: string;
@@ -70,6 +71,12 @@ export interface LanguageItemProfileSocialI {
   whatsapp: string;
   freecodecamp: string;
   codepen: string;
+}
+export interface LanguageItemProfileSkillsI{
+  icon: string;
+  name: string;
+  title: string;
+  key: string;
 }
 export interface LanguageItemGlobalI {
   tweets: string;
