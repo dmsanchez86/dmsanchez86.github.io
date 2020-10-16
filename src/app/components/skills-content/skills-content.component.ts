@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { LanguageItemProfileSkillsI } from 'src/app/interfaces/LanguageI';
+import { LanguageItemProfileSkillsI, LanguageItemSkillsI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 
 @Component({
@@ -15,8 +15,8 @@ import { AppState } from 'src/app/store';
         </div>
       </div>
       <div class="skills-body center">
-        <ng-container *ngFor="let skill of skills">
-          <div class="skills-item center" [title]="skill.title">
+        <ng-container *ngFor="let skill of skills; let i = index">
+          <div *ngIf="i < 10" class="skills-item center" [title]="skill.title">
             <i [class]="skill.icon"></i>
             <span>{{ skill.title }}</span>
           </div>
@@ -26,6 +26,7 @@ import { AppState } from 'src/app/store';
   `,
 })
 export class SkillsContentComponent implements OnInit {
+  language: Observable<LanguageItemSkillsI> = this.store.select(state => state.language.current.skills);
   skills: Observable<LanguageItemProfileSkillsI[]> = this.store.select(state => state.skills.data);
 
   constructor(private store: Store<AppState>) { }
