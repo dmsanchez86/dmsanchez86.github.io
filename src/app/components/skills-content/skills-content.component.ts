@@ -9,7 +9,10 @@ import { AppState } from 'src/app/store';
   template: `
     <div class="skills-wrap" *ngIf="skills | async as skills">
       <div>
-        <h1 class="skills-title">Skills</h1>
+        <h1 class="skills-title">{{ (language | async)?.title }}</h1>
+        <div class="center">
+          <a [routerLink]="['/skills']" routerLinkActive="router-link-active"  class="skills-link">{{ (language | async)?.label_link }}</a>
+        </div>
       </div>
       <div class="skills-body center">
         <ng-container *ngFor="let skill of skills">
