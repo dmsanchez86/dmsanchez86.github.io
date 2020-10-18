@@ -85,6 +85,7 @@ export interface LanguageItemProfileSkillsI{
   name: string;
   title: string;
   key: string;
+  main?: boolean;
 }
 export interface LanguageItemGlobalI {
   tweets: string;

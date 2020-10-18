@@ -6,30 +6,35 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'angular',
     title: 'Angular',
     icon: 'fab fa-angular',
+    main: true,
   },
   {
     name: 'sass',
     key: 'sass',
     title: 'SASS',
     icon: 'fab fa-sass',
+    main: true,
   },
   {
     name: 'react',
     key: 'react',
     title: 'React JS',
     icon: 'fab fa-react',
+    main: true,
   },
   {
     name: 'wordpress',
     key: 'wordpress',
     title: 'Wordpress',
     icon: 'fab fa-wordpress',
+    main: true,
   },
   {
     name: 'android',
     key: 'android',
     title: 'Android',
     icon: 'fab fa-android',
+    main: true,
   },
   {
     name: 'app_store_ios',
@@ -54,6 +59,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'bootstrap',
     title: 'Bootstrap',
     icon: 'fab fa-bootstrap',
+    main: true,
   },
   {
     name: 'chrome',
@@ -72,6 +78,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'css3',
     title: 'CSS3',
     icon: 'fab fa-css3',
+    main: true,
   },
   {
     name: 'figma',
@@ -90,6 +97,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'git',
     title: 'Git',
     icon: 'fab fa-git',
+    main: true,
   },
   {
     name: 'gitlab',
@@ -108,12 +116,14 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'html5',
     title: 'HTML5',
     icon: 'fab fa-html5',
+    main: true,
   },
   {
-    name: 'javascrip',
+    name: 'javascript',
     key: 'javascript',
     title: 'JavaScript',
     icon: 'fab fa-js',
+    main: true,
   },
   {
     name: 'jsfiddle',
@@ -126,6 +136,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'laravel',
     title: 'Laravel',
     icon: 'fab fa-laravel',
+    main: true,
   },
   {
     name: 'less',
@@ -138,6 +149,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'linux',
     title: 'Linux',
     icon: 'fab fa-linux',
+    main: true,
   },
   {
     name: 'markdown',
@@ -156,6 +168,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'node',
     title: 'Node JS',
     icon: 'fab fa-node-js',
+    main: true,
   },
   {
     name: 'npm',
@@ -168,6 +181,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'php',
     title: 'PHP',
     icon: 'fab fa-php',
+    main: true,
   },
   {
     name: 'python',
@@ -192,6 +206,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'shopify',
     title: 'Shopify',
     icon: 'fab fa-shopify',
+    main: true,
   },
   {
     name: 'sketch',

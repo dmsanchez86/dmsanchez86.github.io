@@ -23,7 +23,7 @@ import { AppState } from 'src/app/store';
             </a>
           </ng-container>
           <ng-template #elseTemplate>
-            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  *ngIf="i < 10" class="skills-item center" [title]="skill.title">
+            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  *ngIf="skill.main" class="skills-item center" [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
             </a>
