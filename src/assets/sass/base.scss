@@ -5,7 +5,19 @@
 
 *{ @include reset; }
 
-body,html{ @include init; }
+html{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden !important;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 
 svg:not(:root){
 	overflow: visible;
@@ -14,14 +26,16 @@ svg:not(:root){
 @import 'body';
 
 .fullpage-wrapper{
-	@include perspective(2000px);
+	@include perspective(1000px);
 	@include perspective-origin(center);
 
 	.section{
 
 		&.active{
 			@include transform(translate3d(0,0,0));
-			@include transition(transform .25s ease );
+      @include transition(transform .25s ease );
+      max-height: 100vh;
+      overflow: auto;
 		}
 	}
 }
