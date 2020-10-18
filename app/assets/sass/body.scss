@@ -3,6 +3,7 @@ body{
 	@include perspective(1000px);
 
 	&.home{
+    --current-main: #74b5d4;
 		.navigator_content{
 			.navigator{
 				ul{
@@ -85,6 +86,7 @@ body{
 		}
 	}
 	&.projects{
+    --current-main: rgb(8 144 13 / 75%);
 		.navigator_content{
 			.navigator{
 				ul{
@@ -146,7 +148,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 150%);
+			// @include perspective-origin(50% 150%);
 		}
 
 		.profile_content{
@@ -171,6 +173,7 @@ body{
 		}
 	}
 	&.portafolio{
+    --current-main: rgb(0 137 123);
 		.navigator_content{
 			.navigator{
 				ul{
@@ -232,7 +235,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 250%);
+			// @include perspective-origin(50% 250%);
 		}
 
 		.profile_content{
@@ -257,6 +260,7 @@ body{
 	}
 	&.footer,
 	&.contact{
+    --current-main: rgb(228 120 29 / 99%);
 		.navigator_content{
 			.navigator{
 				ul{
@@ -317,7 +321,7 @@ body{
 		}
 
 		.fullpage-wrapper{
-			@include perspective-origin(50% 350%);
+			// @include perspective-origin(50% 350%);
 		}
 
 		.profile_content{
@@ -361,7 +365,8 @@ body{
 
 			.section{
 				&.active{
-					@include transform(translate3d(0,0,-250px));
+          @include transform(translate3d(17px, 29px, 357px) rotateY(44deg));
+          transform-origin: left center;
 				}
 			}
 		}
@@ -401,9 +406,8 @@ body{
 		}
 		.language-content{
 			z-index: 115;
-      bottom: 6.5rem;
+      bottom: 5.5rem;
       right: 6rem;
-      position: relative;
 
 			i,
 			a{
@@ -420,7 +424,8 @@ body{
 
 			.section{
 				&.active{
-					@include transform(translate3d(0,0,-120px));
+					@include transform(translate3d(0,0,-950px) rotateY(18deg));
+          transform-origin: left center;
 				}
 			}
 		}
