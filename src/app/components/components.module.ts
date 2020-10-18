@@ -14,9 +14,10 @@ import { LanguageContentComponent } from './language-content/language-content.co
 import { TwitterContentComponent } from './twitter-content/twitter-content.component';
 import { ItemProjectComponent } from './item-project/item-project.component';
 import { SkillsContentComponent } from './skills-content/skills-content.component';
+import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, LazyLoadImageModule.forRoot({ preset: intersectionObserverPreset })],
   declarations: [
     LogoComponent,
     NavigatorComponent,

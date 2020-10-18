@@ -10,6 +10,9 @@ import { environment } from '../environments/environment';
 import { reducers } from './store/reducers';
 import { ComponentsModule } from './components/components.module';
 import { EffectsModule } from '@ngrx/effects';
+import { ServiceWorkerModule } from '@angular/service-worker';
+
+import { intersectionObserverPreset, LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { EffectsModule } from '@ngrx/effects';
     StoreModule.forRoot(reducers, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
-    ComponentsModule
+    ComponentsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
+    LazyLoadImageModule.forRoot({ preset: intersectionObserverPreset })
   ],
   providers: [],
   bootstrap: [AppComponent]
