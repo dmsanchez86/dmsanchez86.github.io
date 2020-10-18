@@ -13,7 +13,7 @@ import { mostrarPopup } from 'src/app/store/actions/global';
     <div (click)="seeProfile()"
       class="profile_content {{ this.home ? 'scaleIn profile_content_home': '' }}"
       [attr.title-ref]="(language | async)?.name" >
-      <img src="assets/images/profile.jpg">
+      <img [lazyLoad]="'assets/images/profile.jpg'">
     </div>
   `
 })
