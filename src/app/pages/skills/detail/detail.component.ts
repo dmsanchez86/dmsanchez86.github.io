@@ -14,15 +14,32 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
     <div
       id="section_portafolio"
       class="section active"
-      style="padding: 10vh 0 1rem;min-height: 100vh;">
+      style="padding: 10vh 0 1rem;min-height: 100vh;"
+    >
       <div class="skills-wrap" *ngIf="skill$ | async as skill">
-        <div>
-          <h1 class="skills-title skills-title-complete">{{ skill?.title }}</h1>
+        <div class="skills-icon-wrap">
+          <i [class]="skill.icon"></i>
         </div>
-        <div class="skills-body center">
-          <div class="skills-item skills-item-detail center" [title]="skill.title">
-            <i [class]="skill.icon"></i>
-            <span>{{ skill.title }}</span>
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <a class="skills-item-link" (click)="volver()">
+                <i class="fas fa-arrow-left"></i> Volver
+              </a>
+            </div>
+            <div class="col l6 s12">
+              <h1 class="skills-title-complete">{{ skill?.title }}</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col l6 offset-l6 s12">
+              <div class="skills-body">
+                <div
+                  class="skills-item skills-item-detail skills-item-detail"
+                  [innerHTML]="skill.description"
+                > </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,7 +47,9 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
   `,
 })
 export class DetailComponent implements OnInit, OnDestroy {
-  skill$: Observable<LanguageItemProfileSkillsI> = this.store.select((state) => state.skills.current);
+  skill$: Observable<LanguageItemProfileSkillsI> = this.store.select(
+    (state) => state.skills.current
+  );
 
   name: string;
 
@@ -56,5 +75,9 @@ export class DetailComponent implements OnInit, OnDestroy {
     if (this.name) {
       this.store.dispatch(setSkill({ slug: this.name }));
     }
+  }
+
+  volver() {
+    history.back();
   }
 }
