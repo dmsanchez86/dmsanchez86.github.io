@@ -86,6 +86,10 @@ export interface LanguageItemProfileSkillsI{
   title: string;
   key: string;
   main?: boolean;
+  years?: number;
+  percentage?: number;
+  description?: string;
+  image?: string;
 }
 export interface LanguageItemGlobalI {
   tweets: string;
