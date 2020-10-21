@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { LanguageItemProfileI, LanguageItemProfileSkillsI } from 'src/app/interfaces/LanguageI';
+import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 
 @Component({
