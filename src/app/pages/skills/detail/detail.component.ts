@@ -36,10 +36,19 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
             <div class="row">
               <div class="col l6 offset-l6 s12">
                 <div class="skills-body">
-                  <div
-                    class="skills-item skills-item-detail skills-item-detail"
-                    [innerHTML]="language.profile.skills[skill.key]"
-                  ></div>
+                  <ng-container *ngIf="language.profile.skills[skill.key]; else elseTemplate">
+                    <div
+                      class="skills-item skills-item-detail skills-item-detail"
+                      [innerHTML]="language.profile.skills[skill.key]"
+                    ></div>
+                  </ng-container>
+                  <ng-template #elseTemplate>
+                    <div
+                      class="skills-item skills-item-detail skills-item-detail"
+                      [innerHTML]="language.profile.skills.default"
+                    ></div>
+                  </ng-template>
+
                 </div>
               </div>
             </div>
