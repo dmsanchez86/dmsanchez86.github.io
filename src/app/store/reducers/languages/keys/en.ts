@@ -70,6 +70,11 @@ export const EN: LanguageItemI = {
       codepen: 'On Codepen',
     },
     skills: {
+      default: `
+        <div class="center">
+          <h4>There will be a description soon</h4>
+        </div>
+      `,
       react: `
         <p>
           In 2016 I will started to work in a small company in the <b>Manizales</b> city, I did work for 2 years. Most of the time I was developed with <b>React JS</b> library. A great experience

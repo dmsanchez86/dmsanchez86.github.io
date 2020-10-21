@@ -69,6 +69,11 @@ export const ES: LanguageItemI = {
       codepen: 'En Codepen',
     },
     skills: {
+      default: `
+        <div class="center">
+          <h4>Pronto habrá una descripción</h4>
+        </div>
+      `,
       react: `
         <p>
           En 2016 empecé a trabajar en una pequeña empresa en la ciudad de <b>Manizales</b>, Trabajé allí por 2 años. La mayor parte del tiempo desarrolle con la librería <b>React JS</b>. Una gran experiencia.

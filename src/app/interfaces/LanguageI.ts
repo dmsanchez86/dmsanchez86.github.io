@@ -132,6 +132,7 @@ export interface LanguageItemProfileSkillsKeyI{
   unity?: string;
   vue?: string;
   yarn?: string;
+  default?: string;
 }
 export interface LanguageItemGlobalI {
   tweets: string;
