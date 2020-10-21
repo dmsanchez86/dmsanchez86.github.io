@@ -54,6 +54,8 @@ export interface LanguageItemNavI {
   portafolio: string;
   contact: string;
   hobbies: string;
+  skills?: string;
+  skill?: string;
 }
 export interface LanguageItemProfileI {
   nick: string;

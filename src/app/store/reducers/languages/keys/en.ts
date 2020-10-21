@@ -41,6 +41,8 @@ export const EN: LanguageItemI = {
     portafolio: 'Portafolio',
     contact: 'Contact',
     hobbies: 'Hobbies',
+    skills: 'Skills',
+    skill: 'Skill'
   },
   profile: {
     nick: 'dmsanchez86',
