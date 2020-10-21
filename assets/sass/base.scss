@@ -5,7 +5,19 @@
 
 *{ @include reset; }
 
-body,html{ @include init; }
+html{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden !important;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 
 svg:not(:root){
 	overflow: visible;
@@ -14,14 +26,16 @@ svg:not(:root){
 @import 'body';
 
 .fullpage-wrapper{
-	@include perspective(2000px);
+	@include perspective(1000px);
 	@include perspective-origin(center);
 
 	.section{
 
 		&.active{
 			@include transform(translate3d(0,0,0));
-			@include transition(transform .25s ease );
+      @include transition(transform .25s ease );
+      max-height: 100vh;
+      overflow: auto;
 		}
 	}
 }
@@ -86,6 +100,10 @@ video.responsive-video {
 
 #section_home{
   background-image:
+    -webkit-linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    -webkit-linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    url(assets/images/home.png);
+  background-image:
     linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
     linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
     url(assets/images/home.png);
@@ -95,21 +113,25 @@ video.responsive-video {
 }
 
 #section_portafolio{
-	background-image: linear-gradient(to left, $colaborations-gradient-primary, $colaborations-gradient-secondary, $colaborations-gradient-primary);
+	background-image: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+  background-image: linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
 }
 
 #section_projects{
+  background-image: -webkit-linear-gradient(to left, rgb(8 144 13 / 75%), rgb(49 165 54 / 84%), rgb(19 108 23 / 75%));
 	background-image: linear-gradient(to left, rgb(8 144 13 / 75%), rgb(49 165 54 / 84%), rgb(19 108 23 / 75%));
-	background-size: 100%, 400px;
+  background-size: 100%, 400px;
 }
 
 #section_contact{
-	background-image: linear-gradient(to left, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
+	background-image: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+  background-image: linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
 }
 
 #section_footer {
-	background-image: linear-gradient(to bottom, $contact-gradient-primary, $contact-gradient-secondary, $contact-gradient-primary);
-	background-size: 100%, 400px;
+	background-image: -webkit-linear-gradient(to bottom, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+	background-image: linear-gradient(to bottom, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+  background-size: 100%, 400px;
 }
 
 .twitter_content{
@@ -275,6 +297,177 @@ video.responsive-video {
       display: none;
     }
 
+  }
+}
+
+.skills{
+  &-title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 2rem 0 0 !important;
+    display: block;
+    width: 100% !important;
+
+    &-complete{
+      text-align: center;
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+    }
+  }
+  &-link{
+    font-size: 1rem;
+    display: inline-block;
+    padding: .15rem .45rem;
+    border-radius: 3px;
+    margin: 0 auto 0 !important;
+    display: inline-block;
+    color: #111;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    min-width: 50px;
+    text-align: center;
+    position: relative;
+    transition: 300ms;
+    &:hover,
+    &:focus{
+      color: white;
+      &:before{
+        height: 100%;
+      }
+    }
+    &:before{
+      border-radius: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--current-main);
+      content: '';
+      transition: 300ms;
+      z-index: -1;
+    }
+  }
+  &-body{
+    margin: 3vh auto;
+    display: block;
+    @media(min-width: 680px){
+      max-width: 580px;
+    }
+
+    &-complete{
+      @media(min-width: 998px){
+        max-width: 800px;
+      }
+    }
+  }
+  &-item{
+    display: inline-block;
+    vertical-align: middle;
+    padding: .85rem .35rem;
+    background-color: var(--current-main);
+    color: white;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 3px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    transition: 300ms;
+    border: 2px var(--current-main) solid;
+
+    &-graph{
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 1.8rem;
+      display: flex;
+
+      &-item{
+        flex: 1;
+        text-align: center;
+
+        b{
+          font-size: 5.5rem;
+        }
+      }
+    }
+
+    &-detail{
+      font-size: 1.75rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &:hover,
+    &:focus{
+      transform: scale(1);
+      background-color: white;
+      color: var(--current-main);
+    }
+
+    i,
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span{
+      display: none;
+    }
+    i{
+      font-size: 3.3rem;
+      min-width: 5rem;
+      text-align: center;
+    }
+
+    &-complete{
+      i{
+        font-size: 4.5rem;
+        min-width: 5.5rem;
+      }
+    }
+    &-link{
+      cursor: pointer;
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 1.5rem;
+    }
+    &-detail{
+      i{
+        font-size: 8rem;
+        min-width: 5.5rem;
+      }
+    }
+  }
+
+  &-icon{
+    &-wrap{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      color: white;
+      font-size: 70vh;
+      opacity: .2;
+      text-align: center;
+      transition: 300ms;
+      i{
+        margin-left: 4vw;
+      }
+
+      @media(max-width: 992px){
+        font-size: 45vh;
+        i{
+          margin-left: 1vw;
+        }
+      }
+      @media(max-width: 660px){
+        font-size: 25vh;
+        i{
+          margin-left: 0;
+        }
+      }
+      @media(max-width: 340px){
+        font-size: 20vh;
+      }
+    }
   }
 }
 
