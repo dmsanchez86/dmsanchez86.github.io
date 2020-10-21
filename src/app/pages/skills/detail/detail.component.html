@@ -39,11 +39,13 @@
               <div class="skills-item-graph">
                 <div class="skills-item-graph-item">
                   <div>{{ language.global.years }}</div>
-                  <b>{{ skill.years }}</b>
+                  <b>
+                    <app-number-increment [num]="skill.years"></app-number-increment>
+                  </b>
                 </div>
                 <div class="skills-item-graph-item">
                   <div>{{ language.global.percentage }}</div>
-                  <b>{{ skill.percentage }}%</b>
+                  <b><app-number-increment [num]="skill.percentage"></app-number-increment>%</b>
                 </div>
               </div>
             </div>
