@@ -446,8 +446,25 @@ video.responsive-video {
       font-size: 70vh;
       opacity: .2;
       text-align: center;
+      transition: 300ms;
       i{
-        margin-left: 4vh;
+        margin-left: 4vw;
+      }
+
+      @media(max-width: 992px){
+        font-size: 45vh;
+        i{
+          margin-left: 1vw;
+        }
+      }
+      @media(max-width: 660px){
+        font-size: 25vh;
+        i{
+          margin-left: 0;
+        }
+      }
+      @media(max-width: 340px){
+        font-size: 20vh;
       }
     }
   }
