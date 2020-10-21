@@ -23,7 +23,7 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <a class="skills-item-link" (click)="volver()">
+              <a class="skills-item-link" [routerLink]="['/skills']">
                 <i class="fas fa-arrow-left"></i> Volver
               </a>
             </div>
@@ -75,9 +75,5 @@ export class DetailComponent implements OnInit, OnDestroy {
     if (this.name) {
       this.store.dispatch(setSkill({ slug: this.name }));
     }
-  }
-
-  volver() {
-    history.back();
   }
 }
