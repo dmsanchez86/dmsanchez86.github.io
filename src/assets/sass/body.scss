@@ -1,5 +1,6 @@
 body{
-	overflow: hidden;
+  overflow: hidden;
+  position: relative;
 
 	&.home{
     --current-main: #74b5d4;
