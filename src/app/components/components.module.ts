@@ -15,6 +15,7 @@ import { TwitterContentComponent } from './twitter-content/twitter-content.compo
 import { ItemProjectComponent } from './item-project/item-project.component';
 import { SkillsContentComponent } from './skills-content/skills-content.component';
 import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
+import { NumberIncrementComponent } from './number-increment/number-increment.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, LazyLoadImageModule.forRoot({ preset: intersectionObserverPreset })],
@@ -30,7 +31,8 @@ import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-ima
     LanguageContentComponent,
     TwitterContentComponent,
     ItemProjectComponent,
-    SkillsContentComponent
+    SkillsContentComponent,
+    NumberIncrementComponent
   ],
   exports: [
     LogoComponent,
@@ -44,7 +46,8 @@ import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-ima
     LanguageContentComponent,
     TwitterContentComponent,
     ItemProjectComponent,
-    SkillsContentComponent
+    SkillsContentComponent,
+    NumberIncrementComponent
   ],
 })
 export class ComponentsModule {}
