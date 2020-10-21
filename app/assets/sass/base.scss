@@ -5,7 +5,19 @@
 
 *{ @include reset; }
 
-body,html{ @include init; }
+html{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden !important;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 
 svg:not(:root){
 	overflow: visible;
@@ -14,14 +26,16 @@ svg:not(:root){
 @import 'body';
 
 .fullpage-wrapper{
-	@include perspective(2000px);
+	@include perspective(1000px);
 	@include perspective-origin(center);
 
 	.section{
 
 		&.active{
 			@include transform(translate3d(0,0,0));
-			@include transition(transform .25s ease );
+      @include transition(transform .25s ease );
+      max-height: 100vh;
+      overflow: auto;
 		}
 	}
 }
@@ -357,9 +371,30 @@ video.responsive-video {
     margin-bottom: .5rem;
     border-radius: 3px;
     font-family: "Yanone Kaffeesatz", sans-serif;
-    transform: scale(.85);
     transition: 300ms;
     border: 2px var(--current-main) solid;
+
+    &-graph{
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 1.8rem;
+      display: flex;
+
+      &-item{
+        flex: 1;
+        text-align: center;
+
+        b{
+          font-size: 5.5rem;
+        }
+      }
+    }
+
+    &-detail{
+      font-size: 1.75rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
 
     &:hover,
     &:focus{
@@ -388,10 +423,49 @@ video.responsive-video {
         min-width: 5.5rem;
       }
     }
+    &-link{
+      cursor: pointer;
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 1.5rem;
+    }
     &-detail{
       i{
         font-size: 8rem;
         min-width: 5.5rem;
+      }
+    }
+  }
+
+  &-icon{
+    &-wrap{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      color: white;
+      font-size: 70vh;
+      opacity: .2;
+      text-align: center;
+      transition: 300ms;
+      i{
+        margin-left: 4vw;
+      }
+
+      @media(max-width: 992px){
+        font-size: 45vh;
+        i{
+          margin-left: 1vw;
+        }
+      }
+      @media(max-width: 660px){
+        font-size: 25vh;
+        i{
+          margin-left: 0;
+        }
+      }
+      @media(max-width: 340px){
+        font-size: 20vh;
       }
     }
   }

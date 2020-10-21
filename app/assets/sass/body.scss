@@ -1,6 +1,5 @@
 body{
 	overflow: hidden;
-	@include perspective(1000px);
 
 	&.home{
     --current-main: #74b5d4;
@@ -365,8 +364,8 @@ body{
 
 			.section{
 				&.active{
-          @include transform(translate3d(17px, 29px, 357px) rotateY(44deg));
-          transform-origin: left center;
+          @include transform(translate3d(0, 0, -1000px) rotateZ(-360deg));
+          transform-origin: center;
 				}
 			}
 		}
