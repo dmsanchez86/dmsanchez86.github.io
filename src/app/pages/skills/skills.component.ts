@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit, OnDestroy {
     bodyAddClass('portafolio');
     favicon('portafolio');
 
-    this.global.titlePage(`Skills`);
+    this.global.titlePage(`skills`);
     this.global.metaColor('#00897b');
   }
 

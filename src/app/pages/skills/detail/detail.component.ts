@@ -69,7 +69,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     bodyAddClass('portafolio');
     favicon('portafolio');
 
-    this.global.titlePage(`Skills Detail`);
+    this.global.titlePage(`skill`, this.name);
     this.global.metaColor('#00897b');
 
     if (this.name) {
