@@ -137,6 +137,8 @@ export interface LanguageItemProfileSkillsKeyI{
 export interface LanguageItemGlobalI {
   tweets: string;
   back: string;
+  years: string;
+  percentage: string;
 }
 export interface LanguageItemToolsI {
   preview: string;

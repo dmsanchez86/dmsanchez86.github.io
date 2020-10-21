@@ -42,7 +42,7 @@ export const EN: LanguageItemI = {
     contact: 'Contact',
     hobbies: 'Hobbies',
     skills: 'Skills',
-    skill: 'Skill'
+    skill: 'Skill',
   },
   profile: {
     nick: 'dmsanchez86',
@@ -83,12 +83,14 @@ export const EN: LanguageItemI = {
         <p>
           React is my best library web for build reactive components
         </p>
-      `
+      `,
     },
   },
   global: {
     tweets: `Tweets's @dmsanchez86`,
-    back: 'Back to Skills'
+    back: 'Back to Skills',
+    years: 'Years XP',
+    percentage: 'Percentage'
   },
   tools: {
     preview: 'Preview',
