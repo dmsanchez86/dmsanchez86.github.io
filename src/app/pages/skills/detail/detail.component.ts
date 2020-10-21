@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { LanguageItemProfileSkillsI } from 'src/app/interfaces/LanguageI';
+import { LanguageItemI, LanguageItemProfileSkillsI } from 'src/app/interfaces/LanguageI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
 import { setSkill } from 'src/app/store/actions/skills';
@@ -24,7 +24,7 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
           <div class="row">
             <div class="col l6 s12">
               <a class="skills-item-link" [routerLink]="['/skills']">
-                <i class="fas fa-arrow-left"></i> Volver
+                <i class="fas fa-arrow-left"></i> {{ (language$ | async).global.back }}
               </a>
             </div>
             <div class="col l6 s12">
@@ -37,7 +37,7 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
                 <div
                   class="skills-item skills-item-detail skills-item-detail"
                   [innerHTML]="skill.description"
-                > </div>
+                ></div>
               </div>
             </div>
           </div>
@@ -49,6 +49,10 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
 export class DetailComponent implements OnInit, OnDestroy {
   skill$: Observable<LanguageItemProfileSkillsI> = this.store.select(
     (state) => state.skills.current
+  );
+
+  language$: Observable<LanguageItemI> = this.store.select(
+    (state) => state.language.current
   );
 
   name: string;
