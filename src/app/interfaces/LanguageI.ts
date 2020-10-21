@@ -65,7 +65,7 @@ export interface LanguageItemProfileI {
   biography: string;
   hobbies_bio: string;
   social: LanguageItemProfileSocialI;
-  skills?: LanguageItemProfileSkillsI;
+  skills?: LanguageItemProfileSkillsKeyI;
 }
 export interface LanguageItemProfileSocialI {
   github: string;
@@ -90,8 +90,48 @@ export interface LanguageItemProfileSkillsI{
   main?: boolean;
   years?: number;
   percentage?: number;
-  description?: string;
   image?: string;
+}
+
+export interface LanguageItemProfileSkillsKeyI{
+  angular?: string;
+  sass?: string;
+  react?: string;
+  wordpress?: string;
+  android?: string;
+  app_store?: string;
+  apple?: string;
+  bitbucket?: string;
+  bootstrap?: string;
+  chrome?: string;
+  firefox?: string;
+  css3?: string;
+  figma?: string;
+  fort_awesome?: string;
+  git?: string;
+  gitlab?: string;
+  drive?: string;
+  html5?: string;
+  javascript?: string;
+  jsfiddle?: string;
+  laravel?: string;
+  less?: string;
+  linux?: string;
+  markdown?: string;
+  microsoft?: string;
+  nodejs?: string;
+  npm?: string;
+  php?: string;
+  python?: string;
+  readme?: string;
+  safari?: string;
+  shopify?: string;
+  sketch?: string;
+  slack?: string;
+  ubuntu?: string;
+  unity?: string;
+  vue?: string;
+  yarn?: string;
 }
 export interface LanguageItemGlobalI {
   tweets: string;

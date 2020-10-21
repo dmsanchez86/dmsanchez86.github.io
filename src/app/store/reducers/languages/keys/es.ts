@@ -68,6 +68,17 @@ export const ES: LanguageItemI = {
       freecodecamp: 'En Free Code Camp',
       codepen: 'En Codepen',
     },
+    skills: {
+      react: `
+        <p>
+          En 2016 empecé a trabajar en una pequeña empresa en la ciudad de <b>Manizales</b>, Trabajé allí por 2 años. La mayor parte del tiempo desarrolle con la librería <b>React JS</b>. Una gran experiencia.
+        </p>
+        <br>
+        <p>
+          React en mi opinión es la mejor librería para construir componentes reactivos para la web
+        </p>
+      `
+    },
   },
   global: {
     tweets: `Tweets de @dmsanchez86`,

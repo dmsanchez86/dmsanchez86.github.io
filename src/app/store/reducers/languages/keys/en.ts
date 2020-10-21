@@ -69,6 +69,17 @@ export const EN: LanguageItemI = {
       freecodecamp: 'On Free Code Camp',
       codepen: 'On Codepen',
     },
+    skills: {
+      react: `
+        <p>
+          In 2016 I will started to work in a small company in the <b>Manizales</b> city, I did work for 2 years. Most of the time I was developed with <b>React JS</b> library. A great experience
+        </p>
+        <br>
+        <p>
+          React is my best library web for build reactive components
+        </p>
+      `
+    },
   },
   global: {
     tweets: `Tweets's @dmsanchez86`,
