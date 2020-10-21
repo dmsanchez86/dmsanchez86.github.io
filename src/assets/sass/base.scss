@@ -371,13 +371,25 @@ video.responsive-video {
     margin-bottom: .5rem;
     border-radius: 3px;
     font-family: "Yanone Kaffeesatz", sans-serif;
-    transform: scale(.85);
     transition: 300ms;
     border: 2px var(--current-main) solid;
+
+    &-graph{
+      color: white;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 1.35rem;
+      display: flex;
+
+      &-item{
+        flex: 1;
+        text-align: center
+      }
+    }
 
     &-detail{
       font-size: 1.75rem;
       width: 100%;
+      margin-bottom: 2rem;
     }
 
     &:hover,
