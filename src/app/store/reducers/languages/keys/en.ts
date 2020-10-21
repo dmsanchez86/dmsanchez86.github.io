@@ -49,7 +49,9 @@ export const EN: LanguageItemI = {
     phone: '+(57) 320 376 8421',
     email: 'dmsanchez86@misena.edu.co',
     name: 'Daniel Mauricio Sanchez Avila',
-    biography: `Frontend Developer. I'm from Manizales Caldas in Colombia, currently live in Cali, Valle del Cauca.`,
+    biography: `
+      <p>Frontend Developer. I'm from Manizales Caldas in Colombia, currently live in Cali, Valle del Cauca.</p>
+    `,
     hobbies_bio:
       'My new hobby is ride for the mountains in bike and play with my two little kids. Isabela and Emmanuel',
     social: {

@@ -1,13 +1,11 @@
-<div class="popup">
+<div class="popup" *ngIf="language | async as language">
   <div class="popup-header">
     <app-profile-image [open]="true"></app-profile-image>
   </div>
   <div class="popup-body">
-    <h1 class="popup-body-title">{{ (language | async).name }}</h1>
+    <h1 class="popup-body-title">{{ language.name }}</h1>
     <article>
-      <p>
-        {{ (language | async).biography }}
-      </p>
+      <div [innerHTML]="language.biography"></div>
 
       <app-skills-content></app-skills-content>
     </article>
