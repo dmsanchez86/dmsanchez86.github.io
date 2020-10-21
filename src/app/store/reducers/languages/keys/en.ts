@@ -70,6 +70,7 @@ export const EN: LanguageItemI = {
   },
   global: {
     tweets: `Tweets's @dmsanchez86`,
+    back: 'Back to Skills'
   },
   tools: {
     preview: 'Preview',

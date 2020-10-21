@@ -69,6 +69,7 @@ export const ES: LanguageItemI = {
   },
   global: {
     tweets: `Tweets de @dmsanchez86`,
+    back: 'Volver a las habilidades'
   },
   tools: {
     preview: 'Previsualizar',

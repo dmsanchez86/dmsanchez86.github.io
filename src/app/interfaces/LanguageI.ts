@@ -95,6 +95,7 @@ export interface LanguageItemProfileSkillsI{
 }
 export interface LanguageItemGlobalI {
   tweets: string;
+  back: string;
 }
 export interface LanguageItemToolsI {
   preview: string;
