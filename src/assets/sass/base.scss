@@ -377,12 +377,16 @@ video.responsive-video {
     &-graph{
       color: white;
       font-family: "Yanone Kaffeesatz", sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.8rem;
       display: flex;
 
       &-item{
         flex: 1;
-        text-align: center
+        text-align: center;
+
+        b{
+          font-size: 5.5rem;
+        }
       }
     }
 
