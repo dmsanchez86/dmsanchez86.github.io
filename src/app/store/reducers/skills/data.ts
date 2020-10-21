@@ -20,24 +20,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     key: 'react',
     title: 'React JS',
     icon: 'fab fa-react',
-    main: true,
-    description: `
-      <p>
-        In 2016 I will started to work in a small company in the <b>Manizales</b> city, I did work for 2 years. Most of the time I was developed with <b>React JS</b> library. A great experience
-      </p>
-      <br>
-      <p>
-        React is my best library web for build reactive components
-      </p>
-      <br>
-      <pre>
-import React from 'react';
-
-export const myComponent = (props) => (
-  Hello World {props.name}
-)
-      </pre>
-    `,
+    main: true
   },
   {
     name: 'wordpress',
