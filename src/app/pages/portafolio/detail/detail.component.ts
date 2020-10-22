@@ -5,6 +5,7 @@ import { LanguageItemPortafolioI } from 'src/app/interfaces/LanguageI';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { AppState } from 'src/app/store';
 import { resetPortafolio, setPortafolio } from 'src/app/store/actions/portafolio';
+import { bodyAddClass, bodyRemoveClass } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-detail',
@@ -26,11 +27,11 @@ export class DetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    document.body.classList.add('portafolio');
+    bodyAddClass('portafolio');
   }
   ngOnDestroy(): void {
     this.store.dispatch(resetPortafolio());
-    document.body.classList.remove('portafolio');
+    bodyRemoveClass('portafolio');
   }
 
 }
