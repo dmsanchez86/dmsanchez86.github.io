@@ -381,11 +381,10 @@ body{
         z-index: 100;
         background: rgba(0,0,0,.0);
           cursor: nesw-resize;
-          @include transition((z-index .1s ease, background .15s 1s ease));
+          transition: z-index .1s ease, background .15s ease;
       }
 
       .popup{
-        opacity: 1;
         z-index: 111;
 
         .popup-header{
