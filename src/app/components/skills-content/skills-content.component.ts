@@ -23,7 +23,11 @@ import { AppState } from 'src/app/store';
             </a>
           </ng-container>
           <ng-template #elseTemplate>
-            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  *ngIf="skill.main" class="skills-item center" [title]="skill.title">
+            <a *ngIf="skill.main"
+              (click)="cerrarModal()"
+              [routerLink]="['/skills', 'detail', skill.name]"
+              class="skills-item center"
+              [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
             </a>
