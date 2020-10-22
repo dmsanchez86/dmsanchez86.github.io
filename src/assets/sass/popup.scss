@@ -1,20 +1,22 @@
+:root{
+  --pb-popup: 2rem;
+}
+
 .popup{
 	width: 90vw;
 	height: 90vh;
 	background: rgba(255,255,255,.0);
 	z-index: 111;
 	overflow: hidden;
-	opacity: 0;
-	z-index: -10;
+  z-index: -10;
+	border-radius: 8px;
+	transition: .23s ease;
 	@include center-absolute(fixed);
-	@include border-radius(8px);
-	@include transition((opacity .23s .25s ease, box-shadow .1s .5s linear));
 
 	.edge{
 		position: absolute;
 		background: #f9f9f9;
 		content: '';
-		@include transition((width .15s ease, height .15s ease));
 
 		&.bottom{
 			height: 8px;
@@ -28,21 +30,18 @@
 			right: 0;
 			height: 0;
 			width: 8px;
-			@include transition-delay(.15s);
 		}
 		&.top{
 			top: 0;
 			right: 0;
 			height: 8px;
 			width: 0;
-			@include transition-delay(.30s);
 		}
 		&.left{
 			top: 0;
 			left: 0;
 			height: 0;
 			width: 8px;
-			@include transition-delay(.45s);
 		}
 	}
 
@@ -63,40 +62,32 @@
 
 		.popup-body,
 		.popup-header{
-			@include transform(translatey(0%));
+			transform: translatey(0%);
 		}
+  }
 
-		.popup-body{
+  h1{
+    color: #323232;
+    text-align: center;
+    background: white;
+    padding: .15rem 1.5rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+  }
 
-			h1{
-				@include animation(moveUp .51s 1.6s ease forwards);
-			}
-
-			article{
-				p{
-					@include animation(moveUp .51s 1.8s ease forwards);
-				}
-
-			}
-      .project{
-        @include animation(moveUp .51s 2s ease forwards);
-      }
-		}
-	}
-
-	.popup-header{
+	&-header{
+    position: relative;
 		min-height: 200px;
 		background-color: rgba(72, 71, 71, 1);
 		background-size: 10px 10px;
-	    background-position: 0 0, 5px 5px;
-	    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	    background-image: -o-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	    background-image: linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
-	    @include transition(transform .25s 1s ease-in);
-	    @include transform(translatey(-105%));
+    background-position: 0 0, 5px 5px;
+    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: -o-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    transition: transform .25s ease-in, opacity 200ms 10s ease;
+    transform: translatey(-105%);
 
-	    .profile_content{
+    .profile_content{
 			right: 0;
 			left: 0;
 			margin: auto;
@@ -109,107 +100,114 @@
 			img{
 				@include filter(grayscale(0));
 			}
-		}
+    }
+
+    h1{
+      color: #323232;
+      text-align: center;
+      background: white;
+      position: absolute;
+      bottom: 4.5%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-width: 100%;
+      width: 325px;
+      padding: .15rem 1.5rem;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      border-radius: 6px;
+    }
 	}
 
-	.popup-body{
+	&-body{
 		height: calc(100% - 200px);
     background-color: white;
-    padding: 0 2rem;
-	    @include transition(transform .25s 1s ease-in);
-	    @include transform(translatey(105%));
+    padding: 0 2rem var(--pb-popup);
+    transition: transform .25s ease-in, opacity 200ms 10s ease;
+    transform: translatey(105%);
 
-	    h1{
-	    	color: #323232;
-	    	text-align: center;
-	    	background: white;
-	    	position: relative;
-	    	top: -6%;
-	    	left: 0;
-		    right: 0;
-		    margin: auto;
-		    max-width: 100%;
-		    width: 325px;
-		    padding: .15rem 1.5rem;
-		    font-family: 'Yanone Kaffeesatz', sans-serif;
-		    opacity: 0;
-	    	@include border-radius(6px);
-	    }
+    article{
+      p{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        color: #323232;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 100;
+        padding-top: 2rem;
+      }
 
-	    article{
-	    	p{
-	    		font-family: 'Yanone Kaffeesatz', sans-serif;
-	    		color: #323232;
-	    		text-align: center;
-	    		font-size: 2rem;
-			    font-weight: 100;
-			    padding-top: 2rem;
-			    opacity: 0;
-	    	}
+    }
+    .project{
+      position: fixed;
+      width: 100%;
+      height: auto;
+      bottom: 1%;
+      right: 0;
 
-	    }
-      .project{
-        position: absolute;
-        width: 100%;
-        height: auto;
-        bottom: .75rem;
-        right: 0;
-        opacity: 0;
+      .title{
+        width: 500px;
+        position: relative;
 
-        .title{
-          width: 500px;
+        > a{
+          color: #323232;
+          font-size: 35px;
+          margin: 0 .15rem;
 
-          > a{
-            color: #323232;
-            font-size: 35px;
-            margin: 0 .15rem;
+          i{
+            @include text-shadow(none);
 
-            i{
-              @include text-shadow(none);
+            &:hover{
+              @include animation(none);
+            }
+          }
 
-              &:hover{
-                @include animation(none);
+          &[title-ref]{
+
+            &:first-child{
+              &:after{
+                left: 0%;
               }
             }
 
-            &[title-ref]{
-
-              &:first-child{
-                &:after{
-                  left: 0%;
-                }
-              }
-
-              &:last-child{
-                &:after{
-                  left: inherit;
-                  right: 0%;
-                  bottom: 97%;
-                }
-              }
-
-
+            &:last-child{
               &:after{
-                left: -150%;
-                width: 400%;
-                  top: initial;
-                bottom: 99%;
-                @include transform(translate3d(0, 10%, 0));
+                left: inherit;
+                right: 0%;
+                bottom: 97%;
               }
-              &:before{
-                top: 6%;
-                border-width: 5px  5px 0 5px;
-                border-color: #323232 transparent transparent transparent;
-              }
+            }
 
-              &:nth-child(6){
-                &:before{
-                  top: 4%;
-                }
+
+            &:after{
+              left: -150%;
+              width: 400%;
+                top: initial;
+              bottom: 99%;
+              @include transform(translate3d(0, 10%, 0));
+            }
+            &:before{
+              top: 6%;
+              border-width: 5px  5px 0 5px;
+              border-color: #323232 transparent transparent transparent;
+            }
+
+            &:nth-child(6){
+              &:before{
+                top: 4%;
               }
             }
           }
         }
+
+        @media(max-width: 768px){
+          height: auto;
+
+          > a{
+            font-size: 25px;
+            line-height: 1;
+          }
+        }
       }
+    }
 	}
 }
