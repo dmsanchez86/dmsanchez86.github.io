@@ -121,6 +121,7 @@
 	}
 
 	&-body{
+		height: calc(100% - var(--mh-header));
 		max-height: calc(100% - var(--mh-header));
     background-color: white;
     padding: 0 2rem var(--pb-popup);
