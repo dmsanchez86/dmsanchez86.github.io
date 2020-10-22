@@ -5,7 +5,7 @@ import { Actions } from '@ngrx/effects';
 import { Observable, Subscription } from 'rxjs';
 import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
-import { mostrarPopup } from 'src/app/store/actions/global';
+import { PopupState } from 'src/app/store/actions/global';
 
 @Component({
   selector: 'app-profile-image',
@@ -47,26 +47,18 @@ export class ProfileImageComponent implements OnInit {
   }
 
   seeProfile(ref?:boolean) {
-    let body = document.body;
-    let popup = document.querySelector('.popup');
     let profile = document.querySelector(`.profile_content_home`);
 
     if(!this.open){
-      body.classList.add('profile');
       profile.classList.remove('scaleIn');
 
-      setTimeout(() => {
-        profile.classList.add('scaleOut');
-        popup.classList.add('active');
-      }, 100);
+      setTimeout(() => profile.classList.add('scaleOut'), 100);
 
       this.router.navigateByUrl(`${this.router.url}?view=profile`);
-      this.store.dispatch(mostrarPopup({payload: true}));
+      this.store.dispatch(PopupState({payload: true}));
     }else{
-      body.classList.remove('profile');
       profile.classList.remove('scaleOut');
       profile.classList.remove('scaleIn');
-      popup.classList.remove('active');
 
       setTimeout(() => profile.classList.add('scaleIn'), 100);
 
@@ -76,6 +68,7 @@ export class ProfileImageComponent implements OnInit {
       } catch (error) { }
 
       this.router.navigateByUrl(`${url}`);
+      this.store.dispatch(PopupState({payload: false}));
     }
   }
 
