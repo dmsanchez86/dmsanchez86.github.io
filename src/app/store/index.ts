@@ -33,7 +33,7 @@ export interface AppStateSocial {
 }
 
 export interface AppStateGlobalI {
-  menu: boolean;
+  popup: boolean;
 }
 
 export interface AppStateSkillsI {
