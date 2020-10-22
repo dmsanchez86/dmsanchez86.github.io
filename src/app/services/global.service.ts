@@ -4,6 +4,7 @@ import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { AppState, AppStateLanguaje } from 'src/app/store';
 import { LanguageItemI } from '../interfaces/LanguageI';
+import { PopupState } from '../store/actions/global';
 
 @Injectable({
   providedIn: 'root'
@@ -29,18 +30,16 @@ export class GlobalService {
   }
 
   cerrarMenu(){
-    let body = document.body;
+    let body = document.querySelector('.main-app');
     let profile = document.querySelector(`.profile_content_home`);
-    let popup = document.querySelector('.popup');
     let menu = document.querySelector(`#menu`);
     let overlay_menu = document.querySelector(`.overlay-menu`);
 
     if (body.classList.contains('profile')) {
-      body.classList.remove('profile');
       profile.classList.remove('scaleOut');
-      popup.classList.remove('active');
 
       setTimeout(() => profile.classList.add('scaleIn'), 500);
+      this.store.dispatch(PopupState({payload: false}));
     } else {
       body.classList.remove('menu');
       menu.classList.remove('open');
