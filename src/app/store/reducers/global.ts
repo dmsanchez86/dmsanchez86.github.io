@@ -1,14 +1,14 @@
 import { createReducer, on } from '@ngrx/store';
 import { AppStateGlobalI } from '..';
-import { mostrarPopup } from '../actions/global';
+import { PopupState } from '../actions/global';
 
 const initialState: AppStateGlobalI = {
-  menu: false
+  popup: false
 };
 
 const _globalReducer = createReducer(
   initialState,
-  on(mostrarPopup, (state, action) => ({ ...state, menu: action.payload }))
+  on(PopupState, (state, action) => ({ ...state, popup: action.payload }))
 );
 
 export function globalReducer(state, action) {
