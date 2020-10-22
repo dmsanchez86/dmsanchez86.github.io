@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemProfileSkillsI, LanguageItemSkillsI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
+import { PopupState } from 'src/app/store/actions/global';
 
 @Component({
   selector: 'app-skills-content',
@@ -49,15 +50,12 @@ export class SkillsContentComponent implements OnInit {
   ngOnInit(): void {}
 
   cerrarModal(){
-    let body = document.body;
-    let popup = document.querySelector('.popup');
     let profile = document.querySelector(`.profile_content_home`);
 
-    body.classList.remove('profile');
     profile.classList.remove('scaleOut');
     profile.classList.remove('scaleIn');
-    popup.classList.remove('active');
 
     setTimeout(() => profile.classList.add('scaleIn'), 100);
+    this.store.dispatch(PopupState({payload: false}));
   }
 }
