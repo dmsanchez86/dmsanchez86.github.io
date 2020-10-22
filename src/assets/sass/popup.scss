@@ -1,5 +1,6 @@
 :root{
   --pb-popup: 2rem;
+  --mh-header: 200px;
 }
 
 .popup{
@@ -76,7 +77,7 @@
 
 	&-header{
     position: relative;
-		min-height: 200px;
+		min-height: var(--mh-header);
 		background-color: rgba(72, 71, 71, 1);
 		background-size: 10px 10px;
     background-position: 0 0, 5px 5px;
@@ -120,11 +121,12 @@
 	}
 
 	&-body{
-		height: calc(100% - 200px);
+		max-height: calc(100% - var(--mh-header));
     background-color: white;
     padding: 0 2rem var(--pb-popup);
     transition: transform .25s ease-in, opacity 200ms 10s ease;
     transform: translatey(105%);
+    overflow: auto;
 
     article{
       p{
@@ -138,10 +140,9 @@
 
     }
     .project{
-      position: fixed;
+      position: relative;
       width: 100%;
       height: auto;
-      bottom: 1%;
       right: 0;
 
       .title{
