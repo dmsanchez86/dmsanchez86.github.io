@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { GlobalService } from './services/global.service';
 import { AppState, AppStateLanguaje } from './store';
-import { mostrarPopup } from './store/actions/global';
+import { PopupState } from './store/actions/global';
 import { ChangeLanguage } from './store/actions/language';
 
 @Component({
@@ -13,11 +12,11 @@ import { ChangeLanguage } from './store/actions/language';
 })
 export class AppComponent implements OnInit {
   language: Observable<AppStateLanguaje> = this.store.select(state => state.language);
+  show_popup: Observable<Boolean> = this.store.select(state => state.global.popup);
 
   constructor(
     private global: GlobalService,
-    private store: Store<AppState>,
-    private router: Router
+    private store: Store<AppState>
   ){
     if(localStorage.language){
       this.store.dispatch(ChangeLanguage({ key: localStorage.language }));
@@ -36,11 +35,12 @@ export class AppComponent implements OnInit {
     ) {
       localStorage.fromParent = true;
 
-      this.store.dispatch(mostrarPopup({ payload: true }));
+      this.store.dispatch(PopupState({ payload: true }));
     }
   }
 
   cerrarMenu(){
     this.global.cerrarMenu();
+    this.store.dispatch(PopupState({payload: false}));
   }
 }
