@@ -6,55 +6,57 @@
 
 @media (max-width: 980px){
 	body{
-		&.home{
-			.navigator_content{
-				.navigator{
-					ul{
-						background: $home-alpha;
-						@include box-shadow(-1px 0 5px $home-primary);
-					}
-				}
-			}
-		}
-		&.projects{
-			.navigator_content{
-				.navigator{
-					ul{
-						background: $projects-alpha;
-						@include box-shadow(-1px 0 5px $projects-primary);
-					}
-				}
-			}
-		}
-		&.portafolio,
-		&.collaborations{
-			.navigator_content{
-				.navigator{
-					ul{
-						background: $colaborations-alpha;
-						@include box-shadow(-1px 0 5px $colaborations-primary);
-					}
-				}
-			}
-		}
-		&.footer,
-		&.contact{
-			.navigator_content{
-				.navigator{
-					ul{
-						background: $contact-alpha;
-						@include box-shadow(-1px 0 5px $contact-primary);
-					}
-				}
-			}
-    }
-
-    &.profile{
-      .language-content{
-        right: 4.75rem;
+    .main-app{
+      &.home{
+        .navigator_content{
+          .navigator{
+            ul{
+              background: $home-alpha;
+              @include box-shadow(-1px 0 5px $home-primary);
+            }
+          }
+        }
       }
-      .twitter_content{
-        right: 8rem;
+      &.projects{
+        .navigator_content{
+          .navigator{
+            ul{
+              background: $projects-alpha;
+              @include box-shadow(-1px 0 5px $projects-primary);
+            }
+          }
+        }
+      }
+      &.portafolio,
+      &.collaborations{
+        .navigator_content{
+          .navigator{
+            ul{
+              background: $colaborations-alpha;
+              @include box-shadow(-1px 0 5px $colaborations-primary);
+            }
+          }
+        }
+      }
+      &.footer,
+      &.contact{
+        .navigator_content{
+          .navigator{
+            ul{
+              background: $contact-alpha;
+              @include box-shadow(-1px 0 5px $contact-primary);
+            }
+          }
+        }
+      }
+
+      &.profile{
+        .language-content{
+          right: 4.75rem;
+        }
+        .twitter_content{
+          right: 8rem;
+        }
       }
     }
 	}
@@ -197,20 +199,22 @@
   }
 
   body{
-    &.profile{
-      .language-content{
-        right: 1.75rem;
-        bottom: inherit;
-        top: 1rem;
-        &:after{
+    .main-app{
+      &.profile{
+        .language-content{
+          right: 1.75rem;
           bottom: inherit;
-          top: 145%;
-        }
-        &:before{
-          top: inherit;
-          bottom: -45%;
-          border-width: 0px 5px 5px 5px;
-          border-color: transparent transparent #323232 transparent;
+          top: 1rem;
+          &:after{
+            bottom: inherit;
+            top: 145%;
+          }
+          &:before{
+            top: inherit;
+            bottom: -45%;
+            border-width: 0px 5px 5px 5px;
+            border-color: transparent transparent #323232 transparent;
+          }
         }
       }
     }
