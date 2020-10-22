@@ -1,16 +1,19 @@
-<app-atom-loader></app-atom-loader>
+<main class="main-app">
+  <app-atom-loader></app-atom-loader>
 
-<app-navigator></app-navigator>
-<app-popup></app-popup>
+  <app-navigator></app-navigator>
 
-<div id="main" class="fullpage-wrapper">
-  <router-outlet></router-outlet>
-</div>
+  <app-popup *ngIf="show_popup | async"></app-popup>
 
-<div class="overlay-menu" (click)="cerrarMenu()"></div>
+  <div id="main" class="fullpage-wrapper">
+    <router-outlet></router-outlet>
+  </div>
 
-<app-profile-image [home]="true"></app-profile-image>
+  <div class="overlay-menu" (click)="cerrarMenu()"></div>
 
-<app-twitter-content></app-twitter-content>
+  <app-profile-image [home]="true"></app-profile-image>
 
-<app-language-content></app-language-content>
+  <app-twitter-content></app-twitter-content>
+
+  <app-language-content></app-language-content>
+</main>
