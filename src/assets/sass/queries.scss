@@ -118,9 +118,8 @@
 	}
 
 	.popup{
-
+    --mh-header: 130px;
 		.popup-header{
-			min-height: 130px;
 
 		    .profile_content{
 				right: 0;
@@ -135,7 +134,6 @@
 		}
 
 		.popup-body{
-			height: calc(100% - 130px);
 
 		    h1{
           font-size: 1.6rem;
