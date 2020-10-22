@@ -1,432 +1,435 @@
 body{
-	overflow: hidden;
+  overflow: hidden;
+  position: relative;
 
-	&.home{
-    --current-main: #74b5d4;
-		.navigator_content{
-			.navigator{
-				ul{
-					li{
-						a{
-							color: #E8EBEC;
+  .main-app{
+    &.home{
+      --current-main: #74b5d4;
+      .navigator_content{
+        .navigator{
+          ul{
+            li{
+              a{
+                color: #E8EBEC;
 
-							&:before,
-							&:after{
-								background: $home-primary;
-							}
-						}
+                &:before,
+                &:after{
+                  background: $home-primary;
+                }
+              }
 
-						.edge{
-							background: $home-secondary;
-						}
-					}
-				}
+              .edge{
+                background: $home-secondary;
+              }
+            }
+          }
 
-				.button_menu{
-					border-color: $home-secondary;
-					background: $home-alpha;
+          .button_menu{
+            border-color: $home-secondary;
+            background: $home-alpha;
 
-					> span{
-						border-color: $home-secondary;
-					}
+            > span{
+              border-color: $home-secondary;
+            }
 
-					&:hover{
-						background: $home-secondary;
+            &:hover{
+              background: $home-secondary;
 
-						> span{
-							border-color: $home-primary;
-						}
-					}
-				}
-			}
-			.logo{
-				svg{
-					circle{
-						fill: $home-primary;
-						stroke: $home-secondary;
-					}
-				}
-			}
-		}
-		#fp-nav{
-
-			ul {
-				li {
-					a {
-						span{
-							background: $home-secondary;
-							@include transition(all .25s ease);
-							@include box-shadow(0 0 3px 1px $home-primary);
-						}
-					}
-				}
-			}
-		}
-
-		.profile_content{
-      border-color: $home-primary;
-
-      &:after{
-        background-color: darken($home-primary, 10)
+              > span{
+                border-color: $home-primary;
+              }
+            }
+          }
+        }
+        .logo{
+          svg{
+            circle{
+              fill: $home-primary;
+              stroke: $home-secondary;
+            }
+          }
+        }
       }
-		}
+      #fp-nav{
 
-		.popup{
-
-			.edge{
-				background: $home-primary;
-			}
-		}
-
-		&.profile{
-			.overlay-menu{
-				background-color: $home-secondary;
-			}
-		}
-	}
-	&.projects{
-    --current-main: rgb(8 144 13 / 75%);
-		.navigator_content{
-			.navigator{
-				ul{
-					li{
-						a{
-							color: #E8EBEC;
-
-							&:before,
-							&:after{
-								background: $projects-primary;
-							}
-						}
-
-						.edge{
-							background: $projects-secondary;
-						}
-					}
-				}
-
-				.button_menu{
-					border-color: $projects-secondary;
-					background: $projects-alpha;
-
-					> span{
-						border-color: $projects-secondary;
-					}
-
-					&:hover{
-						background: $projects-secondary;
-
-						> span{
-							border-color: $projects-primary;
-						}
-					}
-				}
-			}
-			.logo{
-				svg{
-					circle{
-						fill: $projects-primary;
-						stroke: $projects-secondary;
-					}
-				}
-			}
-		}
-		#fp-nav{
-
-			ul {
-				li {
-					a {
-						span{
-							background: $projects-secondary;
-							@include transition(all .25s ease);
-							@include box-shadow(0 0 3px 1px $projects-primary);
-						}
-					}
-				}
-			}
-		}
-
-		.fullpage-wrapper{
-			// @include perspective-origin(50% 150%);
-		}
-
-		.profile_content{
-      border-color: $projects-primary;
-
-      &:after{
-        background-color: $projects-primary;
+        ul {
+          li {
+            a {
+              span{
+                background: $home-secondary;
+                @include transition(all .25s ease);
+                @include box-shadow(0 0 3px 1px $home-primary);
+              }
+            }
+          }
+        }
       }
-		}
 
-		.popup{
+      .profile_content{
+        border-color: $home-primary;
 
-			.edge{
-				background: $projects-primary;
-			}
-		}
-
-		&.profile{
-			.overlay-menu{
-				background-color: $projects-secondary;
-			}
-		}
-	}
-	&.portafolio{
-    --current-main: rgb(0 137 123);
-		.navigator_content{
-			.navigator{
-				ul{
-					li{
-						a{
-							color: #E8EBEC;
-
-							&:before,
-							&:after{
-								background: $colaborations-primary;
-							}
-						}
-
-						.edge{
-							background: $colaborations-secondary;
-						}
-					}
-				}
-
-				.button_menu{
-					border-color: $colaborations-secondary;
-					background: $colaborations-alpha;
-
-					> span{
-						border-color: $colaborations-secondary;
-					}
-
-					&:hover{
-						background: $colaborations-secondary;
-
-						> span{
-							border-color: $colaborations-primary;
-						}
-					}
-				}
-			}
-			.logo{
-				svg{
-					circle{
-						fill: $colaborations-primary;
-						stroke: $colaborations-secondary;
-					}
-				}
-			}
-		}
-		#fp-nav{
-
-			ul {
-				li {
-					a {
-						span{
-							background: $colaborations-secondary;
-							@include transition(all .25s ease);
-							@include box-shadow(0 0 3px 1px $colaborations-primary);
-						}
-					}
-				}
-			}
-		}
-
-		.fullpage-wrapper{
-			// @include perspective-origin(50% 250%);
-		}
-
-		.profile_content{
-      border-color: $colaborations-primary;
-      &:after{
-        background-color: $colaborations-primary;
+        &:after{
+          background-color: darken($home-primary, 10)
+        }
       }
-		}
 
-		.popup{
+      .popup{
 
-			.edge{
-				background: $colaborations-primary;
-			}
-		}
-
-		&.profile{
-			.overlay-menu{
-				background-color: $colaborations-secondary;
-			}
-		}
-	}
-	&.footer,
-	&.contact{
-    --current-main: rgb(228 120 29 / 99%);
-		.navigator_content{
-			.navigator{
-				ul{
-					li{
-						a{
-							color: #E8EBEC;
-
-							&:before,
-							&:after{
-								background: $contact-primary;
-							}
-						}
-
-						.edge{
-							background: $contact-secondary;
-						}
-					}
-				}
-				.button_menu{
-					border-color: $contact-secondary;
-					background: $contact-alpha;
-
-					> span{
-						border-color: $contact-secondary;
-					}
-
-					&:hover{
-						background: $contact-secondary;
-
-						> span{
-							border-color: $contact-primary;
-						}
-					}
-				}
-			}
-			.logo{
-				svg{
-					circle{
-						fill: $contact-primary;
-						stroke: $contact-secondary;
-					}
-				}
-			}
-		}
-		#fp-nav{
-
-			ul {
-				li {
-					a {
-						span{
-							background: $contact-secondary;
-							@include transition(all .25s ease);
-							@include box-shadow(0 0 3px 1px $contact-primary);
-						}
-					}
-				}
-			}
-		}
-
-		.fullpage-wrapper{
-			// @include perspective-origin(50% 350%);
-		}
-
-		.profile_content{
-      border-color: $contact-primary;
-      &:after{
-        background-color: $contact-primary;
+        .edge{
+          background: $home-primary;
+        }
       }
-		}
 
-		.popup{
-
-			.edge{
-				background: $contact-primary;
-			}
-		}
-
-		&.profile{
-			.overlay-menu{
-				background-color: $contact-secondary;
-			}
-		}
-	}
-
-	&.profile{
-		@include gradient(linear, (to left, #d6d3d3, #fff));
-
-		#fp-nav{
-
-			ul {
-				li {
-					a {
-						span{
-							display: none;
-						}
-					}
-				}
-			}
-		}
-
-		.fullpage-wrapper{
-
-			.section{
-				&.active{
-          @include transform(translate3d(0, 0, -1000px) rotateZ(-360deg));
-          transform-origin: center;
-				}
-			}
-		}
-
-		.navigator_content{
-			@include transform(translatey(30px));
-		}
-
-		.overlay-menu{
-			width: 100%;
-			z-index: 100;
-			background: rgba(0,0,0,.0);
-		    cursor: nesw-resize;
-		    @include transition((z-index .1s ease, background .15s 1s ease));
-		}
-
-		.popup{
-			opacity: 1;
-			z-index: 111;
-
-			.popup-header{
-				.profile_content{
-					@include animation(scaleIn .5s 1s linear forwards);
-				}
-			}
-		}
-
-		.twitter_content{
-			z-index: 115;
-		    bottom: 5rem;
-    		right: 9rem;
-
-			label{
-				color: #323232;
-				@include text-shadow(0 0 4px rgba(255,255,255,.5));
-			}
-		}
-		.language-content{
-			z-index: 115;
-      bottom: 5.5rem;
-      right: 6rem;
-
-			i,
-			a{
-				color: #323232;
-				@include text-shadow(0 0 4px rgba(255,255,255,.5));
+      &.profile{
+        .overlay-menu{
+          background-color: $home-secondary;
+        }
       }
-		}
-	}
+    }
+    &.projects{
+      --current-main: rgb(8 144 13 / 75%);
+      .navigator_content{
+        .navigator{
+          ul{
+            li{
+              a{
+                color: #E8EBEC;
 
-	&.menu{
-		@include gradient(linear, (to left, #d6d3d3, #fff));
+                &:before,
+                &:after{
+                  background: $projects-primary;
+                }
+              }
 
-		.fullpage-wrapper{
+              .edge{
+                background: $projects-secondary;
+              }
+            }
+          }
 
-			.section{
-				&.active{
-					@include transform(translate3d(0,0,-950px) rotateY(18deg));
-          transform-origin: left center;
-				}
-			}
-		}
-	}
+          .button_menu{
+            border-color: $projects-secondary;
+            background: $projects-alpha;
+
+            > span{
+              border-color: $projects-secondary;
+            }
+
+            &:hover{
+              background: $projects-secondary;
+
+              > span{
+                border-color: $projects-primary;
+              }
+            }
+          }
+        }
+        .logo{
+          svg{
+            circle{
+              fill: $projects-primary;
+              stroke: $projects-secondary;
+            }
+          }
+        }
+      }
+      #fp-nav{
+
+        ul {
+          li {
+            a {
+              span{
+                background: $projects-secondary;
+                @include transition(all .25s ease);
+                @include box-shadow(0 0 3px 1px $projects-primary);
+              }
+            }
+          }
+        }
+      }
+
+      .fullpage-wrapper{
+        // @include perspective-origin(50% 150%);
+      }
+
+      .profile_content{
+        border-color: $projects-primary;
+
+        &:after{
+          background-color: $projects-primary;
+        }
+      }
+
+      .popup{
+
+        .edge{
+          background: $projects-primary;
+        }
+      }
+
+      &.profile{
+        .overlay-menu{
+          background-color: $projects-secondary;
+        }
+      }
+    }
+    &.portafolio{
+      --current-main: rgb(0 137 123);
+      .navigator_content{
+        .navigator{
+          ul{
+            li{
+              a{
+                color: #E8EBEC;
+
+                &:before,
+                &:after{
+                  background: $colaborations-primary;
+                }
+              }
+
+              .edge{
+                background: $colaborations-secondary;
+              }
+            }
+          }
+
+          .button_menu{
+            border-color: $colaborations-secondary;
+            background: $colaborations-alpha;
+
+            > span{
+              border-color: $colaborations-secondary;
+            }
+
+            &:hover{
+              background: $colaborations-secondary;
+
+              > span{
+                border-color: $colaborations-primary;
+              }
+            }
+          }
+        }
+        .logo{
+          svg{
+            circle{
+              fill: $colaborations-primary;
+              stroke: $colaborations-secondary;
+            }
+          }
+        }
+      }
+      #fp-nav{
+
+        ul {
+          li {
+            a {
+              span{
+                background: $colaborations-secondary;
+                @include transition(all .25s ease);
+                @include box-shadow(0 0 3px 1px $colaborations-primary);
+              }
+            }
+          }
+        }
+      }
+
+      .fullpage-wrapper{
+        // @include perspective-origin(50% 250%);
+      }
+
+      .profile_content{
+        border-color: $colaborations-primary;
+        &:after{
+          background-color: $colaborations-primary;
+        }
+      }
+
+      .popup{
+
+        .edge{
+          background: $colaborations-primary;
+        }
+      }
+
+      &.profile{
+        .overlay-menu{
+          background-color: $colaborations-secondary;
+        }
+      }
+    }
+    &.footer,
+    &.contact{
+      --current-main: rgb(228 120 29 / 99%);
+      .navigator_content{
+        .navigator{
+          ul{
+            li{
+              a{
+                color: #E8EBEC;
+
+                &:before,
+                &:after{
+                  background: $contact-primary;
+                }
+              }
+
+              .edge{
+                background: $contact-secondary;
+              }
+            }
+          }
+          .button_menu{
+            border-color: $contact-secondary;
+            background: $contact-alpha;
+
+            > span{
+              border-color: $contact-secondary;
+            }
+
+            &:hover{
+              background: $contact-secondary;
+
+              > span{
+                border-color: $contact-primary;
+              }
+            }
+          }
+        }
+        .logo{
+          svg{
+            circle{
+              fill: $contact-primary;
+              stroke: $contact-secondary;
+            }
+          }
+        }
+      }
+      #fp-nav{
+
+        ul {
+          li {
+            a {
+              span{
+                background: $contact-secondary;
+                @include transition(all .25s ease);
+                @include box-shadow(0 0 3px 1px $contact-primary);
+              }
+            }
+          }
+        }
+      }
+
+      .fullpage-wrapper{
+        // @include perspective-origin(50% 350%);
+      }
+
+      .profile_content{
+        border-color: $contact-primary;
+        &:after{
+          background-color: $contact-primary;
+        }
+      }
+
+      .popup{
+
+        .edge{
+          background: $contact-primary;
+        }
+      }
+
+      &.profile{
+        .overlay-menu{
+          background-color: $contact-secondary;
+        }
+      }
+    }
+
+    &.profile{
+      @include gradient(linear, (to left, #d6d3d3, #fff));
+
+      #fp-nav{
+
+        ul {
+          li {
+            a {
+              span{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .fullpage-wrapper{
+
+        .section{
+          &.active{
+            @include transform(translate3d(0, 0, -1000px) rotateZ(-360deg));
+            transform-origin: center;
+          }
+        }
+      }
+
+      .navigator_content{
+        @include transform(translatey(30px));
+      }
+
+      .overlay-menu{
+        width: 100%;
+        z-index: 100;
+        background: rgba(0,0,0,.0);
+          cursor: nesw-resize;
+          transition: z-index .1s ease, background .15s ease;
+      }
+
+      .popup{
+        z-index: 111;
+
+        .popup-header{
+          .profile_content{
+            @include animation(scaleIn .5s 1s linear forwards);
+          }
+        }
+      }
+
+      .twitter_content{
+        z-index: 115;
+          bottom: 5rem;
+          right: 9rem;
+
+        label{
+          color: #323232;
+          @include text-shadow(0 0 4px rgba(255,255,255,.5));
+        }
+      }
+      .language-content{
+        z-index: 115;
+        bottom: 5.5rem;
+        right: 6rem;
+
+        i,
+        a{
+          color: #323232;
+          @include text-shadow(0 0 4px rgba(255,255,255,.5));
+        }
+      }
+    }
+
+    &.menu{
+      @include gradient(linear, (to left, #d6d3d3, #fff));
+
+      .fullpage-wrapper{
+
+        .section{
+          &.active{
+            @include transform(translate3d(0,0,-950px) rotateY(18deg));
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+
 }
