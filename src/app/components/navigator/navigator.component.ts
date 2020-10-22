@@ -17,7 +17,7 @@ export class NavigatorComponent {
   constructor(private global: GlobalService, private store: Store<AppState>){}
 
   buttonMenu() {
-    document.body.classList.add('menu');
+    document.querySelector('.main-app').classList.add('menu');
     document.querySelector(`#menu`).classList.add('open');
     document.querySelector(`.overlay-menu`).classList.add('open');
     document.querySelector(`.button_menu`)['style'].opacity = 0;
