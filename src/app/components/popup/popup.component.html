@@ -1,19 +1,23 @@
-<div class="popup" *ngIf="language | async as language">
-  <div class="popup-header">
-    <app-profile-image [open]="true"></app-profile-image>
-  </div>
-  <div class="popup-body">
-    <h1 class="popup-body-title">{{ language.name }}</h1>
-    <article>
-      <div [innerHTML]="language.biography"></div>
+<ng-container *ngIf="show_popup | async as show_popup">
+  <div *ngIf="language | async as language"
+    class="popup"
+    [ngClass]="{'active': show_popup}">
+    <div class="popup-header">
+      <app-profile-image [open]="true"></app-profile-image>
+      <h1 class="popup-body-title">{{ language.name }}</h1>
+    </div>
+    <div class="popup-body">
+      <article>
+        <div [innerHTML]="language.biography"></div>
 
-      <app-skills-content></app-skills-content>
-    </article>
+        <app-skills-content></app-skills-content>
+      </article>
 
-    <app-social-networkings></app-social-networkings>
+      <app-social-networkings></app-social-networkings>
+    </div>
+    <div class="edge bottom"></div>
+    <div class="edge right"></div>
+    <div class="edge top"></div>
+    <div class="edge left"></div>
   </div>
-  <div class="edge bottom"></div>
-  <div class="edge right"></div>
-  <div class="edge top"></div>
-  <div class="edge left"></div>
-</div>
+</ng-container>
