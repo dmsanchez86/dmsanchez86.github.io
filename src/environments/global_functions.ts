@@ -30,9 +30,9 @@ export function favicon(fav: string){
 }
 
 export function bodyAddClass(classes: string){
-  document.body.classList.add(classes);
+  document.querySelector('.main-app').classList.add(classes);
 }
 
 export function bodyRemoveClass(classes: string){
-  document.body.classList.remove(classes);
+  document.querySelector('.main-app').classList.remove(classes);
 }
