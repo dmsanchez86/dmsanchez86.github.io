@@ -36,3 +36,7 @@ export function bodyAddClass(classes: string){
 export function bodyRemoveClass(classes: string){
   document.querySelector('.main-app').classList.remove(classes);
 }
+
+export function qs(selector: string) {
+  return document.querySelector(selector);
+}
