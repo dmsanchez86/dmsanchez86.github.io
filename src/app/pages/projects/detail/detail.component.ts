@@ -5,6 +5,7 @@ import { AppState } from 'src/app/store';
 import { ProjectItemI } from 'src/app/interfaces/ProjectItemI';
 import { LanguageItemProjectsI } from 'src/app/interfaces/LanguageI';
 import { resetProject, setProject } from 'src/app/store/actions/projects';
+import { bodyAddClass, bodyRemoveClass } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-detail',
@@ -25,12 +26,12 @@ export class DetailComponent implements OnDestroy, OnDestroy {
   }
 
   ngOnInit(): void {
-    document.body.classList.add('projects');
+    bodyAddClass('projects');
   }
 
   ngOnDestroy(): void {
     this.store.dispatch(resetProject());
-    document.body.classList.remove('projects');
+    bodyRemoveClass('projects');
   }
 
 }
