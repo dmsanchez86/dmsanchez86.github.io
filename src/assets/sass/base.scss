@@ -149,7 +149,7 @@ video.responsive-video {
 .twitter_content{
 	position: fixed;
 	bottom: 2rem;
-	right: 5rem;
+	right: 2rem;
 	color: white;
 	@include perspective(500px);
 	@include transition((bottom 200ms linear, right 200ms ease));
@@ -246,10 +246,13 @@ video.responsive-video {
 
 .language-content{
   position: fixed;
-  bottom: 2.5rem;
-  right: 1.85rem;
+  bottom: 2.3rem;
+  right: 5rem;
   text-align: right;
   transition: 300ms;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  background: rgb(255 255 255 / 19%);
 
   &:after{
     position: absolute;
