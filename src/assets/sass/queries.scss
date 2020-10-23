@@ -225,9 +225,6 @@
       }
     }
   }
-  .twitter_content label{
-    display: none;
-	}
 }
 
 @media (max-width: 500px){
@@ -353,6 +350,12 @@
   body .main-app.profile .language-content{
     top: .5rem;
     right: 1.9rem;
+  }
+}
+
+@media (max-width: 420px){
+  .twitter_content .container{
+    right: -55px;
   }
 }
 
