@@ -473,6 +473,7 @@ video.responsive-video {
       opacity: .175;
       text-align: center;
       transition: 300ms;
+      z-index: -1;
       i{
         margin-left: 4vw;
       }
