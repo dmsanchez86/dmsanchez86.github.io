@@ -243,6 +243,7 @@
 	}
 
 	.navigator_content {
+    padding: .5rem 1rem 0;
 		.navigator {
 			> ul{
 				li{
@@ -350,6 +351,13 @@
   body .main-app.profile .language-content{
     top: .5rem;
     right: 1.9rem;
+  }
+
+  .twitter_content{
+    right: 1rem;
+  }
+  .language-content{
+    right: 4rem;
   }
 }
 
