@@ -25,8 +25,9 @@ body{
           }
 
           .button_menu{
-            border-color: $home-secondary;
-            background: $home-alpha;
+            i{
+              color: darken($home-secondary, 10);
+            }
 
             > span{
               border-color: $home-secondary;
@@ -108,8 +109,9 @@ body{
           }
 
           .button_menu{
-            border-color: $projects-secondary;
-            background: $projects-alpha;
+            i{
+              color: darken($projects-secondary, 10);
+            }
 
             > span{
               border-color: $projects-secondary;
@@ -195,8 +197,9 @@ body{
           }
 
           .button_menu{
-            border-color: $colaborations-secondary;
-            background: $colaborations-alpha;
+            i{
+              color: darken($colaborations-secondary, 10);
+            }
 
             > span{
               border-color: $colaborations-secondary;
@@ -281,8 +284,10 @@ body{
             }
           }
           .button_menu{
-            border-color: $contact-secondary;
-            background: $contact-alpha;
+            // border-color: $contact-secondary;
+            i{
+              color: darken($contact-secondary, 10);
+            }
 
             > span{
               border-color: $contact-secondary;
@@ -366,7 +371,7 @@ body{
 
         .section{
           &.active{
-            @include transform(translate3d(0, 0, -1000px) rotateZ(-360deg));
+            @include transform(translate3d(0, 0, -1000px) scale(.8));
             transform-origin: center;
           }
         }
