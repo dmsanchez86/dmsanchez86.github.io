@@ -461,7 +461,7 @@ video.responsive-video {
       margin: auto;
       color: white;
       font-size: 70vh;
-      opacity: .2;
+      opacity: .175;
       text-align: center;
       transition: 300ms;
       i{
@@ -469,19 +469,20 @@ video.responsive-video {
       }
 
       @media(max-width: 992px){
-        font-size: 45vh;
+        font-size: 60vh;
         i{
           margin-left: 1vw;
         }
       }
       @media(max-width: 660px){
-        font-size: 25vh;
+        font-size: 53vh;
+        opacity: .1;
         i{
           margin-left: 0;
         }
       }
       @media(max-width: 340px){
-        font-size: 20vh;
+        font-size: 48vh;
       }
     }
   }
