@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { AppState, AppStateLanguaje } from 'src/app/store';
@@ -17,7 +18,8 @@ export class GlobalService {
     private meta: Meta,
     private title: Title,
     private store: Store<AppState>,
-    private actions: Actions
+    private actions: Actions,
+    private router: Router
   ) {
     this.store.select('language').subscribe((language: AppStateLanguaje) => {
       this.current = language.current;
@@ -37,6 +39,12 @@ export class GlobalService {
 
     if (body.classList.contains('profile')) {
       profile.classList.remove('scaleOut');
+
+      let url = location.href;
+      try {
+        url = this.router.url.replace('view=profile', '').replace('#about', '');
+        this.router.navigateByUrl(`${url}`);
+      } catch (error) {}
 
       setTimeout(() => profile.classList.add('scaleIn'), 500);
       this.store.dispatch(PopupState({payload: false}));
