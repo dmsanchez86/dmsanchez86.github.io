@@ -69,7 +69,7 @@
 			width: 55px;
       height: 55px;
       @media(max-width: 998px){
-        transform: scale(.8) translate(0, -10px);
+        transform: scale(.8) translate(0, -6px);
       }
 
 			circle{
@@ -103,7 +103,7 @@
       &:after {
         width: 44px;
         height: 44px;
-        top: -23px;
+        top: -19px;
       }
     }
 	}
