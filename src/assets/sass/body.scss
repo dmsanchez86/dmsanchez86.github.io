@@ -400,19 +400,20 @@ body{
       }
 
       .twitter_content{
-        z-index: 115;
-          bottom: 5rem;
-          right: 9rem;
-
-        label{
-          color: #323232;
-          @include text-shadow(0 0 4px rgba(255,255,255,.5));
-        }
+        display: none;
       }
       .language-content{
         z-index: 115;
-        bottom: 5.5rem;
-        right: 6rem;
+        bottom: 5.75rem;
+        right: 5.5rem;
+        background-color: rgba(0,0,0,.1352);
+
+        @media (min-width: 1200px) {
+          right: 7.35rem;
+        }
+        @media (min-width: 1600px) {
+          right: 9rem;
+        }
 
         i,
         a{
