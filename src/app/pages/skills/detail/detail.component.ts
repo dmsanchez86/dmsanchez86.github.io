@@ -22,13 +22,23 @@ export class DetailComponent implements OnInit, OnDestroy {
   );
 
   name: string;
+  showStatistics: boolean = false;
 
   constructor(
     private store: Store<AppState>,
     private global: GlobalService,
-    private params: ActivatedRoute
+    private route: ActivatedRoute
   ) {
-    this.name = this.params.snapshot.params.slug;
+    this.name = this.route.snapshot.params.slug;
+
+    this.route.params.subscribe((params) => {
+      if (params.slug !== this.name) {
+        setTimeout(() => this.setSkill(), 50);
+      }
+
+      this.name = params.slug;
+      this.showStatistics = false;
+    });
   }
 
   ngOnDestroy() {
@@ -42,8 +52,13 @@ export class DetailComponent implements OnInit, OnDestroy {
     this.global.titlePage(`skill`, this.name);
     this.global.metaColor('#00897b');
 
+    this.setSkill();
+  }
+
+  setSkill() {
     if (this.name) {
       this.store.dispatch(setSkill({ slug: this.name }));
+      this.showStatistics = true;
     }
   }
 }

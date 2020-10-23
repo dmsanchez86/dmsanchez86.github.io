@@ -25,18 +25,18 @@
             <div class="skills-body">
               <ng-container *ngIf="language.profile.skills[skill.key]; else elseTemplate">
                 <div
-                  class="skills-item skills-item-detail skills-item-detail"
+                  class="skills-item skills-item-detail"
                   [innerHTML]="language.profile.skills[skill.key]"
                 ></div>
               </ng-container>
               <ng-template #elseTemplate>
                 <div
-                  class="skills-item skills-item-detail skills-item-detail"
+                  class="skills-item skills-item-detail"
                   [innerHTML]="language.profile.skills.default"
                 ></div>
               </ng-template>
 
-              <div class="skills-item-graph">
+              <div class="skills-item-graph" *ngIf="showStatistics">
                 <div class="skills-item-graph-item">
                   <div>{{ language.global.years }}</div>
                   <b>
