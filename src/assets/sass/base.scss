@@ -51,8 +51,17 @@ video.responsive-video {
 @import 'project';
 @import 'preview_page';
 
+:root{
+  --section-pt: 70px;
+}
+
 .section{
-	padding: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  &-pt{
+    padding: var(--section-pt) 0 1rem;
+  }
 }
 
 #fp-nav{
