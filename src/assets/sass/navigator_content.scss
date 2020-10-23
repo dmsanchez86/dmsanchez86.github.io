@@ -1,6 +1,6 @@
 .navigator_content{
 	position: fixed;
-	padding: 1.35rem 0 0;
+	padding: .5rem 0 0;
 	top: 0;
 	z-index: 2;
 	left: 0;
@@ -8,7 +8,11 @@
 	background: rgba(97, 97, 97, 0.0);
 	@include box-shadow(0 1px 4px rgba(0,0,0,0));
 	@include transform(translatey(0px));
-	@include transition(transform .5s ease);
+  @include transition(200ms ease);
+
+  &.scroll{
+    background: rgba(0, 0, 0,.19);
+  }
 
 	.logo{
 		max-width: 55px;
