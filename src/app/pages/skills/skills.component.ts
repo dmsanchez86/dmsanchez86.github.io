@@ -5,7 +5,7 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
 @Component({
   selector: 'app-skills',
   template: `
-    <div id="section_portafolio" class="section active" style="padding: 10vh 0 1rem;min-height: 100vh;">
+    <div id="section_portafolio" class="section active section-pt">
       <router-outlet>
         <app-skills-content [complete]="true"></app-skills-content>
       </router-outlet>
