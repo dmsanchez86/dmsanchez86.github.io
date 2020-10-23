@@ -28,18 +28,6 @@ body{
             i{
               color: darken($home-secondary, 10);
             }
-
-            > span{
-              border-color: $home-secondary;
-            }
-
-            &:hover{
-              background: $home-secondary;
-
-              > span{
-                border-color: $home-primary;
-              }
-            }
           }
         }
         .logo{
@@ -111,18 +99,6 @@ body{
           .button_menu{
             i{
               color: darken($projects-secondary, 10);
-            }
-
-            > span{
-              border-color: $projects-secondary;
-            }
-
-            &:hover{
-              background: $projects-secondary;
-
-              > span{
-                border-color: $projects-primary;
-              }
             }
           }
         }
@@ -200,18 +176,6 @@ body{
             i{
               color: darken($colaborations-secondary, 10);
             }
-
-            > span{
-              border-color: $colaborations-secondary;
-            }
-
-            &:hover{
-              background: $colaborations-secondary;
-
-              > span{
-                border-color: $colaborations-primary;
-              }
-            }
           }
         }
         .logo{
@@ -284,21 +248,8 @@ body{
             }
           }
           .button_menu{
-            // border-color: $contact-secondary;
             i{
               color: darken($contact-secondary, 10);
-            }
-
-            > span{
-              border-color: $contact-secondary;
-            }
-
-            &:hover{
-              background: $contact-secondary;
-
-              > span{
-                border-color: $contact-primary;
-              }
             }
           }
         }

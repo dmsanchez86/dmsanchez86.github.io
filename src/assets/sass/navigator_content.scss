@@ -302,15 +302,14 @@
 
       i{
         font-size: 2.35rem;
+        transition: 200ms;
       }
 
-      > span{
-        border-top: solid 2px white;
-        display: block;
-        width: 80%;
-        margin: 6px auto;
-        border-radius: 30%;
-        @include transition(border .5s ease);
+      &:focus,
+      &:hover{
+        i{
+          transform: scale(1.05);
+        }
       }
 		}
 	}
