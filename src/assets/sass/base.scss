@@ -406,6 +406,7 @@ video.responsive-video {
       transform: scale(1);
       background-color: white;
       color: var(--current-main);
+      @extend .z-depth-4;
     }
 
     i,
