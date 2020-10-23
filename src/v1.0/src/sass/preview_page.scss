@@ -1,0 +1,156 @@
+.preview_page{
+	position: fixed;
+	background: rgba(255,255,255,.3);
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 222;
+	padding: .5rem 0 0 .5rem;
+	opacity: .8;
+	overflow: hidden;
+	@include transition((transform .5s ease, opacity .7s ease));
+	@include border-radius(5px 0 0 0);
+	@include transform-origin(bottom right);
+	@include transform(scale(.37) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg)); 	
+
+	.loader_preview{
+		display: inline-block;
+		width: 150px;
+		height: 100px;
+		color: #323232;
+		text-align: center;
+		@include text-shadow(0 0 6px #fefefe);
+		@include center-absolute(absolute);
+		
+		&:after{
+			position: absolute;
+			left: 0;
+			right: 0;
+			text-align: center;
+			content: 'Loading...';
+			font-family: 'Pacifico';
+			font-size: 2rem;
+			top: 100%;
+		}
+
+		i{
+			font-size: 100px;
+		}
+	}
+	
+	.toolbox{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 1rem 5rem;
+		background: rgba(0,0,0,.4);
+		text-align: center;
+		z-index: 10;
+		@include transform(translate3d(0,-100%,0));
+		@include transition((transform .5s ease-in,opacity .35s ease-out));
+
+		span{
+			cursor: pointer;
+			height: 200px;
+			@include center-absolute(absolute);
+			
+			&:hover{
+				i{
+					@include transform(scale(1.2));
+				}
+			}
+
+			i{
+				font-size: 200px;
+			    color: rgba(255, 255, 255, 0.72);
+			    @include text-shadow(0 0 5px rgba(0,0,0,.5));
+			    @include transition(transform 200ms ease);
+				
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+	}
+
+	iframe{
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		@include transition(opacity 1s .5s ease);
+	}
+	
+	&:hover{
+		opacity: 1;
+
+		.toolbox{
+			@include transform(translate3d(0,0,0));
+		}
+	}
+	
+	&.active{
+		@include transform(scale(.37) translate3d(0%, 0%, 0) rotatey(0) rotatex(0));
+	}
+	
+	&.fullscreen{
+		z-index: 10000;
+		opacity: 1;
+		padding: .5rem;
+		background: white;
+		text-align: right;
+		@include border-radius(5px);
+		@include box-sizing(border-box);
+		@include transform(scale(1) translate3d(0%, 0%, 0) !important);
+
+		iframe{
+			@include border-radius(5px);
+		}
+
+		.toolbox{
+			opacity: .5;
+			height: auto;
+		    width: 40px;
+		    right: 0;
+		    margin: auto;
+		    padding-left: 0;
+		    padding-right: 0;
+		    @include border-radius(0 0 5px 5px);
+
+			.resize{
+				height: auto;
+				
+				i{
+					font-size: 20px;
+					line-height: 1;
+					color: white;
+					
+					&:last-child{
+						display: block;
+						margin-top: .25rem;
+					}
+					&:first-child{
+						display: none;
+					}
+				}
+			}
+
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+	}
+
+	&.load{
+		.loader_preview{
+			display: none;
+		}
+		
+		iframe{
+			opacity: 1;
+		}
+	}
+}

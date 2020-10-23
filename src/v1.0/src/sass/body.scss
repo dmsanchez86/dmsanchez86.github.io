@@ -1,0 +1,402 @@
+body{
+	overflow: hidden;
+	@include perspective(1000px);
+	
+	&.home{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: $home-primary;
+							}
+						}
+
+						.edge{
+							background: $home-secondary;
+						}
+					}
+				}
+
+				.button_menu{
+					border-color: $home-secondary;
+					background: $home-alpha;
+
+					> span{
+						border-color: $home-secondary;
+					}
+
+					&:hover{
+						background: $home-secondary;
+
+						> span{
+							border-color: $home-primary;
+						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: $home-primary;
+						stroke: $home-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $home-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $home-primary);
+						}
+					}
+				}
+			}
+		}
+		
+		.profile_content{
+			border-color: $home-primary;
+		}
+		
+		.popup{
+			
+			.edge{
+				background: $home-primary;
+			}
+		}
+		
+		&.profile{
+			.overlay-menu{
+				background-color: $home-secondary;
+			}
+		}
+	}
+	&.projects{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: $projects-primary;
+							}
+						}
+
+						.edge{
+							background: $projects-secondary;
+						}
+					}
+				}
+
+				.button_menu{
+					border-color: $projects-secondary;
+					background: $projects-alpha;
+
+					> span{
+						border-color: $projects-secondary;
+					}
+
+					&:hover{
+						background: $projects-secondary;
+
+						> span{
+							border-color: $projects-primary;
+						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: $projects-primary;
+						stroke: $projects-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $projects-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $projects-primary);
+						}
+					}
+				}
+			}
+		}
+		
+		.fullpage-wrapper{
+			@include perspective-origin(50% 150%);
+		}
+		
+		.profile_content{
+			border-color: $projects-primary;
+		}
+		
+		.popup{
+			
+			.edge{
+				background: $projects-primary;
+			}
+		}
+		
+		&.profile{
+			.overlay-menu{
+				background-color: $projects-secondary;
+			}
+		}
+	}
+	&.portafolio{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: $colaborations-primary;
+							}
+						}
+
+						.edge{
+							background: $colaborations-secondary;
+						}
+					}
+				}
+
+				.button_menu{
+					border-color: $colaborations-secondary;
+					background: $colaborations-alpha;
+
+					> span{
+						border-color: $colaborations-secondary;
+					}
+
+					&:hover{
+						background: $colaborations-secondary;
+
+						> span{
+							border-color: $colaborations-primary;
+						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: $colaborations-primary;
+						stroke: $colaborations-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $colaborations-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $colaborations-primary);
+						}
+					}
+				}
+			}
+		}
+		
+		.fullpage-wrapper{
+			@include perspective-origin(50% 250%);
+		}
+		
+		.profile_content{
+			border-color: $colaborations-primary;
+		}
+		
+		.popup{
+			
+			.edge{
+				background: $colaborations-primary;
+			}
+		}
+		
+		&.profile{
+			.overlay-menu{
+				background-color: $colaborations-secondary;
+			}
+		}
+	}
+	&.footer,
+	&.contact{
+		.navigator_content{
+			.navigator{
+				ul{
+					li{
+						a{
+							color: #E8EBEC;
+
+							&:before,
+							&:after{
+								background: $contact-primary;
+							}
+						}
+
+						.edge{
+							background: $contact-secondary;
+						}
+					}
+				}
+				.button_menu{
+					border-color: $contact-secondary;
+					background: $contact-alpha;
+
+					> span{
+						border-color: $contact-secondary;
+					}
+
+					&:hover{
+						background: $contact-secondary;
+
+						> span{
+							border-color: $contact-primary;
+						}
+					}
+				}
+			}
+			.logo{
+				svg{
+					circle{
+						fill: $contact-primary;
+						stroke: $contact-secondary;
+					}
+				}
+			}
+		}
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							background: $contact-secondary;
+							@include transition(all .25s ease);
+							@include box-shadow(0 0 3px 1px $contact-primary);
+						}
+					}
+				}
+			}
+		}
+		
+		.fullpage-wrapper{
+			@include perspective-origin(50% 350%);
+		}
+		
+		.profile_content{
+			border-color: $contact-primary;
+		}
+		
+		.popup{
+			
+			.edge{
+				background: $contact-primary;
+			}
+		}
+		
+		&.profile{
+			.overlay-menu{
+				background-color: $contact-secondary;
+			}
+		}
+	}
+	
+	&.profile{
+		@include gradient(linear, (left, #d6d3d3, #fff));
+		
+		#fp-nav{
+
+			ul {
+				li {
+					a {
+						span{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		
+		.fullpage-wrapper{
+			
+			.section{
+				&.active{
+					@include transform(translate3d(0,0,-250px));
+				}
+			}
+		}
+		
+		.navigator_content{
+			@include transform(translatey(30px));
+		}
+		
+		.overlay-menu{
+			width: 100%;
+			z-index: 100;
+			background: rgba(0,0,0,.0);
+		    cursor: nesw-resize;
+		    @include transition((z-index .1s ease, background .15s 1s ease));
+		}
+		
+		.popup{
+			opacity: 1;
+			z-index: 111;
+			
+			.popup-header{
+				.profile_content{
+					@include animation(scaleIn .5s 1s linear forwards);
+				}
+			}
+		}
+		
+		.twitter_content{
+			z-index: 115;
+		    bottom: 4rem;
+    		right: 6rem;
+			
+			label{
+				color: #323232;
+				@include text-shadow(0 0 4px rgba(255,255,255,.5));
+			}
+		}
+	}
+	
+	&.menu{
+		@include gradient(linear, (left, #d6d3d3, #fff));
+		
+		.fullpage-wrapper{
+			
+			.section{
+				&.active{
+					@include transform(translate3d(0,0,-120px));
+				}
+			}
+		}
+	}
+}
