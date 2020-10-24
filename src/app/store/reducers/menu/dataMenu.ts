@@ -31,4 +31,10 @@ export const dataMenu: MenuItemI[] = [
     key: 'hobbies',
     icon: 'circle',
   },
+  {
+    name: 'skills',
+    href: '/skills',
+    key: 'skills',
+    icon: 'atom',
+  },
 ];
