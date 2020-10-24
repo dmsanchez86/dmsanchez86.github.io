@@ -80,6 +80,15 @@ export const data: LanguageItemProfileSkillsI[] = [
     percentage: 95,
   },
   {
+    name: 'github',
+    key: 'hithub',
+    title: 'GitHub',
+    icon: 'fab fa-github',
+    main: true,
+    years: 7,
+    percentage: 85,
+  },
+  {
     name: 'chrome',
     key: 'chrome',
     title: 'Chrome',
@@ -124,7 +133,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     name: 'git',
     key: 'git',
     title: 'Git',
-    icon: 'fab fa-git',
+    icon: 'fab fa-git-alt',
     main: true,
     years: 5,
     percentage: 80,
@@ -311,6 +320,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-vuejs',
     years: 1,
     percentage: 50,
+    main: true
   },
   {
     name: 'yarn',
