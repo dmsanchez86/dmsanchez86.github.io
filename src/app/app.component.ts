@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       let atomLoader: HTMLElement = document.querySelector('#atomLoader');
       atomLoader.style.display = 'none';
-    }, 300);
+    }, 1000);
 
     if (
       location.href.indexOf('view=profile') !== -1 ||
