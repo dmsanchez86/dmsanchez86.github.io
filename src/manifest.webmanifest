@@ -1,8 +1,8 @@
 {
   "name": "dmsanchez86 App",
   "short_name": "dmsanchez86",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#74b5d4",
+  "background_color": "#74b5d4",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
