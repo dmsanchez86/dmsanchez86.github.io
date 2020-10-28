@@ -23,78 +23,6 @@ body{
   position: relative;
 
   .main-app{
-    &.home{
-      --current-main: #74b5d4;
-      .navigator_content{
-        .navigator{
-          ul{
-            li{
-              a{
-                color: #E8EBEC;
-
-                &:before,
-                &:after{
-                  background: $home-primary;
-                }
-              }
-
-              .edge{
-                background: $home-secondary;
-              }
-            }
-          }
-
-          .button_menu{
-            i{
-              color: darken($home-secondary, 10);
-            }
-          }
-        }
-        .logo{
-          svg{
-            circle{
-              fill: $home-primary;
-              stroke: $home-secondary;
-            }
-          }
-        }
-      }
-      #fp-nav{
-
-        ul {
-          li {
-            a {
-              span{
-                background: $home-secondary;
-                @include transition(all .25s ease);
-                @include box-shadow(0 0 3px 1px $home-primary);
-              }
-            }
-          }
-        }
-      }
-
-      .profile_content{
-        border-color: $home-primary;
-
-        &:after{
-          background-color: darken($home-primary, 10)
-        }
-      }
-
-      .popup{
-
-        .edge{
-          background: $home-primary;
-        }
-      }
-
-      &.profile{
-        .overlay-menu{
-          background-color: $home-secondary;
-        }
-      }
-    }
     &.projects{
       --current-main: rgb(8 144 13 / 75%);
       .navigator_content{
@@ -130,24 +58,6 @@ body{
             }
           }
         }
-      }
-      #fp-nav{
-
-        ul {
-          li {
-            a {
-              span{
-                background: $projects-secondary;
-                @include transition(all .25s ease);
-                @include box-shadow(0 0 3px 1px $projects-primary);
-              }
-            }
-          }
-        }
-      }
-
-      .fullpage-wrapper{
-        // @include perspective-origin(50% 150%);
       }
 
       .profile_content{
@@ -207,24 +117,6 @@ body{
           }
         }
       }
-      #fp-nav{
-
-        ul {
-          li {
-            a {
-              span{
-                background: $colaborations-secondary;
-                @include transition(all .25s ease);
-                @include box-shadow(0 0 3px 1px $colaborations-primary);
-              }
-            }
-          }
-        }
-      }
-
-      .fullpage-wrapper{
-        // @include perspective-origin(50% 250%);
-      }
 
       .profile_content{
         border-color: $colaborations-primary;
@@ -282,24 +174,6 @@ body{
           }
         }
       }
-      #fp-nav{
-
-        ul {
-          li {
-            a {
-              span{
-                background: $contact-secondary;
-                @include transition(all .25s ease);
-                @include box-shadow(0 0 3px 1px $contact-primary);
-              }
-            }
-          }
-        }
-      }
-
-      .fullpage-wrapper{
-        // @include perspective-origin(50% 350%);
-      }
 
       .profile_content{
         border-color: $contact-primary;
@@ -323,41 +197,28 @@ body{
     }
 
     &.profile{
-      @include gradient(linear, (to left, #d6d3d3, #fff));
-
-      #fp-nav{
-
-        ul {
-          li {
-            a {
-              span{
-                display: none;
-              }
-            }
-          }
-        }
-      }
+      @include gradient(linear, (to left, var(--main), var(--secondary)));
 
       .fullpage-wrapper{
 
         .section{
           &.active{
-            @include transform(translate3d(0, 0, -1000px) scale(.8));
+            transform: translate3d(0, 0, -1000px) scale(.8);
             transform-origin: center;
           }
         }
       }
 
       .navigator_content{
-        @include transform(translatey(30px));
+        transform: translatey(30px);
       }
 
       .overlay-menu{
         width: 100%;
         z-index: 100;
-        background: rgba(0,0,0,.0);
-          cursor: nesw-resize;
-          transition: z-index .1s ease, background .15s ease;
+        background: var(--overlay);
+        cursor: nesw-resize;
+        transition: z-index .1s ease, background .15s ease;
       }
 
       .popup{
@@ -365,7 +226,7 @@ body{
 
         .popup-header{
           .profile_content{
-            @include animation(scaleIn .5s 1s linear forwards);
+            animation: scaleIn .5s 1s linear forwards;
           }
         }
       }
@@ -373,6 +234,7 @@ body{
       .twitter_content{
         display: none;
       }
+
       .language-content{
         z-index: 115;
         bottom: 5.75rem;
@@ -389,7 +251,7 @@ body{
         i,
         a{
           color: #323232;
-          @include text-shadow(0 0 4px rgba(255,255,255,.5));
+          text-shadow: 0 0 4px rgba(255,255,255,.5);
         }
       }
     }
@@ -401,7 +263,7 @@ body{
 
         .section{
           &.active{
-            @include transform(translate3d(0,0,-950px) rotateY(18deg));
+            transform: translate3d(0,0,-950px) rotateY(18deg);
             transform-origin: left center;
           }
         }
