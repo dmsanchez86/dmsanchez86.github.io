@@ -1,12 +1,5 @@
 #section_home{
-  background-image:
-    -webkit-linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
-    -webkit-linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
-    url(assets/images/home.png);
-  background-image:
-    linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
-    linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
-    url(assets/images/home.png);
+  background-image: var(--fondo);
 	background-size: 100%, 100%, contain;
   background-position: center;
   background-repeat: no-repeat, no-repeat, no-repeat;
