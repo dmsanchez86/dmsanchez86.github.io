@@ -1,0 +1,89 @@
+.twitter_content{
+	position: fixed;
+	bottom: 1.2rem;
+	right: 2rem;
+	color: white;
+	@include perspective(500px);
+	@include transition((bottom 200ms linear, right 200ms ease));
+
+	label{
+		font-size: 2rem;
+		cursor: pointer;
+		@include transition(all 200ms ease);
+		@include text-shadow(0 0 2px rgba(0,0,0,.4));
+
+		&:hover{
+			@include text-shadow(0 0 5px rgba(0,0,0,.4));
+		}
+
+		&:after{
+			position: absolute;
+			bottom: 100%;
+      right: -65%;
+      text-align: right;
+			width: 10rem;
+			content: attr(title-ref);
+			color: white;
+			opacity: 0;
+			padding: .15rem .5rem;
+			font-size: 16px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      @include text-shadow(none);
+      @include transition((transform .5s ease, opacity .25s ease));
+			@include transform(translate3d(0,-10%, 0));
+			background-image: -webkit-radial-gradient(center, #111, #323232);
+			@include border-radius(4px);
+		}
+
+		&:before{
+			position: absolute;
+			top: -6%;
+			left: 0;
+			width: 11px;
+			margin: auto;
+			right: 0;
+			border: solid #323232;
+			opacity: 0;
+			content: '';
+			border-width: 5px  5px 0 5px;
+			border-color: #323232 transparent transparent transparent;
+			@include transition(opacity .25s ease);
+		}
+
+		&:hover{
+			&:after{
+				opacity: 1;
+				@include transform(translate3d(0,0,0));
+			}
+
+			&:before{
+				opacity: 1;
+			}
+		}
+	}
+
+	input[type=checkbox]{
+		display: none;
+
+		&:checked{
+			+ .container.close{
+				@include box-shadow(0 0 5px rgba(0, 0, 0, .3));
+				@include transform(scale(1) rotatex(0) rotatey(0) rotatez(0) translate3d(0,0,0));
+			}
+		}
+	}
+
+	.container{
+		position: absolute;
+		bottom: 40px;
+    	right: 0;
+		width: 255px;
+		height: 400px;
+		@include transition(transform 300ms ease);
+		@include transform-origin(right bottom);
+
+		&.close{
+			@include transform(scale(0) rotatex(120deg) rotatey(120deg) rotatez(120deg) translate3d(0,0,-500px));
+		}
+	}
+}
