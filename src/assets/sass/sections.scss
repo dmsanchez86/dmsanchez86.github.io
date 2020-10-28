@@ -1,0 +1,35 @@
+#section_home{
+  background-image:
+    -webkit-linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    -webkit-linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    url(assets/images/home.png);
+  background-image:
+    linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4),
+    url(assets/images/home.png);
+	background-size: 100%, 100%, contain;
+  background-position: center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+#section_portafolio{
+	background-image: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+  background-image: linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+}
+
+#section_projects{
+  background-image: -webkit-linear-gradient(to left, rgb(8 144 13 / 75%), rgb(49 165 54 / 84%), rgb(19 108 23 / 75%));
+	background-image: linear-gradient(to left, rgb(8 144 13 / 75%), rgb(49 165 54 / 84%), rgb(19 108 23 / 75%));
+  background-size: 100%, 400px;
+}
+
+#section_contact{
+	background-image: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+  background-image: linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+}
+
+#section_footer {
+	background-image: -webkit-linear-gradient(to bottom, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+	background-image: linear-gradient(to bottom, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+  background-size: 100%, 400px;
+}
