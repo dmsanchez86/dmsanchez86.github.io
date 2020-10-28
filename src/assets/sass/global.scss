@@ -14,23 +14,6 @@
   }
 }
 
-#fp-nav{
-    top: inherit;
-    bottom: 2rem;
-
-	ul {
-		li {
-			a {
-				span{
-					background: white;
-					@include transition(all .5s ease);
-					@include box-shadow(0 0 3px 1px rgba(0, 0, 0, 0.68));
-				}
-			}
-		}
-	}
-}
-
 .fp-section.fp-table:not(#section_footer),
 .fp-slide.fp-table:not(#section_footer) {
     height: 100vh !important;
