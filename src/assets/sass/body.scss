@@ -1,3 +1,23 @@
+*{ @include reset; }
+
+html{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden !important;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+svg:not(:root){
+	overflow: visible;
+}
+
 body{
   overflow: hidden;
   position: relative;
@@ -393,4 +413,25 @@ body{
     }
   }
 
+}
+
+.fullpage-wrapper{
+	@include perspective(1000px);
+	@include perspective-origin(center);
+
+	.section{
+
+		&.active{
+			@include transform(translate3d(0,0,0));
+      @include transition(transform .25s ease );
+      max-height: 100vh;
+      overflow: auto;
+		}
+	}
+}
+
+img.responsive-img,
+video.responsive-video {
+  max-width: 100%;
+  height: auto;
 }
