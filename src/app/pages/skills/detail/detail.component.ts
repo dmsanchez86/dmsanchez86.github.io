@@ -6,7 +6,7 @@ import { LanguageItemI, LanguageItemProfileSkillsI } from 'src/app/interfaces/La
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
 import { setSkill } from 'src/app/store/actions/skills';
-import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
+import { bodyAddClass, bodyRemoveClass, favicon, removeThemeTMP } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-detail',
@@ -43,6 +43,7 @@ export class DetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     bodyRemoveClass('portafolio');
+    removeThemeTMP();
   }
 
   ngOnInit() {
