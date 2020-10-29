@@ -24,176 +24,56 @@ body{
 
   .main-app{
     &.projects{
-      --current-main: rgb(8 144 13 / 75%);
-      .navigator_content{
-        .navigator{
-          ul{
-            li{
-              a{
-                color: #E8EBEC;
+      --current-main: rgb(8, 144, 13);
+      --nav-item: #E8EBEC;
+      --nav-item-edge: ##27822B;
+      --nav-item-bg: ##27822B;
+      --nav-item-bg2: ##27822B;
 
-                &:before,
-                &:after{
-                  background: $projects-primary;
-                }
-              }
+      --profile-b: ##005104;
+      --btn-mobile: #005104;
 
-              .edge{
-                background: $projects-secondary;
-              }
-            }
-          }
+      --main: #309034;
+      --secondary: #005104;
+      --terciary: rgba(48,144,52,0.72);
+      --overlay: #27822B;
 
-          .button_menu{
-            i{
-              color: darken($projects-secondary, 10);
-            }
-          }
-        }
-        .logo{
-          svg{
-            circle{
-              fill: $projects-primary;
-              stroke: $projects-secondary;
-            }
-          }
-        }
-      }
-
-      .profile_content{
-        border-color: $projects-primary;
-
-        &:after{
-          background-color: $projects-primary;
-        }
-      }
-
-      .popup{
-
-        .edge{
-          background: $projects-primary;
-        }
-      }
-
-      &.profile{
-        .overlay-menu{
-          background-color: $projects-secondary;
-        }
-      }
+      --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
     }
     &.portafolio{
-      --current-main: rgb(0 137 123);
-      .navigator_content{
-        .navigator{
-          ul{
-            li{
-              a{
-                color: #E8EBEC;
+      --current-main: rgb(0, 137, 123);
+      --nav-item: #E8EBEC;
+      --nav-item-edge: #026D63;
+      --nav-item-bg: #026D63;
+      --nav-item-bg2: #026D63;
 
-                &:before,
-                &:after{
-                  background: $colaborations-primary;
-                }
-              }
+      --profile-b: #026D63;
+      --btn-mobile: #026D63;
 
-              .edge{
-                background: $colaborations-secondary;
-              }
-            }
-          }
+      --main: #04756A;
+      --secondary: #026D63;
+      --terciary: rgba(0, 137, 123, 0.75);
+      --overlay: #026D63;
 
-          .button_menu{
-            i{
-              color: darken($colaborations-secondary, 10);
-            }
-          }
-        }
-        .logo{
-          svg{
-            circle{
-              fill: $colaborations-primary;
-              stroke: $colaborations-secondary;
-            }
-          }
-        }
-      }
-
-      .profile_content{
-        border-color: $colaborations-primary;
-        &:after{
-          background-color: $colaborations-primary;
-        }
-      }
-
-      .popup{
-
-        .edge{
-          background: $colaborations-primary;
-        }
-      }
-
-      &.profile{
-        .overlay-menu{
-          background-color: $colaborations-secondary;
-        }
-      }
+      --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
     }
     &.footer,
     &.contact{
       --current-main: rgb(228 120 29 / 99%);
-      .navigator_content{
-        .navigator{
-          ul{
-            li{
-              a{
-                color: #E8EBEC;
+      --nav-item: #E8EBEC;
+      --nav-item-edge: #B3631D;
+      --nav-item-bg: #B3631D;
+      --nav-item-bg2: #B3631D;
 
-                &:before,
-                &:after{
-                  background: $contact-primary;
-                }
-              }
+      --profile-b: #B3631D;
+      --btn-mobile: #B3631D;
 
-              .edge{
-                background: $contact-secondary;
-              }
-            }
-          }
-          .button_menu{
-            i{
-              color: darken($contact-secondary, 10);
-            }
-          }
-        }
-        .logo{
-          svg{
-            circle{
-              fill: $contact-primary;
-              stroke: $contact-secondary;
-            }
-          }
-        }
-      }
+      --main: #C16E25;
+      --secondary: #B3631D;
+      --terciary: rgba(214, 127, 53, 0.75);
+      --overlay: #B3631D;
 
-      .profile_content{
-        border-color: $contact-primary;
-        &:after{
-          background-color: $contact-primary;
-        }
-      }
-
-      .popup{
-
-        .edge{
-          background: $contact-primary;
-        }
-      }
-
-      &.profile{
-        .overlay-menu{
-          background-color: $contact-secondary;
-        }
-      }
+      --fondo: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
     }
 
     &.profile{
