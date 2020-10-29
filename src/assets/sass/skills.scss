@@ -68,14 +68,17 @@
     display: inline-block;
     vertical-align: middle;
     padding: .85rem .35rem;
-    background-color: var(--current-main);
+    background-image: var(--skill-g);
+    background-color: var(--skill-bg);
     color: white;
     margin-right: .5rem;
     margin-bottom: .5rem;
     border-radius: 3px;
     font-family: "Yanone Kaffeesatz", sans-serif;
     transition: 300ms;
-    border: 2px var(--current-main) solid;
+    border: 2px var(--skill-b) solid;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--skill-tf);
 
     &-graph{
       color: white;
