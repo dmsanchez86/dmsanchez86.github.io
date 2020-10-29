@@ -20,138 +20,137 @@ svg:not(:root){
 
 body{
   overflow: hidden;
-  position: relative;
+  position: relative;  
+}
 
-  .main-app{
-    &.projects{
-      --current-main: rgb(8, 144, 13);
-      --nav-item: #E8EBEC;
-      --nav-item-edge: #005104;
-      --nav-item-bg: #005104;
-      --nav-item-bg2: #005104;
+.main-app{
+  &.projects{
+    --current-main: rgb(8, 144, 13);
+    --nav-item: #E8EBEC;
+    --nav-item-edge: #005104;
+    --nav-item-bg: #005104;
+    --nav-item-bg2: #005104;
 
-      --profile-b: #005104;
-      --btn-mobile: #005104;
+    --profile-b: #005104;
+    --btn-mobile: #005104;
 
-      --logo-fill: #309034;
-      --logo-stroke: #005104;
-      --logo-scale: #005104;
+    --logo-fill: #309034;
+    --logo-stroke: #005104;
+    --logo-scale: #005104;
 
-      --main: #309034;
-      --secondary: #005104;
-      --terciary: rgba(48,144,52,0.72);
-      --overlay: #005104;
+    --main: #309034;
+    --secondary: #005104;
+    --terciary: rgba(48,144,52,0.72);
+    --overlay: #005104;
 
-      --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+  }
+  &.portafolio{
+    --current-main: rgb(0, 137, 123);
+    --nav-item: #E8EBEC;
+    --nav-item-edge: #026D63;
+    --nav-item-bg: #026D63;
+    --nav-item-bg2: #026D63;
+
+    --profile-b: #026D63;
+    --btn-mobile: #026D63;
+
+    --logo-fill: #04756A;
+    --logo-stroke: #026D63;
+    --logo-scale: #026D63;
+
+    --main: #04756A;
+    --secondary: #026D63;
+    --terciary: rgba(0, 137, 123, 0.75);
+    --overlay: #026D63;
+
+    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+  }
+  &.footer,
+  &.contact{
+    --current-main: rgb(228 120 29 / 99%);
+    --nav-item: #E8EBEC;
+    --nav-item-edge: #B3631D;
+    --nav-item-bg: #B3631D;
+    --nav-item-bg2: #B3631D;
+
+    --profile-b: #B3631D;
+    --btn-mobile: #B3631D;
+
+    --logo-fill: #C16E25;
+    --logo-stroke: #B3631D;
+    --logo-scale: #B3631D;
+
+    --main: #C16E25;
+    --secondary: #B3631D;
+    --terciary: rgba(214, 127, 53, 0.75);
+    --overlay: #B3631D;
+
+    --fondo: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+  }
+
+  &.profile{
+    .fullpage-wrapper .section.active{
+      transform: translate3d(0, 0, -1000px) scale(.8);
+      transform-origin: center;
     }
-    &.portafolio{
-      --current-main: rgb(0, 137, 123);
-      --nav-item: #E8EBEC;
-      --nav-item-edge: #026D63;
-      --nav-item-bg: #026D63;
-      --nav-item-bg2: #026D63;
 
-      --profile-b: #026D63;
-      --btn-mobile: #026D63;
-
-      --logo-fill: #04756A;
-      --logo-stroke: #026D63;
-      --logo-scale: #026D63;
-
-      --main: #04756A;
-      --secondary: #026D63;
-      --terciary: rgba(0, 137, 123, 0.75);
-      --overlay: #026D63;
-
-      --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
-    }
-    &.footer,
-    &.contact{
-      --current-main: rgb(228 120 29 / 99%);
-      --nav-item: #E8EBEC;
-      --nav-item-edge: #B3631D;
-      --nav-item-bg: #B3631D;
-      --nav-item-bg2: #B3631D;
-
-      --profile-b: #B3631D;
-      --btn-mobile: #B3631D;
-
-      --logo-fill: #C16E25;
-      --logo-stroke: #B3631D;
-      --logo-scale: #B3631D;
-
-      --main: #C16E25;
-      --secondary: #B3631D;
-      --terciary: rgba(214, 127, 53, 0.75);
-      --overlay: #B3631D;
-
-      --fondo: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+    .navigator_content{
+      transform: translatey(30px);
     }
 
-    &.profile{
-      .fullpage-wrapper .section.active{
-        transform: translate3d(0, 0, -1000px) scale(.8);
-        transform-origin: center;
-      }
+    .overlay-menu{
+      width: 100%;
+      z-index: 100;
+      cursor: nesw-resize;
+      transition: z-index .1s ease, background .15s ease;
+    }
 
-      .navigator_content{
-        transform: translatey(30px);
-      }
+    .popup{
+      z-index: 111;
 
-      .overlay-menu{
-        width: 100%;
-        z-index: 100;
-        cursor: nesw-resize;
-        transition: z-index .1s ease, background .15s ease;
-      }
-
-      .popup{
-        z-index: 111;
-
-        .popup-header .profile_content{
-          animation: scaleIn .5s 1s linear forwards;
-        }
-      }
-
-      .twitter_content{
-        display: none;
-      }
-
-      .language-content{
-        z-index: 115;
-        bottom: 5.75rem;
-        right: 5.5rem;
-        background-color: rgba(0,0,0,.1352);
-
-        @media (min-width: 1200px) {
-          right: 7.35rem;
-        }
-        @media (min-width: 1600px) {
-          right: 9rem;
-        }
-
-        i,
-        a{
-          color: #323232;
-          text-shadow: 0 0 4px rgba(255,255,255,.5);
-        }
+      .popup-header .profile_content{
+        animation: scaleIn .5s 1s linear forwards;
       }
     }
 
-    &.menu{
-      @include gradient(linear, (to left, #d6d3d3, #fff));
+    .twitter_content{
+      display: none;
+    }
 
-      .fullpage-wrapper .section.active{
-        transform: translate3d(0,0,-950px) rotateY(18deg);
-        transform-origin: left center;
+    .language-content{
+      z-index: 115;
+      bottom: 5.75rem;
+      right: 5.5rem;
+      background-color: rgba(0,0,0,.1352);
+
+      @media (min-width: 1200px) {
+        right: 7.35rem;
+      }
+      @media (min-width: 1600px) {
+        right: 9rem;
       }
 
-      .language-content{
-        z-index: 11;
+      i,
+      a{
+        color: #323232;
+        text-shadow: 0 0 4px rgba(255,255,255,.5);
       }
     }
   }
 
+  &.menu{
+    @include gradient(linear, (to left, #d6d3d3, #fff));
+
+    .fullpage-wrapper .section.active{
+      transform: translate3d(0,0,-950px) rotateY(18deg);
+      transform-origin: left center;
+    }
+
+    .language-content{
+      z-index: 11;
+    }
+  }
 }
 
 .fullpage-wrapper{
