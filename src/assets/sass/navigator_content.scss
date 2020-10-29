@@ -179,7 +179,7 @@
 						height: 100%;
 						z-index: -1;
 						content: '';
-						transition: width .5s .4s ease;
+						transition: 300ms ease, width .5s .4s ease;
             background: var(--nav-item-edge);
 					}
 
@@ -200,7 +200,7 @@
 					position: absolute;
 					background: var(--nav-item-edge);
 					content: '';
-					transition: width .13s ease,height .13s ease;
+					transition: width .13s ease, height .13s ease;
 
 					&.right,
 					&.left{
