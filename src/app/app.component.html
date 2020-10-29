@@ -16,4 +16,22 @@
   <app-twitter-content></app-twitter-content>
 
   <app-language-content></app-language-content>
+
+  <ng-container *ngIf="language | async as language">
+    <div class="thanks center">
+      <span>
+        {{ language.current.thanks.label }}
+      </span>
+      <i class="fas fa-brain"></i> 
+      <span>
+        & 
+        <a target="_blank" href="https://angular.io" class="fab fa-angular" title="Angular"></a> 
+        <a target="_blank" href="https://angular.io/guide/service-worker-getting-started" class="pwa" title="Progressive Web APP">
+          <span>p</span>
+          <span>w</span>
+          <span>a</span>
+        </a> 
+      </span>
+    </div>
+  </ng-container>
 </main>
