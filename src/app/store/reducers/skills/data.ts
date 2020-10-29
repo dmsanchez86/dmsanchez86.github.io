@@ -10,8 +10,15 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 70,
     colors: {
-      current_main: '#e23237'
-    }
+      current_main: '#e23237',
+      secondary: '#b52e31',
+      nav_item_edge: '#b52e31',
+      btn_mobile: '#b52e31',
+      profile_b: '#b52e31',
+      logo_fill: '#e23237',
+      logo_stroke: '#b52e31',
+      logo_scale: '#b52e31',
+    },
   },
   {
     name: 'sass',
@@ -22,8 +29,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 90,
     colors: {
-      current_main: '#cf649a'
-    }
+      current_main: '#cf649a',
+    },
   },
   {
     name: 'react',
@@ -34,8 +41,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 2,
     percentage: 50,
     colors: {
-      current_main: '#61dafb'
-    }
+      current_main: '#61dafb',
+    },
   },
   {
     name: 'wordpress',
@@ -46,8 +53,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 75,
     colors: {
-      current_main: '#444'
-    }
+      current_main: '#444',
+    },
   },
   {
     name: 'android',
@@ -58,8 +65,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 1,
     percentage: 40,
     colors: {
-      current_main: '#30d57f'
-    }
+      current_main: '#30d57f',
+    },
   },
   {
     name: 'app_store_ios',
@@ -69,8 +76,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 2,
     percentage: 50,
     colors: {
-      current_main: '#1c7ff4'
-    }
+      current_main: '#1c7ff4',
+    },
   },
   {
     name: 'apple',
@@ -80,8 +87,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 2,
     percentage: 65,
     colors: {
-      current_main: '#d6d6d6'
-    }
+      current_main: '#d6d6d6',
+    },
   },
   {
     name: 'bitbucket',
@@ -91,8 +98,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 90,
     colors: {
-      current_main: '#0747a6'
-    }
+      current_main: '#0747a6',
+    },
   },
   {
     name: 'bootstrap',
@@ -103,8 +110,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 95,
     colors: {
-      current_main: '#533b78'
-    }
+      current_main: '#533b78',
+    },
   },
   {
     name: 'github',
@@ -115,8 +122,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 7,
     percentage: 85,
     colors: {
-      current_main: '#222'
-    }
+      current_main: '#222',
+    },
   },
   {
     name: 'chrome',
@@ -126,8 +133,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 10,
     percentage: 95,
     colors: {
-      current_main: '#fdd901'
-    }
+      current_main: '#fdd901',
+    },
   },
   {
     name: 'firefox',
@@ -137,8 +144,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 4,
     percentage: 80,
     colors: {
-      current_main: '#f52e33'
-    }
+      current_main: '#f52e33',
+    },
   },
   {
     name: 'css3',
@@ -149,8 +156,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 95,
     colors: {
-      current_main: '#1579b8'
-    }
+      current_main: '#1579b8',
+    },
   },
   {
     name: 'figma',
@@ -160,8 +167,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 1,
     percentage: 35,
     colors: {
-      current_main: '#19b6f6'
-    }
+      current_main: '#19b6f6',
+    },
   },
   {
     name: 'fort-awesome',
@@ -171,8 +178,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 85,
     colors: {
-      current_main: '#333'
-    }
+      current_main: '#333',
+    },
   },
   {
     name: 'git',
@@ -183,8 +190,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 80,
     colors: {
-      current_main: '#d74a34'
-    }
+      current_main: '#d74a34',
+    },
   },
   {
     name: 'gitlab',
@@ -194,8 +201,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 80,
     colors: {
-      current_main: '#f46a25'
-    }
+      current_main: '#f46a25',
+    },
   },
   {
     name: 'google-drive',
@@ -205,8 +212,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 8,
     percentage: 50,
     colors: {
-      current_main: '#19a464'
-    }
+      current_main: '#19a464',
+    },
   },
   {
     name: 'html5',
@@ -217,8 +224,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 5,
     percentage: 90,
     colors: {
-      current_main: '#e96228'
-    }
+      current_main: '#e96228',
+    },
   },
   {
     name: 'javascript',
@@ -229,7 +236,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 6,
     percentage: 95,
     colors: {
-      current_main: '#df9e28'
+      current_main: '#df9e28',
     },
   },
   {
@@ -240,7 +247,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 1,
     percentage: 50,
     colors: {
-      current_main: '#222'
+      current_main: '#222',
     },
   },
   {
