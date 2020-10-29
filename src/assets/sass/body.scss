@@ -159,7 +159,8 @@ body{
     transform: translate3d(0,0,0);
     transition: transform .25s ease;
     max-height: 100vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
