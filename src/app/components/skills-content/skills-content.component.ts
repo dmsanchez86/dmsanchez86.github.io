@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { LanguageItemProfileSkillsI, LanguageItemSkillsI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 import { PopupState } from 'src/app/store/actions/global';
+import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-skills-content',
@@ -18,7 +19,14 @@ import { PopupState } from 'src/app/store/actions/global';
       <div class="skills-body center" [ngClass]="{'skills-body-complete': complete}">
         <ng-container *ngFor="let skill of skills; let i = index">
           <ng-container *ngIf="complete; else elseTemplate">
-            <a [routerLink]="['/skills', 'detail', skill.name]" routerLinkActive="router-link-active"  class="skills-item center" [ngClass]="{'skills-item-complete': complete}" [title]="skill.title">
+            <a 
+              routerLinkActive="router-link-active"
+              class="skills-item center"
+              (mouseover)="cambiarColor(skill)" 
+              (mouseout)="quitarColor()" 
+              [routerLink]="['/skills', 'detail', skill.name]"
+              [ngClass]="{'skills-item-complete': complete}" 
+              [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
             </a>
@@ -57,5 +65,12 @@ export class SkillsContentComponent implements OnInit {
 
     setTimeout(() => profile.classList.add('scaleIn'), 100);
     this.store.dispatch(PopupState({payload: false}));
+  }
+
+  cambiarColor(skill: LanguageItemProfileSkillsI){
+    setThemeTMP(skill.colors);
+  }
+  quitarColor(){
+    removeThemeTMP();
   }
 }
