@@ -5,61 +5,25 @@
 }
 
 @media (max-width: 980px){
-	body{
-    .main-app{
-      &.home{
-        .navigator_content{
-          .navigator{
-            ul{
-              background: $home-alpha;
-              @include box-shadow(-1px 0 5px $home-primary);
-            }
-          }
-        }
-      }
-      &.projects{
-        .navigator_content{
-          .navigator{
-            ul{
-              background: $projects-alpha;
-              @include box-shadow(-1px 0 5px $projects-primary);
-            }
-          }
-        }
-      }
-      &.portafolio,
-      &.collaborations{
-        .navigator_content{
-          .navigator{
-            ul{
-              background: $colaborations-alpha;
-              @include box-shadow(-1px 0 5px $colaborations-primary);
-            }
-          }
-        }
-      }
-      &.footer,
-      &.contact{
-        .navigator_content{
-          .navigator{
-            ul{
-              background: $contact-alpha;
-              @include box-shadow(-1px 0 5px $contact-primary);
-            }
-          }
-        }
-      }
-
-      &.profile{
-        .language-content{
-          right: 4.75rem;
-        }
-        .twitter_content{
-          right: 8rem;
+  .main-app{
+    .navigator_content{
+      .navigator{
+        ul{
+          background: var(--current-main);
+          box-shadow: -1px 0 5px var(--secondary);
         }
       }
     }
-	}
+
+    &.profile{
+      .language-content{
+        right: 4.75rem;
+      }
+      .twitter_content{
+        right: 8rem;
+      }
+    }
+  }
 
 	.navigator_content {
 		.navigator {
