@@ -11,14 +11,8 @@
 
   <div class="overlay-menu" (click)="cerrarMenu()"></div>
 
-  <app-profile-image [home]="true"></app-profile-image>
-
-  <app-twitter-content></app-twitter-content>
-
-  <app-language-content></app-language-content>
-
   <ng-container *ngIf="language | async as language">
-    <div class="thanks center">
+    <div class="thanks center" tabindex="1">
       <span>
         {{ language.current.thanks.label }}
       </span>
@@ -34,4 +28,11 @@
       </span>
     </div>
   </ng-container>
+
+  <app-profile-image [home]="true"></app-profile-image>
+  
+  <app-twitter-content></app-twitter-content>
+
+  <app-language-content></app-language-content>
+
 </main>
