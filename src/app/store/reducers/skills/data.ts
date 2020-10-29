@@ -9,6 +9,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#e23237'
+    }
   },
   {
     name: 'sass',
@@ -18,6 +21,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 90,
+    colors: {
+      current_main: '#cf649a'
+    }
   },
   {
     name: 'react',
@@ -27,6 +33,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 2,
     percentage: 50,
+    colors: {
+      current_main: '#61dafb'
+    }
   },
   {
     name: 'wordpress',
@@ -36,6 +45,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 75,
+    colors: {
+      current_main: '#444'
+    }
   },
   {
     name: 'android',
@@ -45,6 +57,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 1,
     percentage: 40,
+    colors: {
+      current_main: '#30d57f'
+    }
   },
   {
     name: 'app_store_ios',
@@ -53,6 +68,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-app-store-ios',
     years: 2,
     percentage: 50,
+    colors: {
+      current_main: '#1c7ff4'
+    }
   },
   {
     name: 'apple',
@@ -61,6 +79,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-apple',
     years: 2,
     percentage: 65,
+    colors: {
+      current_main: '#d6d6d6'
+    }
   },
   {
     name: 'bitbucket',
@@ -69,6 +90,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-bitbucket',
     years: 5,
     percentage: 90,
+    colors: {
+      current_main: '#0747a6'
+    }
   },
   {
     name: 'bootstrap',
@@ -78,6 +102,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 95,
+    colors: {
+      current_main: '#533b78'
+    }
   },
   {
     name: 'github',
@@ -87,6 +114,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 7,
     percentage: 85,
+    colors: {
+      current_main: '#222'
+    }
   },
   {
     name: 'chrome',
@@ -95,6 +125,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-chrome',
     years: 10,
     percentage: 95,
+    colors: {
+      current_main: '#fdd901'
+    }
   },
   {
     name: 'firefox',
@@ -103,6 +136,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-firefox',
     years: 4,
     percentage: 80,
+    colors: {
+      current_main: '#f52e33'
+    }
   },
   {
     name: 'css3',
@@ -112,6 +148,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 95,
+    colors: {
+      current_main: '#1579b8'
+    }
   },
   {
     name: 'figma',
@@ -120,6 +159,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-figma',
     years: 1,
     percentage: 35,
+    colors: {
+      current_main: '#19b6f6'
+    }
   },
   {
     name: 'fort-awesome',
@@ -128,6 +170,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-fort-awesome',
     years: 5,
     percentage: 85,
+    colors: {
+      current_main: '#333'
+    }
   },
   {
     name: 'git',
@@ -137,6 +182,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 80,
+    colors: {
+      current_main: '#d74a34'
+    }
   },
   {
     name: 'gitlab',
@@ -145,6 +193,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-gitlab',
     years: 5,
     percentage: 80,
+    colors: {
+      current_main: '#f46a25'
+    }
   },
   {
     name: 'google-drive',
@@ -153,6 +204,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-google-drive',
     years: 8,
     percentage: 50,
+    colors: {
+      current_main: '#19a464'
+    }
   },
   {
     name: 'html5',
@@ -162,6 +216,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 90,
+    colors: {
+      current_main: '#e96228'
+    }
   },
   {
     name: 'javascript',
@@ -171,6 +228,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 6,
     percentage: 95,
+    colors: {
+      current_main: '#df9e28'
+    },
   },
   {
     name: 'jsfiddle',
@@ -179,6 +239,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-jsfiddle',
     years: 1,
     percentage: 50,
+    colors: {
+      current_main: '#222'
+    },
   },
   {
     name: 'laravel',
@@ -188,6 +251,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 1,
     percentage: 45,
+    colors: {
+      current_main: '#eb4d43',
+    },
   },
   {
     name: 'less',
@@ -196,6 +262,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-less',
     years: 2,
     percentage: 90,
+    colors: {
+      current_main: '#2b4674',
+    },
   },
   {
     name: 'linux',
@@ -205,6 +274,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#222',
+    },
   },
   {
     name: 'markdown',
@@ -213,6 +285,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-markdown',
     years: 3,
     percentage: 70,
+    colors: {
+      current_main: '#444',
+    },
   },
   {
     name: 'microsoft',
@@ -221,6 +296,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-microsoft',
     years: 10,
     percentage: 90,
+    colors: {
+      current_main: '#7cb605',
+    },
   },
   {
     name: 'node',
@@ -230,6 +308,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 6,
     percentage: 65,
+    colors: {
+      current_main: '#7fc728',
+    },
   },
   {
     name: 'npm',
@@ -238,6 +319,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-npm',
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#ca3e3d',
+    },
   },
   {
     name: 'php',
@@ -247,6 +331,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#7377ad',
+    },
   },
   {
     name: 'python',
@@ -255,6 +342,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-python',
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#f7c41c',
+    },
   },
   {
     name: 'readme',
@@ -263,6 +353,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-readme',
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#333',
+    },
   },
   {
     name: 'safari',
@@ -271,6 +364,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-safari',
     years: 2,
     percentage: 50,
+    colors: {
+      current_main: '#1b8fef',
+    },
   },
   {
     name: 'shopify',
@@ -280,6 +376,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     main: true,
     years: 1,
     percentage: 70,
+    colors: {
+      current_main: '#91b946',
+    },
   },
   {
     name: 'sketch',
@@ -288,6 +387,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-sketch',
     years: 1,
     percentage: 60,
+    colors: {
+      current_main: '#f5a600',
+    },
   },
   {
     name: 'slack',
@@ -296,6 +398,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-slack',
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#501650',
+    },
   },
   {
     name: 'ubuntu',
@@ -304,6 +409,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-ubuntu',
     years: 5,
     percentage: 70,
+    colors: {
+      current_main: '#ec7020',
+    },
   },
   {
     name: 'unity',
@@ -312,6 +420,9 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-unity',
     years: 2,
     percentage: 50,
+    colors: {
+      current_main: '#222',
+    },
   },
   {
     name: 'vuejs',
@@ -320,7 +431,10 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-vuejs',
     years: 1,
     percentage: 50,
-    main: true
+    main: true,
+    colors: {
+      current_main: '#33475b',
+    },
   },
   {
     name: 'yarn',
@@ -329,5 +443,8 @@ export const data: LanguageItemProfileSkillsI[] = [
     icon: 'fab fa-yarn',
     years: 2,
     percentage: 70,
+    colors: {
+      current_main: '#2c8ebb',
+    },
   },
 ];
