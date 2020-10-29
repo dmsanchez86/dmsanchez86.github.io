@@ -141,14 +141,9 @@ body{
     &.menu{
       @include gradient(linear, (to left, #d6d3d3, #fff));
 
-      .fullpage-wrapper{
-
-        .section{
-          &.active{
-            transform: translate3d(0,0,-950px) rotateY(18deg);
-            transform-origin: left center;
-          }
-        }
+      .fullpage-wrapper .section.active{
+        transform: translate3d(0,0,-950px) rotateY(18deg);
+        transform-origin: left center;
       }
 
       .language-content{
@@ -163,15 +158,12 @@ body{
 	@include perspective(1000px);
 	@include perspective-origin(center);
 
-	.section{
-
-		&.active{
-			@include transform(translate3d(0,0,0));
-      @include transition(transform .25s ease );
-      max-height: 100vh;
-      overflow: auto;
-		}
-	}
+	.section.active{
+    transform: translate3d(0,0,0);
+    transition: transform .25s ease;
+    max-height: 100vh;
+    overflow: auto;
+  }
 }
 
 img.responsive-img,
