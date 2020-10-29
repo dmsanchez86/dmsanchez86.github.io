@@ -1,0 +1,46 @@
+.thanks{
+  position: fixed;
+  bottom: 1.35rem;
+  padding: .5rem 1rem .5rem;
+  border-radius: 7px;
+  background-color: rgba(255,255,255,0);
+  width: 240px;
+  max-width: 100%;
+  margin: auto;
+  right: 0;
+  left: 0;
+  transition: 250ms ease;
+  color: white;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-transform: uppercase;
+
+  &:focus,
+  &:hover{
+    background-color: rgba(255,255,255,.15);
+
+    > span{
+      opacity: 1;
+    }
+  }
+
+  > span{
+    transition: 250ms ease;
+    opacity: 0;
+  }
+
+  .pwa,
+  .fa-angular,
+  .fa-brain{
+    display: inline-block;
+    margin: 0 .25rem;
+  }
+  .fa-angular{
+    color: #e23237;
+  }
+
+  .pwa{
+    background: linear-gradient(to right, var(--secondary) 0%, var(--terciary) 50%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
