@@ -5,6 +5,7 @@ export const ES: LanguageItemI = {
   title: 'Español',
   label: 'Cambiar Idioma',
   loading: 'Cargando...',
+  thanks: { label: 'Construido con' },
   logo: {
     title: 'Sitio Web dmsanchez86',
   },

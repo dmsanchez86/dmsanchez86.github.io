@@ -3,6 +3,7 @@ export interface LanguageItemI {
   title: string;
   label: string;
   loading: string;
+  thanks?: LanguageItemThanksI;
   skills?: LanguageItemSkillsI;
   meta: LanguageItemMetaI;
   logo: LanguageItemLogoI;
@@ -14,6 +15,9 @@ export interface LanguageItemI {
   portafolio: LanguageItemPortafolioI;
 }
 
+export interface LanguageItemThanksI {
+  label: string;
+}
 export interface LanguageItemSkillsI {
   title: string;
   label: string;
