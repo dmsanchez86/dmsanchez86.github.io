@@ -21,6 +21,9 @@
 
   --fondo: -webkit-linear-gradient(132deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4), -webkit-linear-gradient(0deg, #74b5d4, rgba(16, 181, 212, 0.4), #74b5d4), url(assets/images/home.png);
 
+  --pb-popup: 2rem;
+  --mh-header: 200px;
+
   --section-pt: 100px;
   @media (max-width: 998px) {
     --section-pt: 70px;
