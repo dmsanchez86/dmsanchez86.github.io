@@ -35,11 +35,14 @@
     margin: 0 .25rem;
   }
   .fa-angular{
-    color: #e23237;
+    // color: #e23237;
+    background: linear-gradient(to right, #e23237 0%, #b52e31 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .pwa{
-    background: linear-gradient(to right, var(--secondary) 0%, var(--terciary) 50%, var(--secondary) 100%);
+    background: linear-gradient(to right, #b52e31, var(--terciary), var(--secondary), #b52e31);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
