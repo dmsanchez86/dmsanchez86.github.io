@@ -26,17 +26,21 @@ body{
     &.projects{
       --current-main: rgb(8, 144, 13);
       --nav-item: #E8EBEC;
-      --nav-item-edge: ##27822B;
-      --nav-item-bg: ##27822B;
-      --nav-item-bg2: ##27822B;
+      --nav-item-edge: #005104;
+      --nav-item-bg: #005104;
+      --nav-item-bg2: #005104;
 
-      --profile-b: ##005104;
+      --profile-b: #005104;
       --btn-mobile: #005104;
+
+      --logo-fill: #309034;
+      --logo-stroke: #005104;
+      --logo-scale: #005104;
 
       --main: #309034;
       --secondary: #005104;
       --terciary: rgba(48,144,52,0.72);
-      --overlay: #27822B;
+      --overlay: #005104;
 
       --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
     }
@@ -49,6 +53,10 @@ body{
 
       --profile-b: #026D63;
       --btn-mobile: #026D63;
+
+      --logo-fill: #04756A;
+      --logo-stroke: #026D63;
+      --logo-scale: #026D63;
 
       --main: #04756A;
       --secondary: #026D63;
@@ -67,6 +75,10 @@ body{
 
       --profile-b: #B3631D;
       --btn-mobile: #B3631D;
+
+      --logo-fill: #C16E25;
+      --logo-stroke: #B3631D;
+      --logo-scale: #B3631D;
 
       --main: #C16E25;
       --secondary: #B3631D;
