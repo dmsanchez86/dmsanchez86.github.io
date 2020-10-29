@@ -41,7 +41,6 @@ body{
     --main: #309034;
     --secondary: #005104;
     --terciary: rgba(48,144,52,0.72);
-    --overlay: #005104;
 
     --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
   }
@@ -62,7 +61,6 @@ body{
     --main: #04756A;
     --secondary: #026D63;
     --terciary: rgba(0, 137, 123, 0.75);
-    --overlay: #026D63;
 
     --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
   }
@@ -84,12 +82,12 @@ body{
     --main: #C16E25;
     --secondary: #B3631D;
     --terciary: rgba(214, 127, 53, 0.75);
-    --overlay: #B3631D;
 
     --fondo: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
   }
 
   &.profile{
+    --overlay: var(--secondary);
     .fullpage-wrapper .section.active{
       transform: translate3d(0, 0, -1000px) scale(.8);
       transform-origin: center;
