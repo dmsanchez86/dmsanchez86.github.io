@@ -87,7 +87,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     years: 2,
     percentage: 65,
     colors: {
-      current_main: '#d6d6d6',
+      current_main: '#333',
     },
   },
   {
