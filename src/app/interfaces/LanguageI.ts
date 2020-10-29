@@ -86,7 +86,7 @@ export interface LanguageItemProfileSocialI {
   freecodecamp: string;
   codepen: string;
 }
-export interface LanguageItemProfileSkillsI{
+export interface LanguageItemProfileSkillsI {
   icon: string;
   name: string;
   title: string;
@@ -95,6 +95,36 @@ export interface LanguageItemProfileSkillsI{
   years?: number;
   percentage?: number;
   image?: string;
+  colors?: LanguageItemProfileSkillsColorsI;
+}
+
+export interface LanguageItemProfileSkillsColorsI{
+  current_main?: string;
+  nav_item?: string;
+  nav_item_edge?: string;
+  nav_item_bg?: string;
+  nav_item_bg2?: string;
+  nav_close?: string;
+
+  profile_b?: string;
+  btn_mobile?: string;
+
+  logo_fill?: string;
+  logo_stroke?: string;
+  logo_scale?: string;
+  logo_text?: string;
+
+  skill_bg?: string;
+  skill_b?: string;
+  skill_g?: string;
+  skill_tf?: string;
+
+  main?: string;
+  secondary?: string;
+  terciary?: string;
+  overlay?: string;
+
+  fondo?: string;
 }
 
 export interface LanguageItemProfileSkillsKeyI{
