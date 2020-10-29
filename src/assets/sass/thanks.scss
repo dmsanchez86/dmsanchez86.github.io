@@ -19,6 +19,7 @@
   }
 
   @media (max-width: 550px){
+    z-index: 2;
     &:hover,
     &:focus{
       // bottom: 8vh;
