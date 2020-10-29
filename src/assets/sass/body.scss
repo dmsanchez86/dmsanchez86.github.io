@@ -89,16 +89,9 @@ body{
     }
 
     &.profile{
-      @include gradient(linear, (to left, var(--main), var(--secondary)));
-
-      .fullpage-wrapper{
-
-        .section{
-          &.active{
-            transform: translate3d(0, 0, -1000px) scale(.8);
-            transform-origin: center;
-          }
-        }
+      .fullpage-wrapper .section.active{
+        transform: translate3d(0, 0, -1000px) scale(.8);
+        transform-origin: center;
       }
 
       .navigator_content{
@@ -108,7 +101,6 @@ body{
       .overlay-menu{
         width: 100%;
         z-index: 100;
-        background: var(--overlay);
         cursor: nesw-resize;
         transition: z-index .1s ease, background .15s ease;
       }
@@ -116,10 +108,8 @@ body{
       .popup{
         z-index: 111;
 
-        .popup-header{
-          .profile_content{
-            animation: scaleIn .5s 1s linear forwards;
-          }
+        .popup-header .profile_content{
+          animation: scaleIn .5s 1s linear forwards;
         }
       }
 
