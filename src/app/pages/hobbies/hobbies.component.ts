@@ -15,11 +15,11 @@ export class HobbiesComponent implements OnInit {
   constructor(private store: Store<AppState>, private global: GlobalService) {}
 
   ngOnDestroy() {
-    bodyRemoveClass('contact');
+    bodyRemoveClass('hobbies');
   }
 
   ngOnInit() {
-    bodyAddClass('contact');
+    bodyAddClass('hobbies');
     favicon('contact');
 
     this.global.titlePage(`hobbies`);

@@ -16,15 +16,15 @@ export class SkillsComponent implements OnInit, OnDestroy {
   constructor(private global: GlobalService) { }
 
   ngOnDestroy() {
-    bodyRemoveClass('portafolio');
+    bodyRemoveClass('skills');
   }
 
   ngOnInit() {
-    bodyAddClass('portafolio');
+    bodyAddClass('skills');
     favicon('portafolio');
 
     this.global.titlePage(`skills`);
-    this.global.metaColor('#00897b');
+    this.global.metaColor('#33475b');
   }
 
 }
