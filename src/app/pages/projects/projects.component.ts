@@ -32,6 +32,6 @@ export class ProjectsComponent implements OnInit {
     favicon('projects');
 
     this.global.titlePage(`projects`);
-    this.global.metaColor('#61AB64');
+    this.global.metaColor('#df9e28');
   }
 }

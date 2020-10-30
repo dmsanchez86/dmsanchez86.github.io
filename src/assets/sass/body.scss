@@ -25,22 +25,22 @@ body{
 
 .main-app{
   &.projects{
-    --current-main: rgb(8, 144, 13);
+    --current-main: #df9e28;
     --nav-item: #E8EBEC;
-    --nav-item-edge: #005104;
-    --nav-item-bg: #005104;
-    --nav-item-bg2: #005104;
+    --nav-item-edge: #b7801b;
+    --nav-item-bg: #b7801b;
+    --nav-item-bg2: #b7801b;
 
-    --profile-b: #005104;
-    --btn-mobile: #005104;
+    --profile-b: #b7801b;
+    --btn-mobile: #b7801b;
 
-    --logo-fill: #309034;
-    --logo-stroke: #005104;
-    --logo-scale: #005104;
+    --logo-fill: #b7801b;
+    --logo-stroke: #b7801b;
+    --logo-scale: #b7801b;
 
-    --main: #309034;
-    --secondary: #005104;
-    --terciary: rgba(48,144,52,0.72);
+    --main: #b7801b;
+    --secondary: #e4a010;
+    --terciary: #f39f18;
 
     --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
   }
