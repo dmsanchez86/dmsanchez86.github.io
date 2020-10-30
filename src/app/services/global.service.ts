@@ -3,8 +3,8 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { AppState, AppStateLanguaje } from 'src/app/store';
-import { LanguageItemI } from '../interfaces/LanguageI';
+import { AppState } from 'src/app/store';
+import { LanguageItemI, LanguageItemProfileSkillsI } from '../interfaces/LanguageI';
 import { PopupState } from '../store/actions/global';
 
 @Injectable({
@@ -14,6 +14,8 @@ export class GlobalService {
   current: LanguageItemI;
   currentPage: string = '';
 
+  skills: LanguageItemProfileSkillsI[];
+
   constructor(
     private meta: Meta,
     private title: Title,
@@ -21,8 +23,9 @@ export class GlobalService {
     private actions: Actions,
     private router: Router
   ) {
-    this.store.select('language').subscribe((language: AppStateLanguaje) => {
+    this.store.subscribe(({ language, skills }) => {
       this.current = language.current;
+      this.skills = skills.data;
     });
     this.actions.subscribe((action: any) => {
       if (action.type === '[LANGUAGE] change') {
@@ -61,7 +64,14 @@ export class GlobalService {
     this.title.setTitle(`${pre ? `${pre} ` : ''}${this.current.nav[key]} | ${this.current.profile.name}`);
   }
 
-  metaColor(color: string){
-    this.meta.updateTag({name: 'theme-color', content: color});
+  metaColor(color: string, slug?) {
+    let skill: LanguageItemProfileSkillsI;
+
+    if (slug) {
+      skill = this.skills.find(skill => skill.name === slug);
+      color = skill.colors.main;
+    }
+
+    this.meta.updateTag({ name: 'theme-color', content: color });
   }
 }

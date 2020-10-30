@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { LanguageItemI, LanguageItemProfileSkillsI } from 'src/app/interfaces/LanguageI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
@@ -24,10 +25,13 @@ export class DetailComponent implements OnInit, OnDestroy {
   name: string;
   showStatistics: boolean = false;
 
+  sus: Subscription = new Subscription();
+
   constructor(
     private store: Store<AppState>,
     private global: GlobalService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private actions: Actions
   ) {
     this.name = this.route.snapshot.params.slug;
 
@@ -39,11 +43,18 @@ export class DetailComponent implements OnInit, OnDestroy {
       this.name = params.slug;
       this.showStatistics = false;
     });
+
+    this.sus = this.actions.subscribe((action: any) => {
+      if(action.type === setSkill.type){
+        this.global.metaColor(null, action.slug);
+      }
+    })
   }
 
   ngOnDestroy() {
     bodyRemoveClass('portafolio');
     removeThemeTMP();
+    this.sus.unsubscribe();
   }
 
   ngOnInit() {
@@ -51,7 +62,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     favicon('portafolio');
 
     this.global.titlePage(`skill`, this.name);
-    this.global.metaColor('#00897b');
+    // this.global.metaColor('#00897b');
 
     this.setSkill();
   }
