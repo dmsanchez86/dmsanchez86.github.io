@@ -131,6 +131,18 @@
       }
 
     }
+
+    .skills-item{
+      --skill-tf: var(--main);
+
+      &:hover,
+      &:focus,
+      &.active{
+        --skill-tf: var(--secondary);
+        --skill-bg: var(--main);
+      }
+    }
+
     .project{
       position: relative;
       width: 100%;
