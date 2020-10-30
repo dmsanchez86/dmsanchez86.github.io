@@ -19,6 +19,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_fill: '#e23237',
       logo_stroke: '#b52e31',
       logo_scale: '#b52e31',
+      fondo: 'none',
     },
   },
   {
@@ -40,6 +41,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#bc3a7b',
       logo_scale: '#cf3476',
       terciary: '#bc3a7b',
+      fondo: 'none',
     },
   },
   {
@@ -61,6 +63,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#0096d2',
       logo_scale: '#09a6d1',
       terciary: '#09a6d1',
+      fondo: 'none',
     },
   },
   {
@@ -82,6 +85,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -94,6 +98,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     percentage: 40,
     colors: {
       current_main: '#3dc980',
+      fondo: 'none',
     },
   },
   {
@@ -114,6 +119,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#0a65d0',
       logo_scale: '#0071bc',
       terciary: '#0071bc',
+      fondo: 'none',
     },
   },
   {
@@ -134,6 +140,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -154,6 +161,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#063985',
       logo_scale: '#0061a9',
       terciary: '#094293',
+      fondo: 'none',
     },
   },
   {
@@ -175,11 +183,12 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#422f60',
       logo_scale: '#572364',
       terciary: '#6c4675',
+      fondo: 'none',
     },
   },
   {
     name: 'github',
-    key: 'hithub',
+    key: 'github',
     title: 'GitHub',
     icon: 'fab fa-github',
     main: true,
@@ -196,6 +205,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -216,6 +226,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#b7801b',
       logo_scale: '#dc9d00',
       terciary: '#e4a010',
+      fondo: 'none',
     },
   },
   {
@@ -236,6 +247,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#c64a14',
       logo_scale: '#f44611',
       terciary: '#e25f23',
+      fondo: 'none',
     },
   },
   {
@@ -257,6 +269,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#237296',
       logo_scale: '#0a497b',
       terciary: '#0096d2',
+      fondo: 'none',
     },
   },
   {
@@ -277,6 +290,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#0096d2',
       logo_scale: '#09a6d1',
       terciary: '#09a6d1',
+      fondo: 'none',
     },
   },
   {
@@ -297,6 +311,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -318,6 +333,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#b23623',
       logo_scale: '#e55137',
       terciary: '#d95030',
+      fondo: 'none',
     },
   },
   {
@@ -338,6 +354,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#c64a14',
       logo_scale: '#f44611',
       terciary: '#e25f23',
+      fondo: 'none',
     },
   },
   {
@@ -349,6 +366,7 @@ export const data: LanguageItemProfileSkillsI[] = [
     percentage: 50,
     colors: {
       current_main: '#19a464',
+      fondo: 'none',
     },
   },
   {
@@ -370,6 +388,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#c64a14',
       logo_scale: '#f44611',
       terciary: '#e25f23',
+      fondo: 'none',
     },
   },
   {
@@ -391,6 +410,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#b7801b',
       logo_scale: '#dc9d00',
       terciary: '#e4a010',
+      fondo: 'none',
     },
   },
   {
@@ -411,6 +431,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -432,6 +453,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#da2317',
       logo_scale: '#f54021',
       terciary: '#f54021',
+      fondo: 'none',
     },
   },
   {
@@ -452,6 +474,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#063985',
       logo_scale: '#0061a9',
       terciary: '#094293',
+      fondo: 'none',
     },
   },
   {
@@ -473,6 +496,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -493,6 +517,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -513,6 +538,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#639204',
       logo_scale: '#00bb2d',
       terciary: '#57a639',
+      fondo: 'none',
     },
   },
   {
@@ -534,6 +560,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#639204',
       logo_scale: '#00bb2d',
       terciary: '#57a639',
+      fondo: 'none',
     },
   },
   {
@@ -554,6 +581,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#a52e2d',
       logo_scale: '#cb3234',
       terciary: '#e51d2e',
+      fondo: 'none',
     },
   },
   {
@@ -575,6 +603,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#555991',
       logo_scale: '#6576b4',
       terciary: '#7f69a5',
+      fondo: 'none',
     },
   },
   {
@@ -595,6 +624,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#b7801b',
       logo_scale: '#dc9d00',
       terciary: '#e4a010',
+      fondo: 'none',
     },
   },
   {
@@ -615,6 +645,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -635,6 +666,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#063985',
       logo_scale: '#0061a9',
       terciary: '#094293',
+      fondo: 'none',
     },
   },
   {
@@ -654,8 +686,9 @@ export const data: LanguageItemProfileSkillsI[] = [
       profile_b: '#749438',
       logo_fill: '#749438',
       logo_stroke: '#749438',
-      logo_scale: '#cb3234',
+      logo_scale: '#bfbf6c',
       terciary: '#bfbf6c',
+      fondo: 'none',
     },
   },
   {
@@ -676,6 +709,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#b7801b',
       logo_scale: '#dc9d00',
       terciary: '#e4a010',
+      fondo: 'none',
     },
   },
   {
@@ -696,6 +730,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#401240',
       logo_scale: '#630b57',
       terciary: '#4c2882',
+      fondo: 'none',
     },
   },
   {
@@ -716,6 +751,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#c64a14',
       logo_scale: '#f44611',
       terciary: '#e25f23',
+      fondo: 'none',
     },
   },
   {
@@ -736,6 +772,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#111',
       logo_scale: '#222',
       terciary: '#333',
+      fondo: 'none',
     },
   },
   {
@@ -757,6 +794,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#293949',
       logo_scale: '#0a497b',
       terciary: '#434750',
+      fondo: 'none',
     },
   },
   {
@@ -777,6 +815,7 @@ export const data: LanguageItemProfileSkillsI[] = [
       logo_stroke: '#237296',
       logo_scale: '#0a497b',
       terciary: '#0096d2',
+      fondo: 'none',
     },
   },
 ];
