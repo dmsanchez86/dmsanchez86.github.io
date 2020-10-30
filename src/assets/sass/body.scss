@@ -64,8 +64,47 @@ body{
 
     --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
   }
-  &.footer,
+  &.skills{
+    --current-main: #33475b;
+    --nav-item: #E8EBEC;
+    --nav-item-edge: #293949;
+    --nav-item-bg: #293949;
+    --nav-item-bg2: #293949;
+
+    --profile-b: #293949;
+    --btn-mobile: #293949;
+
+    --logo-fill: #293949;
+    --logo-stroke: #293949;
+    --logo-scale: #293949;
+
+    --main: #293949;
+    --secondary: #434750;
+    --terciary: #0a497b;
+
+    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+  }
   &.contact{
+    --current-main: #ca3e3d;
+    --nav-item: #E8EBEC;
+    --nav-item-edge: #a52e2d;
+    --nav-item-bg: #a52e2d;
+    --nav-item-bg2: #a52e2d;
+
+    --profile-b: #a52e2d;
+    --btn-mobile: #a52e2d;
+
+    --logo-fill: #a52e2d;
+    --logo-stroke: #a52e2d;
+    --logo-scale: #a52e2d;
+
+    --main: #e51d2e;
+    --secondary: #a52e2d;
+    --terciary: #ca3e3d;
+
+    --fondo: -webkit-linear-gradient(to left, #ca3e3d, rgb(220 111 18 / 81%), rgb(230 122 30));
+  }
+  &.footer{
     --current-main: rgb(228 120 29 / 99%);
     --nav-item: #E8EBEC;
     --nav-item-edge: #B3631D;
