@@ -42,7 +42,7 @@ body{
     --secondary: #e4a010;
     --terciary: #f39f18;
 
-    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
   }
   &.portafolio{
     --current-main: rgb(0, 137, 123);
@@ -54,7 +54,7 @@ body{
     --profile-b: #026D63;
     --btn-mobile: #026D63;
 
-    --logo-fill: #04756A;
+    --logo-fill: #026D63;
     --logo-stroke: #026D63;
     --logo-scale: #026D63;
 
@@ -62,7 +62,7 @@ body{
     --secondary: #026D63;
     --terciary: rgba(0, 137, 123, 0.75);
 
-    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+    --fondo: linear-gradient(to top, var(--secondary), var(--main));
   }
   &.skills{
     --current-main: #33475b;
@@ -82,7 +82,7 @@ body{
     --secondary: #434750;
     --terciary: #0a497b;
 
-    --fondo: -webkit-linear-gradient(to left, rgb(0 137 123), rgb(27 127 117 / 74%), rgb(15 155 140 / 75%));
+    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
   }
   &.contact{
     --current-main: #ca3e3d;
@@ -102,27 +102,27 @@ body{
     --secondary: #a52e2d;
     --terciary: #ca3e3d;
 
-    --fondo: -webkit-linear-gradient(to left, #ca3e3d, rgb(220 111 18 / 81%), rgb(230 122 30));
+    --fondo: linear-gradient(to top, var(--secondary), var(--main));
   }
   &.hobbies{
-    --current-main: rgb(228 120 29 / 99%);
+    --current-main: #f46a25;
     --nav-item: #E8EBEC;
-    --nav-item-edge: #B3631D;
-    --nav-item-bg: #B3631D;
-    --nav-item-bg2: #B3631D;
+    --nav-item-edge: #c64a14;
+    --nav-item-bg: #c64a14;
+    --nav-item-bg2: #c64a14;
 
-    --profile-b: #B3631D;
-    --btn-mobile: #B3631D;
+    --profile-b: #c64a14;
+    --btn-mobile: #c64a14;
 
-    --logo-fill: #C16E25;
-    --logo-stroke: #B3631D;
-    --logo-scale: #B3631D;
+    --logo-fill: #c64a14;
+    --logo-stroke: #c64a14;
+    --logo-scale: #c64a14;
 
-    --main: #C16E25;
-    --secondary: #B3631D;
-    --terciary: rgba(214, 127, 53, 0.75);
+    --main: #c64a14;
+    --secondary: #e25f23;
+    --terciary: #e25f23;
 
-    --fondo: -webkit-linear-gradient(to left, rgb(228 120 29 / 99%), rgb(220 111 18 / 81%), rgb(230 122 30));
+    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
   }
 
   &.profile{

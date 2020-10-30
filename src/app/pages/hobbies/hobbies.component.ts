@@ -23,6 +23,6 @@ export class HobbiesComponent implements OnInit {
     favicon('contact');
 
     this.global.titlePage(`hobbies`);
-    this.global.metaColor('#D67F35');
+    this.global.metaColor('#c64a14');
   }
 }
