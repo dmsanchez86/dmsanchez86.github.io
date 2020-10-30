@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemProjectsI } from 'src/app/interfaces/LanguageI';
@@ -8,18 +8,18 @@ import { AppState } from 'src/app/store';
 @Component({
   selector: 'app-item-project',
   template: `
-    <div [attr.tabIndex]="this.i + 1">
+    <div class="item-project-wrap" [attr.tabIndex]="this.i + 1" *ngIf="language | async as language">
       <div class="project" style="height: 50vh;width: 98vw;">
         <h1 class="title">
           <ng-container *ngIf="project?.url">
-            <a [href]="project?.url" target="_blank">{{ (language | async)[project?.key] }}</a>
+            <a [href]="project?.url" target="_blank">{{ language[project?.key] }}</a>
           </ng-container>
           <ng-container *ngIf="project?.url_play_store && project?.url_app_store;else other">
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store">{{ (language | async)[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store">{{ language[project?.key] }}</a>
           </ng-container>
           <ng-template #other >
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ (language | async)[project?.key] }}</a>
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ (language | async)[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ language[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ language[project?.key] }}</a>
           </ng-template>
           <app-tools [project]="project" [url]="key"></app-tools>
         </h1>
@@ -27,7 +27,7 @@ import { AppState } from 'src/app/store';
     </div>
   `,
 })
-export class ItemProjectComponent implements OnInit {
+export class ItemProjectComponent {
   @Input() project: ProjectItemI;
   @Input() i: number;
   @Input() key: string;
@@ -36,6 +36,4 @@ export class ItemProjectComponent implements OnInit {
   );
 
   constructor(private store: Store<AppState>) {}
-
-  ngOnInit(): void {}
 }
