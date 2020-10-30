@@ -4,7 +4,11 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './contact.component.html',
+  template: `
+    <div class="section active" id="section_contact">
+      <app-social-networkings></app-social-networkings>
+    </div>
+  `,
 })
 export class ContactComponent implements OnInit, OnDestroy {
   constructor(private global: GlobalService) {}
