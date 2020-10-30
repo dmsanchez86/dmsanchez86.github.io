@@ -18,6 +18,6 @@ export class ContactComponent implements OnInit, OnDestroy {
     favicon('contact');
 
     this.global.titlePage(`contact`);
-    this.global.metaColor('#D67F35');
+    this.global.metaColor('#ca3e3d');
   }
 }
