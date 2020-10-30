@@ -10,8 +10,9 @@ import { PopupState } from 'src/app/store/actions/global';
 @Component({
   selector: 'app-profile-image',
   template: `
-    <div (click)="seeProfile()"
+    <div 
       class="profile_content {{ this.home ? 'scaleIn profile_content_home': '' }}"
+      (click)="seeProfile()"
       [attr.title-ref]="(language | async)?.name" >
       <img [lazyLoad]="'assets/images/profile.jpg'">
     </div>
