@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { LanguageItemProfileSkillsI, LanguageItemSkillsI } from 'src/app/interfaces/LanguageI';
+import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
 import { PopupState } from 'src/app/store/actions/global';
 import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
@@ -53,7 +54,7 @@ export class SkillsContentComponent implements OnInit {
   language: Observable<LanguageItemSkillsI> = this.store.select(state => state.language.current.skills);
   skills: Observable<LanguageItemProfileSkillsI[]> = this.store.select(state => state.skills.data);
 
-  constructor(private store: Store<AppState>) { }
+  constructor(private store: Store<AppState>, private global: GlobalService) { }
 
   ngOnInit(): void {}
 
@@ -69,8 +70,10 @@ export class SkillsContentComponent implements OnInit {
 
   cambiarColor(skill: LanguageItemProfileSkillsI){
     setThemeTMP(skill.colors);
+    this.global.metaColor(skill.colors.current_main);
   }
   quitarColor(){
     removeThemeTMP();
+    this.global.metaColor('#33475b');
   }
 }
