@@ -51,7 +51,11 @@ export const EN: LanguageItemI = {
     email: 'dmsanchez86@misena.edu.co',
     name: 'Daniel Mauricio Sanchez Avila',
     biography: `
-      <p>Frontend Developer. I'm from Manizales Caldas in Colombia, currently live in Cali, Valle del Cauca.</p>
+      <p>Frontend Developer. from <b>Manizales, Colombia</b>, 
+      currently live in Cali same country. I have been working at 
+      <a href="https://existaya.com" target="_blank">@Existaya</a> for 2 years now. 
+      APPS development with <b>Angular</b> for 
+      the <b>Web</b> and with <b>IONIC</b> for mobiles</p>
     `,
     hobbies_bio:
       'My new hobby is ride for the mountains in bike and play with my two little kids. Isabela and Emmanuel',
