@@ -51,7 +51,12 @@ export const ES: LanguageItemI = {
     email: 'dmsanchez86@misena.edu.co',
     name: 'Daniel Mauricio Sánchez Ávila',
     biography: `
-      <p>Desarrollador FrontEnd. Soy de Colombia, del departamento de Caldas, Nací en la ciudad de Manizales. Actualmente vivo en la ciudad de Cali, valle del Cauca.</p>
+      <p>
+        Desarrollador <b>FrontEnd</b>. De la ciudad de <b>Manizales, Colombia</b>. 
+        Actualmente vivo en la ciudad de Cali del mismo país. Trabajo en 
+        <a href="https://existaya.com" target="_blank">@Existaya</a> desde hace ya 2 años. Desarrollo
+        con <b>Angular</b> para la web y con <b>IONIC</b> para mobiles.
+      </p>
     `,
     hobbies_bio:
       'Mi nuevo pasatiempo es salir a rodar en mi bicicleta por las montañas y jugar con mis dos pequeños hijos. Isabela & Emmanuel',
