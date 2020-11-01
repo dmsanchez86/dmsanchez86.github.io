@@ -3,7 +3,6 @@ import { AppStateLanguaje } from '../..';
 import { ChangeLanguage } from '../../actions/language/';
 import { EN } from './keys/en';
 import { ES } from './keys/es';
-// import { dataProjects } from './dataLanguages';
 
 const initialState: AppStateLanguaje = {
   es: ES,
