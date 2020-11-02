@@ -8,6 +8,10 @@
   border-radius: 4px;
   background: rgb(255 255 255 / 19%);
 
+  @media(max-width:575px){
+    right: 3.3rem
+  }
+
   &:after{
     position: absolute;
     bottom: 145%;

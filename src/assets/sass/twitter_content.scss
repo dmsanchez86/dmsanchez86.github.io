@@ -6,6 +6,10 @@
 	@include perspective(500px);
 	@include transition((bottom 200ms linear, right 200ms ease));
 
+	@media(max-width:575px){
+	    right: .75rem;
+	}
+
 	label{
 		font-size: 1.7rem;
 		cursor: pointer;
