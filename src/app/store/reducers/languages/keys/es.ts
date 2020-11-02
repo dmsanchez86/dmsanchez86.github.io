@@ -93,7 +93,7 @@ export const ES: LanguageItemI = {
   },
   global: {
     tweets: `Tweets de @dmsanchez86`,
-    back: 'Volver a las habilidades',
+    back: '',
     years: 'Años XP',
     percentage: 'Porcentage'
   },
