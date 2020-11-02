@@ -192,6 +192,11 @@
   }
 }
 
+@media (max-width: 575px){
+  .section-pt {
+    padding: calc(var(--section-pt) + 20px) 0 1rem;
+  }
+}
 @media (max-width: 500px){
 	.project .title a{
     font-size: 1.65rem;
@@ -303,6 +308,10 @@
         }
       }
 		}
+  }
+
+  .skills-body {
+    padding: 0 1rem;
   }
 
   .skills-item{
