@@ -9,7 +9,7 @@ import { AppState } from 'src/app/store';
   selector: 'app-item-project',
   template: `
     <div class="item-project-wrap" [attr.tabIndex]="this.i + 1" *ngIf="language | async as language">
-      <div class="project" style="height: 50vh;width: 98vw;">
+      <div class="project" style="height: 50vh;">
         <h1 class="title">
           <ng-container *ngIf="project?.url">
             <a [href]="project?.url" target="_blank">{{ language[project?.key] }}</a>
