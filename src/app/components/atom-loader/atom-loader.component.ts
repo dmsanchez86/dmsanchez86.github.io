@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState } from 'src/app/store';
@@ -15,9 +15,7 @@ import { AppState } from 'src/app/store';
     </div>
   `,
 })
-export class AtomLoaderComponent implements OnInit {
+export class AtomLoaderComponent {
   language: Observable<string> = this.store.select(state => state.language.current.loading);
   constructor(private store: Store<AppState>) {}
-
-  ngOnInit(): void {}
 }
