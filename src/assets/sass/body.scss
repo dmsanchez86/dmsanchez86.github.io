@@ -1,5 +1,20 @@
 *{ @include reset; }
 
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  background-color: var(--main);
+  border-left: 1px solid var(--terciary); }
+
+::-webkit-scrollbar-thumb {
+  transition: 300ms;
+  background-color: white; }
+
+::-webkit-scrollbar-thumb:hover {
+  transform: scale(1.05);
+  background-color: darken(white, 15) }
+
 html{
   width: 100vw;
   height: 100vh;
