@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title, Meta }    from '@angular/platform-browser'
 import { GlobalService } from 'src/app/services/global.service';
-import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_functions';
+import { bodyAddClass, bodyRemoveClass, favicon, qs } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,6 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
   `,
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  camera: any;
-
   constructor(private global: GlobalService) {}
 
   ngOnDestroy() {
@@ -21,11 +19,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     bodyAddClass('home');
     favicon('home');
-    // this.fontsThree();
 
-    setTimeout(() => document.querySelector('.twitter_content .container').classList.add('close'), 500);
+    setTimeout(() => qs('.twitter_content .container').classList.add('close'), 500);
 
     this.global.titlePage(`home`);
     this.global.metaColor('#87CEEB');
   }
 }
+
