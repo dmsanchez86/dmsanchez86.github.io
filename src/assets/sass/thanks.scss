@@ -37,12 +37,15 @@
 
     > span{
       opacity: 1;
+      display: inline-block;
     }
   }
 
   > span{
     transition: 250ms ease;
     opacity: 0;
+    display: none;
+    vertical-align: top;
   }
 
   .pwa,
