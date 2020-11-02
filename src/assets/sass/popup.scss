@@ -9,6 +9,29 @@
 	transition: .23s ease;
 	@include center-absolute(fixed);
 
+  @media(max-height: 700px) and (min-width: 768px){
+    --mh-header: 100px;
+    .popup-header .profile_content {
+      height: 75px;
+      max-width: 75px;
+    }
+    .popup-header h1 {
+      bottom: -5%;
+      font-size: 1.35rem;
+    }
+    .popup-body article p {
+      font-size: 1.3rem;
+    }
+    h1 {
+      font-size: 1.35rem;
+      margin-top: 1rem !important;
+    }
+    .skills-item i {
+      font-size: 2.3rem;
+      min-width: 3rem;
+    }
+  }
+
 	.edge{
 		position: absolute;
 		background: var(--main);
@@ -119,6 +142,21 @@
     transition: transform .25s ease-in, opacity 200ms 10s ease;
     transform: translatey(105%);
     overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 15px; }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--secondary);
+      border-left: 1px solid var(--terciary); }
+
+    &::-webkit-scrollbar-thumb {
+      transition: 300ms;
+      background-color: black; }
+
+    &::-webkit-scrollbar-thumb:hover {
+      transform: scale(1.05);
+      background-color: darken(white, 15) }
 
     article{
       p{
