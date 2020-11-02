@@ -196,6 +196,9 @@
   .section-pt {
     padding: calc(var(--section-pt) + 20px) 0 1rem;
   }
+  .navigator_content .navigator .button_menu i {
+    font-size: 1.8rem;
+  } 
 }
 @media (max-width: 500px){
 	.project .title a{
@@ -213,7 +216,6 @@
 	}
 
 	.navigator_content {
-    padding: .5rem 1rem 0;
 		.navigator {
 			> ul{
 				li{

@@ -10,6 +10,10 @@
 	transform: translatey(0px);
   transition: 200ms ease;
 
+  @media(max-width:998px){
+  	padding: .5rem .5rem 0;
+  }
+
   &.scroll{
     background: rgba(0, 0, 0,.19);
   }
@@ -18,6 +22,10 @@
 		max-width: 55px;
 		display: inline-block;
 		position: relative;
+
+		@media(max-width:575px){
+		    transform: scale(.7) translate3d(-10px, -10px, 0);
+		}
 
 		&:after{
 			content: '';
