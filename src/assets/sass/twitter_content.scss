@@ -6,8 +6,12 @@
 	@include perspective(500px);
 	@include transition((bottom 200ms linear, right 200ms ease));
 
+	@media(max-width:575px){
+	    right: .75rem;
+	}
+
 	label{
-		font-size: 2rem;
+		font-size: 1.7rem;
 		cursor: pointer;
 		@include transition(all 200ms ease);
 		@include text-shadow(0 0 2px rgba(0,0,0,.4));
@@ -19,7 +23,7 @@
 		&:after{
 			position: absolute;
 			bottom: 100%;
-      right: -65%;
+      right: -8%;
       text-align: right;
 			width: 10rem;
 			content: attr(title-ref);

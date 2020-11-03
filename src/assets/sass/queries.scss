@@ -192,6 +192,14 @@
   }
 }
 
+@media (max-width: 575px){
+  .section-pt {
+    padding: calc(var(--section-pt) + 20px) 0 1rem;
+  }
+  .navigator_content .navigator .button_menu i {
+    font-size: 1.8rem;
+  } 
+}
 @media (max-width: 500px){
 	.project .title a{
     font-size: 1.65rem;
@@ -208,7 +216,6 @@
 	}
 
 	.navigator_content {
-    padding: .5rem 1rem 0;
 		.navigator {
 			> ul{
 				li{
@@ -305,6 +312,10 @@
 		}
   }
 
+  .skills-body {
+    padding: 0 1rem;
+  }
+
   .skills-item{
     padding: 0.5rem 0rem;
 
@@ -318,6 +329,10 @@
     right: 1.9rem;
   }
 
+  .twitter_content,
+  .language-content{
+    z-index: 2;
+  }
   .twitter_content{
     right: 1rem;
   }

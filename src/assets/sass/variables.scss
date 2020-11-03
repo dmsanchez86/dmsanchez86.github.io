@@ -33,6 +33,9 @@
   @media (max-width: 998px) {
     --section-pt: 70px;
   }
+  @media (max-width: 575px) {
+    --section-pt: 45px;
+  }
 }
 
 $text-3d-color: #323232;

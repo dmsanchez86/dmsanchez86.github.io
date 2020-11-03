@@ -6,6 +6,11 @@
     display: block;
     width: 100% !important;
 
+    @media(max-width: 575px){
+      font-size: 1.5rem;
+      margin: .5rem 0 !important;
+    }
+
     &-complete{
       text-align: center;
       color: white;
@@ -71,8 +76,8 @@
     background-image: var(--skill-g);
     background-color: var(--skill-bg);
     color: white;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
+    // margin-right: .5rem;
+    // margin-bottom: .5rem;
     border-radius: 3px;
     font-family: "Yanone Kaffeesatz", sans-serif;
     transition: 300ms;

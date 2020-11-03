@@ -4,8 +4,12 @@ import { AppStateSkillsI } from '../..';
 import { cargarSkills, setSkill } from '../../actions/skills';
 import { data } from './data';
 
+let dataWithFilter = data.sort(
+  (x, y) =>  (x.main === y.main)? 0 : x.main? -1 : 1
+);
+
 const initialState: AppStateSkillsI = {
-  data,
+  data: dataWithFilter,
   current: null,
 };
 
