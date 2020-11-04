@@ -1,5 +1,10 @@
-<div id="section_projects" style="padding: 0;height: 100vh;overflow-y: auto;">
-  <app-item-project [project]="(project | async)" [i]="0" [key]="'projects'"> </app-item-project>
+<div class="section section-project-detail">
+  <app-item-project 
+    [project]="(project | async)" 
+    [i]="0"
+    [no_tools]="true" 
+    [classes]="'project project-detail project-h2'"
+    [key]="'projects'"> </app-item-project>
 </div>
 
-<app-preview [project]="(project | async)"></app-preview>
+<!-- <app-preview [project]="(project | async)"></app-preview> -->
