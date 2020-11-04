@@ -9,7 +9,7 @@ import { AppState } from 'src/app/store';
   selector: 'app-item-project',
   template: `
     <div class="item-project-wrap" [attr.tabIndex]="this.i + 1" *ngIf="language | async as language">
-      <div class="project" style="height: 50vh;">
+      <div [class]="classes">
         <h1 class="title">
           <ng-container *ngIf="project?.url">
             <a [href]="project?.url" target="_blank">{{ language[project?.key] }}</a>
@@ -21,7 +21,9 @@ import { AppState } from 'src/app/store';
             <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ language[project?.key] }}</a>
             <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ language[project?.key] }}</a>
           </ng-template>
-          <app-tools [project]="project" [url]="key"></app-tools>
+          <app-tools *ngIf="!no_tools" 
+            [project]="project" 
+            [url]="key"></app-tools>
         </h1>
       </div>
     </div>
@@ -31,6 +33,8 @@ export class ItemProjectComponent {
   @Input() project: ProjectItemI;
   @Input() i: number;
   @Input() key: string;
+  @Input() classes: any;
+  @Input() no_tools: boolean;
   language: Observable<LanguageItemProjectsI> = this.store.select(
     (state) => state.language.current[this.key]
   );
