@@ -139,6 +139,25 @@ body{
 
     --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
   }
+  &._404{
+    --current-main: #e8c087;
+    --main: #e8c087;
+    --nav-item-edge: #d2b48c;
+    --nav-item-bg: #d2b48c;
+    --nav-item-bg2: #d2b48c;
+
+    --profile-b: #d2b48c;
+    --btn-mobile: #d2b48c;
+
+    --logo-fill: #d2b48c;
+    --logo-stroke: #d2b48c;
+    --logo-scale: #d2b48c;
+
+    --secondary: #d2b48c;
+    --terciary: #efa94a;
+
+    --fondo: linear-gradient(615deg, #c09a63, #cda76f, #dab37b, #e8c087, #f6cd93);
+  }
 
   &.profile{
     --overlay: var(--secondary);
