@@ -6,7 +6,7 @@ import { SkillsComponent } from './skills.component';
 
 const routes: Routes = [
   { path: '', component: SkillsComponent },
-  { path: 'detail/:slug', component: DetailComponent},
+  { path: ':slug', component: DetailComponent},
 ];
 
 @NgModule({

@@ -25,7 +25,7 @@ import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
               class="skills-item center"
               (mouseover)="cambiarColor(skill)" 
               (mouseout)="quitarColor()" 
-              [routerLink]="['/skills', 'detail', skill.name]"
+              [routerLink]="['/skills', skill.name]"
               [ngClass]="{'skills-item-complete': complete}" 
               [title]="skill.title">
               <i [class]="skill.icon"></i>
@@ -35,7 +35,7 @@ import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
           <ng-template #elseTemplate>
             <a *ngIf="skill.main"
               (click)="cerrarModal()"
-              [routerLink]="['/skills', 'detail', skill.name]"
+              [routerLink]="['/skills', skill.name]"
               class="skills-item center"
               [title]="skill.title">
               <i [class]="skill.icon"></i>
