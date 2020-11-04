@@ -1,18 +1,20 @@
 .thanks{
   position: fixed;
   bottom: 1.15rem;
-  padding: .5rem 1rem .5rem;
-  border-radius: 7px;
-  background-color: rgba(255,255,255,0);
-  width: 240px;
+  padding: 0.5rem .4rem 0.5rem;
+  border-radius: 58px;
+  background-color: rgb(255 255 255 / 22%);
   max-width: 100%;
   margin: auto;
   right: 0;
   left: 0;
-  transition: 250ms ease;
+  transition: 250ms ease, width 250ms 250ms linear;
   color: white;
   font-family: "Yanone Kaffeesatz", sans-serif;
   text-transform: uppercase;
+  overflow: hidden;
+  width: 2.5rem;
+  max-height: 35px;
 
   &:focus{
     outline: none;
@@ -34,18 +36,26 @@
   &:focus,
   &:hover{
     background-color: rgba(255,255,255,.15);
+    width: 240px;
 
     > span{
       opacity: 1;
-      display: inline-block;
+      width: auto;
+      height: auto;
+      position: relative;
+      transition: 
+        width 250ms 250ms linear, 
+        height 250ms 250ms linear, 
+        opacity 250ms 100ms linear;
     }
   }
-
+  
   > span{
-    transition: 250ms ease;
+    width: 0;
+    height: 0;
     opacity: 0;
-    display: none;
     vertical-align: top;
+    position: absolute;
   }
 
   .pwa,
@@ -62,7 +72,7 @@
   }
 
   .pwa{
-    background: linear-gradient(to right, #b52e31, var(--terciary), var(--secondary), #b52e31);
+    background: linear-gradient(to right, #ddd, white, #eee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
