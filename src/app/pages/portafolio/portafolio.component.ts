@@ -12,7 +12,11 @@ import { bodyAddClass, bodyRemoveClass, favicon } from 'src/environments/global_
   template: `
     <div id="section_portafolio" class="section active" style="padding: 0;">
       <ng-container *ngFor="let project of (projects | async);let i = index">
-        <app-item-project [project]="project" [i]="i" [key]="'portafolio'"> </app-item-project>
+        <app-item-project 
+          [project]="project"
+          [classes]="'project project-h'"  
+          [i]="i" 
+          [key]="'portafolio'"> </app-item-project>
       </ng-container>
     </div>
   `
