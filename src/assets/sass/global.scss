@@ -5,6 +5,39 @@
   &-pt{
     padding: var(--section-pt) 0 1rem;
   }
+
+  &-p404{
+    position: relative;
+    &-title{
+      z-index: 2;
+      color: white;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 30vw;
+      height: auto !important;
+      margin-top: 4.5vh !important;
+    }
+    &-icon{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      color: white;
+      font-size: 70vh;
+      opacity: 0.175;
+      text-align: center;
+      transition: 300ms;
+      z-index: 1;
+      @media(max-width: 998px){
+        font-size: 50vh;
+      }
+      @media(max-width: 768px){
+        font-size: 35vh;
+      }
+      @media(max-width: 400px){
+        font-size: 25vh;
+      }
+    }
+  }
 }
 
 .fp-section.fp-table:not(#section_footer),
