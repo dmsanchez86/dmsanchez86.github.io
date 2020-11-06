@@ -14,7 +14,13 @@ import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
       <div>
         <h1 class="skills-title" [ngClass]="{'skills-title-complete': complete}">{{ (language | async)?.title }}</h1>
         <div class="center" *ngIf="!complete">
-          <a [routerLink]="['/skills']" (click)="cerrarModal()" routerLinkActive="router-link-active"  class="skills-link">{{ (language | async)?.label_link }}</a>
+          <a 
+            [routerLink]="['/skills']" 
+            (click)="cerrarModal()" 
+            routerLinkActive="router-link-active" 
+            class="skills-link">
+            {{ (language | async)?.label_link }}
+          </a>
         </div>
       </div>
       <div class="skills-body center" [ngClass]="{'skills-body-complete': complete}">
