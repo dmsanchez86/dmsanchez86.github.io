@@ -27,12 +27,21 @@ import { AppState } from 'src/app/store';
         </h1>
       </div>
       <div class="item-project-description" *ngIf="complete">
-        <ng-container *ngIf="language[project?.key].description;else otherD">
-          {{language[project?.key].description}}
-        </ng-container>
-        <ng-template #otherD>
-          {{ language.default }}
-        </ng-template>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-9">
+              <div class="item-project-description-wrap">
+                <ng-container *ngIf="language[project?.key].description;else otherD">
+                  {{language[project?.key].description}}
+                </ng-container>
+                <ng-template #otherD>
+                  {{ language.default }}
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   `,
