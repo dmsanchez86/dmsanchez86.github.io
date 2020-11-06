@@ -8,7 +8,7 @@ export const loadPortafolio = createAction(
 
 export const setPortafolio = createAction(
   '[PORTAFOLIO] set project',
-  props<ProjectItemI>()
+  props<{ slug: string }>()
 );
 
 export const resetPortafolio = createAction('[PORTAFOLIO] reset project');
