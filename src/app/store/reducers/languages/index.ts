@@ -1,8 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 import { AppStateLanguaje } from '../..';
 import { ChangeLanguage } from '../../actions/language/';
-import { EN } from './keys/en';
-import { ES } from './keys/es';
+import { EN } from './keys/en/';
+import { ES } from './keys/es/';
 
 const initialState: AppStateLanguaje = {
   es: ES,
