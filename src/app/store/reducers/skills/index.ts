@@ -18,7 +18,11 @@ const _skillsReducer = createReducer(
   on(cargarSkills, (state, action) => ({ ...state, data: action.payload })),
   on(setSkill, (state, action) => {
     let skill = state.data.filter((item) => item.name === action.slug)[0];
-    setThemeTMP(skill.colors);
+    try {
+      if(Object.keys(skill.colors).length){
+        setThemeTMP(skill.colors);
+      }
+    } catch (error) { }
     return {
       ...state,
       current: skill,
