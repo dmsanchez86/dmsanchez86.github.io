@@ -23,6 +23,7 @@ import { AppState } from 'src/app/store';
           </ng-template>
           <app-tools *ngIf="!no_tools" 
             [project]="project" 
+            [no_preview]="no_preview"
             [url]="key"></app-tools>
         </h1>
       </div>
@@ -52,6 +53,7 @@ export class ItemProjectComponent {
   @Input() key: string;
   @Input() classes: any;
   @Input() no_tools: boolean;
+  @Input() no_preview: boolean;
   @Input() complete: boolean;
   language: Observable<LanguageItemProjectsI> = this.store.select(
     (state) => state.language.current[this.key]
