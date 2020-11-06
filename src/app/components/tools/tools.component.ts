@@ -46,10 +46,10 @@ export class ToolsComponent {
       this.store.dispatch(setProject(this.project));
     }
     if (this.project.type === 'portafolio') {
-      this.store.dispatch(setPortafolio(this.project));
+      this.store.dispatch(setPortafolio({slug: this.project.key}));
     }
-    // this.router.navigate([this.url, this.project.key]);
-    window.open(this.project.url)
+    this.router.navigate([this.url, this.project.key]);
+    // window.open(this.project.url)
   }
 
   codeF(){
