@@ -5,6 +5,7 @@ import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store';
 import { LanguageItemI, LanguageItemProfileSkillsI } from '../interfaces/LanguageI';
+import { ProjectItemI } from '../interfaces/ProjectItemI';
 import { PopupState } from '../store/actions/global';
 
 @Injectable({
@@ -15,6 +16,7 @@ export class GlobalService {
   currentPage: string = '';
 
   skills: LanguageItemProfileSkillsI[];
+  portafolio: ProjectItemI[];
 
   constructor(
     private meta: Meta,
@@ -23,9 +25,10 @@ export class GlobalService {
     private actions: Actions,
     private router: Router
   ) {
-    this.store.subscribe(({ language, skills }) => {
+    this.store.subscribe(({ language, skills, portafolio }) => {
       this.current = language.current;
       this.skills = skills.data;
+      this.portafolio = portafolio.data;
     });
     this.actions.subscribe((action: any) => {
       if (action.type === '[LANGUAGE] change') {
@@ -50,7 +53,7 @@ export class GlobalService {
       } catch (error) {}
 
       setTimeout(() => profile.classList.add('scaleIn'), 500);
-      this.store.dispatch(PopupState({payload: false}));
+      this.store.dispatch(PopupState({ payload: false }));
     } else {
       body.classList.remove('menu');
       menu.classList.remove('open');
@@ -70,6 +73,17 @@ export class GlobalService {
     if (slug) {
       skill = this.skills.find(skill => skill.name === slug);
       color = skill.colors.main;
+    }
+
+    this.meta.updateTag({ name: 'theme-color', content: color });
+  }
+
+  metaColorP(color: string, slug?) {
+    let item: ProjectItemI;
+
+    if (slug) {
+      item = this.portafolio.find((item) => item.key === slug);
+      color = item?.colors?.main;
     }
 
     this.meta.updateTag({ name: 'theme-color', content: color });
