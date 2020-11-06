@@ -1,3 +1,5 @@
+import { LanguageItemProfileSkillsColorsI } from './LanguageI';
+
 export interface ProjectItemI {
   name?: string;
   url?: string;
@@ -10,4 +12,5 @@ export interface ProjectItemI {
   app?: boolean;
   key?: string;
   type?: string;
+  colors?: LanguageItemProfileSkillsColorsI;
 }
