@@ -12,19 +12,27 @@ import { AppState } from 'src/app/store';
       <div [class]="classes">
         <h1 class="title">
           <ng-container *ngIf="project?.url">
-            <a [href]="project?.url" target="_blank">{{ language[project?.key] }}</a>
+            <a [href]="project?.url" target="_blank">{{ language[project?.key].name }}</a>
           </ng-container>
           <ng-container *ngIf="project?.url_play_store && project?.url_app_store;else other">
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store">{{ language[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store">{{ language[project?.key].name }}</a>
           </ng-container>
           <ng-template #other >
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ language[project?.key] }}</a>
-            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ language[project?.key] }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_app_store && !project?.url_play_store">{{ language[project?.key].name }}</a>
+            <a [href]="'javascript::void(0)'" *ngIf="project?.url_play_store && !project?.url_app_store">{{ language[project?.key].name }}</a>
           </ng-template>
           <app-tools *ngIf="!no_tools" 
             [project]="project" 
             [url]="key"></app-tools>
         </h1>
+      </div>
+      <div class="item-project-description" *ngIf="complete">
+        <ng-container *ngIf="language[project?.key].description;else otherD">
+          {{language[project?.key].description}}
+        </ng-container>
+        <ng-template #otherD>
+          {{ language.default }}
+        </ng-template>
       </div>
     </div>
   `,
@@ -35,6 +43,7 @@ export class ItemProjectComponent {
   @Input() key: string;
   @Input() classes: any;
   @Input() no_tools: boolean;
+  @Input() complete: boolean;
   language: Observable<LanguageItemProjectsI> = this.store.select(
     (state) => state.language.current[this.key]
   );
