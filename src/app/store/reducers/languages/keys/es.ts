@@ -104,52 +104,147 @@ export const ES: LanguageItemI = {
     install: 'Instalar',
   },
   projects: {
-    football: 'Campo de Fútbol 3D',
-    atom: 'Cargador Átomo',
-    form: 'Formulario con Perspectiva',
-    jurisquiz_app: 'Juris Quiz Animación Logo',
-    quotes: 'Máquina de citas ',
-    ball: 'Cargador Bola',
-    weather: 'App del Clima',
-    slide: 'Slider con Perspectiva',
-    clock: 'Reloj Interactivo',
-    cellphone: 'Celular 3D',
-    cube: 'Cubo 3D',
-    lists: 'Listas 3D',
-    geometry_cube: 'Geometría Cubo 3D',
-    jurisquiz_web: 'Juris Quiz Web',
-    arthritis: 'Artritis Web',
-    angular_template: 'Template Básico Angular',
-    mecaut: 'Mecaut',
+    default: `Pronto...`,
+    football: {
+      name: 'Campo de Fútbol 3D',
+    },
+    atom: {
+      name: 'Cargador Átomo',
+    },
+    form: {
+      name: 'Formulario con Perspectiva',
+    },
+    jurisquiz_app: {
+      name: 'Juris Quiz Animación Logo',
+    },
+    quotes: {
+      name: 'Máquina de citas ',
+    },
+    ball: {
+      name: 'Cargador Bola',
+    },
+    weather: {
+      name: 'App del Clima',
+    },
+    slide: {
+      name: 'Slider con Perspectiva',
+    },
+    clock: {
+      name: 'Reloj Interactivo',
+    },
+    cellphone: {
+      name: 'Celular 3D',
+    },
+    cube: {
+      name: 'Cubo 3D',
+    },
+    lists: {
+      name: 'Listas 3D',
+    },
+    geometry_cube: {
+      name: 'Geometría Cubo 3D',
+    },
+    jurisquiz_web: {
+      name: 'Juris Quiz Web',
+    },
+    arthritis: {
+      name: 'Artritis Web',
+    },
+    angular_template: {
+      name: 'Template Básico Angular',
+    },
+    mecaut: {
+      name: 'Mecaut',
+    },
   },
   portafolio: {
-    krika: 'Krika Cosmetics',
-    energiteca: 'Energiteca',
-    energiteca_app: 'Energiteca App',
-    libreria_nacional_app: 'Librería Nacional App',
-    libreria_nacional: 'Librería Nacional',
-    aseoya: 'AseoYa',
-    aseoya_app: 'Aseoya App',
-    coomeva_mp: 'Coomeva Medicina Prepagada',
-    coomeva_sao: 'Coomeva Salud Oral',
-    coomeva_pro: 'Coomeva Protegete',
-    existaya: 'Existaya Agencia',
-    stp: 'STP Networks',
-    go: 'Go Finanzas',
-    between_pines: 'Entre Pinos',
-    oral_center: 'Oral Center',
-    conexiones: 'Conexiones',
-    zeus_web: 'Zeus Consultores',
-    santodomingo: 'I.E Santo Domingo Savio',
-    antorcha: 'Antorcha Films',
-    raking: 'Rakin.org',
-    jurisquiz: 'Juris Quiz',
-    therapy: 'Consejos para artritis',
-    zopp: 'Zopp Agencia',
-    buffalo: 'Buffalo Republic',
-    easynet: 'EasyNet',
-    cliniweb: 'CliniWeb',
-    hospital: 'Clinica de Artritis',
-    finca: 'Finca y Café',
+    default: `Pronto...`,
+    krika: {
+      name: 'Krika Cosmetics',
+      description: `
+        Mi último proyecto, fue desarrollado con la plataforma de Shopify
+      `,
+    },
+    energiteca: {
+      name: 'Energiteca',
+    },
+    energiteca_app: {
+      name: 'Energiteca App',
+    },
+    libreria_nacional_app: {
+      name: 'Librería Nacional App',
+    },
+    libreria_nacional: {
+      name: 'Librería Nacional',
+    },
+    aseoya: {
+      name: 'AseoYa',
+    },
+    aseoya_app: {
+      name: 'Aseoya App',
+    },
+    coomeva_mp: {
+      name: 'Coomeva Medicina Prepagada',
+    },
+    coomeva_sao: {
+      name: 'Coomeva Salud Oral',
+    },
+    coomeva_pro: {
+      name: 'Coomeva Protegete',
+    },
+    existaya: {
+      name: 'Existaya Agencia',
+    },
+    stp: {
+      name: 'STP Networks',
+    },
+    go: {
+      name: 'Go Finanzas',
+    },
+    between_pines: {
+      name: 'Entre Pinos',
+    },
+    oral_center: {
+      name: 'Oral Center',
+    },
+    conexiones: {
+      name: 'Conexiones',
+    },
+    zeus_web: {
+      name: 'Zeus Consultores',
+    },
+    santodomingo: {
+      name: 'I.E Santo Domingo Savio',
+    },
+    antorcha: {
+      name: 'Antorcha Films',
+    },
+    raking: {
+      name: 'Rakin.org',
+    },
+    jurisquiz: {
+      name: 'Juris Quiz',
+    },
+    therapy: {
+      name: 'Consejos para artritis',
+    },
+    zopp: {
+      name: 'Zopp Agencia',
+    },
+    buffalo: {
+      name: 'Buffalo Republic',
+    },
+    easynet: {
+      name: 'EasyNet',
+    },
+    cliniweb: {
+      name: 'CliniWeb',
+    },
+    hospital: {
+      name: 'Clinica de Artritis',
+    },
+    finca: {
+      name: 'Finca y Café',
+    },
   },
 };
