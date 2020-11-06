@@ -147,6 +147,12 @@
   }
 }
 
+.section-detail{
+  .tools .tool{
+    background: var(--logo-fill);
+  }
+}
+
 .item-project{
   &-description{
     color: white;
