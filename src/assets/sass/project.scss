@@ -147,9 +147,35 @@
   }
 }
 
-.item-project-wrap{
-  &:focus,
-  &:hover{
-    outline: none;
+.item-project{
+  &-description{
+    color: white;
+    font-size: 1.75rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    &-wrap{
+      padding: 2rem 1.5rem;
+      border-radius: 5px;
+      border: 2px dotted var(--logo-fill);
+      background-color: var(--logo-fill);
+
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.45rem;;
+    }
+    
+    @media (max-width: 500px) {
+      font-size: 1.15rem;;
+    }
+  }
+
+  &-wrap{
+    &:focus,
+    &:hover{
+      outline: none;
+    }
   }
 }
