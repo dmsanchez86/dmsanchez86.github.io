@@ -21,7 +21,7 @@ export class NavigatorComponent {
     qs('.main-app').classList.add('menu');
     qs(`#menu`).classList.add('open');
     qs(`.overlay-menu`).classList.add('open');
-    qs(`.button_menu`)['style'].opacity = 0;
+    qs(`.button_menu`)['style'].opacity = '0';
   }
 
   cerrarMenu() {
