@@ -5,6 +5,7 @@ import { LanguageItemNavI } from 'src/app/interfaces/LanguageI';
 import { MenuItemI } from 'src/app/interfaces/MenuItemI';
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
+import { qs } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-navigator',
@@ -17,10 +18,10 @@ export class NavigatorComponent {
   constructor(private global: GlobalService, private store: Store<AppState>){}
 
   buttonMenu() {
-    document.querySelector('.main-app').classList.add('menu');
-    document.querySelector(`#menu`).classList.add('open');
-    document.querySelector(`.overlay-menu`).classList.add('open');
-    document.querySelector(`.button_menu`)['style'].opacity = 0;
+    qs('.main-app').classList.add('menu');
+    qs(`#menu`).classList.add('open');
+    qs(`.overlay-menu`).classList.add('open');
+    qs(`.button_menu`)['style'].opacity = 0;
   }
 
   cerrarMenu() {
