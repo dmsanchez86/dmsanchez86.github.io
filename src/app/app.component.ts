@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { GlobalService } from './services/global.service';
@@ -16,10 +17,12 @@ export class AppComponent implements OnInit {
 
   constructor(
     private global: GlobalService,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    @Inject(DOCUMENT) private document: Document
   ){
     if(localStorage.language){
       this.store.dispatch(ChangeLanguage({ key: localStorage.language }));
+      this.document.documentElement.lang = localStorage.language;
     }
   }
 
