@@ -11,25 +11,7 @@ import { isValidUrl } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-tools',
-  template: `
-    <div class="tools" *ngIf="(language | async) as lang">
-      <div *ngIf="project?.preview && !no_preview" (click)="previewF()" class="tool preview" [attr.title-ref]="lang.preview">
-        <i class="fa fa-desktop"></i>
-      </div>
-      <div *ngIf="project?.code" (click)="codeF()" class="tool code" [attr.title-ref]="lang.check">
-        <i class="fa fa-code"></i>
-      </div>
-      <div *ngIf="project?.download" (click)="downloadF()" class="tool download" [attr.title-ref]="lang.download">
-        <i class="fa fa-download"></i>
-      </div>
-      <div *ngIf="project?.app && project?.url_play_store" (click)="installF()" class="tool code" [attr.title-ref]="lang.install">
-        <i class="fab fa-google-play"></i>
-      </div>
-      <div *ngIf="project?.app && project?.url_app_store" (click)="installF()" class="tool code" [attr.title-ref]="lang.install">
-        <i class="fab fa-app-store-ios"></i>
-      </div>
-    </div>
-  `
+  templateUrl: './tools.component.html'
 })
 export class ToolsComponent {
   @Input() project: ProjectItemI;
