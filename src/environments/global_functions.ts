@@ -26,25 +26,23 @@ export function isValidUrl(url, obligatorio?, ftp?) {
 }
 
 export function favicon(fav: string){
-  document
-    .querySelector('#favicon')
-    .setAttribute('href', `assets/images/favicon_${fav}.png`);
+  qs('#favicon').setAttribute('href', `assets/images/favicon_${fav}.png`);
 }
 
 export function bodyAddClass(classes: string){
-  document.querySelector('.main-app').classList.add(classes);
+  qs('.main-app').classList.add(classes);
 }
 
 export function bodyRemoveClass(classes: string){
-  document.querySelector('.main-app').classList.remove(classes);
+  qs('.main-app').classList.remove(classes);
 }
 
-export function qs(selector: string) {
+export function qs(selector: string): HTMLElement {
   return document.querySelector(selector);
 }
 
 export function setThemeTMP(
-  { 
+  {
     current_main,
     nav_item,
     nav_item_edge,
@@ -149,7 +147,7 @@ export function removeThemeTMP(){
   qs('.main-app')['style'].removeProperty(`--nav-item-bg`);
   qs('.main-app')['style'].removeProperty(`--nav-item-bg2`);
   qs('.main-app')['style'].removeProperty(`--nav-close`);
-  
+
   qs('.main-app')['style'].removeProperty(`--profile-b`);
   qs('.main-app')['style'].removeProperty(`--btn-mobile`);
 

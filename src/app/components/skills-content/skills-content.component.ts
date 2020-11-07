@@ -5,7 +5,7 @@ import { LanguageItemProfileSkillsI, LanguageItemSkillsI } from 'src/app/interfa
 import { GlobalService } from 'src/app/services/global.service';
 import { AppState } from 'src/app/store';
 import { PopupState } from 'src/app/store/actions/global';
-import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
+import { qs, removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-skills-content',
@@ -14,10 +14,10 @@ import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
       <div>
         <h1 class="skills-title" [ngClass]="{'skills-title-complete': complete}">{{ (language | async)?.title }}</h1>
         <div class="center" *ngIf="!complete">
-          <a 
-            [routerLink]="['/skills']" 
-            (click)="cerrarModal()" 
-            routerLinkActive="router-link-active" 
+          <a
+            [routerLink]="['/skills']"
+            (click)="cerrarModal()"
+            routerLinkActive="router-link-active"
             class="skills-link">
             {{ (language | async)?.label_link }}
           </a>
@@ -26,13 +26,13 @@ import { removeThemeTMP, setThemeTMP } from 'src/environments/global_functions';
       <div class="skills-body center" [ngClass]="{'skills-body-complete': complete}">
         <ng-container *ngFor="let skill of skills; let i = index">
           <ng-container *ngIf="complete; else elseTemplate">
-            <a 
+            <a
               routerLinkActive="router-link-active"
               class="skills-item center"
-              (mouseover)="cambiarColor(skill)" 
-              (mouseout)="quitarColor()" 
+              (mouseover)="cambiarColor(skill)"
+              (mouseout)="quitarColor()"
               [routerLink]="['/skills', skill.name]"
-              [ngClass]="{'skills-item-complete': complete}" 
+              [ngClass]="{'skills-item-complete': complete}"
               [title]="skill.title">
               <i [class]="skill.icon"></i>
               <span>{{ skill.title }}</span>
@@ -65,7 +65,7 @@ export class SkillsContentComponent implements OnInit {
   ngOnInit(): void {}
 
   cerrarModal(){
-    let profile = document.querySelector(`.profile_content_home`);
+    let profile = qs(`.profile_content_home`);
 
     profile.classList.remove('scaleOut');
     profile.classList.remove('scaleIn');

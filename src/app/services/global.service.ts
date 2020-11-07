@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Actions } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store';
+import { qs } from 'src/environments/global_functions';
 import { LanguageItemI, LanguageItemProfileSkillsI } from '../interfaces/LanguageI';
 import { ProjectItemI } from '../interfaces/ProjectItemI';
 import { PopupState } from '../store/actions/global';
@@ -38,10 +39,10 @@ export class GlobalService {
   }
 
   cerrarMenu(){
-    let body = document.querySelector('.main-app');
-    let profile = document.querySelector(`.profile_content_home`);
-    let menu = document.querySelector(`#menu`);
-    let overlay_menu = document.querySelector(`.overlay-menu`);
+    let body = qs('.main-app');
+    let profile = qs(`.profile_content_home`);
+    let menu = qs(`#menu`);
+    let overlay_menu = qs(`.overlay-menu`);
 
     if (body.classList.contains('profile')) {
       profile.classList.remove('scaleOut');
@@ -58,7 +59,7 @@ export class GlobalService {
       body.classList.remove('menu');
       menu.classList.remove('open');
       overlay_menu.classList.remove('open');
-      document.querySelector(`.button_menu`)['style'].opacity = 1;
+      qs(`.button_menu`)['style'].opacity = '1';
     }
   }
 

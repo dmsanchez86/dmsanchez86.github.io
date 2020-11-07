@@ -6,11 +6,12 @@ import { Observable, Subscription } from 'rxjs';
 import { LanguageItemProfileI } from 'src/app/interfaces/LanguageI';
 import { AppState } from 'src/app/store';
 import { PopupState } from 'src/app/store/actions/global';
+import { qs } from 'src/environments/global_functions';
 
 @Component({
   selector: 'app-profile-image',
   template: `
-    <div 
+    <div
       class="profile_content {{ this.home ? 'scaleIn profile_content_home': '' }}"
       (click)="seeProfile()"
       [attr.title-ref]="(language | async)?.name" >
@@ -48,7 +49,7 @@ export class ProfileImageComponent implements OnInit {
   }
 
   seeProfile(ref?:boolean) {
-    let profile = document.querySelector(`.profile_content_home`);
+    let profile = qs(`.profile_content_home`);
 
     if(!this.open){
       profile.classList.remove('scaleIn');

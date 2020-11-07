@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { qs } from 'src/environments/global_functions';
 import { GlobalService } from './services/global.service';
 import { AppState, AppStateLanguaje } from './store';
 import { PopupState } from './store/actions/global';
@@ -28,7 +29,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     setTimeout(() => {
-      let atomLoader: HTMLElement = document.querySelector('#atomLoader');
+      let atomLoader: HTMLElement = qs('#atomLoader');
       atomLoader.style.display = 'none';
     }, 1000);
 
