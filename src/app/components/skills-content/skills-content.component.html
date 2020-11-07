@@ -1,0 +1,42 @@
+<div class="skills-wrap" *ngIf="skills | async as skills">
+  <div>
+    <h1 class="skills-title" [ngClass]="{'skills-title-complete': complete}">{{ (language | async)?.title }}</h1>
+    <div class="center" *ngIf="!complete">
+      <a
+        [routerLink]="['/skills']"
+        (click)="cerrarModal()"
+        routerLinkActive="router-link-active"
+        class="skills-link">
+        {{ (language | async)?.label_link }}
+      </a>
+    </div>
+  </div>
+  <div class="skills-body center" [ngClass]="{'skills-body-complete': complete}">
+    <ng-container *ngFor="let skill of skills; let i = index">
+      <ng-container *ngIf="complete; else elseTemplate">
+        <a
+          routerLinkActive="router-link-active"
+          class="skills-item center"
+          (mouseover)="cambiarColor(skill)"
+          (mouseout)="quitarColor()"
+          [routerLink]="['/skills', skill.name]"
+          [ngClass]="{'skills-item-complete': complete}"
+          [title]="skill.title">
+          <i [class]="skill.icon"></i>
+          <span>{{ skill.title }}</span>
+        </a>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <a *ngIf="skill.main"
+          (click)="cerrarModal()"
+          [routerLink]="['/skills', skill.name]"
+          class="skills-item center"
+          [title]="skill.title">
+          <i [class]="skill.icon"></i>
+          <span>{{ skill.title }}</span>
+        </a>
+      </ng-template>
+
+    </ng-container>
+  </div>
+</div>
