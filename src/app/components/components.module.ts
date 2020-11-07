@@ -17,37 +17,29 @@ import { SkillsContentComponent } from './skills-content/skills-content.componen
 import { LazyLoadImageModule, intersectionObserverPreset } from 'ng-lazyload-image';
 import { NumberIncrementComponent } from './number-increment/number-increment.component';
 
+const globalComponents = [
+  LogoComponent,
+  NavigatorComponent,
+  AtomLoaderComponent,
+  PopupComponent,
+  ToolsComponent,
+  ProfileImageComponent,
+  SocialNetworkingsComponent,
+  PreviewComponent,
+  LanguageContentComponent,
+  TwitterContentComponent,
+  ItemProjectComponent,
+  SkillsContentComponent,
+  NumberIncrementComponent
+]
+
 @NgModule({
-  imports: [CommonModule, RouterModule, LazyLoadImageModule.forRoot({ preset: intersectionObserverPreset })],
-  declarations: [
-    LogoComponent,
-    NavigatorComponent,
-    AtomLoaderComponent,
-    PopupComponent,
-    ToolsComponent,
-    ProfileImageComponent,
-    SocialNetworkingsComponent,
-    PreviewComponent,
-    LanguageContentComponent,
-    TwitterContentComponent,
-    ItemProjectComponent,
-    SkillsContentComponent,
-    NumberIncrementComponent
+  imports: [
+    CommonModule,
+    RouterModule,
+    LazyLoadImageModule.forRoot({ preset: intersectionObserverPreset })
   ],
-  exports: [
-    LogoComponent,
-    NavigatorComponent,
-    AtomLoaderComponent,
-    PopupComponent,
-    ToolsComponent,
-    ProfileImageComponent,
-    SocialNetworkingsComponent,
-    PreviewComponent,
-    LanguageContentComponent,
-    TwitterContentComponent,
-    ItemProjectComponent,
-    SkillsContentComponent,
-    NumberIncrementComponent
-  ],
+  declarations: globalComponents,
+  exports: globalComponents,
 })
 export class ComponentsModule {}
