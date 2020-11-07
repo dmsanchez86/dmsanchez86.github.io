@@ -33,9 +33,43 @@ svg:not(:root){
 	overflow: visible;
 }
 
+.description a,
+.popup a{
+  &:not(.skills-item){
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    color: var(--main);
+    border-radius: 3px;
+    padding: .15rem .25rem;
+    transition: color 200ms 200ms ease;
+
+    &:before{
+      transition: 300ms ease-in-out;
+      position: absolute;
+      content: '';
+      width: 100%;
+      z-index: -1;
+      height: 2px;
+      background-color: var(--main);
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &:hover,
+    &:focus{
+      color: white;
+      &:before{
+        height: 100%;
+      }
+    }
+  }
+}
+
 body{
   overflow: hidden;
-  position: relative;  
+  position: relative;
 }
 
 .main-app{
