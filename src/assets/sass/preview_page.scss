@@ -9,8 +9,8 @@
 	opacity: .8;
 	overflow: hidden;
 	transition: transform .5s ease, opacity .7s ease;
+	transform-origin: bottom center;
 	@include border-radius(5px 0 0 0);
-	@include transform-origin(bottom center);
 	@include transform(scale(.235) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg));
 
 	.loader_preview{
