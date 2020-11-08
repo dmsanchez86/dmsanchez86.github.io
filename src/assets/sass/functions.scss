@@ -15,42 +15,6 @@
             #{$property} : $value;
 }
 
-// Function to set border radius
-@mixin border-radius($radius) {
-  @include prefixes(border-radius, $radius);
-}
-
-// Funtion to set box-shadow
-@mixin box-shadow($value) {
-  @include prefixes(box-shadow , $value);
-}
-
-// Function to set box sizing
-@mixin box-sizing($value) {
-  @include prefixes(box-sizing , $value);
-}
-
-// Function to create style button
-@mixin button(){
-    button{
-        background: $lima;
-        border: thin solid $lima;
-        display: inline-block;
-        margin: 1rem 0 0 0;
-        padding: .5rem 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-
-        @include transition(all .25s ease);
-
-        &:hover{
-            background: rgba(255,255,255,0);
-            color: $lima;
-        }
-    }
-}
-
 // function to center any tag absolute
 @mixin center-absolute($position){
   position: $position;
