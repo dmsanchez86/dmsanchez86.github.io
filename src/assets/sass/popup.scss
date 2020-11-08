@@ -90,7 +90,7 @@
     text-align: center;
     background: white;
     padding: .15rem 1.5rem;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: var(--font-yanone);
   }
 
 	&-header{
@@ -129,7 +129,7 @@
       max-width: 100%;
       width: 325px;
       padding: .15rem 1.5rem;
-      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-family: var(--font-yanone);
       border-radius: 6px;
     }
 	}
@@ -160,7 +160,7 @@
 
     article{
       p{
-        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-family: var(--font-yanone);
         color: #323232;
         text-align: center;
         font-size: 2rem;

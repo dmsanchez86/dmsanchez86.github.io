@@ -3,7 +3,7 @@
 	width: 100vw;
 	height: 100vh;
   text-align: center;
-  
+
   &-h{
     height: 50vh;
   }
@@ -54,7 +54,7 @@
 					padding: .15rem .5rem;
 					font-size: 16px;
           background-image: -webkit-radial-gradient(center,#111,#323232);
-				    font-family: 'Yanone Kaffeesatz', sans-serif;
+				    font-family: var(--font-yanone);
 				    @include text-shadow(none);
 				    @include transition((transform .5s ease, opacity .25s ease));
 					@include transform(translate3d(0,-10%, 0));
@@ -106,7 +106,7 @@
 	img{
 		max-width: 200px;
   }
-  
+
   &:focus,
   &.active,
   &:hover{
@@ -132,7 +132,7 @@
 
       .tools{
         display: block;
-  
+
         .tool{
           $k: 0.2;
           @for $i from 1 through 10 {
@@ -157,7 +157,7 @@
   &-description{
     color: white;
     font-size: 1.75rem;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: var(--font-yanone);
     &-wrap{
       padding: 2rem 1.5rem;
       border-radius: 5px;
@@ -172,7 +172,7 @@
     @media (max-width: 768px) {
       font-size: 1.45rem;;
     }
-    
+
     @media (max-width: 500px) {
       font-size: 1.15rem;;
     }

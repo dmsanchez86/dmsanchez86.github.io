@@ -11,7 +11,7 @@
     &-title{
       z-index: 2;
       color: white;
-      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-family: var(--font-yanone);
       font-size: 30vw;
       height: auto !important;
       margin-top: 4.5vh !important;
@@ -48,7 +48,7 @@
 .text-footer{
 	font-size: 1.5rem;
 	color: white;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-family: var(--font-yanone);
 	display: block;
 	margin-bottom: 1rem;
 }
