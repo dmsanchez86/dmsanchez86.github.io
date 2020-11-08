@@ -1,10 +1,10 @@
 .twitter_content{
 	position: fixed;
-	bottom: 1.2rem;
+	bottom: .8rem;
 	right: 2rem;
 	color: white;
 	@include perspective(500px);
-	@include transition((bottom 200ms linear, right 200ms ease));
+	transition: bottom 200ms linear, right 200ms ease, opacity 100ms 100ms linearç;
 
 	@media(max-width:575px){
 	    right: .75rem;
