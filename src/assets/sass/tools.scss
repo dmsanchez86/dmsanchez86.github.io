@@ -24,7 +24,7 @@
 	    @include text-shadow(0 0 3px #111);
 	    @include box-shadow(0 0 4px rgba(0,0,0,.6));
 		@include border-radius(50%);
-		@include transition(all .5s ease-in);
+		transition: all .5s ease-in;
 
 		&:after{
 			position: absolute;
@@ -38,7 +38,7 @@
 			font-size: 16px;
       background-image: -webkit-radial-gradient(center, #111, #323232);
       font-family: var(--font-yanone);
-      @include transition((transform .5s ease, opacity .25s ease));
+      transition: transform .5s ease, opacity .25s ease;
 			@include transform(translate3d(0,-10%, 0));
 			@include border-radius(4px);
 		}
@@ -55,7 +55,7 @@
 			content: '';
 			border-width: 0 5px 5px 5px;
 			border-color: transparent transparent #323232 transparent;
-			@include transition(opacity .25s ease);
+			transition: opacity .25s ease;
 		}
 
 		&:active{

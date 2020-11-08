@@ -66,7 +66,7 @@
           background-image: -webkit-radial-gradient(center,#111,#323232);
 				    font-family: var(--font-yanone);
 				    @include text-shadow(none);
-				    @include transition((transform .5s ease, opacity .25s ease));
+				    transition: transform .5s ease, opacity .25s ease;
 					@include transform(translate3d(0,-10%, 0));
 					@include border-radius(4px);
 				}
@@ -83,7 +83,7 @@
 					content: '';
 					border-width: 0 5px 5px 5px;
 					border-color: transparent transparent #323232 transparent;
-					@include transition(opacity .25s ease);
+					transition: opacity .25s ease;
 				}
 
 				&:hover{

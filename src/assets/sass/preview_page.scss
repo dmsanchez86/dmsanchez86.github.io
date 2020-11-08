@@ -8,7 +8,7 @@
 	padding: .5rem 0 0 .5rem;
 	opacity: .8;
 	overflow: hidden;
-	@include transition((transform .5s ease, opacity .7s ease));
+	transition: transform .5s ease, opacity .7s ease;
 	@include border-radius(5px 0 0 0);
 	@include transform-origin(bottom center);
 	@include transform(scale(.235) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg));
@@ -49,7 +49,7 @@
 		text-align: center;
 		z-index: 10;
 		@include transform(translate3d(0,-100%,0));
-		@include transition((transform .5s ease-in,opacity .35s ease-out));
+		transition: transform .5s ease-in,opacity .35s ease-out;
 
 		span{
 			cursor: pointer;
@@ -66,7 +66,7 @@
 				font-size: 200px;
 			    color: rgba(255, 255, 255, 0.72);
 			    @include text-shadow(0 0 5px rgba(0,0,0,.5));
-			    @include transition(transform 200ms ease);
+			    transition: transform 200ms ease;
 
 				&:last-child{
 					display: none;
@@ -79,7 +79,7 @@
 		width: 100%;
 		height: 100%;
 		opacity: 0;
-		@include transition(opacity 1s .5s ease);
+		transition: opacity 1s .5s ease;
 	}
 
 	&:hover{

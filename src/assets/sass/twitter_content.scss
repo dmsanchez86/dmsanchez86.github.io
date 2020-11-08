@@ -13,7 +13,7 @@
 	label{
 		font-size: 1.7rem;
 		cursor: pointer;
-		@include transition(all 200ms ease);
+		transition: all 200ms ease;
 		@include text-shadow(0 0 2px rgba(0,0,0,.4));
 
 		&:hover{
@@ -33,7 +33,7 @@
 			font-size: 16px;
       font-family: var(--font-yanone);
       @include text-shadow(none);
-      @include transition((transform .5s ease, opacity .25s ease));
+      transition: transform .5s ease, opacity .25s ease;
 			@include transform(translate3d(0,-10%, 0));
 			background-image: -webkit-radial-gradient(center, #111, #323232);
 			@include border-radius(4px);
@@ -51,7 +51,7 @@
 			content: '';
 			border-width: 5px  5px 0 5px;
 			border-color: #323232 transparent transparent transparent;
-			@include transition(opacity .25s ease);
+			transition: opacity .25s ease;
 		}
 
 		&:hover{
@@ -80,10 +80,10 @@
 	.container{
 		position: absolute;
 		bottom: 40px;
-    	right: 0;
+    right: 0;
 		width: 255px;
 		height: 400px;
-		@include transition(transform 300ms ease);
+		transition: transform 300ms ease;
 		@include transform-origin(right bottom);
 
 		&.close{

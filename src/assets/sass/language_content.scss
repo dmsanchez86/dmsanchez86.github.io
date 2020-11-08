@@ -24,7 +24,7 @@
     font-size: 16px;
     font-family: var(--font-yanone);
     @include text-shadow(none);
-    @include transition((transform .5s ease, opacity .25s ease));
+    transition: transform .5s ease, opacity .25s ease;
     @include transform(translate3d(0,-10%, 0));
     background-image: -webkit-radial-gradient(center, #111, #323232);
     @include border-radius(4px);
@@ -42,7 +42,7 @@
     content: '';
     border-width: 5px  5px 0 5px;
     border-color: #323232 transparent transparent transparent;
-    @include transition(opacity .25s ease);
+    transition: opacity .25s ease;
   }
 
   &:hover{
