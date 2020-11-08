@@ -15,40 +15,6 @@
             #{$property} : $value;
 }
 
-// Function to align items to center --- display flex
-@mixin align-items($value) {
-  -webkit-align-items: $value;
-  -moz-align-items: $value;
-  -ms-align-items: $value;
-  -o-align-items: $value;
-  align-items: $value;
-}
-
-// Function to set animation
-@mixin animation($value) {
-  @include prefixes(animation, $value);
-}
-
-// Function to set direction animation
-@mixin animation-direction($value){
-  @include prefixes(animation-direction, $value);
-}
-
-// Function to set delay animation
-@mixin animation-delay($value){
-  @include prefixes(animation-delay, $value);
-}
-
-// Funtion to start or pause animation
-@mixin animation-play-state($value){
-  @include prefixes(animation-play-state, $value);
-}
-
-// function to fill animation mode
-@mixin animation-fill-mode($value){
-  @include prefixes(animation-fill-mode, $value);
-}
-
 // Function to set border radius
 @mixin border-radius($radius) {
   @include prefixes(border-radius, $radius);
