@@ -36,6 +36,10 @@
   @media (max-width: 575px) {
     --section-pt: 45px;
   }
+
+  --font-pacifico: 'Pacifico', cursive;
+  --font-indie: 'Indie Flower', cursive;
+  --font-yanone: 'Yanone Kaffeesatz', sans-serif;
 }
 
 $text-3d-color: #323232;
@@ -60,7 +64,7 @@ $colaborations-gradient-primary: rgba(0, 137, 123, 0.75);
 $colaborations-gradient-secondary: rgba(60, 158, 148, 0.8);
 
 $contact-primary: #C16E25;
-$contact-secondary: #B3631D; 
-$contact-alpha: rgba(193, 110, 37, 0.71); 
+$contact-secondary: #B3631D;
+$contact-alpha: rgba(193, 110, 37, 0.71);
 $contact-gradient-primary: rgba(214, 127, 53, 0.75);
 $contact-gradient-secondary: rgba(230, 134, 52, 0.8);
