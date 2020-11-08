@@ -62,7 +62,7 @@
     font-size: 1.1rem;
     opacity: 0;
     z-index: -1;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: var(--font-yanone);
     text-transform: uppercase;
 		@include gradient(radial, (center, #323232, transparent));
 		// @include transform(rotatex(83deg));

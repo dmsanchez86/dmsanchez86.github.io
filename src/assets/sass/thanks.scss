@@ -10,7 +10,7 @@
   left: 0;
   transition: 250ms ease, width 250ms 250ms linear;
   color: white;
-  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-family: var(--font-yanone);
   text-transform: uppercase;
   overflow: hidden;
   width: 2.5rem;
@@ -43,13 +43,13 @@
       width: auto;
       height: auto;
       position: relative;
-      transition: 
-        width 250ms 250ms linear, 
-        height 250ms 250ms linear, 
+      transition:
+        width 250ms 250ms linear,
+        height 250ms 250ms linear,
         opacity 250ms 800ms linear;
     }
   }
-  
+
   > span{
     width: 0;
     height: 0;

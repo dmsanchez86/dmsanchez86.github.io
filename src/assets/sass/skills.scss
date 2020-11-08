@@ -14,7 +14,7 @@
     &-complete{
       text-align: center;
       color: white;
-      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-family: var(--font-yanone);
     }
   }
   &-link{
@@ -25,7 +25,7 @@
     margin: 0 auto 0 !important;
     display: inline-block;
     color: #111;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: var(--font-yanone);
     min-width: 50px;
     text-align: center;
     position: relative;
@@ -79,15 +79,16 @@
     // margin-right: .5rem;
     // margin-bottom: .5rem;
     border-radius: 3px;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-family: var(--font-yanone);
     transition: 300ms;
     border: 0px var(--skill-b) solid;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: var(--skill-tf);
 
     &-graph{
       color: white;
-      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-family: var(--font-yanone);
       font-size: 1.8rem;
       display: flex;
 
@@ -138,7 +139,7 @@
     &-link{
       cursor: pointer;
       color: white;
-      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-family: var(--font-yanone);
       font-size: 1.5rem;
 
       @media(max-width: 768px){
