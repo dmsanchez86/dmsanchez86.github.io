@@ -95,42 +95,6 @@
   margin: auto;
 }
 
-// Function to set element how flex
-@mixin flex($value){
-  display: -webkit-#{$value};
-  display: -moz-#{$value};
-  display: -ms-#{$value};
-  display: -o-#{$value};
-  display: $value;
-}
-
-// Function to set element how flex-item
-@mixin flex-item($value){
-  -webkit-flex: $value;
-  -moz-flex: $value;
-  -ms-flex: $value;
-  -o-flex: $value;
-  flex: $value;
-}
-
-// Function to set direction to item with display flex
-@mixin flex-direction($value){
-  -webkit-flex-direction: $value;
-  -moz-flex-direction: $value;
-  -ms-flex-direction: $value;
-  -o-flex-direction: $value;
-  flex-direction: $value;
-}
-
-// Function to set filter any item
-@mixin filter($value){
-  -webkit-filter: $value;
-  -moz-filter: $value;
-  -ms-filter: $value;
-  -o-filter: $value;
-  filter: $value;
-}
-
 // Function to set gradient
 @mixin gradient($direction, $value){
   background-image: -webkit-#{$direction}-gradient($value);
