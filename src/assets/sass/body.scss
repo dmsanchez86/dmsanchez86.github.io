@@ -91,7 +91,7 @@ body{
     --secondary: #e4a010;
     --terciary: #f39f18;
 
-    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
+    --fondo: transparent; //linear-gradient(to bottom, var(--secondary), var(--main));
   }
   &.portafolio{
     --current-main: rgb(0, 137, 123);
@@ -111,7 +111,7 @@ body{
     --secondary: #026D63;
     --terciary: rgba(0, 137, 123, 0.75);
 
-    --fondo: linear-gradient(to top, var(--secondary), var(--main));
+    --fondo: transparent; //linear-gradient(to top, var(--secondary), var(--main));
   }
   &.skills{
     --current-main: #33475b;
@@ -131,7 +131,7 @@ body{
     --secondary: #434750;
     --terciary: #0a497b;
 
-    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
+    --fondo: transparent; //linear-gradient(to bottom, var(--secondary), var(--main));
   }
   &.contact{
     --current-main: #ca3e3d;
@@ -151,7 +151,7 @@ body{
     --secondary: #a52e2d;
     --terciary: #ca3e3d;
 
-    --fondo: linear-gradient(to top, var(--secondary), var(--main));
+    --fondo: transparent; //linear-gradient(to top, var(--secondary), var(--main));
   }
   &.hobbies{
     --current-main: #f46a25;
@@ -171,7 +171,7 @@ body{
     --secondary: #e25f23;
     --terciary: #e25f23;
 
-    --fondo: linear-gradient(to bottom, var(--secondary), var(--main));
+    --fondo: transparent; //linear-gradient(to bottom, var(--secondary), var(--main));
   }
   &._404{
     --current-main: #e8c087;
@@ -190,7 +190,7 @@ body{
     --secondary: #d2b48c;
     --terciary: #efa94a;
 
-    --fondo: linear-gradient(615deg, #c09a63, #cda76f, #dab37b, #e8c087, #f6cd93);
+    --fondo: transparent; //linear-gradient(615deg, #c09a63, #cda76f, #dab37b, #e8c087, #f6cd93);
   }
 
   &.profile{
