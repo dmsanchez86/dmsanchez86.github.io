@@ -148,15 +148,6 @@
   display: block;
 }
 
-// Function to justify items to center display flex
-@mixin justify-content($value) {
-  -webkit-justify-content: $value;
-  -moz-justify-content: $value;
-  -ms-justify-content: $value;
-  -o-justify-content: $value;
-  justify-content: $value;
-}
-
 // Funtion to set perspective
 @mixin perspective($value) {
   @include prefixes(perspective, $value);
