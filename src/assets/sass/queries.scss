@@ -347,7 +347,8 @@
   }
 }
 
-@media (max-width: 400px){roject .title a{
+@media (max-width: 400px){
+  .project .title a{
     font-size: 1.25rem;
     &[title-ref]:after{
       font-size: 10.5px;
