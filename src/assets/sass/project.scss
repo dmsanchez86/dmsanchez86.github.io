@@ -23,7 +23,7 @@
 		> a{
 			font-size: 50px;
 			color: white;
-			font-family: 'Pacifico';
+			font-family: var(--font-pacifico);
 			@include transition(all .5s ease);
 			@include text-3d;
 

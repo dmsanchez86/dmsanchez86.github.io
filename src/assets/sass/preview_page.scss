@@ -28,7 +28,7 @@
 			right: 0;
 			text-align: center;
 			content: attr(title);
-			font-family: 'Pacifico';
+			font-family: var(--font-pacifico);
 			font-size: 2rem;
 			top: 100%;
 		}

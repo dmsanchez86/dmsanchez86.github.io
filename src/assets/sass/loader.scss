@@ -28,7 +28,7 @@
 			top: 105%;
 			left: 0;
 			text-align: center;
-			font-family: 'Pacifico', Helvetica;
+			font-family: var(--font-pacifico);
 			width: 100%;
 			overflow: hidden;
 			// @include animation(widthText 500ms infinite linear);

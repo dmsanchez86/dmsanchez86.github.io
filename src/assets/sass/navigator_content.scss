@@ -102,7 +102,7 @@
 					fill: #323232;
           font-size: 26px;
           fill: var(--logo-text);
-					font-family: 'Pacifico', cursive;
+					font-family: var(--font-pacifico);
 				}
 			}
     }
@@ -288,7 +288,7 @@
 				font-weight: bold;
 				display: none;
 				color: var(--nav-close);
-				font-family: 'Pacifico';
+				font-family: var(--font-pacifico);
 				text-shadow: 0 0 2px rgba(0,0,0,.4);
 				transition: all 1s ease;
 
