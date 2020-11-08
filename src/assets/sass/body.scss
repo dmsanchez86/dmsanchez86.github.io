@@ -75,7 +75,6 @@ body{
 .main-app{
   &.projects{
     --current-main: #df9e28;
-    --nav-item: #E8EBEC;
     --nav-item-edge: #b7801b;
     --nav-item-bg: #b7801b;
     --nav-item-bg2: #b7801b;
@@ -95,7 +94,6 @@ body{
   }
   &.portafolio{
     --current-main: rgb(0, 137, 123);
-    --nav-item: #E8EBEC;
     --nav-item-edge: #026D63;
     --nav-item-bg: #026D63;
     --nav-item-bg2: #026D63;
@@ -115,7 +113,6 @@ body{
   }
   &.skills{
     --current-main: #33475b;
-    --nav-item: #E8EBEC;
     --nav-item-edge: #293949;
     --nav-item-bg: #293949;
     --nav-item-bg2: #293949;
@@ -135,7 +132,6 @@ body{
   }
   &.contact{
     --current-main: #ca3e3d;
-    --nav-item: #E8EBEC;
     --nav-item-edge: #a52e2d;
     --nav-item-bg: #a52e2d;
     --nav-item-bg2: #a52e2d;
@@ -155,7 +151,6 @@ body{
   }
   &.hobbies{
     --current-main: #f46a25;
-    --nav-item: #E8EBEC;
     --nav-item-edge: #c64a14;
     --nav-item-bg: #c64a14;
     --nav-item-bg2: #c64a14;
