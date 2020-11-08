@@ -129,14 +129,9 @@
     padding: 0;
 }
 
-// Funtion to set text shadow
-@mixin text-shadow($value) {
-  @include prefixes(text-shadow , $value);
-}
-
 // function to put text in 3d - effect with text shadow
 @mixin text-3d{
-  @include text-shadow((
+  text-shadow:
     1px -1px 1px $text-3d-color,
     2px -2px 1px $text-3d-color,
     3px -3px 1px $text-3d-color,
@@ -144,11 +139,11 @@
     5px -5px 1px $text-3d-color,
     6px -6px 1px $text-3d-color,
     7px -7px 1px $text-3d-color,
-    8px -8px 1px $text-3d-color,
-  ));
+    8px -8px 1px $text-3d-color
+  ;
 
   &:hover{
-    @include text-shadow((
+    text-shadow:
       2px -1px 1px $text-3d-color-hover,
       3px -2px 1px $text-3d-color-hover,
       4px -3px 1px $text-3d-color-hover,
@@ -158,14 +153,9 @@
       8px -7px 1px $text-3d-color-hover,
       9px -8px 1px $text-3d-color-hover,
       10px -9px 1px $text-3d-color-hover,
-      11px -10px 1px $text-3d-color-hover,
-    ));
+      11px -10px 1px $text-3d-color-hover
+    ;
   }
-}
-
-// Function to set transforms
-@mixin transform($value){
-    @include prefixes(transform, $value);
 }
 
 // function to set calc property

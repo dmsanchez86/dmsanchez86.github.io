@@ -16,9 +16,9 @@
 			height: 25%;
 			@include center-absolute(absolute);
 			@include gradient(radial, (center, #323232, #111));
-			@include border-radius(50%);
-			@include box-shadow(0 0 5px rgba(0,0,0,.5));
-			@include animation(backgroundAtom 1000ms infinite linear);
+			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(0,0,0,.5);
+			animation: backgroundAtom 1000ms infinite linear;
 			content: '';
 		}
 
@@ -40,7 +40,7 @@
 		height: 100%;
 		background: rgba(255,255,255,0);
 		@include center-absolute(absolute);
-		@include border-radius(50%);
+		border-radius: 50%;
 		border: solid thin rgba(0,0,0,.2);
 
 		&:before{
@@ -51,27 +51,27 @@
 			background: #323232;
 			@include gradient(linear, (to left, #323232, #111));
 			@include center-absolute(absolute);
-			@include border-radius(50%);
-			@include box-shadow(0 0 5px rgba(255,255,255,.5) inset);
+			border-radius: 50%;
+			box-shadow: 0 0 5px rgba(255,255,255,.5) inset;
 		}
 
 		&:nth-child(1){
 			&:before{
-				@include animation(point 1500ms -1000ms linear infinite);
+				animation: point 1500ms -1000ms linear infinite;
 			}
 		}
 		&:nth-child(2){
-			@include transform(rotate(60deg));
+			transform: rotate(60deg);
 
 			&:before{
-				@include animation(point 1800ms -2000ms linear infinite reverse);
+				animation: point 1800ms -2000ms linear infinite reverse;
 			}
 		}
 		&:nth-child(3){
-			@include transform(rotate(-60deg));
+			transform: rotate(-60deg);
 
 			&:before{
-				@include animation(point 1300ms -3000ms linear infinite reverse);
+				animation: point 1300ms -3000ms linear infinite reverse;
 			}
 		}
 	}

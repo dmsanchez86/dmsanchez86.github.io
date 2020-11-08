@@ -10,8 +10,8 @@
 	overflow: hidden;
 	transition: transform .5s ease, opacity .7s ease;
 	transform-origin: bottom center;
-	@include border-radius(5px 0 0 0);
-	@include transform(scale(.235) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg));
+	border-radius: 5px 0 0 0;
+	transform: scale(.235) translate3d(100%, 100%, 20px) rotatey(10deg) rotatex(90deg);
 
 	.loader_preview{
 		display: inline-block;
@@ -19,7 +19,7 @@
 		height: 100px;
 		color: #323232;
 		text-align: center;
-		@include text-shadow(0 0 6px #fefefe);
+		text-shadow: 0 0 6px #fefefe;
 		@include center-absolute(absolute);
 
 		&:after{
@@ -48,7 +48,7 @@
 		background: rgba(0,0,0,.4);
 		text-align: center;
 		z-index: 10;
-		@include transform(translate3d(0,-100%,0));
+		transform: translate3d(0,-100%,0);
 		transition: transform .5s ease-in,opacity .35s ease-out;
 
 		span{
@@ -58,14 +58,14 @@
 
 			&:hover{
 				i{
-					@include transform(scale(1.2));
+					transform: scale(1.2);
 				}
 			}
 
 			i{
 				font-size: 200px;
 			    color: rgba(255, 255, 255, 0.72);
-			    @include text-shadow(0 0 5px rgba(0,0,0,.5));
+			    text-shadow: 0 0 5px rgba(0,0,0,.5);
 			    transition: transform 200ms ease;
 
 				&:last-child{
@@ -86,12 +86,12 @@
 		opacity: 1;
 
 		.toolbox{
-			@include transform(translate3d(0,0,0));
+			transform: translate3d(0,0,0);
 		}
 	}
 
 	&.active{
-		@include transform(scale(.235) translate3d(0%, 0%, 0) rotatey(0) rotatex(0));
+		transform: scale(.235) translate3d(0%, 0%, 0) rotatey(0) rotatex(0);
 	}
 
 	&.fullscreen{
@@ -100,23 +100,23 @@
 		padding: .5rem;
 		background: white;
 		text-align: right;
-		@include border-radius(5px);
-		@include box-sizing(border-box);
-		@include transform(scale(1) translate3d(0%, 0%, 0) !important);
+		border-radius: 5px;
+		box-sizing: border-box;
+		transform: scale(1) translate3d(0%, 0%, 0) !important;
 
 		iframe{
-			@include border-radius(5px);
+			border-radius: 5px;
 		}
 
 		.toolbox{
 			opacity: .5;
 			height: auto;
-		    width: 40px;
-		    right: 0;
-		    margin: auto;
-		    padding-left: 0;
-		    padding-right: 0;
-		    @include border-radius(0 0 5px 5px);
+      width: 40px;
+      right: 0;
+      margin: auto;
+      padding-left: 0;
+      padding-right: 0;
+      border-radius: 0 0 5px 5px;
 
 			.resize{
 				height: auto;

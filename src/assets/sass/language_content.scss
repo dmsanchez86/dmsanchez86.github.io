@@ -23,11 +23,11 @@
     padding: .15rem .5rem;
     font-size: 16px;
     font-family: var(--font-yanone);
-    @include text-shadow(none);
+    text-shadow: none;
     transition: transform .5s ease, opacity .25s ease;
-    @include transform(translate3d(0,-10%, 0));
+    transform: translate3d(0,-10%, 0);
     background-image: -webkit-radial-gradient(center, #111, #323232);
-    @include border-radius(4px);
+    border-radius: 4px;
   }
 
   &:before{
@@ -48,7 +48,7 @@
   &:hover{
     &:after{
       opacity: 1;
-      @include transform(translate3d(0,0,0));
+      transform: translate3d(0,0,0);
     }
 
     &:before{
