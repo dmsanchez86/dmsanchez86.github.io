@@ -174,13 +174,6 @@
     padding: 0;
 }
 
-// Funtion to set font Roboto
-@mixin roboto($size, $weight){
-  font-family: 'Roboto', sans-serif;
-  font-size: $size;
-  font-weight: $weight;
-}
-
 // Funtion to set text shadow
 @mixin text-shadow($value) {
   @include prefixes(text-shadow , $value);
