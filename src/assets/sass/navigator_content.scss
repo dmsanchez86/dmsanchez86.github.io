@@ -94,7 +94,7 @@
 				fill: var(--logo-text);
 				stroke-width:1;
 				stroke: transparent;
-				font-family: 'Indie Flower', cursive;
+				font-family: var(--font-indie);
 				transition: all .25s ease;
 				text-shadow: 0 0 2px rgba(0,0,0,.65);
 
