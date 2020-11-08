@@ -61,8 +61,8 @@
           left: initial;
           right: 105%;
           min-width: 165px;
-          @include transform-origin(top right);
-          @include transform(rotate(90deg));
+          transform-origin: top right;
+          transform: rotate(90deg);
         }
       }
     }
