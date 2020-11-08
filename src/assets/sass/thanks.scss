@@ -22,21 +22,18 @@
 
   @media (max-width: 550px){
     z-index: 2;
-    &:hover,
-    &:focus{
-      // bottom: 8vh;
-      & ~ app-profile-image .profile_content,
-      & ~ app-twitter-content .twitter_content,
-      & ~ app-language-content .language-content{
-        opacity: 0;
-      }
-    }
   }
 
   &:focus,
   &:hover{
     background-color: rgba(255,255,255,.15);
     width: 240px;
+
+    & ~ app-profile-image .profile_content,
+    & ~ app-twitter-content .twitter_content,
+    & ~ app-language-content .language-content{
+      opacity: 0;
+    }
 
     > span{
       opacity: 1;
