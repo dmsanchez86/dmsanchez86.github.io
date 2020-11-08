@@ -215,11 +215,6 @@
   }
 }
 
-// Funtion to set transition delay
-@mixin transition-delay($value) {
-  @include prefixes(transition-delay, $value);
-}
-
 // Function to set transforms
 @mixin transform($value){
     @include prefixes(transform, $value);
