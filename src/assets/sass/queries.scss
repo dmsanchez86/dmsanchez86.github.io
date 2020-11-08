@@ -161,11 +161,14 @@
 		@include perspective(500px);
   }
 
-  .project .title a{
-    font-size: 2.5rem;
+  .project .title{
+    height: 55px;
+    a{
+      font-size: 35px;
 
-    &[title-ref]:after{
-      font-size: 12px;
+      &[title-ref]:after{
+        font-size: 12px;
+      }
     }
   }
 
@@ -198,12 +201,15 @@
   }
   .navigator_content .navigator .button_menu i {
     font-size: 1.8rem;
-  } 
+  }
 }
 @media (max-width: 500px){
-	.project .title a{
-    font-size: 1.65rem;
-	}
+	.project .title{
+    height: 45px;
+    a{
+      font-size: 1.65rem;
+	  }
+  }
 
 	.fp-controlArrow{
 
