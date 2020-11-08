@@ -9,6 +9,12 @@
   }
   &-h2{
     height: 25vh;
+
+    .title{
+      @media(max-height: 650px) and (min-width: 768px){
+        bottom: inherit;
+      }
+    }
   }
   &-h3{
     height: 15vh;
@@ -18,14 +24,18 @@
 		position: relative;
 		height: 70px;
 		display: inline-block;
-		@include center-absolute(absolute);
+    @include center-absolute(absolute);
 
 		> a{
-			font-size: 50px;
+      font-size: 50px;
 			color: white;
 			font-family: var(--font-pacifico);
-			@include transition(all .5s ease);
-			@include text-3d;
+      transition: all .5s ease;
+      @include text-3d;
+
+      @media(max-width: 998px){
+        font-weight: 500;
+      }
 
 			&[title-ref]{
         position: relative;
@@ -100,6 +110,14 @@
 					@include animation(text3D 3s infinite linear);
 				}
 			}
+    }
+
+    @media(max-height: 650px) and (min-width: 768px){
+      height: 45px;
+
+      > a{
+        font-size: 35px;
+      }
     }
 	}
 
