@@ -22,10 +22,10 @@
         <div class="col-9">
           <div class="item-project-description-wrap">
             <ng-container *ngIf="language[project?.key].description;else otherD">
-              {{language[project?.key].description}}
+              <div [innerHTML]="language[project?.key].description"></div>
             </ng-container>
             <ng-template #otherD>
-              {{ language.default }}
+              <div [innerHTML]="language.default"></div>
             </ng-template>
           </div>
         </div>
