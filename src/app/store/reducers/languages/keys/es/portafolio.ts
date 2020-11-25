@@ -3,7 +3,9 @@ export const portafolio = {
     krika: {
       name: 'Krika Cosmetics',
       description: `
-        Mi último proyecto, fue desarrollado con la plataforma de Shopify
+        <p>
+          Mi último proyecto realizado con la empresa <a target="_blank" href="https://existaya.com">@Existaya</a>, fue desarrollado con la plataforma de <a href="https://shopify.com" target="_blank">Shopify</a>
+        </p>
       `,
     },
     energiteca: {

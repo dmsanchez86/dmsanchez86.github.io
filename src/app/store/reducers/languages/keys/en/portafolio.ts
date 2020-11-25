@@ -3,7 +3,9 @@ export const portafolio = {
     krika: {
       name: 'Krika Cosmetics',
       description: `
-        My last project, it was develop with shopify
+        <p>
+          My last project with <a href="https://existaya.com">@Existaya</a> company, this site was develop with <a   href="https://shopify.com" target="_blank">Shopify</a> platform
+        </p>
       `,
     },
     energiteca: {
