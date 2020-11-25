@@ -13,4 +13,27 @@ export interface ProjectItemI {
   key?: string;
   type?: string;
   colors?: LanguageItemProfileSkillsColorsI;
+
+  tecnologies?: ProjectItemTecnologiesI[];
+  devs?: ProjectItemDevsI[];
+  year?: ProjectItemYearI;
+}
+
+export interface ProjectItemTecnologiesI{
+  icon: string;
+  name: string;
+}
+
+export interface ProjectItemDevsI{
+  icon: string;
+  name: string;
+  linkedin?: string;
+  github?: string;
+  twitter?: string;
+  type?: string;
+}
+
+export interface ProjectItemYearI{
+  icon: string;
+  name: string;
 }
