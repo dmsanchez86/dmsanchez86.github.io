@@ -20,6 +20,42 @@ export const dataPortafolio: ProjectItemI[] = [
       terciary: '#bc3a7b',
       fondo: 'none',
     },
+
+    year: {
+      icon: 'far fa-calendar-check',
+      name: '2020'
+    },
+
+    devs: [
+      {
+        icon: 'fab fa-dev',
+        name: 'Daniel M Sanchez',
+        type: 'Frontend'
+      },{
+        icon: 'fab fa-dev',
+        name: 'Darwin Solarte',
+        type: 'Backend'
+      }
+    ],
+
+    tecnologies: [
+      {
+        icon: 'fas fa-brain',
+        name: 'Liquid'
+      },{
+        icon: 'fas fa-brain',
+        name: 'SASS'
+      },{
+        icon: 'fas fa-brain',
+        name: 'HTML5'
+      },{
+        icon: 'fas fa-brain',
+        name: 'Bootstrap'
+      },{
+        icon: 'fas fa-brain',
+        name: 'Vanilla JS ES6'
+      }
+    ]
   },
   {
     name: 'Librería Nacional',
