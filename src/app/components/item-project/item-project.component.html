@@ -23,6 +23,29 @@
           <div class="item-project-description-wrap">
             <ng-container *ngIf="language[project?.key].description;else otherD">
               <div [innerHTML]="language[project?.key].description"></div>
+
+              <br>
+              <div class="row">
+                <div class="col m4">
+                  <ul>
+                    <li *ngFor="let tec of project.tecnologies">
+                      <i [class]="tec.icon"></i> {{tec.name}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="col m6 mt-3 mt-m0">
+                  <ul>
+                    <li *ngFor="let dev of project.devs">
+                      <i [class]="dev.icon"></i> {{dev.name}} - {{dev.type}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="col m2 mt-3 mt-m0">
+                  <ul>
+                    <li><i [class]="project.year.icon"></i> {{project.year.name}}</li>
+                  </ul>
+                </div>
+              </div>
             </ng-container>
             <ng-template #otherD>
               <div [innerHTML]="language.default"></div>
