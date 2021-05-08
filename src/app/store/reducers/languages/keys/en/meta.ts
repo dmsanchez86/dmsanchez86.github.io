@@ -7,7 +7,7 @@ export const meta = {
       title: 'Daniel Mauricio Sánchez Ávila | Frontend Developer',
       type: 'Blog',
       url: 'http://dmsanchez86.github.io',
-      image: 'assets/images/profile.jpg',
+      image: 'assets/images/profile.png',
       description: 'Website Frontend dmsanchez86',
       site_name: 'Daniel Mauricio Sánchez Ávila"',
     },
@@ -17,6 +17,6 @@ export const meta = {
       title: 'Daniel Mauricio Sánchez Ávila | Frontend Developer',
       description: 'Website Frontend dmsanchez86',
       creator: '@dmsanchez86',
-      image: 'assets/images/profile.jpg',
+      image: 'assets/images/profile.png',
     },
 }
